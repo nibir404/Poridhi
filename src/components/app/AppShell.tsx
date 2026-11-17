@@ -140,6 +140,14 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
       if (p && p !== root && Array.from(p.children).every((c) => (c as HTMLElement).style.display === "none")) p.style.display = "none";
     });
 
+    // Lab screens: drop the narrow icon rail (guide / files / cloud / keys / info); the workspace covers those.
+    if (/^Lab/.test(screen)) {
+      root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.width > 0 && r.width < 90 && r.height > window.innerHeight * 0.4 && el.querySelectorAll("svg").length >= 4 && !el.textContent?.trim()) el.style.display = "none";
+      });
+    }
+
     // Buttons ↔ seed entities (modules, labs, exam questions).
     applyContext(root, screen);
 

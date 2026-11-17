@@ -79,7 +79,8 @@
     "id": "72E-0",
     "name": "LabLaunch",
     "route": "/app/lab/launch",
-    "title": "Launch lab"
+    "title": "Launch lab",
+    "extra": "LabGuideExtra"
   },
   {
     "id": "79T-0",
