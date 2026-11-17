@@ -10,9 +10,8 @@ const PHONE = "(max-width: 767px)";
 type Tab = { label: string; href: string; match: RegExp; icon: string };
 const APP_TABS: Tab[] = [
   { label: "Home", href: "/app", match: /^\/app$/, icon: "M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" },
-  { label: "Learn", href: "/app/roadmap", match: /^\/app\/(roadmap|course|learn)/, icon: "M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M8 6h6a3 3 0 0 1 0 6h-4a3 3 0 0 0 0 6h6" },
+  { label: "Learn", href: "/app/roadmap", match: /^\/app\/(roadmap|course|learn|interview|exam|practice)/, icon: "M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0M8 6h6a3 3 0 0 1 0 6h-4a3 3 0 0 0 0 6h6" },
   { label: "Labs", href: "/app/lab/launch", match: /^\/app\/lab/, icon: "M3 4h18v16H3zM7 10l3 2.5L7 15M12.5 15H17" },
-  { label: "Practice", href: "/app/interview", match: /^\/app\/(interview|exam|practice)/, icon: "M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-4 3v-3a2 2 0 0 1-2-2z" },
   { label: "Me", href: "/app/me", match: /^\/app\/me/, icon: "M12 8m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" },
 ];
 const SITE_TABS: Tab[] = [
@@ -20,7 +19,7 @@ const SITE_TABS: Tab[] = [
   { label: "Labs", href: "/labs", match: /^\/labs/, icon: APP_TABS[2].icon },
   { label: "Courses", href: "/courses", match: /^\/courses/, icon: APP_TABS[1].icon },
   { label: "Pricing", href: "/pricing", match: /^\/pricing/, icon: "M20 12l-8 8-9-9V3h8zM7.5 7.5h.01" },
-  { label: "Sign in", href: "/signin", match: /^\/(signin|onboarding|welcome)/, icon: APP_TABS[4].icon },
+  { label: "Sign in", href: "/signin", match: /^\/(signin|onboarding|welcome)/, icon: APP_TABS[APP_TABS.length - 1].icon },
 ];
 /** Focus screens (running lab, exam question, live interview) get a back bar and no tabs. */
 const FOCUS = /^\/app\/(lab(?!\/launch)|exam\/q|interview\/(session|terminal|feedback|error)|practice\/)/;

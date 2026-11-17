@@ -43,7 +43,7 @@ resource "aws_lb_target_group" "web" {
 
 export default function ExamWorkspace() {
   const { plan } = usePlan();
-  if (plan !== "pro") return <ProWall back="/app/exam" crumb="Milestone 1 exam" title="AI exam" what="The AI exam" about="Exams run on a real sandbox and are graded by AI against a rubric, and passing earns your certificate." />;
+  if (plan !== "pro") return <ProWall back="/app/exam" crumb="Milestone 1 · Linux, Scripting & Containerization · Milestone exam" title="AI exam" what="The AI exam" about="Exams run on a real sandbox and are graded by AI against a rubric, and passing earns your certificate." />;
   return <ExamInner />;
 }
 
@@ -108,7 +108,7 @@ function ExamInner() {
   );
 
   return (
-    <Workspace back="/app/exam/questions" crumb={`Milestone 1 exam · Q${q.n} of 10`} title={q.title}
+    <Workspace back="/app/exam/questions" crumb={`Milestone 1 · Milestone exam · Q${q.n} of 10`} title={q.title}
       progress={{ done: results.filter((r) => r.ok).length, total: RUBRIC.length, label: "rubric items" }} timer={`${mm}:${String(ss).padStart(2, "0")} left`} timerTone={secs < 180 ? "warn" : "ok"}
       railTitle="Questions" railAction={{ label: "All questions", href: "/app/exam/questions" }} rail={rail}
       tab={tab} setTab={setTab}

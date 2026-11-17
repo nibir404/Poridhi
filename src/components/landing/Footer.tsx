@@ -6,7 +6,7 @@ import { Button, S, WIDTH, mono } from "./ui";
 /** The original footer's links, laid out render.com style: brand and CTA, link columns, legal row. */
 const COLS: [string, [string, string][]][] = [
   ["Explore", [["Courses", "/courses"], ["Labs", "/labs"], ["Lab guides", "/labs/guide/expose-docker-lb"], ["Pricing", "/pricing"]]],
-  ["Practice", [["AI interview", "/app/interview"], ["AI exam", "/app/exam"], ["Roadmap", "/app/roadmap"], ["Time bank", "/app/me/time-bank"]]],
+  ["In every track", [["AI interview", "/app/interview"], ["AI exam", "/app/exam"], ["Roadmap", "/app/roadmap"], ["Time bank", "/app/me/time-bank"]]],
   ["Community", [["Verify a certificate", "/u/rahim"], ["Public profiles", "/u/rahim"]]],
   ["Company", [["About", "/"], ["Help center", "/app/me/support"], ["Contact", "/app/me/support"]]],
 ];

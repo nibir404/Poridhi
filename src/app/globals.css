@@ -260,8 +260,8 @@ body.pd-phone .pd-siteheader { display: none !important; }
 .pd-resizer:focus-visible { outline: none; }
 
 /* Closing CTA: slow-drifting diagonal hatch + dot grid, faded at the edges */
-.pd-cta-tex{position:absolute;inset:0;pointer-events:none;opacity:.55;
-  background-image:repeating-linear-gradient(-45deg,var(--dashboard-border) 0 1px,transparent 1px 9px),radial-gradient(var(--dashboard-border) 1px,transparent 1.2px);
+.pd-cta-tex{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:repeating-linear-gradient(-45deg,var(--dashboard-muted) 0 1px,transparent 1px 9px),radial-gradient(var(--dashboard-muted) 1.1px,transparent 1.4px);
   background-size:auto,22px 22px;
   -webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 0%,transparent 75%);
   animation:pd-cta-drift 28s linear infinite}

@@ -30,7 +30,7 @@ function score(answer: string, keys: string[]) {
 
 export default function InterviewWorkspace() {
   const { plan } = usePlan();
-  if (plan !== "pro") return <ProWall back="/app/interview" crumb="AI interview · System design" title="Design a URL shortener" what="The AI interview" about="A live interviewer asks follow-ups, scores every stage and writes you a hiring-style report." />;
+  if (plan !== "pro") return <ProWall back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage" crumb="Milestone 1 · Docker networking & storage · AI interview" title="Design a URL shortener" what="The AI interview" about="A live interviewer asks follow-ups, scores every stage and writes you a hiring-style report." />;
   return <InterviewInner />;
 }
 
@@ -81,7 +81,7 @@ function InterviewInner() {
   const mm = Math.floor(secs / 60), ss = secs % 60;
 
   return (
-    <Workspace back="/app/interview" crumb="AI interview · System design" title="Design a URL shortener"
+    <Workspace back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage" crumb="Milestone 1 · Docker networking & storage · AI interview" title="Design a URL shortener"
       progress={{ done: Math.min(stage, 5), total: 5, label: "stages" }} timer={`${mm}:${String(ss).padStart(2, "0")}`}
       railTitle={avg != null ? `Stages · avg ${avg}` : "Stages"} railAction={{ label: "New interview", href: "/app/interview" }} rail={rail}
       tab={tab} setTab={setTab}

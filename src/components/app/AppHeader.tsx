@@ -14,9 +14,8 @@ import { seed } from "@/data/seed";
  */
 const LINKS: { label: string; href: string; match: RegExp }[] = [
   { label: "Home", href: "/app", match: /^\/app$/ },
-  { label: "Learn", href: "/app/roadmap", match: /^\/app\/(roadmap|course|learn)/ },
+  { label: "Learn", href: "/app/roadmap", match: /^\/app\/(roadmap|course|learn|interview|exam|practice)/ }, // AI interviews and exams live inside course modules
   { label: "Labs", href: "/app/lab/launch", match: /^\/app\/lab/ },
-  { label: "Practice", href: "/app/interview", match: /^\/app\/(interview|exam|practice)/ },
   { label: "Me", href: "/app/me", match: /^\/app\/me/ },
 ];
 const I = ({ d, size = 15, color = "currentColor" }: { d: string; size?: number; color?: string }) => (
