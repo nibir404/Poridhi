@@ -68,7 +68,7 @@ export default function Landing() {
               <p style={{ margin: 0, maxWidth: 480, fontSize: 17, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>Read every track free. Then build in real Ubuntu VMs with VS Code, a terminal and AWS, right in your browser.</p>
             </Reveal>
             <Reveal hero delay={0.15} style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-              <Pill href="/signin" solid>Start a free lab <Icon d="M9 6l6 6-6 6" size={14} /></Pill>
+              <Pill href="/signin" solid>Start a free lab</Pill>
               <Pill href="/courses">Explore tracks</Pill>
             </Reveal>
             <Reveal hero delay={0.2}><span style={{ ...mono, fontSize: 12, color: "var(--dashboard-muted)" }}>30 free lab minutes · no card</span></Reveal>
@@ -113,7 +113,7 @@ export default function Landing() {
       <section style={{ width: W, margin: "0 auto", padding: "clamp(72px, 9vw, 128px) 0", textAlign: "center", display: "grid", justifyItems: "center", gap: 16 }}>
         <Reveal><h2 style={h2}>Practice that checks your work</h2></Reveal>
         <Reveal delay={0.05}><p style={{ margin: 0, maxWidth: 520, fontSize: 16, lineHeight: 1.6, color: "var(--dashboard-muted)" }}>Every step is verified inside a real machine. Read for free, practise on real infrastructure, and earn your lab time back by passing milestones.</p></Reveal>
-        <Reveal delay={0.1}><Pill href="/signin" solid>Get started <Icon d="M9 6l6 6-6 6" size={14} /></Pill></Reveal>
+        <Reveal delay={0.1}><Pill href="/signin" solid>Get started</Pill></Reveal>
       </section>
 
       {/* Feature bento: crops of the real product */}
