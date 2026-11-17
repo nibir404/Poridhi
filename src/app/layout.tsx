@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/motion/SmoothScroll";
+import BootLoader from "@/components/layout/BootLoader";
 
 const mono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" data-puku-theme="light" suppressHydrationWarning>
       <head><script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("pd-theme");if(t!=="dark")t="light";var d=document.documentElement;d.dataset.theme=t;d.dataset.pukuTheme=t==="dark"?"dark":"light"}catch(e){}` }} /></head>
       <body className={mono.variable} suppressHydrationWarning>
+        <BootLoader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
