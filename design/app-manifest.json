@@ -1,0 +1,401 @@
+[
+ {
+  "id": "HNS-0",
+  "name": "AuthSignIn",
+  "route": "/signin"
+ },
+ {
+  "id": "HOY-0",
+  "name": "AuthCheckEmail",
+  "route": "/signin/check-email"
+ },
+ {
+  "id": "HQ3-0",
+  "name": "AuthGoal",
+  "route": "/onboarding/goal"
+ },
+ {
+  "id": "HR8-0",
+  "name": "AuthLevel",
+  "route": "/onboarding/level"
+ },
+ {
+  "id": "HSD-0",
+  "name": "AuthPlan",
+  "route": "/onboarding/plan"
+ },
+ {
+  "id": "HTI-0",
+  "name": "AuthWelcome",
+  "route": "/welcome"
+ },
+ {
+  "id": "4A9-0",
+  "name": "Dashboard",
+  "route": "/app"
+ },
+ {
+  "id": "3PF-0",
+  "name": "RoadmapAll",
+  "route": "/app/roadmap"
+ },
+ {
+  "id": "2RX-0",
+  "name": "RoadmapMilestone",
+  "route": "/app/roadmap/milestone-1"
+ },
+ {
+  "id": "6YW-0",
+  "name": "LabRunning",
+  "route": "/app/lab",
+  "title": "Lab"
+ },
+ {
+  "id": "CKI-0",
+  "name": "InterviewVoice",
+  "route": "/app/practice/interview",
+  "title": "AI interview"
+ },
+ {
+  "id": "D84-0",
+  "name": "ExamIDE",
+  "route": "/app/practice/exam",
+  "title": "AI exam"
+ },
+ {
+  "id": "72E-0",
+  "name": "LabLaunch",
+  "route": "/app/lab/launch",
+  "title": "Launch lab"
+ },
+ {
+  "id": "79T-0",
+  "name": "LabBoot",
+  "route": "/app/lab/boot",
+  "title": "Starting lab"
+ },
+ {
+  "id": "7EL-0",
+  "name": "LabCloudTray",
+  "route": "/app/lab/cloud-tray",
+  "title": "Add resource"
+ },
+ {
+  "id": "7JD-0",
+  "name": "LabExposePort",
+  "route": "/app/lab/expose",
+  "title": "Expose a port"
+ },
+ {
+  "id": "7O5-0",
+  "name": "LabDatabase",
+  "route": "/app/lab/database",
+  "title": "Database"
+ },
+ {
+  "id": "7SX-0",
+  "name": "LabIde",
+  "route": "/app/lab/ide",
+  "title": "IDE + Puku CLI"
+ },
+ {
+  "id": "7XP-0",
+  "name": "LabMachines",
+  "route": "/app/lab/machines",
+  "title": "Machines & access"
+ },
+ {
+  "id": "82H-0",
+  "name": "LabMenu",
+  "route": "/app/lab/menu",
+  "title": "Lab menu"
+ },
+ {
+  "id": "879-0",
+  "name": "LabTimeLow",
+  "route": "/app/lab/time",
+  "title": "Time running low"
+ },
+ {
+  "id": "8C1-0",
+  "name": "LabComplete",
+  "route": "/app/lab/complete",
+  "title": "Lab complete"
+ },
+ {
+  "id": "ALJ-0",
+  "name": "LabFiles",
+  "route": "/app/lab/files",
+  "title": "Files"
+ },
+ {
+  "id": "AS2-0",
+  "name": "LabResources",
+  "route": "/app/lab/resources",
+  "title": "Resources"
+ },
+ {
+  "id": "AYL-0",
+  "name": "LabCredentials",
+  "route": "/app/lab/credentials",
+  "title": "Credentials"
+ },
+ {
+  "id": "B54-0",
+  "name": "LabInfo",
+  "route": "/app/lab/info",
+  "title": "Lab info"
+ },
+ {
+  "id": "588-0",
+  "name": "CourseOverview",
+  "route": "/app/course",
+  "title": "Course overview"
+ },
+ {
+  "id": "9OI-0",
+  "name": "CourseRoadmap",
+  "route": "/app/course/roadmap",
+  "title": "Course roadmap"
+ },
+ {
+  "id": "9UI-0",
+  "name": "CourseInstructors",
+  "route": "/app/course/instructors",
+  "title": "Instructors"
+ },
+ {
+  "id": "A0I-0",
+  "name": "CourseFaq",
+  "route": "/app/course/faq",
+  "title": "FAQ"
+ },
+ {
+  "id": "5EG-0",
+  "name": "ClassRecorded",
+  "route": "/app/learn/class",
+  "title": "Recorded class"
+ },
+ {
+  "id": "A6I-0",
+  "name": "ClassNoteEdit",
+  "route": "/app/learn/class/note",
+  "title": "Add note"
+ },
+ {
+  "id": "ACK-0",
+  "name": "ClassNotes",
+  "route": "/app/learn/class/notes",
+  "title": "My notes"
+ },
+ {
+  "id": "5TL-0",
+  "name": "ClassLive",
+  "route": "/app/learn/live",
+  "title": "Live class"
+ },
+ {
+  "id": "61N-0",
+  "name": "QuickCheck",
+  "route": "/app/learn/check",
+  "title": "Quick check"
+ },
+ {
+  "id": "69B-0",
+  "name": "QuickCheckResult",
+  "route": "/app/learn/check/result",
+  "title": "Quick check result"
+ },
+ {
+  "id": "6FD-0",
+  "name": "GatePro",
+  "route": "/app/learn/gate",
+  "title": "Pro gate"
+ },
+ {
+  "id": "6LF-0",
+  "name": "GateLocked",
+  "route": "/app/learn/locked",
+  "title": "Locked"
+ },
+ {
+  "id": "6TZ-0",
+  "name": "ModuleComplete",
+  "route": "/app/learn/module-complete",
+  "title": "Module complete"
+ },
+ {
+  "id": "6WC-0",
+  "name": "MilestoneComplete",
+  "route": "/app/learn/milestone-complete",
+  "title": "Milestone complete"
+ },
+ {
+  "id": "BBN-0",
+  "name": "ExamIntro",
+  "route": "/app/exam",
+  "title": "Milestone exam"
+ },
+ {
+  "id": "D1Q-0",
+  "name": "ExamQuestions",
+  "route": "/app/exam/questions",
+  "title": "Exam questions"
+ },
+ {
+  "id": "DDF-0",
+  "name": "ExamInstructions",
+  "route": "/app/exam/q4/instructions",
+  "title": "Q4 instructions"
+ },
+ {
+  "id": "DIO-0",
+  "name": "ExamWhiteboard",
+  "route": "/app/exam/q4/whiteboard",
+  "title": "Q4 whiteboard"
+ },
+ {
+  "id": "DNX-0",
+  "name": "ExamSubmit",
+  "route": "/app/exam/q4/submit",
+  "title": "Submit Q4"
+ },
+ {
+  "id": "DYF-0",
+  "name": "ExamState2",
+  "route": "/app/exam/q4/review",
+  "title": "Q4 review"
+ },
+ {
+  "id": "DT6-0",
+  "name": "ExamState1",
+  "route": "/app/exam/q4/finish",
+  "title": "Finish exam"
+ },
+ {
+  "id": "C69-0",
+  "name": "ExamPassed",
+  "route": "/app/exam/result",
+  "title": "Exam passed"
+ },
+ {
+  "id": "C8V-0",
+  "name": "ExamFailed",
+  "route": "/app/exam/result/retry",
+  "title": "Exam not passed"
+ },
+ {
+  "id": "CAL-0",
+  "name": "InterviewIntro",
+  "route": "/app/interview",
+  "title": "AI interview"
+ },
+ {
+  "id": "CG1-0",
+  "name": "InterviewWhiteboard",
+  "route": "/app/interview/session",
+  "title": "Interview"
+ },
+ {
+  "id": "COT-0",
+  "name": "InterviewFeedback",
+  "route": "/app/interview/feedback",
+  "title": "Feedback"
+ },
+ {
+  "id": "CT4-0",
+  "name": "InterviewTerminal",
+  "route": "/app/interview/terminal",
+  "title": "Interview terminal"
+ },
+ {
+  "id": "CXF-0",
+  "name": "InterviewError",
+  "route": "/app/interview/error",
+  "title": "Scoring error"
+ },
+ {
+  "id": "EEU-0",
+  "name": "InterviewReport",
+  "route": "/app/interview/report",
+  "title": "Interview report"
+ },
+ {
+  "id": "EHH-0",
+  "name": "MePortfolio",
+  "route": "/app/me",
+  "title": "Profile"
+ },
+ {
+  "id": "EMW-0",
+  "name": "MeTimeBank",
+  "route": "/app/me/time-bank",
+  "title": "Time bank & coins"
+ },
+ {
+  "id": "ES9-0",
+  "name": "MeCertificates",
+  "route": "/app/me/certificates",
+  "title": "Certificates"
+ },
+ {
+  "id": "EXM-0",
+  "name": "MeSubscription",
+  "route": "/app/me/subscription",
+  "title": "Subscription"
+ },
+ {
+  "id": "FCI-0",
+  "name": "MeSupport",
+  "route": "/app/me/support",
+  "title": "Support"
+ },
+ {
+  "id": "FIH-0",
+  "name": "MeSupportBook",
+  "route": "/app/me/support/book",
+  "title": "Book a TA"
+ },
+ {
+  "id": "FOG-0",
+  "name": "MeSupportRate",
+  "route": "/app/me/support/rate",
+  "title": "Rate session"
+ },
+ {
+  "id": "G23-0",
+  "name": "MeProgress",
+  "route": "/app/me/progress",
+  "title": "Progress"
+ },
+ {
+  "id": "G7Y-0",
+  "name": "MeLabHistory",
+  "route": "/app/me/lab-history",
+  "title": "Lab history"
+ },
+ {
+  "id": "GDT-0",
+  "name": "MeSchedule",
+  "route": "/app/me/schedule",
+  "title": "Schedule"
+ },
+ {
+  "id": "GJO-0",
+  "name": "MeSettings",
+  "route": "/app/me/settings",
+  "title": "Settings"
+ },
+ {
+  "id": "GPJ-0",
+  "name": "MeEditProfile",
+  "route": "/app/me/edit",
+  "title": "Edit profile"
+ },
+ {
+  "id": "HFQ-0",
+  "name": "MeNotes",
+  "route": "/app/me/notes",
+  "title": "Notes"
+ }
+]

@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Design tokens, 1:1 with the Paper file "Poridhi Website 2.0". */
+:root {
+  --color-white-50: #FDFDFD; --color-white-100: #F8F8F8; --color-white-200: #F4F4F4; --color-white-300: #F0F0F0;
+  --color-white-400: #EDEDED; --color-white-500: #E8E8E8; --color-white-600: #D3D3D3; --color-white-700: #A5A5A5;
+  --color-white-800: #808080; --color-white-900: #616161;
+  --color-grey-50: #E9E9E9; --color-grey-100: #BABABA; --color-grey-200: #999999; --color-grey-300: #6A6A6A;
+  --color-grey-400: #4D4D4D; --color-grey-500: #212121; --color-grey-600: #1E1E1E; --color-grey-700: #171717;
+  --color-grey-800: #121212; --color-grey-900: #0E0E0E;
+  --color-blue-50: #EDEDF6; --color-blue-100: #C6C8E2; --color-blue-200: #ABAED5; --color-blue-300: #8489C1;
+  --color-blue-400: #6D72B5; --color-blue-500: #484FA3; --color-blue-600: #424894; --color-blue-700: #333874;
+  --color-blue-800: #282B5A; --color-blue-900: #1E2144;
+  --color-purple-50: #F5ECFB; --color-purple-100: #DFC4F3; --color-purple-200: #D0A8ED; --color-purple-300: #BB80E4;
+  --color-purple-400: #AD67DF; --color-purple-500: #9941D7; --color-purple-600: #8B3BC4; --color-purple-700: #6D2E99;
+  --color-purple-800: #542476; --color-purple-900: #401B5A;
+
+  --color-bg: #FFFFFF;
+  --color-surface: var(--color-white-200);
+  --color-surface-2: var(--color-white-400);
+  --color-line: var(--color-white-500);
+  --color-ink: var(--color-grey-900);
+  --color-ink-2: var(--color-grey-400);
+  --color-ink-3: var(--color-white-800);
+  --color-primary: var(--color-blue-500);
+  --color-primary-soft: var(--color-blue-50);
+  --color-night: var(--color-blue-900);
+  --color-night-2: var(--color-blue-700);
+  --color-secondary: var(--color-purple-500);
+  --color-secondary-soft: var(--color-purple-50);
+  --color-ember: #F0592A; --color-ember-soft: #FEEEE8;
+  --color-success: #22B866; --color-warning: #E8913A; --color-danger: #D94141;
+  --color-accent: #B0B3FC; --color-accent-hover: #9EA2F7; --color-on-accent: #242449;
+  --color-accent-text: #5257C8; --color-accent-on-dark: #BFC2FF;
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius: 6px;
+}
+
+html, body { background: var(--color-bg); color: var(--color-ink); }
+body { --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+* { box-sizing: border-box; }
+
+/* Lenis smooth scrolling */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Interaction layer shared by every page */
+.pd-hover-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+.pd-hover-lift:hover { transform: translateY(-3px); }
+.pd-dither-hover { position: relative; isolation: isolate; }
+.pd-dither-hover::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: url(/assets/dither-card.svg) center/cover; opacity: 0; transition: opacity .3s; mix-blend-mode: multiply;
+}
+.pd-dither-hover:hover::after { opacity: .18; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Overlays (Explore mega menu, ⌘K search) reuse the Paper overlay artboards. */
+.pd-overlay { position: fixed; inset: 0; z-index: 100; overflow-y: auto; }
+.pd-explore { background: rgba(14,14,14,.18); }
+.pd-explore [data-pid="1PN-0"] { background: transparent !important; height: auto !important; padding-bottom: 40px; }
+.pd-explore [data-pid="1PO-0"] { visibility: hidden; }
+.pd-search { background: transparent; }
+.pd-search [data-pid="1U1-0"] { min-height: 100vh; background: rgba(14,14,14,.55) !important; backdrop-filter: blur(6px); }
+.pd-overlay [data-pid] { cursor: default; }
+.pd-caret { color: #BFC2FF; animation: pd-blink 1s steps(1) infinite; }
+@keyframes pd-blink { 50% { opacity: 0; } }
+.pd-explore-link:hover { background: rgba(255,255,255,.12) !important; color: #fff !important; }
+.pd-explore-item:hover { background: var(--color-white-100); }
+@media (max-width: 1100px) { .pd-explore-col:nth-child(1), .pd-explore-col:last-child { display: none !important; } }
+@media (max-width: 640px) { .pd-hide-sm { display: none; } }
+
+/* Glowing edge that follows the cursor (cards + buttons). --mx/--my set by GlowTracker. */
+.pd-glow { position: relative; isolation: isolate; }
+.pd-glow::before {
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; pointer-events: none; z-index: 3;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), #B0B3FC 0%, #9941D7 35%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .25s;
+}
+.pd-glow:hover::before { opacity: 1; }
+.pd-glow-btn { position: relative; transition: box-shadow .25s, transform .25s cubic-bezier(.2,.7,.2,1); }
+.pd-glow-btn:hover { box-shadow: 0 0 0 1px #B0B3FC, 0 0 18px 2px rgba(176,179,252,.55), 0 0 42px 4px rgba(153,65,215,.25); }
+.pd-glow-btn::before {
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from var(--pd-angle, 0deg), transparent 0 70%, #fff 80%, #B0B3FC 90%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .2s;
+}
+.pd-glow-btn:hover::before { opacity: 1; animation: pd-spin 1.6s linear infinite; }
+@property --pd-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes pd-spin { to { --pd-angle: 360deg; } }
+/* replace the old dither hover */
+.pd-dither-hover::after { display: none; }
+.pd-screen-in { animation: pd-screen-in .45s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes pd-screen-in { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+
+/* App themes: light (design), dark, terminal. Screens use inline design colours, so the
+   dark themes are a colour-space flip of the whole frame; photos/illustrations are flipped back. */
+html[data-theme="dark"] body { background: #242424; }
+html[data-theme="dark"] .pd-frame { filter: invert(0.86) hue-rotate(180deg); }
+html[data-theme="terminal"] body { background: #16231B; }
+html[data-theme="terminal"] .pd-frame { filter: invert(0.87) hue-rotate(180deg) sepia(0.4) hue-rotate(75deg) saturate(1.5); }
+html[data-theme="dark"] .pd-frame :is(img, video, canvas, [style*="url(https://app.paper.design"][style*=".png"]),
+html[data-theme="terminal"] .pd-frame :is(img, video, canvas, [style*="url(https://app.paper.design"][style*=".png"]) { filter: invert(1) hue-rotate(180deg); }
+/* Lab terminal follows the theme: light in light mode; the frame flip turns it back to dark in dark/terminal. */
+.pd-term { filter: invert(0.9) hue-rotate(180deg); }
+
+/* Helvetica Neue ships no 600 face; map semibold to its Medium cut so 600 reads lighter than Bold.
+   All weights are declared because an @font-face family replaces the system family entirely. */
+@font-face { font-family: "Helvetica Neue"; font-weight: 300; src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"); }
+@font-face { font-family: "Helvetica Neue"; font-weight: 400; src: local("HelveticaNeue"), local("Helvetica Neue"); }
+@font-face { font-family: "Helvetica Neue"; font-weight: 500 600; src: local("HelveticaNeue-Medium"), local("Helvetica Neue Medium"); }
+@font-face { font-family: "Helvetica Neue"; font-weight: 700 900; src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"); }
