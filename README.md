@@ -68,7 +68,7 @@ See [docs/FLOWS.md](docs/FLOWS.md) for every screen, its route and where each bu
 
 ## Themes
 
-Every page has a light, dark and terminal theme, switched from the header (sign-in screens, which have no header, show the switch in the bottom-left corner; on phones it is in the top bar). The choice is saved in `localStorage` under `pd-theme`. Dark themes recolour the design at runtime with distinct page, card and inset levels (`src/components/theme/recolor.ts`). In the lab, the terminal is light in light mode and dark in dark and terminal modes.
+Every page has a light, dark and terminal (Windows 98 style) theme, switched from the header (sign-in screens, which have no header, show the switch in the bottom-left corner; on phones it is in the top bar). The choice is saved in `localStorage` under `pd-theme`. Dark themes recolour the design at runtime with distinct page, card and inset levels (`src/components/theme/recolor.ts`). In the lab, the terminal is light in light mode and dark in dark and terminal modes. A contrast guard keeps every text at WCAG AA or better in all three themes.
 
 ## Layout on different screens
 

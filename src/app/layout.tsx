@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" data-puku-theme="light" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("pd-theme")||"light";var d=document.documentElement;d.dataset.theme=t;d.dataset.pukuTheme=t==="light"?"light":"dark"}catch(e){}` }} /></head>
+      <head><script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("pd-theme")||"light";var d=document.documentElement;d.dataset.theme=t;d.dataset.pukuTheme=t==="dark"?"dark":"light"}catch(e){}` }} /></head>
       <body className={mono.variable} suppressHydrationWarning>
         <SmoothScroll>{children}</SmoothScroll>
       </body>

@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.5.0] - 2026-11-17
+
+### Changed
+- Terminal theme is now a Windows 98 desktop: teal desktop, silver bevelled windows and cards, raised buttons, sunken fields, navy gradient title bars, square corners, Tahoma text, black console in the lab. Built by redefining the design-system variables, so search, menus and phone bars follow.
+
+### Added
+- Contrast guard: after any theme is applied, every text is checked against its real background and lifted to the most readable colour if it falls below WCAG AA (4.5:1, 3:1 for large text).
+- Colour parsing handles modern CSS colours (oklch, color-mix), so the recolour and guard read design-system values correctly.
+- Screens swapped in after load (the rotating product preview) are recoloured and checked too.
+
+### Verified
+- Contrast audit of 15 screens (marketing and app) in all three themes: 0 texts below WCAG AA.
+
 ## [1.4.0] - 2026-11-17
 
 ### Changed

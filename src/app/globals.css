@@ -118,14 +118,35 @@ html.lenis, html.lenis body { height: auto; }
 }
 body { background: var(--dashboard-main); }
 html[data-theme="dark"] { --color-blue-50: color-mix(in oklab, var(--dashboard-accent) 18%, var(--dashboard-panel)); --color-blue-700: var(--dashboard-accent); --color-grey-900: var(--dashboard-text); --color-ember-soft: color-mix(in oklab, var(--dashboard-warning) 16%, var(--dashboard-panel)); }
+/* Terminal theme: a Windows 98 desktop. Redefines the design-system variables, so the recolour,
+   overlays and phone bars pick it up; bevels, square corners and the title bar are added below. */
 html[data-theme="terminal"] {
-  --color-bg: #122017; --color-surface: #1A2C20; --color-surface-2: #213628; --color-line: #28402F;
-  --color-ink: #D2F7DD; --color-ink-2: #9FD0AE; --color-ink-3: #86B796;
-  --color-white-100: #0E1A12; --color-blue-50: #1F3A28; --color-blue-700: #9FF0BC; --color-grey-900: #D2F7DD;
-  --color-accent-text: #9FF0BC; --color-ember-soft: #33261A; color-scheme: dark;
+  color-scheme: light;
+  --dashboard-main: #008080; --dashboard-sidebar: #C0C0C0; --dashboard-panel: #C0C0C0; --dashboard-hover: #DFDFDF;
+  --dashboard-selected: #000080; --dashboard-border: #808080; --dashboard-text: #000000; --dashboard-muted: #3C3C3C;
+  --dashboard-accent: #000080; --dashboard-accent-ink: #FFFFFF;
+  --dashboard-success: #006400; --dashboard-danger: #8B0000; --dashboard-warning: #6B4400;
+  --color-bg: #C0C0C0; --color-surface: #DFDFDF; --color-blue-50: #DFDFDF; --color-blue-700: #000080; --color-accent-text: #000000; --color-grey-900: #000080;
+  --font-sans: Tahoma, Verdana, "Segoe UI", sans-serif; --font-mono: "Courier New", Courier, monospace;
+  --puku-radius: 0px; --puku-radius-panel: 0px;
+  --w98-raised: inset -1px -1px #0A0A0A, inset 1px 1px #FFFFFF, inset -2px -2px #808080, inset 2px 2px #DFDFDF;
+  --w98-sunken: inset -1px -1px #FFFFFF, inset 1px 1px #808080, inset -2px -2px #DFDFDF, inset 2px 2px #0A0A0A;
 }
 
-html[data-theme="terminal"] body { background: #0B140E; }
+html[data-theme="terminal"] body { background: #008080; }
+html[data-theme="terminal"] .pd-frame * { border-radius: 0 !important; }
+html[data-theme="terminal"] .pd-term { background: #000000 !important; box-shadow: var(--w98-sunken); }
+html[data-theme="terminal"] [data-w98="panel-fill"] { background: #C0C0C0 !important; }
+html[data-theme="terminal"] :is([data-w98="panel"], [data-w98="panel-fill"]) { box-shadow: var(--w98-raised) !important; border-color: transparent !important; }
+html[data-theme="terminal"] [data-w98="button"] { box-shadow: var(--w98-raised) !important; border-color: transparent !important; }
+html[data-theme="terminal"] [data-w98="button"]:active { box-shadow: var(--w98-sunken) !important; }
+html[data-theme="terminal"] [data-w98="field"] { box-shadow: var(--w98-sunken) !important; border-color: transparent !important; background: #FFFFFF !important; }
+html[data-theme="terminal"] [data-w98="title"] { background: linear-gradient(90deg, #000080, #1084D0) !important; border-color: transparent !important; }
+html[data-theme="terminal"] [data-w98="title"] svg :is(path, circle, rect) { stroke: #FFFFFF !important; }
+html[data-theme="terminal"] :is(.pd-m-top, .pd-m-tabs) { background: #C0C0C0 !important; box-shadow: var(--w98-raised); border: 0; backdrop-filter: none; }
+html[data-theme="terminal"] .pd-m-top { background: linear-gradient(90deg, #000080, #1084D0) !important; }
+html[data-theme="terminal"] .pd-m-top button, html[data-theme="terminal"] .pd-m-title { color: #FFFFFF !important; }
+html[data-theme="terminal"] :is(.pd-m-tabs button, .pd-theme-switch button) { border-radius: 0 !important; }
 /* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
 html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: invert(0.9) hue-rotate(180deg); }
 
@@ -142,6 +163,6 @@ html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: in
 body.pd-phone { padding-top: calc(56px + env(safe-area-inset-top)); -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
 body.pd-phone-tabs { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
 body.pd-phone .pd-theme-switch { display: none !important; }
-html:is([data-theme="dark"], [data-theme="terminal"]) :is(.pd-m-top, .pd-m-tabs) { background: color-mix(in srgb, var(--color-bg) 92%, transparent); border-color: var(--color-line); }
-html:is([data-theme="dark"], [data-theme="terminal"]) :is(.pd-m-top, .pd-m-tabs) button:not([aria-current]) { color: #E6E6E6 !important; }
-html:is([data-theme="dark"], [data-theme="terminal"]) .pd-m-title { color: #E6E6E6; }
+html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) { background: color-mix(in srgb, var(--color-bg) 92%, transparent); border-color: var(--color-line); }
+html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) button:not([aria-current]) { color: #E6E6E6 !important; }
+html[data-theme="dark"] .pd-m-title { color: #E6E6E6; }
