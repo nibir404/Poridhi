@@ -73,7 +73,8 @@ export const screenBehaviours: Record<string, Behaviour> = {
     const day = byText(root, "Sunday, 16 Nov");
     if (day) day.textContent = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "short" });
     const bars = Array.from($(root, "I2M-0")?.children ?? []) as HTMLElement[];
-    gsap.from(bars, { scaleY: 0, transformOrigin: "50% 100%", duration: 0.8, ease: "power3.out", stagger: 0.06, delay: 0.3 });
+    const tw = gsap.fromTo(bars, { scaleY: 0, transformOrigin: "50% 100%" }, { scaleY: 1, duration: 0.8, ease: "power3.out", stagger: 0.06, delay: 0.3 });
+    return () => { tw.kill(); gsap.set(bars, { clearProps: "transform" }); };
   },
 
   // VM boot finishes on its own and drops the student into the running lab.

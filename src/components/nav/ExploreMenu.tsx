@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { catalog, exploreLinks, topics } from "@/data/catalog";
+import { ItemIcon } from "@/data/itemIcon";
 
 /** Explore mega menu (design O01): sections · topics · items for the hovered topic · featured lab. */
 export default function ExploreMenu({ open, onClose, top = 72 }: { open: boolean; onClose: () => void; top?: number }) {
@@ -18,7 +19,7 @@ export default function ExploreMenu({ open, onClose, top = 72 }: { open: boolean
           style={{ position: "fixed", inset: 0, top, zIndex: 150, background: "rgba(14,14,14,.18)", fontFamily: "var(--font-sans)" }}>
           <motion.div initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -6, opacity: 0 }} transition={{ type: "spring", stiffness: 420, damping: 34 }}
             onClick={(e) => e.stopPropagation()} onMouseLeave={onClose}
-            style={{ margin: "12px auto 0", width: "min(1360px, calc(100% - 32px))", display: "flex", background: "#fff", border: "1px solid var(--color-line)", borderRadius: 6, boxShadow: "0 32px 64px -32px rgba(14,14,14,.25)", overflow: "hidden", maxHeight: "calc(100vh - 110px)" }}>
+            style={{ margin: "12px auto 0", width: "min(1360px, calc(100% - 32px))", display: "flex", background: "var(--color-bg)", border: "1px solid var(--color-line)", borderRadius: 6, boxShadow: "0 32px 64px -32px rgba(14,14,14,.25)", overflow: "hidden", maxHeight: "calc(100vh - 110px)" }}>
             {/* Sections */}
             <div className="pd-explore-col" style={{ width: 300, flexShrink: 0, background: "linear-gradient(170deg,#1E2144,#282B5A)", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 24, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", inset: 0, background: "url(/assets/dither-card.svg) right top/480px 280px no-repeat", opacity: 0.12, pointerEvents: "none" }} />
@@ -42,7 +43,7 @@ export default function ExploreMenu({ open, onClose, top = 72 }: { open: boolean
                 <button key={t} onMouseEnter={() => setTopic(t)} onFocus={() => setTopic(t)} onClick={() => go("/courses")}
                   style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 44, padding: "0 12px", border: 0, borderRadius: 6, cursor: "pointer", fontFamily: "inherit", fontSize: 15, textAlign: "left", background: topic === t ? "var(--color-surface)" : "transparent", color: topic === t ? "var(--color-ink)" : "var(--color-ink-2)", fontWeight: topic === t ? 500 : 400 }}>
                   {t}
-                  {topic === t && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0E0E0E" strokeWidth="2.2" strokeLinecap="round"><path d="M9 6l6 6-6 6" /></svg>}
+                  {topic === t && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" strokeWidth="2.2" strokeLinecap="round"><path d="M9 6l6 6-6 6" /></svg>}
                 </button>
               ))}
               <button onClick={() => go("/courses")} style={{ marginTop: "auto", height: 44, padding: "0 12px", border: 0, borderTop: "1px solid var(--color-line)", background: "transparent", textAlign: "left", color: "var(--color-accent-text)", fontSize: 15, fontWeight: 500, cursor: "pointer", fontFamily: "inherit" }}>Browse all topics →</button>
@@ -59,16 +60,12 @@ export default function ExploreMenu({ open, onClose, top = 72 }: { open: boolean
                     {items.map((i) => (
                       <div key={i.title} onClick={() => go(i.href)} className="pd-explore-item"
                         style={{ display: "flex", alignItems: "center", gap: 14, padding: 12, borderRadius: 6, cursor: "pointer" }}>
-                        <div style={{ width: 40, height: 40, borderRadius: 6, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", background: i.kind === "Track" ? "linear-gradient(150deg,#1E2144,#424894)" : i.kind === "AI practice" ? "var(--color-blue-50)" : "#0E0E0E" }}>
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={i.kind === "AI practice" ? "#333874" : "#fff"} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                            {i.kind === "AI practice" ? <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-4 3v-3a2 2 0 0 1-2-2z" /> : <><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M7 10l3 2.5L7 15M12.5 15H17" /></>}
-                          </svg>
-                        </div>
+                        <ItemIcon item={i} size={40} />
                         <div style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
                           <div style={{ display: "flex", gap: 8, alignItems: "center", fontSize: 15, fontWeight: 600, lineHeight: "18px", color: "var(--color-ink)" }}>
                             {i.title}
                             {i.kind === "Track" && <span style={{ background: "var(--color-blue-50)", color: "var(--color-blue-700)", fontSize: 11, fontWeight: 500, padding: "2px 6px", borderRadius: 4 }}>Career track</span>}
-                            {i.pro && <span style={{ background: "var(--color-grey-900)", color: "#fff", fontSize: 11, fontWeight: 500, padding: "2px 6px", borderRadius: 4 }}>Pro</span>}
+                            {i.pro && <span style={{ background: "var(--color-grey-900)", color: "var(--color-bg)", fontSize: 11, fontWeight: 500, padding: "2px 6px", borderRadius: 4 }}>Pro</span>}
                             {i.isNew && <span style={{ background: "var(--color-accent)", color: "var(--color-on-accent)", fontSize: 11, fontWeight: 600, padding: "2px 6px", borderRadius: 4 }}>New</span>}
                           </div>
                           <div style={{ fontSize: 13, lineHeight: "16px", color: "var(--color-ink-3)" }}>{i.meta}</div>

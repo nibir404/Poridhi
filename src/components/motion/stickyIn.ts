@@ -1,5 +1,6 @@
 /** Sticky that works inside zoomed DesignFrame (native position:sticky breaks under CSS zoom). */
 export function stickyIn(el: HTMLElement, container: HTMLElement, topPx = 88) {
+  if (el.closest(".pd-reflow")) return () => {}; // stacked layouts on phone/tablet: no sticky
   el.style.alignSelf = "flex-start";
   el.style.willChange = "transform";
   let raf = 0;

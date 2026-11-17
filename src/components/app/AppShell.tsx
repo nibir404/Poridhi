@@ -4,8 +4,12 @@ import { createPortal } from "react-dom";
 import SearchPalette from "@/components/nav/SearchPalette";
 import { useRouter } from "next/navigation";
 import DesignFrame from "@/components/layout/DesignFrame";
+import MobileChrome from "@/components/layout/MobileChrome";
 import { enhancePage } from "@/components/motion/enhance";
 import { applyGlow } from "@/components/motion/glow";
+import { soften } from "@/components/motion/soften";
+import { bindRecolor } from "@/components/theme/recolor";
+import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
@@ -172,9 +176,12 @@ export default function AppShell({ screen, children }: { screen: string; childre
       .map((el) => el.dataset.pid!);
     const undoMotion = enhancePage({ cardGroups: cards });
 
+    soften(root);
     const undoGlow = applyGlow(root);
+    const undoRecolor = bindRecolor(root, currentTheme);
     return () => {
       undoGlow();
+      undoRecolor();
       window.removeEventListener("pd-theme", paint);
       mount?.remove();
       setSlot(null);
@@ -189,6 +196,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     <div ref={host} className="pd-app">
       <DesignFrame width={1600}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />
+      <MobileChrome variant="app" onSearch={() => setSearch(true)} />
       {!hasToggle && (slot ? createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el) : <ThemeSwitch />)}
     </div>
   );

@@ -69,6 +69,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
     "Open milestone 1": "/app/roadmap/milestone-1", "Linux fundamentals": "/app/course", "Docker networking & storage": "/app/learn/class",
     "Text processing & regex": "/app/learn/class", "Bash scripting": "/app/learn/class", "Network namespaces": "/app/learn/class",
     "Overlay networking": "/app/learn/class", "Docker fundamentals": "/app/learn/class", "IAM & accounts": "/app/learn/locked",
+    "EC2 & autoscaling": "/app/learn/locked", "Load balancers": "/app/learn/locked", "S3 & CloudFront": "/app/learn/locked", "RDS & DynamoDB": "/app/learn/locked", "Serverless basics": "/app/learn/locked", "State & backends": "/app/learn/locked", "Terraform modules": "/app/learn/locked", "Workspaces & envs": "/app/learn/locked", "Ansible config": "/app/learn/locked", "Packer images": "/app/learn/locked", "Policy as code": "/app/learn/locked", "Services & ingress": "/app/learn/locked", "ConfigMaps & secrets": "/app/learn/locked", "Storage & PVCs": "/app/learn/locked", "Helm charts": "/app/learn/locked", "RBAC & security": "/app/learn/locked", "Autoscaling": "/app/learn/locked", "Metrics with Prometheus": "/app/learn/locked", "Grafana dashboards": "/app/learn/locked", "Logs with Loki": "/app/learn/locked", "Tracing with Tempo": "/app/learn/locked", "Alerting & SLOs": "/app/learn/locked", "On-call drills": "/app/learn/locked", "Cost monitoring": "/app/learn/locked", "GitHub Actions": "/app/learn/locked", "Build & cache": "/app/learn/locked", "Argo CD": "/app/learn/locked", "Progressive delivery": "/app/learn/locked", "Secrets in CI": "/app/learn/locked", "Capstone project": "/app/learn/locked", "Final review": "/app/learn/locked",
     "VPC from scratch": "/app/learn/locked", "Terraform basics": "/app/learn/locked", "Pods & deployments": "/app/learn/locked",
   },
   RoadmapMilestone: {
@@ -89,7 +90,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   ModuleComplete: { "Start Module 4": "/app/learn/class", "3 / 7Modules to exam": "/app/exam", "+30Coins": "/app/me/time-bank" },
   MilestoneComplete: { "Download PDF": "/app/me/certificates", "Share on LinkedIn": "/u/rahim", "● +300 coins": "/app/me/time-bank", "Rank · Engineer": "/leaderboard" },
   ExamIntro: { "See questions": "/app/exam/questions" },
-  ExamQuestions: { "Resume · 9:12": "/app/exam/q4/instructions", Start: "/app/exam/q4/instructions", Retry: "/app/exam/q4/instructions", "Finish exam": "/app/exam/q4/finish" },
+  ExamQuestions: { Terraform: "/app/exam/q4/instructions", AWS: "/app/exam/q4/instructions", ELB: "/app/exam/q4/instructions", Ansible: "/app/exam/q4/instructions", CloudFormation: "/app/exam/q4/instructions", "Resume · 9:12": "/app/exam/q4/instructions", Start: "/app/exam/q4/instructions", Retry: "/app/exam/q4/instructions", "Finish exam": "/app/exam/q4/finish" },
   ExamInstructions: { "Submit Q4": "/app/exam/q4/submit", "All questions": "/app/exam/questions" },
   ExamWhiteboard: { "Submit Q4": "/app/exam/q4/submit", "All questions": "/app/exam/questions" },
   ExamSubmit: { "Keep working": "/app/exam/q4/whiteboard", "Save and submit": "/app/exam/q4/review", "All questions": "/app/exam/questions" },
@@ -103,7 +104,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   InterviewFeedback: { "Next question": "/app/interview/terminal", "Try again": "/app/interview/session", "Finish interview": "/app/interview/report" },
   InterviewTerminal: { "Finish interview": "/app/interview/report" },
   InterviewError: { "Retry scoring": "/app/interview/feedback", "Score later, keep going": "/app/interview/terminal", "Finish interview": "/app/interview/report" },
-  InterviewVoice: { "Finish interview": "/app/interview/report", "Stop and send": "/app/interview/feedback", Restart: "/app/interview/session" },
+  InterviewVoice: { Pause: "/app/interview/error", "Finish interview": "/app/interview/report", "Stop and send": "/app/interview/feedback", Restart: "/app/interview/session" },
   InterviewReport: {
     "Retry weakest stage": "/app/interview/session", "Back to course": "/app/course",
     "Caching at scale28 min": "/app/learn/class", "Lab: Redis cluster failover~40 min": "/app/lab/launch",
@@ -118,4 +119,20 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   MeSupportRate: { "Send feedback": "/app/me/support", Later: "/app/me/support" },
   MeCertificates: { PDF: "/u/rahim", Share: "/u/rahim" },
   MeEditProfile: { Cancel: "/app/me", "Save changes": "/app/me" },
+
+  // Lab side panels: back to the running lab, forward to the completion check.
+  LabCloudTray: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabExposePort: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabDatabase: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "+ Server": "/app/lab/machines", "MongoDB 8.0Launch": "/app/lab/machines", "Redis 7.0Launch": "/app/lab/machines" },
+  LabIde: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "Open Expose port": "/app/lab/expose", "Show command": "/app/lab" },
+  LabMachines: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabMenu: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "Pause instead": "/app/lab" },
+  LabFiles: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabResources: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", Add: "/app/lab/database" },
+  LabCredentials: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabInfo: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  ClassNoteEdit: { "Mark complete": "/app/learn/check", "Start check": "/app/learn/check", "Save note ⌘↵": "/app/learn/class/notes" },
+  ClassNotes: { "Mark complete": "/app/learn/check", "Start check": "/app/learn/check", "Note at 09:42": "/app/learn/class", "Run in lab ▸": "/app/lab/launch", Done: "/app/learn/class" },
+  CourseRoadmap: { "Open full canvas": "/app/roadmap" },
+  CourseFaq: { "Ask a question": "/app/me/support" },
 };

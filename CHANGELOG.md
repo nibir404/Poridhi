@@ -2,6 +2,24 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.1.0] - 2026-11-17
+
+### Added
+- Full-width layout on screens wider than the design; uniform scaling between 1024px and the design width.
+- Phone app shell: compact top bar (logo or back button, search, theme), bottom tab bar, focus mode without tabs for the running lab, exam questions and live interview.
+- Phone and tablet reflow: fluid widths, card rows become 2-column grids, wide rows stack, lab tool rail turns horizontal.
+- Proper dark and terminal themes: runtime recolour with separate page, card and inset levels and readable text; areas the design draws dark (hero, lab terminal) keep their colours. Search, Explore menu and switches follow the theme.
+- Topic icons for every search and Explore item.
+- Links for every remaining button (lab panels, notes, roadmap modules, exam topics, FAQ, course roadmap).
+
+### Changed
+- Large black fills softened: small chips and selected rows use lavender, big panels the brand navy.
+- Buttons and cards stay still on hover (no lift or magnetic movement).
+
+### Fixed
+- Entrance animations no longer get stuck half-way (staggered cards, flat dashboard chart).
+- Duplicate theme switch in the marketing header.
+
 ## [1.0.0] - 2026-11-17
 
 ### Added

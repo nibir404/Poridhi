@@ -2,12 +2,17 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
+import { wireDesignToggle } from "@/components/theme/theme";
 import { useRouter } from "next/navigation";
 import DesignFrame from "@/components/layout/DesignFrame";
+import MobileChrome from "@/components/layout/MobileChrome";
 import ExploreMenu from "@/components/nav/ExploreMenu";
 import SearchPalette from "@/components/nav/SearchPalette";
 import { enhancePage } from "@/components/motion/enhance";
 import { applyGlow } from "@/components/motion/glow";
+import { soften } from "@/components/motion/soften";
+import { bindRecolor } from "@/components/theme/recolor";
+import { getTheme as currentTheme } from "@/components/theme/theme";
 
 /** Text on the page → route. Applied to any leaf element with exactly this text. */
 const LINKS: Record<string, string> = {
@@ -106,11 +111,14 @@ export default function MarketingShell({ children, extra }: Props) {
       }
     };
     window.addEventListener("keydown", onKey);
+    soften(root);
     const undoGlow = applyGlow(root);
+    const undoRecolor = bindRecolor(root, currentTheme);
     // Theme switch at the start of the nav's right-hand group.
+    const undoToggle = nav ? wireDesignToggle(nav) : null;
     const right = nav?.lastElementChild as HTMLElement | null;
     let mount: HTMLElement | null = null;
-    if (right && getComputedStyle(right).display === "flex") {
+    if (!undoToggle && right && getComputedStyle(right).display === "flex") {
       mount = document.createElement("div");
       mount.style.display = "flex";
       right.prepend(mount);
@@ -118,9 +126,11 @@ export default function MarketingShell({ children, extra }: Props) {
       setSlot({ el: mount, dark: !(m[3] !== undefined && m[3] < 0.5) && m[0] + m[1] + m[2] < 300 });
     }
     return () => {
+      undoToggle?.();
       mount?.remove();
       setSlot(null);
       undoGlow();
+      undoRecolor();
       undo();
       handlers.forEach(([el, h]) => el.removeEventListener("click", h));
       window.removeEventListener("keydown", onKey);
@@ -135,6 +145,7 @@ export default function MarketingShell({ children, extra }: Props) {
 
       <ExploreMenu open={explore} onClose={() => setExplore(false)} />
       <SearchPalette open={search} onClose={() => setSearch(false)} />
+      <MobileChrome variant="site" onSearch={() => setSearch(true)} />
     </div>
   );
 }

@@ -49,12 +49,12 @@ export default function HomeInteractions() {
 
       // Hero entrance
       const copy = q("1M6-0");
-      if (copy) gsap.from(copy.children, { y: 28, opacity: 0, duration: 0.9, ease: "power3.out", stagger: 0.08, delay: 0.1 });
+      if (copy) gsap.fromTo(copy.children, { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", stagger: 0.08, delay: 0.1 });
 
       // Lab stage: rise in, then gentle parallax as the page scrolls
       const stage = q("1MM-0");
       if (stage) {
-        gsap.from(stage, { y: 80, opacity: 0, scale: 0.97, duration: 1.1, ease: "power3.out", delay: 0.35 });
+        gsap.fromTo(stage, { y: 80, opacity: 0, scale: 0.97 }, { y: 0, opacity: 1, scale: 1, duration: 1.1, ease: "power3.out", delay: 0.35 });
         gsap.to(stage, { yPercent: -6, ease: "none", scrollTrigger: { trigger: stage, start: "top 80%", end: "bottom top", scrub: true } });
       }
       // Floating proof cards bob and pop in
@@ -62,7 +62,7 @@ export default function HomeInteractions() {
       ["1OS-0", "1P6-0"].forEach((pid, i) => {
         const f = q(pid);
         if (!f) return;
-        gsap.from(f, { y: 24, opacity: 0, scale: 0.9, duration: 0.7, ease: "back.out(1.6)", delay: 0.9 + i * 0.25 });
+        gsap.fromTo(f, { y: 24, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.6)", delay: 0.9 + i * 0.25 });
         gsap.to(f, { y: "+=8", duration: 2.4 + i * 0.4, yoyo: true, repeat: -1, ease: "sine.inOut", delay: 1.6 + i * 0.2 });
       });
     });

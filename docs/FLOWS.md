@@ -11,32 +11,32 @@ Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links
 | AuthPlan | `/onboarding/plan` | global links only |
 | AuthWelcome | `/welcome` | global links only |
 | Dashboard | `/app` | Lab time bank2h 40m → `/app/me/time-bank`<br>Streak12 days → `/app/me/progress`<br>Labs passed142+9 this week → `/app/me/lab-history`<br>MON17 → `/app/me/schedule`<br>TUE18 → `/app/me/schedule` |
-| RoadmapAll | `/app/roadmap` | Open milestone 1 → `/app/roadmap/milestone-1`<br>Linux fundamentals → `/app/course`<br>Docker networking & storage → `/app/learn/class`<br>Text processing & regex → `/app/learn/class`<br>Bash scripting → `/app/learn/class`<br>Network namespaces → `/app/learn/class`<br>Overlay networking → `/app/learn/class`<br>Docker fundamentals → `/app/learn/class`<br>IAM & accounts → `/app/learn/locked`<br>VPC from scratch → `/app/learn/locked`<br>Terraform basics → `/app/learn/locked`<br>Pods & deployments → `/app/learn/locked` |
+| RoadmapAll | `/app/roadmap` | Open milestone 1 → `/app/roadmap/milestone-1`<br>Linux fundamentals → `/app/course`<br>Docker networking & storage → `/app/learn/class`<br>Text processing & regex → `/app/learn/class`<br>Bash scripting → `/app/learn/class`<br>Network namespaces → `/app/learn/class`<br>Overlay networking → `/app/learn/class`<br>Docker fundamentals → `/app/learn/class`<br>IAM & accounts → `/app/learn/locked`<br>EC2 & autoscaling → `/app/learn/locked`<br>Load balancers → `/app/learn/locked`<br>S3 & CloudFront → `/app/learn/locked`<br>RDS & DynamoDB → `/app/learn/locked`<br>Serverless basics → `/app/learn/locked`<br>State & backends → `/app/learn/locked`<br>Terraform modules → `/app/learn/locked`<br>Workspaces & envs → `/app/learn/locked`<br>Ansible config → `/app/learn/locked`<br>Packer images → `/app/learn/locked`<br>Policy as code → `/app/learn/locked`<br>Services & ingress → `/app/learn/locked`<br>ConfigMaps & secrets → `/app/learn/locked`<br>Storage & PVCs → `/app/learn/locked`<br>Helm charts → `/app/learn/locked`<br>RBAC & security → `/app/learn/locked`<br>Autoscaling → `/app/learn/locked`<br>Metrics with Prometheus → `/app/learn/locked`<br>Grafana dashboards → `/app/learn/locked`<br>Logs with Loki → `/app/learn/locked`<br>Tracing with Tempo → `/app/learn/locked`<br>Alerting & SLOs → `/app/learn/locked`<br>On-call drills → `/app/learn/locked`<br>Cost monitoring → `/app/learn/locked`<br>GitHub Actions → `/app/learn/locked`<br>Build & cache → `/app/learn/locked`<br>Argo CD → `/app/learn/locked`<br>Progressive delivery → `/app/learn/locked`<br>Secrets in CI → `/app/learn/locked`<br>Capstone project → `/app/learn/locked`<br>Final review → `/app/learn/locked`<br>VPC from scratch → `/app/learn/locked`<br>Terraform basics → `/app/learn/locked`<br>Pods & deployments → `/app/learn/locked` |
 | RoadmapMilestone | `/app/roadmap/milestone-1` | Linux fundamentals12 / 12 · done → `/app/course`<br>Network namespaces10 items · ~4 h → `/app/learn/class`<br>Milestone 1 · 23 modules → `/app/course`<br>+ 16 more modules → `/app/course/roadmap` |
 | Lab | `/app/lab` | ← Previous → `/app/lab/launch`<br>Next step → → `/app/lab/complete`<br>IDE··· → `/app/lab/ide`<br>Retarget LB to :8080 → `/app/lab/expose`<br>Open raw response → `/app/lab/expose` |
-| AI interview | `/app/practice/interview` | Finish interview → `/app/interview/report`<br>Stop and send → `/app/interview/feedback`<br>Restart → `/app/interview/session` |
+| AI interview | `/app/practice/interview` | Pause → `/app/interview/error`<br>Finish interview → `/app/interview/report`<br>Stop and send → `/app/interview/feedback`<br>Restart → `/app/interview/session` |
 | AI exam | `/app/practice/exam` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
 | Launch lab | `/app/lab/launch` | Launch lab → `/app/lab/boot`<br>Terminal → `/app/lab/boot`<br>VS Code → `/app/lab/ide`<br>Load balancer → `/app/lab/expose`<br>Cloud tray → `/app/lab/cloud-tray` |
 | Starting lab | `/app/lab/boot` | ← Previous → `/app/lab/launch`<br>Next step → → `/app/lab` |
-| Add resource | `/app/lab/cloud-tray` | global links only |
-| Expose a port | `/app/lab/expose` | global links only |
-| Database | `/app/lab/database` | global links only |
-| IDE + Puku CLI | `/app/lab/ide` | global links only |
-| Machines & access | `/app/lab/machines` | global links only |
-| Lab menu | `/app/lab/menu` | global links only |
+| Add resource | `/app/lab/cloud-tray` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
+| Expose a port | `/app/lab/expose` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
+| Database | `/app/lab/database` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete`<br>+ Server → `/app/lab/machines`<br>MongoDB 8.0Launch → `/app/lab/machines`<br>Redis 7.0Launch → `/app/lab/machines` |
+| IDE + Puku CLI | `/app/lab/ide` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete`<br>Open Expose port → `/app/lab/expose`<br>Show command → `/app/lab` |
+| Machines & access | `/app/lab/machines` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
+| Lab menu | `/app/lab/menu` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete`<br>Pause instead → `/app/lab` |
 | Time running low | `/app/lab/time` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete`<br>+15 min from bank → `/app/lab`<br>+30 → `/app/lab`<br>Later → `/app/lab`<br>Resume → `/app/lab` |
 | Lab complete | `/app/lab/complete` | ← Previous → `/app/lab`<br>Next lab → → `/app/lab/launch`<br>Continue → `/app/learn/check`<br>Keep VM running → `/app/lab`<br>End & save time → `/app/me/lab-history` |
-| Files | `/app/lab/files` | global links only |
-| Resources | `/app/lab/resources` | global links only |
-| Credentials | `/app/lab/credentials` | global links only |
-| Lab info | `/app/lab/info` | global links only |
+| Files | `/app/lab/files` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
+| Resources | `/app/lab/resources` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete`<br>Add → `/app/lab/database` |
+| Credentials | `/app/lab/credentials` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
+| Lab info | `/app/lab/info` | ← Previous → `/app/lab`<br>Next step → → `/app/lab/complete` |
 | Course overview | `/app/course` | Continue learning → `/app/learn/class`<br>Start course free → `/app/learn/class`<br>Start course → `/app/learn/class` |
-| Course roadmap | `/app/course/roadmap` | global links only |
+| Course roadmap | `/app/course/roadmap` | Open full canvas → `/app/roadmap` |
 | Instructors | `/app/course/instructors` | global links only |
-| FAQ | `/app/course/faq` | global links only |
-| Recorded class | `/app/learn/class` | Mark complete → `/app/learn/check`<br>Start check → `/app/learn/check`<br>Pro → `/app/me/subscription` |
-| Add note | `/app/learn/class/note` | global links only |
-| My notes | `/app/learn/class/notes` | global links only |
+| FAQ | `/app/course/faq` | Ask a question → `/app/me/support` |
+| Recorded class | `/app/learn/class` | Mark complete → `/app/learn/check`<br>Start check → `/app/learn/check` |
+| Add note | `/app/learn/class/note` | Mark complete → `/app/learn/check`<br>Start check → `/app/learn/check`<br>Save note ⌘↵ → `/app/learn/class/notes` |
+| My notes | `/app/learn/class/notes` | Mark complete → `/app/learn/check`<br>Start check → `/app/learn/check`<br>Note at 09:42 → `/app/learn/class`<br>Run in lab ▸ → `/app/lab/launch`<br>Done → `/app/learn/class` |
 | Live class | `/app/learn/live` | Join class → `/app/learn/class`<br>Mark complete → `/app/learn/check`<br>Go Pro → `/app/learn/gate` |
 | Quick check | `/app/learn/check` | global links only |
 | Quick check result | `/app/learn/check/result` | Next: Publish nginx lab → → `/app/lab/launch`<br>Retry check → `/app/learn/check` |
@@ -45,7 +45,7 @@ Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links
 | Module complete | `/app/learn/module-complete` | Start Module 4 → `/app/learn/class`<br>3 / 7Modules to exam → `/app/exam`<br>+30Coins → `/app/me/time-bank` |
 | Milestone complete | `/app/learn/milestone-complete` | Download PDF → `/app/me/certificates`<br>Share on LinkedIn → `/u/rahim`<br>● +300 coins → `/app/me/time-bank`<br>Rank · Engineer → `/leaderboard` |
 | Milestone exam | `/app/exam` | See questions → `/app/exam/questions` |
-| Exam questions | `/app/exam/questions` | Resume · 9:12 → `/app/exam/q4/instructions`<br>Start → `/app/exam/q4/instructions`<br>Retry → `/app/exam/q4/instructions`<br>Finish exam → `/app/exam/q4/finish` |
+| Exam questions | `/app/exam/questions` | Terraform → `/app/exam/q4/instructions`<br>AWS → `/app/exam/q4/instructions`<br>ELB → `/app/exam/q4/instructions`<br>Ansible → `/app/exam/q4/instructions`<br>CloudFormation → `/app/exam/q4/instructions`<br>Resume · 9:12 → `/app/exam/q4/instructions`<br>Start → `/app/exam/q4/instructions`<br>Retry → `/app/exam/q4/instructions`<br>Finish exam → `/app/exam/q4/finish` |
 | Q4 instructions | `/app/exam/q4/instructions` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
 | Q4 whiteboard | `/app/exam/q4/whiteboard` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
 | Submit Q4 | `/app/exam/q4/submit` | Keep working → `/app/exam/q4/whiteboard`<br>Save and submit → `/app/exam/q4/review`<br>All questions → `/app/exam/questions` |

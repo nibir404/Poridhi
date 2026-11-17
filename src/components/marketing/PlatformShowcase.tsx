@@ -40,7 +40,7 @@ function animateScreen(key: string, root: HTMLElement) {
     const iv = window.setInterval(() => { s++; if (clock?.firstChild) clock.firstChild.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")} `; }, 1000);
     timers.push(iv as unknown as number);
     const nodes = Array.from($("CKV-0")?.children ?? []) as HTMLElement[];
-    tweens.push(gsap.from(nodes, { opacity: 0, y: 10, duration: 0.5, stagger: 0.25, ease: "power2.out" }) as gsap.core.Tween);
+    tweens.push(gsap.fromTo(nodes, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.25, ease: "power2.out" }) as gsap.core.Tween);
   }
   if (key === "exam") {
     const code = $("DD1-0");
@@ -74,10 +74,10 @@ export default function PlatformShowcase({ width }: { width: number }) {
   const T = TABS[i];
   return (
     <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} style={{ width, display: "flex", flexDirection: "column", gap: 14 }}>
-      <div role="tablist" style={{ display: "flex", gap: 6, alignSelf: "center", padding: 4, borderRadius: 6, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.14)", backdropFilter: "blur(10px)" }}>
+      <div role="tablist" data-lenis-prevent style={{ display: "flex", gap: 6, alignSelf: "center", maxWidth: "100%", overflowX: "auto", scrollbarWidth: "none", padding: 4, borderRadius: 6, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.14)", backdropFilter: "blur(10px)" }}>
         {TABS.map((t, k) => (
           <button key={t.key} role="tab" aria-selected={k === i} onClick={() => setI(k)}
-            style={{ position: "relative", display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 14px", border: 0, borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: k === i ? "#242449" : "rgba(255,255,255,.8)", background: k === i ? "#BFC2FF" : "transparent", overflow: "hidden", transition: "background .2s,color .2s" }}>
+            style={{ position: "relative", flexShrink: 0, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 14px", border: 0, borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: k === i ? "#242449" : "rgba(255,255,255,.8)", background: k === i ? "#BFC2FF" : "transparent", overflow: "hidden", transition: "background .2s,color .2s" }}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon} /></svg>
             {t.label}
             {k === i && !paused && (

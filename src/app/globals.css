@@ -49,7 +49,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Interaction layer shared by every page */
 .pd-hover-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
-.pd-hover-lift:hover { transform: translateY(-3px); }
+.pd-hover-lift:hover { box-shadow: 0 8px 24px -16px rgba(14,14,14,.35); }
 .pd-dither-hover { position: relative; isolation: isolate; }
 .pd-dither-hover::after {
   content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
@@ -85,7 +85,7 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0; transition: opacity .25s;
 }
 .pd-glow:hover::before { opacity: 1; }
-.pd-glow-btn { position: relative; transition: box-shadow .25s, transform .25s cubic-bezier(.2,.7,.2,1); }
+.pd-glow-btn { position: relative; transition: box-shadow .25s; }
 .pd-glow-btn:hover { box-shadow: 0 0 0 1px #B0B3FC, 0 0 18px 2px rgba(176,179,252,.55), 0 0 42px 4px rgba(153,65,215,.25); }
 .pd-glow-btn::before {
   content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; pointer-events: none;
@@ -101,16 +101,24 @@ html.lenis, html.lenis body { height: auto; }
 .pd-screen-in { animation: pd-screen-in .45s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes pd-screen-in { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 
-/* App themes: light (design), dark, terminal. Screens use inline design colours, so the
-   dark themes are a colour-space flip of the whole frame; photos/illustrations are flipped back. */
-html[data-theme="dark"] body { background: #242424; }
-html[data-theme="dark"] .pd-frame { filter: invert(0.86) hue-rotate(180deg); }
-html[data-theme="terminal"] body { background: #16231B; }
-html[data-theme="terminal"] .pd-frame { filter: invert(0.87) hue-rotate(180deg) sepia(0.4) hue-rotate(75deg) saturate(1.5); }
-html[data-theme="dark"] .pd-frame :is(img, video, canvas, [style*="url(https://app.paper.design"][style*=".png"]),
-html[data-theme="terminal"] .pd-frame :is(img, video, canvas, [style*="url(https://app.paper.design"][style*=".png"]) { filter: invert(1) hue-rotate(180deg); }
-/* Lab terminal follows the theme: light in light mode; the frame flip turns it back to dark in dark/terminal. */
-.pd-term { filter: invert(0.9) hue-rotate(180deg); }
+/* Themes. Design screens are recoloured at runtime (src/components/theme/recolor.ts);
+   these tokens cover everything drawn with CSS variables (search, menus, switches, phone bars). */
+html[data-theme="dark"] {
+  --color-bg: #1C1C22; --color-surface: #26262E; --color-surface-2: #2E2E37; --color-line: #34343D;
+  --color-ink: #EDEDF0; --color-ink-2: #B4B4BE; --color-ink-3: #9A9AA6;
+  --color-white-100: #16161B; --color-blue-50: #2A2C4A; --color-blue-700: #C6C8FF; --color-grey-900: #EDEDF0;
+  --color-accent-text: #C6C8FF; --color-ember-soft: #3A2219; color-scheme: dark;
+}
+html[data-theme="terminal"] {
+  --color-bg: #122017; --color-surface: #1A2C20; --color-surface-2: #213628; --color-line: #28402F;
+  --color-ink: #D2F7DD; --color-ink-2: #9FD0AE; --color-ink-3: #86B796;
+  --color-white-100: #0E1A12; --color-blue-50: #1F3A28; --color-blue-700: #9FF0BC; --color-grey-900: #D2F7DD;
+  --color-accent-text: #9FF0BC; --color-ember-soft: #33261A; color-scheme: dark;
+}
+html[data-theme="dark"] body { background: #121216; }
+html[data-theme="terminal"] body { background: #0B140E; }
+/* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
+html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: invert(0.9) hue-rotate(180deg); }
 
 /* Helvetica Neue ships no 600 face; map semibold to its Medium cut so 600 reads lighter than Bold.
    All weights are declared because an @font-face family replaces the system family entirely. */
@@ -118,3 +126,16 @@ html[data-theme="terminal"] .pd-frame :is(img, video, canvas, [style*="url(https
 @font-face { font-family: "Helvetica Neue"; font-weight: 400; src: local("HelveticaNeue"), local("Helvetica Neue"); }
 @font-face { font-family: "Helvetica Neue"; font-weight: 500 600; src: local("HelveticaNeue-Medium"), local("Helvetica Neue Medium"); }
 @font-face { font-family: "Helvetica Neue"; font-weight: 700 900; src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"); }
+
+/* Phone app shell (MobileChrome). */
+.pd-m-top, .pd-m-tabs { position: fixed; left: 0; right: 0; z-index: 130; display: flex; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+.pd-m-top { top: 0; align-items: center; gap: 4px; height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 8px 0; border-bottom: 1px solid #EFEFEF; }
+.pd-m-tabs { bottom: 0; height: calc(64px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid #EFEFEF; }
+.pd-m-tabs button:active, .pd-m-top button:active { transform: scale(.94); transition: transform .08s; }
+.pd-m-title { font: 600 15px/18px var(--font-sans); color: #0E0E0E; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body.pd-phone { padding-top: calc(56px + env(safe-area-inset-top)); -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+body.pd-phone-tabs { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+body.pd-phone .pd-theme-switch { display: none !important; }
+html:is([data-theme="dark"], [data-theme="terminal"]) :is(.pd-m-top, .pd-m-tabs) { background: color-mix(in srgb, var(--color-bg) 92%, transparent); border-color: var(--color-line); }
+html:is([data-theme="dark"], [data-theme="terminal"]) :is(.pd-m-top, .pd-m-tabs) button:not([aria-current]) { color: #E6E6E6 !important; }
+html:is([data-theme="dark"], [data-theme="terminal"]) .pd-m-title { color: #E6E6E6; }

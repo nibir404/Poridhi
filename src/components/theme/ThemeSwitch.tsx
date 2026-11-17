@@ -19,11 +19,11 @@ export default function ThemeSwitch({ inline = false, dark = false }: { inline?:
   }, []);
   return (
     <div role="radiogroup" aria-label="Theme" className="pd-theme-switch"
-      style={{ ...(inline ? { flexShrink: 0 } : { position: "fixed", left: 16, bottom: 16, zIndex: 120, boxShadow: "0 8px 24px -12px rgba(0,0,0,.35)" }), display: "flex", gap: 2, padding: 3, borderRadius: 6, background: dark ? "rgba(255,255,255,.08)" : "#F4F4F4", border: inline ? 0 : "1px solid #E6E6E6" }}>
+      style={{ ...(inline ? { flexShrink: 0 } : { position: "fixed", left: 16, bottom: 16, zIndex: 120, boxShadow: "0 8px 24px -12px rgba(0,0,0,.35)" }), display: "flex", gap: 2, padding: 3, borderRadius: 6, background: dark ? "rgba(255,255,255,.08)" : "var(--color-surface)", border: inline ? 0 : "1px solid var(--color-line)" }}>
       {THEMES.map((k) => (
         <button key={k} role="radio" aria-checked={t === k} aria-label={`${k} theme`} onClick={() => setTheme(k)}
-          style={{ width: inline ? 28 : 32, height: inline ? 28 : 32, display: "flex", alignItems: "center", justifyContent: "center", border: t === k && !dark ? "1px solid #E6E6E6" : "1px solid transparent", borderRadius: 4, background: t === k ? (dark ? "rgba(255,255,255,.16)" : "#fff") : "transparent", cursor: "pointer" }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={t === k ? (dark ? "#FFFFFF" : "#0E0E0E") : dark ? "#A5A5A5" : "#808080"} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={ICON[k]} /></svg>
+          style={{ width: inline ? 28 : 32, height: inline ? 28 : 32, display: "flex", alignItems: "center", justifyContent: "center", border: t === k && !dark ? "1px solid #E6E6E6" : "1px solid transparent", borderRadius: 4, background: t === k ? (dark ? "rgba(255,255,255,.16)" : "var(--color-bg)") : "transparent", cursor: "pointer" }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={t === k ? (dark ? "#FFFFFF" : "var(--color-ink)") : dark ? "#A5A5A5" : "var(--color-ink-3)"} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={ICON[k]} /></svg>
         </button>
       ))}
     </div>

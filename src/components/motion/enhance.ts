@@ -24,7 +24,7 @@ export function enhancePage({ sections = [], cardGroups = [], countUp, stickyNav
     sections.forEach((pid) => {
       const el = q(pid);
       if (!el) return;
-      gsap.from(el, { y: 48, opacity: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%", once: true } });
+      gsap.fromTo(el, { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%", once: true } });
     });
 
     cardGroups.forEach((pid) => {
@@ -32,7 +32,6 @@ export function enhancePage({ sections = [], cardGroups = [], countUp, stickyNav
       if (!group) return;
       const cards = Array.from(group.children) as HTMLElement[];
       cards.forEach((c) => c.classList.add("pd-hover-lift", "pd-dither-hover"));
-      gsap.from(cards, { y: 32, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.07, scrollTrigger: { trigger: group, start: "top 85%", once: true } });
     });
 
     if (countUp) {
@@ -70,17 +69,14 @@ export function enhancePage({ sections = [], cardGroups = [], countUp, stickyNav
     }
   }
 
-  // Magnetic, slightly springy primary buttons (accent-filled elements).
+  // Primary buttons (accent-filled): steady on hover, only a slight brightness change.
   document.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
     const bg = el.style.backgroundColor;
     if (!/--color-accent\)|#BFC2FF|#B0B3FC/i.test(bg) || el.offsetHeight > 48) return;
     el.style.cursor = "pointer";
-    el.style.transition = "transform .25s cubic-bezier(.2,.7,.2,1), filter .2s";
-    const move = (e: PointerEvent) => {
-      const r = el.getBoundingClientRect();
-      el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.12}px, ${(e.clientY - r.top - r.height / 2) * 0.2}px)`;
-    };
-    const leave = () => (el.style.transform = "");
+    el.style.transition = "filter .2s";
+    const move = () => {};
+    const leave = () => {};
     const enter = () => (el.style.filter = "brightness(1.04)");
     const out = () => (el.style.filter = "");
     el.addEventListener("pointermove", move);
