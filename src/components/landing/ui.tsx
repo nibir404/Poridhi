@@ -23,7 +23,7 @@ export function Button({ href, children, variant = "default", size = "md", onCli
     background: variant === "default" ? "var(--dashboard-accent)" : variant === "secondary" ? "var(--dashboard-hover)" : "transparent",
     color: variant === "default" ? "var(--dashboard-accent-ink)" : "var(--dashboard-text)",
   };
-  const cls = `puku-btn puku-btn-${variant}`;
+  const cls = `puku-btn puku-btn-${variant}${variant === "default" ? " pd-glow-btn" : ""}`; // primary CTAs keep the glowing hover
   return href ? <Link href={href} className={cls} style={style}>{children}</Link> : <button type="button" onClick={onClick} className={cls} style={style}>{children}</button>;
 }
 

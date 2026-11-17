@@ -2,6 +2,21 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.5.0] - 2026-11-17
+
+### Changed
+- Landing rebuilt with a render.com-style hierarchy (one headline → one line → a product visual or feature group per section) and many more product visuals:
+  - Hero: statement plus a live lab environment diagram (browser → load balancer → lab VM → nginx → postgres) with a terminal that types the lab commands and flips node status as checks pass, including the 502 and the fix.
+  - "Read. Launch. Pass." three-step section with mini product visuals.
+  - Tabbed platform showcase (Labs, AI interview, AI exam, Roadmap, Time bank) with large real screens and auto-advance.
+  - Capability grid (what every lab includes) and proof grid (checks, graded exams, certificates, portfolio, ranks).
+  - Stats, stack logos, product bento, tracks, time bank, interview, ranks, pricing and FAQ kept.
+- Ranks show the metal hexagon rank badges, locked ranks greyed.
+- Footer: the original footer's links in a render-style layout (brand + CTA, link columns, legal row with status and theme switch).
+- Primary CTAs have the glowing hover again, drawn from theme colours.
+- Dark mode: cards, tabs and borders lifted so they separate from the black page.
+- Leaderboard is for signed-in learners: it lives at `/app/leaderboard` under the app header (old `/leaderboard` redirects), reachable from the account menu, dashboard and rank links; removed from the public header and footer.
+
 ## [2.4.0] - 2026-11-17
 
 ### Added

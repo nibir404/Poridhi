@@ -35,7 +35,7 @@ import { applyContext } from "./context";
  */
 const bar0Early = (root: HTMLElement) => { const b = root.children[0] as HTMLElement | undefined; return b && b.offsetHeight <= 90 ? b : undefined; };
 
-export default function AppShell({ screen, children }: { screen: string; children: React.ReactNode }) {
+export default function AppShell({ screen, children, width = 1600 }: { screen: string; children: React.ReactNode; width?: number }) {
   const withHeader = !screen.startsWith("Auth"); // every /app screen; sign-in uses the site header
   const router = useRouter();
   const host = useRef<HTMLDivElement>(null);
@@ -188,7 +188,9 @@ export default function AppShell({ screen, children }: { screen: string; childre
     const stickies: (() => void)[] = [];
     const appBar = bar0Early(root);
     const bodyRow = root.children[1] as HTMLElement | undefined;
-    const isGlobalBar = !!appBar && ["Home", "Learn", "Labs", "Practice", "Me"].every((t) => Array.from(appBar.querySelectorAll("[data-pid]")).some((e) => !e.children.length && e.textContent?.trim() === t));
+    const hasAll = (words: string[]) => !!appBar && words.every((t) => Array.from(appBar.querySelectorAll("[data-pid]")).some((e) => !e.children.length && e.textContent?.trim() === t));
+    // The design's global app bar, or a website nav on pages that moved into the app (leaderboard).
+    const isGlobalBar = hasAll(["Explore", "Pricing"]) || !!appBar && ["Home", "Learn", "Labs", "Practice", "Me"].every((t) => Array.from(appBar.querySelectorAll("[data-pid]")).some((e) => !e.children.length && e.textContent?.trim() === t));
     if (withHeader && isGlobalBar) appBar!.style.display = "none";
     if (appBar && bodyRow && !root.closest(".pd-reflow")) {
       const zoom = root.getBoundingClientRect().width / (root.offsetWidth || 1) || 1;
@@ -334,7 +336,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     <div ref={host} className="pd-app">
       {!withHeader && <SiteHeader />}
       {withHeader && <AppHeader onSearch={() => setSearch(true)} onChip={(which, at) => setChip((c) => (c?.which === which ? null : { which, at }))} onAccount={(at) => setAccount((a) => (a ? null : at))} />}
-      <DesignFrame width={1600}>{children}</DesignFrame>
+      <DesignFrame width={width}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />
       <AccountMenu anchor={account} onClose={() => setAccount(null)} />
       <ChipPopover chip={chip?.which ?? null} anchor={chip?.at ?? null} onClose={() => setChip(null)} />

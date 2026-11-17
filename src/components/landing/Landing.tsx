@@ -1,23 +1,24 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import PlatformShowcase from "@/components/marketing/PlatformShowcase";
 import MobileChrome from "@/components/layout/MobileChrome";
 import SiteHeader from "@/components/layout/SiteHeader";
-import { bindRecolor } from "@/components/theme/recolor";
-import { getTheme } from "@/components/theme/theme";
 import { track } from "@/data/roadmap";
 import { stackLogos } from "@/data/stackLogos";
 import DotField from "./DotField";
 import { Button as PButton } from "./ui";
 import { Stats, Tracks, TimeBank, Interview, Ranks, Pricing, Faq } from "./Sections";
 import Bento from "./Bento";
+import LabDiagram from "./LabDiagram";
+import Footer from "./Footer";
+import { Steps, FeatureTabs, Capabilities, Proof } from "./Showcase";
+import { SectionHead } from "./ui";
 
 /**
- * Immersive landing page on the Puku design-system tokens (light, dark, 98).
- * Soft gradient light behind a left-aligned statement, a dashed isometric cube field of
- * "running VMs", the real product bleeding off the bottom of the hero, hatched dividers,
- * a mono stack grid, and feature cards with dashed isometric illustrations.
+ * Landing page, render.com-style hierarchy on Puku tokens (pure black and white):
+ * one headline per section → one line of explanation → a product visual or a feature group.
+ * Hero statement + live lab diagram, stats, Read/Launch/Pass, stack, tabbed platform showcase,
+ * product bento, lab capabilities, tracks, time bank, interview, ranks, proof, pricing, FAQ,
+ * closing CTA and footer.
  */
 const W = "min(1200px, calc(100% - 40px))";
 const mono: React.CSSProperties = { fontFamily: "var(--font-mono)" };
@@ -42,21 +43,6 @@ function Hatch({ h = 36 }: { h?: number }) {
 }
 
 export default function Landing() {
-  const showcase = useRef<HTMLDivElement>(null);
-  const [showW, setShowW] = useState(1100);
-
-;
-  // The embedded product screens are Paper exports: keep them in the active theme.
-  useEffect(() => {
-    const el = showcase.current;
-    if (!el) return;
-    const fit = () => setShowW(Math.min(1100, el.clientWidth));
-    fit();
-    const ro = new ResizeObserver(fit); ro.observe(el);
-    const undo = bindRecolor(el, getTheme);
-    return () => { ro.disconnect(); undo(); };
-  }, []);
-
 
   return (
     <div className="pd-landing" style={{ minHeight: "100vh", background: "var(--dashboard-main)", color: "var(--dashboard-text)", fontFamily: "var(--font-sans)", overflowX: "clip" }}>
@@ -91,15 +77,18 @@ export default function Landing() {
             <DotField />
           </div>
         </div>
-        {/* Product, cropped by the hero's bottom edge */}
-        <div ref={showcase} style={{ position: "relative", width: W, margin: "0 auto", height: "clamp(300px, 38vw, 520px)", overflow: "hidden" }}>
-          <PlatformShowcase width={Math.max(280, showW)} />
+        {/* Product: a live lab environment */}
+        <div className="pd-rise" style={{ position: "relative", width: W, margin: "0 auto", paddingBottom: "clamp(40px, 6vw, 80px)", animationDelay: ".25s" }}>
+          <LabDiagram />
         </div>
       </section>
 
       <Stats />
+      <Steps />
 
-      <div style={{ height: 40 }} />
+      <section style={{ width: W, margin: "128px auto 40px" }}>
+        <SectionHead k="Your stack" title="Whatever you want to learn, it runs on Poridhi." body="Real tools on real machines, from the Linux shell to GitOps on Kubernetes." />
+      </section>
       <Hatch />
 
       {/* Stack grid */}
@@ -118,6 +107,8 @@ export default function Landing() {
 
       <Hatch />
 
+      <FeatureTabs />
+
       {/* Statement */}
       <section style={{ width: W, margin: "0 auto", padding: "clamp(72px, 9vw, 128px) 0", textAlign: "center", display: "grid", justifyItems: "center", gap: 16 }}>
         <Reveal><h2 style={h2}>Practice that checks your work</h2></Reveal>
@@ -130,24 +121,7 @@ export default function Landing() {
         <Bento />
       </section>
 
-      {/* How it works, numbered rows */}
-      <section style={{ width: W, margin: "clamp(80px, 10vw, 140px) auto 0" }}>
-        <Reveal><div style={eyebrow}>How Poridhi works</div></Reveal>
-        <Reveal delay={0.05}><h2 style={{ ...h2, marginTop: 12, maxWidth: 760 }}>Read free. Practise for real. Earn your time back.</h2></Reveal>
-        <ol style={{ listStyle: "none", margin: "40px 0 0", padding: 0, borderTop: "1px solid var(--dashboard-border)" }}>
-          {[
-            ["01", "Read every track free", "Roadmaps, class recordings, notes and every lab guide. No sign-up needed."],
-            ["02", "Launch a real lab", "A fresh VM with every tool ready. Steps are checked inside the machine as you go."],
-            ["03", "Earn your time back", "Pass a milestone exam and get lab time and coins. Certificates are verified."],
-          ].map(([n, t, d]) => (
-            <li key={n} className="pd-l-row" style={{ display: "grid", gridTemplateColumns: "80px minmax(0, 1fr) minmax(0, 1.2fr)", gap: 24, padding: "28px 0", borderBottom: "1px solid var(--dashboard-border)", alignItems: "baseline" }}>
-              <span style={{ ...mono, fontSize: 13, color: "var(--dashboard-muted)" }}>{n}</span>
-              <span style={{ font: "500 22px/1.25 var(--font-sans)", letterSpacing: "-.01em" }}>{t}</span>
-              <span style={{ fontSize: 16, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>{d}</span>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <Capabilities />
 
       <Tracks />
 
@@ -175,6 +149,7 @@ export default function Landing() {
       <TimeBank />
       <Interview />
       <Ranks />
+      <Proof />
       <Pricing />
       <Faq />
 
@@ -191,12 +166,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <footer style={{ width: W, margin: "0 auto", padding: "28px 0 48px", borderTop: "1px solid var(--dashboard-border)", display: "flex", flexWrap: "wrap", gap: 20, justifyContent: "space-between", fontSize: 14, color: "var(--dashboard-muted)" }}>
-        <span style={mono}>© 2026 Poridhi · Dhaka</span>
-        <nav aria-label="Footer" style={{ display: "flex", flexWrap: "wrap", gap: 18 }}>
-          {[["Labs", "/labs"], ["Courses", "/courses"], ["Pricing", "/pricing"], ["Leaderboard", "/leaderboard"], ["Verify a certificate", "/u/rahim"]].map(([t, h]) => <Link key={h} href={h} style={{ color: "inherit", textDecoration: "none" }}>{t}</Link>)}
-        </nav>
-      </footer>
+      <Footer />
 
     </div>
   );

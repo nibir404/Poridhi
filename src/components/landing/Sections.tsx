@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Arrow, Badge, Button, Card, Check, Icon, Reveal, S, SectionHead, WIDTH, eyebrow, mono } from "./ui";
+import RankBadge from "./RankBadge";
 
 /** Sections carried over from the previous landing, rebuilt with Puku primitives. */
 const section = (top = 28): React.CSSProperties => ({ width: WIDTH, margin: `${S(top)}px auto 0` });
@@ -121,7 +122,10 @@ export function Ranks() {
         <ol className="pd-l-ranks" style={{ listStyle: "none", margin: `${S(10)}px 0 0`, padding: 0, display: "grid", gridTemplateColumns: "repeat(6, 1fr)", border: "1px solid var(--dashboard-border)", borderRadius: "var(--puku-radius-panel)", overflow: "hidden" }}>
           {ranks.map(([r, xp], i) => (
             <li key={r} style={{ padding: S(5), borderLeft: i ? "1px solid var(--dashboard-border)" : 0, background: i === current ? "var(--dashboard-hover)" : "var(--dashboard-panel)", display: "grid", gap: S(2) }}>
-              <span style={{ ...mono, fontSize: 12, color: i <= current ? "var(--dashboard-text)" : "var(--dashboard-muted)" }}>L{i + 1}{i === current ? " · you" : ""}</span>
+              <span style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <span style={{ ...mono, fontSize: 12, color: i <= current ? "var(--dashboard-text)" : "var(--dashboard-muted)" }}>L{i + 1}{i === current ? " · you" : ""}</span>
+                <RankBadge rank={r} size={40} locked={i > current} />
+              </span>
               <span style={{ font: "500 17px/1.25 var(--font-sans)", color: i <= current ? "var(--dashboard-text)" : "var(--dashboard-muted)" }}>{r}</span>
               <span style={{ ...mono, fontSize: 12, color: "var(--dashboard-muted)" }}>{xp} XP</span>
               <span aria-hidden style={{ height: 4, borderRadius: 999, background: i < current ? "var(--dashboard-text)" : i === current ? "linear-gradient(90deg, var(--dashboard-text) 40%, var(--dashboard-border) 40%)" : "var(--dashboard-border)" }} />

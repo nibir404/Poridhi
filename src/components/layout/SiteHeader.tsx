@@ -7,14 +7,13 @@ import ExploreMenu from "@/components/nav/ExploreMenu";
 import SearchPalette from "@/components/nav/SearchPalette";
 
 /**
- * The one header for the website and sign-in: landing, labs, courses, pricing, leaderboard,
+ * The one header for the website and sign-in: landing, labs, courses, pricing,
  * public profiles and the sign-in / onboarding flow. Sticky, theme-aware, with Explore and ⌘K.
  */
 const LINKS = [
   { label: "Labs", href: "/labs", match: /^\/labs/ },
   { label: "Courses", href: "/courses", match: /^\/courses/ },
   { label: "Pricing", href: "/pricing", match: /^\/pricing/ },
-  { label: "Leaderboard", href: "/leaderboard", match: /^\/leaderboard/ },
 ];
 
 export default function SiteHeader() {

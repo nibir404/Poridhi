@@ -28,7 +28,7 @@ const LINKS: Record<string, string> = {
   "Go Pro": "/signin?plan=pro",
   "Explore career tracks →": "/courses",
   "Verify a certificate": "/u/rahim",
-  Leaderboard: "/leaderboard",
+  Leaderboard: "/app/leaderboard",
   "View modules →": "/labs/kubernetes-aws",
   "Read guide →": "/labs/guide/expose-docker-lb",
   "Lab library · 700+": "/labs",

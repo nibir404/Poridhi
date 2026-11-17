@@ -7,6 +7,7 @@ import { seed } from "@/data/seed";
 const ITEMS: { label: string; href: string; icon: string }[] = [
   { label: "Dashboard", href: "/app", icon: "M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" },
   { label: "Account", href: "/app/me", icon: "M12 8m-4 0a4 4 0 1 0 8 0a4 4 0 1 0-8 0M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" },
+  { label: "Leaderboard", href: "/app/leaderboard", icon: "M4 20V10M10 20V4M16 20v-7M22 20H2" },
   { label: "Settings", href: "/app/me/settings", icon: "M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0-6 0M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" },
 ];
 

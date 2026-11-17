@@ -1,12 +1,6 @@
-import MarketingShell from "@/components/marketing/MarketingShell";
-import LeaderboardDesign from "@/design/LeaderboardDesign";
+import { redirect } from "next/navigation";
 
-export const metadata = { title: "Leaderboard · Poridhi" };
-
+/** The leaderboard moved behind sign-in; keep the old address working. */
 export default function Page() {
-  return (
-    <MarketingShell>
-      <LeaderboardDesign />
-    </MarketingShell>
-  );
+  redirect("/app/leaderboard");
 }

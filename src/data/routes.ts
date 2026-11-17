@@ -65,6 +65,7 @@ export const APP_LINKS: Record<string, string> = {
   "End interview": "/app/interview/feedback",
   "View full report": "/app/interview/report",
   // App bar chips and common actions
+  Leaderboard: "/app/leaderboard",
   Instructions: "/app/exam/q4/instructions", Question: "/app/exam/q4/whiteboard", "main.tf": "/app/practice/exam", "default.conf": "/app/lab/ide",
   "Finish interview": "/app/interview/report", Client: "/app/interview/session", "staging-cluster": "/app/interview/terminal",
   "Ask a TA": "/app/me/support/book",
@@ -80,7 +81,7 @@ export const APP_LINKS: Record<string, string> = {
   "19:00 TA · Michael": "/app/me/support/book", "14:00 TA · Michael": "/app/me/support/book",
   "Term 1···": "/app/lab", "Term 2": "/app/lab", ":8080": "/app/lab/expose", "66dbf3.lb.poridhi.io": "/app/lab/expose",
   "+ Terminal": "/app/lab", "+ MongoDB": "/app/lab/database", "+ Redis": "/app/lab/database", "+ Expose port": "/app/lab/expose",
-  "+180 this week": "/app/me/time-bank", "7RAYou · up 31,240": "/leaderboard", "7RAYou · up 3 1,240": "/leaderboard",
+  "+180 this week": "/app/me/time-bank", "7RAYou · up 31,240": "/app/leaderboard", "7RAYou · up 3 1,240": "/app/leaderboard",
 };
 
 /**
@@ -114,7 +115,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   GatePro: { "Go Pro · ৳1,500 / month": "/app/me/subscription", "Start check": "/app/learn/check", "Mark complete": "/app/learn/check" },
   GateLocked: { "Start check": "/app/learn/gate", "Mark complete": "/app/learn/gate" },
   ModuleComplete: { "Start Module 4": "/app/learn/class", "3 / 7Modules to exam": "/app/exam", "+30Coins": "/app/me/time-bank" },
-  MilestoneComplete: { "Download PDF": "/app/me/certificates", "Share on LinkedIn": "/u/rahim", "● +300 coins": "/app/me/time-bank", "Rank · Engineer": "/leaderboard" },
+  MilestoneComplete: { "Download PDF": "/app/me/certificates", "Share on LinkedIn": "/u/rahim", "● +300 coins": "/app/me/time-bank", "Rank · Engineer": "/app/leaderboard" },
   ExamIntro: { "See questions": "/app/exam/questions" },
   ExamQuestions: { Terraform: "/app/exam/q4/instructions", AWS: "/app/exam/q4/instructions", ELB: "/app/exam/q4/instructions", Ansible: "/app/exam/q4/instructions", CloudFormation: "/app/exam/q4/instructions", "Resume · 9:12": "/app/exam/q4/instructions", Start: "/app/exam/q4/instructions", Retry: "/app/exam/q4/instructions", "Finish exam": "/app/exam/q4/finish" },
   ExamInstructions: { "Submit Q4": "/app/exam/q4/submit", "All questions": "/app/exam/questions" },
