@@ -22,13 +22,13 @@ const P = {
 
 export function itemIcon(i: Item): { path: string; bg: string; stroke: string } {
   const t = `${i.title} ${i.meta}`.toLowerCase();
-  const navy = { bg: "linear-gradient(150deg,#1E2144,#424894)", stroke: "#FFFFFF" };
-  const soft = { bg: "var(--color-blue-50)", stroke: "#333874" };
+  const navy = { bg: "var(--dashboard-accent)", stroke: "var(--dashboard-accent-ink)" }; // design system: black/white
+  const soft = { bg: "var(--dashboard-hover)", stroke: "var(--dashboard-text)" };
   const pick = (path: string, tone = navy) => ({ path, ...tone });
   if (i.kind === "Track") return pick(/kubernetes/.test(t) ? P.helm : /mlops|ai/.test(t) ? P.chip : /backend|system/.test(t) ? P.code : P.route);
   if (i.kind === "AI practice") return pick(/system design|whiteboard/.test(t) ? P.board : P.mic, soft);
   if (i.kind === "Lab guide") return pick(P.book, soft);
-  const lab = { bg: "#2A2D52", stroke: "#FFFFFF" };
+  const lab = { bg: "var(--dashboard-selected)", stroke: "var(--dashboard-text)" };
   if (/terraform/.test(t)) return pick(P.layers, lab);
   if (/prometheus|grafana|monitor/.test(t)) return pick(P.chart, lab);
   if (/github|ci\b|actions/.test(t)) return pick(P.branch, lab);
@@ -46,7 +46,7 @@ export function itemIcon(i: Item): { path: string; bg: string; stroke: string } 
 export function ItemIcon({ item, size = 44 }: { item: Item; size?: number }) {
   const ic = itemIcon(item);
   return (
-    <div style={{ width: size, height: size, borderRadius: 6, background: ic.bg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+    <div style={{ width: size, height: size, borderRadius: 8, border: "1px solid var(--dashboard-border)", background: ic.bg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
       <svg width={size / 2} height={size / 2} viewBox="0 0 24 24" fill="none" stroke={ic.stroke} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={ic.path} /></svg>
     </div>
   );
