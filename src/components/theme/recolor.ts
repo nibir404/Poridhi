@@ -10,11 +10,21 @@ import type { Theme } from "./theme";
  * Originals are stored so switching back to light restores the design exactly.
  */
 type Pal = { dark: boolean; bg: string; card: string; inset: string; line: string; text: string; text2: string; text3: string; tintL: number };
-/** Light and dark follow the Puku palette (puku.sh): warm olive-grey neutrals, indigo accent. */
+/** Light and dark come from the Puku design system tokens (src/styles/puku-tokens.css). */
+const DS = { bg: "var(--dashboard-main)", card: "var(--dashboard-panel)", inset: "var(--dashboard-hover)", line: "var(--dashboard-border)", text: "var(--dashboard-text)", text2: "var(--dashboard-text)", text3: "var(--dashboard-muted)" };
 const PAL: Record<Theme, Pal> = {
-  light: { dark: false, bg: "oklch(95.4% 0.009 100)", card: "oklch(98.4% 0.007 106.5)", inset: "oklch(91.8% 0.013 111.3)", line: "oklch(84.2% 0.018 120.7)", text: "oklch(28.6% 0.019 125.3)", text2: "oklch(40% 0.02 124)", text3: "oklch(50.5% 0.022 123.2)", tintL: 0 },
-  dark: { dark: true, bg: "oklch(19.8% 0.004 128.7)", card: "oklch(22.9% 0.006 121.9)", inset: "oklch(26.4% 0.011 122.2)", line: "oklch(32.8% 0.014 118.6)", text: "oklch(94.7% 0.012 106.6)", text2: "oklch(82% 0.016 113)", text3: "oklch(70.2% 0.02 119.9)", tintL: 0.24 },
+  light: { dark: false, ...DS, tintL: 0 },
+  dark: { dark: true, ...DS, tintL: 0.24 },
   terminal: { dark: true, bg: "#0B140E", card: "#122017", inset: "#1A2C20", line: "#28402F", text: "#D2F7DD", text2: "#9FD0AE", text3: "#86B796", tintL: 0.18 },
+};
+/** Design accent (#B0B3FC family) → the design system's accent; status hues → DS status tokens. */
+const isAccent = ([h, s, l]: readonly [number, number, number]) => h > 225 && h < 250 && s > 0.6 && l > 0.75 && l < 0.92;
+const status = (h: number, s: number, l: number): string | null => {
+  if (s < 0.35 || l < 0.25 || l > 0.75) return null;
+  if (h >= 95 && h <= 170) return "var(--dashboard-success)";
+  if (h <= 12 || h >= 340) return "var(--dashboard-danger)";
+  if (h > 12 && h <= 45) return "var(--dashboard-warning)";
+  return null;
 };
 
 type RGB = [number, number, number, number];
@@ -43,6 +53,7 @@ function mapBg(c: RGB, p: Pal, isRoot: boolean): string | null {
     if (l > 0.9) return p.inset; // #F4F4F4, #EFEFEF …
     return p.line; // mid greys used as fills (progress tracks, dividers)
   }
+  if (isAccent([h, s, l]) && p.text === DS.text) return "var(--dashboard-accent)";
   if (p.dark && l > 0.85) return css(h, Math.min(s, 0.45), p.tintL, c[3]); // soft tints → dark tints
   return null; // saturated fills (accent buttons, status colours) stay
 }
@@ -54,6 +65,8 @@ function mapText(c: RGB, p: Pal): string | null {
     if (l < 0.45) return p.text2;
     return p.text3;
   }
+  const st = p.text === DS.text ? status(h, s, l) : null;
+  if (st) return st;
   if (p.dark && l < 0.55) return css(h, Math.min(s, 0.8), 0.74, c[3]); // dark brand text → readable on dark
   return null;
 }
@@ -87,7 +100,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       if (v === null) el.removeAttribute("style"); else el.setAttribute("style", v!);
       saved.delete(el);
     }
-    if (el instanceof HTMLElement) { delete el.dataset.pdDark; delete el.dataset.pdLight; }
+    if (el instanceof HTMLElement) { delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; }
   });
   if (!theme) return; // restore only
   const p = PAL[theme];
@@ -112,8 +125,10 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       const bg = parse(cs.backgroundColor);
       const nb = bg && mapBg(bg, p, el === root);
       if (nb) set.push(["background-color", nb]);
+      if (nb === "var(--dashboard-accent)") el.dataset.pdAccent = "1";
+      const onAccent = !!el.closest("[data-pd-accent]");
       const tx = parse(cs.color);
-      const nt = tx && mapText(tx, p);
+      const nt = onAccent ? "var(--dashboard-accent-ink)" : tx && mapText(tx, p);
       if (nt) set.push(["color", nt]);
       (["top", "right", "bottom", "left"] as const).forEach((side) => {
         if (cs.getPropertyValue(`border-${side}-width`) === "0px") return;
@@ -126,7 +141,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
         const v = cs.getPropertyValue(attr);
         const c = parse(v);
         if (!c) continue;
-        const nv = mapText(c, p);
+        const nv = (el as Element).closest("[data-pd-accent]") ? (c[3] > 0 && v !== "none" ? "var(--dashboard-accent-ink)" : null) : mapText(c, p);
         if (nv) set.push([attr, nv]);
       }
     }

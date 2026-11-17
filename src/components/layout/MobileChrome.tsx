@@ -106,8 +106,8 @@ export default function MobileChrome({ variant, onSearch }: { variant: "app" | "
             return (
               <button key={t.label} onClick={() => router.push(t.href)} aria-current={on ? "page" : undefined}
                 style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 3, border: 0, background: "transparent", color: on ? "var(--color-ink)" : "var(--color-ink-3)", fontFamily: "var(--font-sans)", fontSize: 11, fontWeight: on ? 600 : 400, cursor: "pointer", position: "relative" }}>
-                {on && <motion.span layoutId="pd-tab" style={{ position: "absolute", top: 6, width: 44, height: 30, borderRadius: 6, background: "#B0B3FC" }} transition={{ type: "spring", stiffness: 500, damping: 38 }} />}
-                <span style={{ position: "relative", color: on ? "#242449" : undefined }}><Icon d={t.icon} /></span>
+                {on && <motion.span layoutId="pd-tab" style={{ position: "absolute", top: 6, width: 44, height: 30, borderRadius: 6, background: "var(--dashboard-accent)" }} transition={{ type: "spring", stiffness: 500, damping: 38 }} />}
+                <span style={{ position: "relative", color: on ? "var(--dashboard-accent-ink)" : undefined }}><Icon d={t.icon} /></span>
                 {t.label}
               </button>
             );

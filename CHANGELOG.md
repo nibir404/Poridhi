@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.4.0] - 2026-11-17
+
+### Changed
+- The Puku design system (`@puku` registry, ds.puku.sh) is the source of truth for theme tokens: `src/styles/puku-tokens.css` is pulled from the registry and the app's `--color-*`, the runtime recolour, overlays and phone bars all read its `--dashboard-*` variables.
+- Accent follows the design system: indigo with near-white ink in light, lavender with navy ink in dark (fills and the text on them).
+- Status colours (success, warning, danger) use the design system's tokens for readable contrast in both modes.
+- Panels use the design system's 12px panel radius; controls keep 6px.
+- Mono type: TX-02 (licensed, not committed), falling back to Geist Mono.
+
+### Added
+- `components.json` with the `@puku` registry and `.mcp.json` for the design-system MCP; both read `PUKUSH_ACCESS_TOKEN` from the environment (set it in `.env.local`, never commit it).
+
 ## [1.3.0] - 2026-11-17
 
 ### Changed

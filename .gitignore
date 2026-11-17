@@ -46,3 +46,6 @@ next-env.d.ts
 
 # Licensed font: not redistributed in this public repo (see README)
 /public/fonts/Matter.ttf
+
+# Licensed font
+/public/fonts/TX-02.ttf

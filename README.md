@@ -14,9 +14,19 @@ Every screen is built 1:1 from the Paper design file and runs on seed data, so t
 | 3D / shaders | three.js, React Three Fiber, drei |
 | Font | Matter (licensed, see below), Geist Mono |
 
+## Design system
+
+Colours, radii and type come from the Puku design system (`@puku` registry at ds.puku.sh). Put your token in `.env.local`:
+
+```bash
+echo "PUKUSH_ACCESS_TOKEN=<your token>" >> .env.local
+```
+
+`components.json` registers `@puku` for the shadcn CLI and `.mcp.json` registers the design-system MCP; both read the token from the environment. Tokens live in `src/styles/puku-tokens.css` (pulled from the registry's `puku.css`).
+
 ## Font
 
-Matter is a licensed typeface, so it is not committed to this public repository. Put `Matter.ttf` (variable, weights 300–800) at `public/fonts/Matter.ttf`; without it the site falls back to Helvetica Neue / system sans.
+Matter and TX-02 are licensed typefaces, so they are not committed to this public repository. Put `Matter.ttf` (variable, 300–800) and `TX-02.ttf` in `public/fonts/`; without them the site falls back to Helvetica Neue / system sans and Geist Mono.
 
 ## Getting started
 

@@ -9,6 +9,7 @@ export function getTheme(): Theme {
 export function setTheme(t: Theme) {
   localStorage.setItem(KEY, t);
   document.documentElement.dataset.theme = t;
+  document.documentElement.dataset.pukuTheme = t === "light" ? "light" : "dark";
   window.dispatchEvent(new CustomEvent("pd-theme", { detail: t }));
 }
 

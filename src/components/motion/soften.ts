@@ -8,6 +8,12 @@ const BLACK = /^rgb\((14|18|23|26), \1, \1\)$/;
 const NAVY = "#1E2144";
 
 export function soften(root: HTMLElement) {
+  // Design system metrics: controls keep --puku-radius (6px); panels use --puku-radius-panel (12px).
+  root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
+    if (el.style.borderRadius !== "6px" || el.offsetWidth < 240 || el.offsetHeight < 120) return;
+    const cs = getComputedStyle(el);
+    if (cs.borderTopWidth !== "0px" || cs.backgroundColor !== "rgba(0, 0, 0, 0)") el.style.borderRadius = "var(--puku-radius-panel)";
+  });
   root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
     const cs = getComputedStyle(el);
     if (!BLACK.test(cs.backgroundColor) || el.closest(".pd-term")) return;

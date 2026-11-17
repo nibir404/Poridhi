@@ -1,0 +1,78 @@
+/* Puku design system tokens, from the @puku registry (ds.puku.sh, components/ui/puku.css).
+   Source of truth for colour, radius, control metrics and type. Do not edit by hand: re-pull. */
+:root { --puku-radius: 6px; --puku-radius-panel: 12px; --puku-control-height: 44px; --puku-ease: cubic-bezier(0.23, 1, 0.32, 1); }
+[data-puku-theme="dark"] {
+  --dashboard-accent: oklch(0.791293 0.103344 281.9417);
+  --dashboard-accent-ink: oklch(0.28117 0.066841 281.2127);
+  --dashboard-border: oklch(0.328183 0.014001 118.5834);
+  --dashboard-danger: oklch(0.77549 0.132703 16.571);
+  --dashboard-hover: oklch(0.264374 0.011263 122.1851);
+  --dashboard-main: oklch(0.198266 0.00422 128.6998);
+  --dashboard-muted: oklch(0.701673 0.020463 119.91);
+  --dashboard-panel: oklch(0.22851 0.005863 121.9076);
+  --dashboard-selected: oklch(0.264374 0.011263 122.1851);
+  --dashboard-sidebar: oklch(0.175658 0.004348 128.7392);
+  --dashboard-success: oklch(0.783186 0.076829 151.5692);
+  --dashboard-text: oklch(0.946641 0.011948 106.6257);
+  --dashboard-warning: oklch(0.801071 0.085223 58.5293);
+  --puku-radius: 6px;
+  --puku-radius-panel: 12px;
+  --puku-control-height: 44px;
+  --puku-spacing: 4px;
+  --puku-font-size: 14px;
+  --puku-font-weight: 400;
+  --puku-line-height: 1.5;
+  --puku-motion: 160ms;
+  --puku-shadow-opacity: 0.35;
+  --puku-font-family: var(--font-matter, ui-sans-serif), system-ui, sans-serif;
+  --puku-font-mono: var(--font-tx02, ui-monospace), ui-monospace, monospace;
+  --font-sans: var(--puku-font-family);
+  --font-mono: var(--puku-font-mono);
+  --background: var(--dashboard-main);
+  --foreground: var(--dashboard-text);
+  --color-bg: var(--dashboard-main);
+  --color-fg: var(--dashboard-text);
+  --color-muted: var(--dashboard-muted);
+  --color-border: var(--dashboard-border);
+  --color-card: var(--dashboard-panel);
+  --color-accent: var(--dashboard-accent);
+  --color-accent-fg: var(--dashboard-accent-ink);
+}
+
+[data-puku-theme="light"] {
+  --dashboard-accent: oklch(0.49836 0.197713 274.9088);
+  --dashboard-accent-ink: oklch(0.986516 0.006606 286.2779);
+  --dashboard-border: oklch(0.841544 0.01826 120.7381);
+  --dashboard-danger: oklch(0.50939 0.177517 17.6575);
+  --dashboard-hover: oklch(0.918367 0.013406 111.2868);
+  --dashboard-main: oklch(0.953976 0.009355 99.9864);
+  --dashboard-muted: oklch(0.505095 0.022462 123.2185);
+  --dashboard-panel: oklch(0.983725 0.006587 106.5201);
+  --dashboard-selected: oklch(0.856494 0.020812 118.9912);
+  --dashboard-sidebar: oklch(0.931538 0.011996 106.6302);
+  --dashboard-success: oklch(0.477119 0.091624 149.7422);
+  --dashboard-text: oklch(0.285693 0.018593 125.3027);
+  --dashboard-warning: oklch(0.479907 0.107036 53.5449);
+  --puku-radius: 6px;
+  --puku-radius-panel: 12px;
+  --puku-control-height: 44px;
+  --puku-spacing: 4px;
+  --puku-font-size: 14px;
+  --puku-font-weight: 400;
+  --puku-line-height: 1.5;
+  --puku-motion: 160ms;
+  --puku-shadow-opacity: 0.35;
+  --puku-font-family: var(--font-matter, ui-sans-serif), system-ui, sans-serif;
+  --puku-font-mono: var(--font-tx02, ui-monospace), ui-monospace, monospace;
+  --font-sans: var(--puku-font-family);
+  --font-mono: var(--puku-font-mono);
+  --background: var(--dashboard-main);
+  --foreground: var(--dashboard-text);
+  --color-bg: var(--dashboard-main);
+  --color-fg: var(--dashboard-text);
+  --color-muted: var(--dashboard-muted);
+  --color-border: var(--dashboard-border);
+  --color-card: var(--dashboard-panel);
+  --color-accent: var(--dashboard-accent);
+  --color-accent-fg: var(--dashboard-accent-ink);
+}

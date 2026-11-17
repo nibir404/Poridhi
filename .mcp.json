@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "puku-ds": {
+      "type": "http",
+      "url": "https://ds.puku.sh/api/mcp",
+      "headers": { "Authorization": "Bearer ${PUKUSH_ACCESS_TOKEN}" }
+    }
+  }
+}
