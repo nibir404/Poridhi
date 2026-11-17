@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.2.0] - 2026-11-17
+
+### Changed
+- Pure black and white: light is a white page with black text, dark is a black page with white text, neutral greys in between (no tint). The accent is black on light and white on dark; success, warning and danger keep their colours for meaning.
+- Wordmark logo is black on light and white on dark; the mark keeps its colours.
+- Landing gradient light is greyscale; leftover lavender chips and navy panels are neutral grey chips and near-black panels.
+
 ## [2.1.0] - 2026-11-17
 
 ### Changed

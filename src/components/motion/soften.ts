@@ -5,7 +5,8 @@
  * Lab terminal panels (.pd-term / monospace consoles) are left alone.
  */
 const BLACK = /^rgb\((14|18|23|26), \1, \1\)$/;
-const NAVY = "#1E2144";
+const NAVY = "var(--dashboard-text)"; // text colour on the grey chip (black on light, white on dark)
+const PANEL = "#111111"; // large black panels: near-black, true to the black-and-white theme
 
 export function soften(root: HTMLElement) {
   // Design system metrics: controls keep --puku-radius (6px); panels use --puku-radius-panel (12px).
@@ -22,15 +23,15 @@ export function soften(root: HTMLElement) {
     const h = r.height / zoom;
     const mono = /mono/i.test(cs.fontFamily) || !!el.querySelector('[style*="mono" i]');
     if (h <= 48 && !mono) {
-      el.style.backgroundColor = "#EDEDF6";
+      el.style.backgroundColor = "var(--dashboard-hover)";
       [el, ...Array.from(el.querySelectorAll<HTMLElement>("*"))].forEach((n) => {
         if (n instanceof SVGElement) {
-          if (/^#fff(fff)?$/i.test(n.getAttribute("stroke") ?? "")) n.setAttribute("stroke", NAVY);
-          if (/^#fff(fff)?$/i.test(n.getAttribute("fill") ?? "")) n.setAttribute("fill", NAVY);
+          if (/^#fff(fff)?$/i.test(n.getAttribute("stroke") ?? "")) (n as SVGElement).style.stroke = NAVY;
+          if (/^#fff(fff)?$/i.test(n.getAttribute("fill") ?? "")) (n as SVGElement).style.fill = NAVY;
         } else if (getComputedStyle(n).color === "rgb(255, 255, 255)") n.style.color = NAVY;
       });
     } else if (!mono) {
-      el.style.backgroundColor = NAVY;
+      el.style.backgroundColor = PANEL;
     }
   });
 }
