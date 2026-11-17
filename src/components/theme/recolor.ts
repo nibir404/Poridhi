@@ -103,7 +103,21 @@ function mapLine(c: RGB, p: Pal, width = 1): string | null {
   return p.line; // every grey hairline uses the quiet DS border
 }
 
-const saved = new WeakMap<Element, string | null>();
+/** Only the properties the theme set are remembered and restored, so animation state
+ *  (opacity, transforms written by GSAP) is never rolled back. */
+const saved = new WeakMap<Element, Map<string, [string, string]>>();
+function setProp(el: HTMLElement | SVGElement, k: string, v: string) {
+  let m = saved.get(el);
+  if (!m) saved.set(el, (m = new Map()));
+  if (!m.has(k)) m.set(k, [el.style.getPropertyValue(k), el.style.getPropertyPriority(k)]);
+  el.style.setProperty(k, v, "important");
+}
+function restore(el: HTMLElement | SVGElement) {
+  const m = saved.get(el);
+  if (!m) return;
+  m.forEach(([v, pr], k) => (v ? el.style.setProperty(k, v, pr) : el.style.removeProperty(k)));
+  saved.delete(el);
+}
 
 function isDarkZone(el: HTMLElement) {
   // Inside an element the design paints dark (e.g. hero, navy cards, terminals): leave untouched.
@@ -121,11 +135,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
   const all = [root, ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))].filter((e) => !e.closest("[data-pd-native]"));
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
-    if (saved.has(el)) {
-      const v = saved.get(el);
-      if (v === null) el.removeAttribute("style"); else el.setAttribute("style", v!);
-      saved.delete(el);
-    }
+    restore(el);
     if (el instanceof HTMLElement) { delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; delete el.dataset.w98; }
   });
   if (!theme) return; // restore only
@@ -178,8 +188,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
     }
     if (theme === "terminal" && html) tagW98(el, root, nb ?? null, cs);
     if (!set.length) return;
-    saved.set(el, el.getAttribute("style"));
-    set.forEach(([k, v]) => (el as HTMLElement).style.setProperty(k, v, "important"));
+    set.forEach(([k, v]) => setProp(el, k, v));
   });
 }
 
@@ -222,8 +231,20 @@ export function guardContrast(root: HTMLElement) {
     if (ratio(blend(fg, bg), bg) >= need) return;
     const options: [string, RGB][] = [["var(--dashboard-text)", ink], ["#FFFFFF", [255, 255, 255, 1]], ["#000000", [0, 0, 0, 1]]];
     const best = options.map(([css, c]) => [css, ratio(c, bg)] as const).sort((a, b) => b[1] - a[1])[0];
-    if (!saved.has(el)) saved.set(el, el.getAttribute("style"));
-    el.style.setProperty("color", best[0], "important");
+    setProp(el, "color", best[0]);
+  });
+  // Grey icons (stroke or fill) need 3:1 against their backdrop (WCAG non-text contrast).
+  root.querySelectorAll<SVGElement>("svg :is(path, circle, rect, line, polyline, polygon, ellipse)").forEach((el) => {
+    if (el.closest("[data-pd-native]")) return;
+    const cs = getComputedStyle(el);
+    const bg = backdrop(el.closest("svg")!);
+    for (const attr of ["stroke", "fill"] as const) {
+      const c = parse(cs.getPropertyValue(attr));
+      if (!c || c[3] < 0.5) continue;
+      if (ratio(c, bg) >= 3) continue;
+      const options: [string, RGB][] = [["var(--dashboard-text)", ink], ["#FFFFFF", [255, 255, 255, 1]], ["#000000", [0, 0, 0, 1]]];
+      setProp(el, attr, options.map(([css, o]) => [css, ratio(o, bg)] as const).sort((a, b) => b[1] - a[1])[0][0]);
+    }
   });
 }
 

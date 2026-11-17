@@ -65,6 +65,8 @@ export const APP_LINKS: Record<string, string> = {
   "End interview": "/app/interview/feedback",
   "View full report": "/app/interview/report",
   // App bar chips and common actions
+  Instructions: "/app/exam/q4/instructions", Question: "/app/exam/q4/whiteboard", "main.tf": "/app/practice/exam", "default.conf": "/app/lab/ide",
+  "Finish interview": "/app/interview/report", Client: "/app/interview/session", "staging-cluster": "/app/interview/terminal",
   "2h 40m bank": "/app/me/time-bank",
   "Ask a TA": "/app/me/support/book",
   "Report issue": "/app/me/support",
@@ -150,11 +152,11 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
 
   // Lab side panels: back to the running lab, forward to the completion check.
   LabCloudTray: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
-  LabExposePort: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
+  LabExposePort: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", Cancel: "/app/lab/expose", Remove: "/app/lab", "Expose port 8080": "/app/lab/complete" },
   LabDatabase: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "+ Server": "/app/lab/machines", "MongoDB 8.0Launch": "/app/lab/machines", "Redis 7.0Launch": "/app/lab/machines" },
   LabIde: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "Open Expose port": "/app/lab/expose", "Show command": "/app/lab" },
   LabMachines: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
-  LabMenu: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "Pause instead": "/app/lab" },
+  LabMenu: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "Pause instead": "/app/lab", Cancel: "/app/lab", "End lab": "/app/lab/complete", "End & save time": "/app/me/lab-history" },
   LabFiles: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },
   LabResources: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", Add: "/app/lab/database" },
   LabCredentials: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete" },

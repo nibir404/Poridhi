@@ -13,6 +13,7 @@ import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import AccountMenu from "./AccountMenu";
+import { wireIcons } from "./iconLinks";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
 import { screenBehaviours } from "./behaviours";
@@ -135,6 +136,9 @@ export default function AppShell({ screen, children }: { screen: string; childre
       avatar.addEventListener("click", openAccount);
     }
 
+    // Icon-only buttons on lab, exam and interview screens.
+    const undoIcons = wireIcons(root, screen);
+
     // Lab icon strip: each tool icon opens its panel (matched by icon shape, so order changes don't matter).
     if (screen.startsWith("Lab")) {
       const RAIL: [string, string, string][] = [
@@ -233,6 +237,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     const undoRecolor = bindRecolor(root, currentTheme);
     return () => {
       undoGlow();
+      undoIcons();
       undoCopy();
       avatar?.removeEventListener("click", openAccount);
       undoRecolor();

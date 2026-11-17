@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.7.0] - 2026-11-17
+
+### Added
+- Lab, AI exam and AI interview screens are clickable end to end: every icon button is routed by its icon (lab top bar: machines, expose port, cloud tray, end lab, info; topology nodes; new tab; layout; exam: instructions, code, terminal, whiteboard, previous/next; interview: back, next stage, AI hint, mic), whiteboard tools toggle as a group, and dialog actions (Cancel, Remove, Expose port, End lab) go to the right state. Exam Question / Instructions tabs and file tabs link too.
+- Contrast guard covers icons (3:1 against their real background) in every theme.
+
+### Fixed
+- Home hero going blank in the Windows 98 theme when the product preview switched tabs: theme changes now restore only the colours they set, never animation state.
+
 ## [1.6.0] - 2026-11-17
 
 ### Added
