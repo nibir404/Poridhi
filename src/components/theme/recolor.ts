@@ -154,7 +154,10 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
     const cs = getComputedStyle(el);
     const bg = parse(cs.backgroundColor);
     const darkFill = bg && bg[3] > 0.5 && hsl(bg)[2] < 0.3;
-    const darkImage = cs.backgroundImage.includes("gradient") && !cs.backgroundImage.includes("255, 255, 255");
+    // Gradient art = a gradient whose first colour is dark (hero, product tiles); light dot grids are not art.
+    const firstStop = cs.backgroundImage.includes("gradient") ? cs.backgroundImage.match(/(rgba?\([^)]+\)|oklch\([^)]+\)|#[0-9a-f]{3,8})/i) : null;
+    const fc = firstStop ? parse(firstStop[1]) : null;
+    const darkImage = !!fc && fc[3] > 0.3 && hsl(fc)[2] < 0.35;
     if ((darkFill || darkImage) && el.offsetWidth > 60 && el.offsetHeight > 40) { el.dataset.pdDark = "1"; if (darkImage) el.dataset.pdImg = "1"; }
     else if (bg && bg[3] > 0.9 && hsl(bg)[2] > 0.9 && el.offsetWidth > 120 && el.offsetHeight > 80) el.dataset.pdLight = "1";
   });

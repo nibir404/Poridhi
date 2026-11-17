@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.1.0] - 2026-11-17
+
+### Changed
+- Landing page, immersive direction: soft gradient light with grain behind a left-aligned statement and pill CTAs; a halftone dot-matrix shader (canvas, theme-coloured, blocky patches that form and dissolve) beside it; the real product bleeding off the bottom of the hero; hatched dividers; a mono stack grid; a numbered how-it-works list; the career track as a strip; a gradient closing CTA.
+- Feature bento built from the actual product: crops of the lab, AI interview, AI exam, roadmap and time-bank screens with floating UI chips (check passed, hire signal, exam grade, milestone progress, coins redeemed) and a "YOU" cursor.
+
+### Fixed
+- Light dot-grid backgrounds (e.g. the interview whiteboard) were treated as gradient art and stayed light in dark mode; only dark gradients count as art now.
+
+### Removed
+- Isometric illustrations from the previous landing draft.
+
 ## [2.0.0] - 2026-11-17
 
 ### Changed

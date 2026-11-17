@@ -196,3 +196,34 @@ html[data-theme="terminal"] .pd-l-logo { background-image: url(/assets/poridhi-l
 @media (prefers-reduced-motion: reduce) { .pd-rise, .pd-reveal { animation: none !important; } }
 /* Dark mode: white wordmark logo for contrast on dark surfaces (the mark keeps its colours). */
 html[data-theme="dark"] [style*="poridhi-logo.png"], html[data-theme="dark"] .pd-l-logo { background-image: url(/assets/poridhi-logo-white.png) !important; }
+
+/* Landing: gradient light, grain, hatch, motion bits */
+.pd-l-aurora { position: absolute; inset: -20% -10% auto -10%; height: 140%; pointer-events: none;
+  background:
+    radial-gradient(40% 50% at 18% 30%, color-mix(in oklab, var(--dashboard-accent) 55%, transparent), transparent 70%),
+    radial-gradient(35% 45% at 62% 18%, color-mix(in oklab, #F2A38A 45%, transparent), transparent 70%),
+    radial-gradient(45% 55% at 92% 60%, color-mix(in oklab, #1E2144 55%, transparent), transparent 70%);
+  filter: blur(40px); opacity: .75; animation: pd-aurora 18s ease-in-out infinite alternate; }
+html[data-theme="dark"] .pd-l-aurora { opacity: .45; }
+.pd-l-aurora-2 { inset: -30% -10% -30% -10%; height: auto; opacity: .5; }
+@keyframes pd-aurora { to { transform: translate3d(3%, 2%, 0) scale(1.06); } }
+.pd-l-noise { position: absolute; inset: 0; pointer-events: none; opacity: .06; background-image: radial-gradient(var(--dashboard-text) .5px, transparent .6px); background-size: 3px 3px; }
+.pd-hatch { background-image: repeating-linear-gradient(-45deg, var(--dashboard-border) 0 1px, transparent 1px 7px); }
+.pd-chip { animation: pd-chip-in .6s cubic-bezier(.23,1,.32,1) both; }
+@keyframes pd-chip-in { from { opacity: 0; transform: translateY(8px); } }
+.pd-cursor { animation: pd-cursor 6s ease-in-out infinite; }
+@keyframes pd-cursor { 50% { transform: translate(-22px, -10px); } }
+.pd-l-card { transition: border-color .2s var(--puku-ease); }
+.pd-l-card:hover { border-color: color-mix(in oklab, var(--dashboard-accent) 50%, var(--dashboard-border)) !important; }
+@media (max-width: 960px) {
+  .pd-l-hero-grid { grid-template-columns: 1fr !important; }
+  .pd-l-cubes { display: none; }
+  .pd-bento { grid-template-columns: 1fr !important; }
+  .pd-bento > * { grid-column: auto !important; }
+  .pd-l-stack { grid-template-columns: repeat(3, 1fr) !important; }
+  .pd-l-track { grid-template-columns: repeat(2, 1fr) !important; }
+  .pd-l-row { grid-template-columns: 48px 1fr !important; }
+  .pd-l-row > span:last-child { grid-column: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .pd-l-aurora, .pd-cursor, .pd-chip { animation: none !important; } }
+html[data-theme="terminal"] .pd-l-aurora, html[data-theme="terminal"] .pd-l-noise { display: none; }
