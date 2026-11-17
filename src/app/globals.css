@@ -118,37 +118,9 @@ html.lenis, html.lenis body { height: auto; }
 }
 body { background: var(--dashboard-main); }
 html[data-theme="dark"] { --color-primary: var(--dashboard-accent); --color-blue-50: color-mix(in oklab, var(--dashboard-accent) 18%, var(--dashboard-panel)); --color-blue-700: var(--dashboard-accent); --color-grey-900: var(--dashboard-text); --color-ember-soft: color-mix(in oklab, var(--dashboard-warning) 16%, var(--dashboard-panel)); }
-/* Terminal theme: a Windows 98 desktop. Redefines the design-system variables, so the recolour,
-   overlays and phone bars pick it up; bevels, square corners and the title bar are added below. */
-html[data-theme="terminal"] {
-  color-scheme: light;
-  --dashboard-main: #008080; --dashboard-sidebar: #C0C0C0; --dashboard-panel: #C0C0C0; --dashboard-hover: #DFDFDF;
-  --dashboard-selected: #000080; --dashboard-border: #808080; --dashboard-text: #000000; --dashboard-muted: #3C3C3C;
-  --dashboard-accent: #000080; --dashboard-accent-ink: #FFFFFF;
-  --dashboard-success: #006400; --dashboard-danger: #8B0000; --dashboard-warning: #6B4400;
-  --color-bg: #C0C0C0; --color-surface: #DFDFDF; --color-blue-50: #DFDFDF; --color-blue-700: #000080; --color-accent-text: #000000; --color-grey-900: #000080;
-  --font-sans: Tahoma, Verdana, "Segoe UI", sans-serif; --font-mono: "Courier New", Courier, monospace;
-  --puku-radius: 0px; --puku-radius-panel: 0px;
-  --w98-raised: inset -1px -1px #0A0A0A, inset 1px 1px #FFFFFF, inset -2px -2px #808080, inset 2px 2px #DFDFDF;
-  --w98-sunken: inset -1px -1px #FFFFFF, inset 1px 1px #808080, inset -2px -2px #DFDFDF, inset 2px 2px #0A0A0A;
-}
 
-html[data-theme="terminal"] body { background: #008080; }
-html[data-theme="terminal"] .pd-frame * { border-radius: 0 !important; }
-html[data-theme="terminal"] .pd-term { background: #000000 !important; box-shadow: var(--w98-sunken); }
-html[data-theme="terminal"] [data-w98="panel-fill"] { background: #C0C0C0 !important; }
-html[data-theme="terminal"] :is([data-w98="panel"], [data-w98="panel-fill"]) { box-shadow: var(--w98-raised) !important; border-color: transparent !important; }
-html[data-theme="terminal"] [data-w98="button"] { box-shadow: var(--w98-raised) !important; border-color: transparent !important; }
-html[data-theme="terminal"] [data-w98="button"]:active { box-shadow: var(--w98-sunken) !important; }
-html[data-theme="terminal"] [data-w98="field"] { box-shadow: var(--w98-sunken) !important; border-color: transparent !important; background: #FFFFFF !important; }
-html[data-theme="terminal"] [data-w98="title"] { background: linear-gradient(90deg, #000080, #1084D0) !important; border-color: transparent !important; }
-html[data-theme="terminal"] [data-w98="title"] svg :is(path, circle, rect) { stroke: #FFFFFF !important; }
-html[data-theme="terminal"] :is(.pd-m-top, .pd-m-tabs) { background: #C0C0C0 !important; box-shadow: var(--w98-raised); border: 0; backdrop-filter: none; }
-html[data-theme="terminal"] .pd-m-top { background: linear-gradient(90deg, #000080, #1084D0) !important; }
-html[data-theme="terminal"] .pd-m-top button, html[data-theme="terminal"] .pd-m-title { color: #FFFFFF !important; }
-html[data-theme="terminal"] :is(.pd-m-tabs button, .pd-theme-switch button) { border-radius: 0 !important; }
 /* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
-/* Lab console: recoloured with the rest of the screen (light in light mode, dark in dark mode, black in 98). */
+/* Lab console: recoloured with the rest of the screen (light in light mode, dark in dark mode). */
 
 /* Matter and TX-02 from the Puku design system (ds.puku.sh/assets), variable 100–900. */
 @font-face { font-family: "Matter"; src: url("/fonts/Matter.woff2") format("woff2"), url("/fonts/Matter.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
@@ -167,9 +139,6 @@ html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) { background: color-mix(in sr
 html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) button:not([aria-current]) { color: #E6E6E6 !important; }
 html[data-theme="dark"] .pd-m-title { color: #E6E6E6; }
 .pd-menu-row:hover, .pd-menu-row:focus-visible { background: var(--color-surface) !important; outline: none; }
-/* Windows 98: the logo sits on the navy title bar, so its wordmark turns white (the mark keeps its colours). */
-html[data-theme="terminal"] [style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }
-html[data-theme="terminal"] .pd-m-top span[style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }
 
 /* One icon style everywhere: 24-grid line icons, round caps and joins, optical stroke by size
    (2px at 12–14px, 1.8px at 15–24px). Overrides the mixed stroke widths in the design exports. */
@@ -185,9 +154,6 @@ html[data-theme="terminal"] .pd-m-top span[style*="poridhi-logo.png"] { backgrou
 @media (max-width: 1080px) { .pd-l-search { display: none !important; } }
 @media (max-width: 900px) { .pd-l-links { display: none !important; } .pd-l-3 { grid-template-columns: 1fr !important; } .pd-l-stats { grid-template-columns: repeat(2, 1fr) !important; } .pd-l-stats > div:nth-child(3) { border-left: 0 !important; } .pd-l-stats > div:nth-child(n+3) { border-top: 1px solid var(--dashboard-border); } }
 body.pd-phone .pd-l-nav { display: none !important; }
-html[data-theme="terminal"] .pd-landing { background: #008080 !important; }
-html[data-theme="terminal"] .pd-landing :is(section > div, .pd-l-card, .pd-l-stats, header) { border-radius: 0 !important; box-shadow: var(--w98-raised) !important; }
-html[data-theme="terminal"] .pd-l-logo { background-image: url(/assets/poridhi-logo.png) !important; }
 @keyframes pd-rise-k { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 .pd-rise { animation: pd-rise-k .7s cubic-bezier(.23,1,.32,1) both; }
 @supports (animation-timeline: view()) {
@@ -226,7 +192,6 @@ html[data-theme="dark"] .pd-l-aurora { opacity: .45; }
   .pd-l-row > span:last-child { grid-column: 2; }
 }
 @media (prefers-reduced-motion: reduce) { .pd-l-aurora, .pd-cursor, .pd-chip { animation: none !important; } }
-html[data-theme="terminal"] .pd-l-aurora, html[data-theme="terminal"] .pd-l-noise { display: none; }
 
 /* Pure black and white. Overrides the design-system palette for light and dark with neutral
    greys (no tint); the accent is black on light and white on dark. Status colours keep meaning. */
@@ -250,3 +215,22 @@ html:is([data-theme="light"], [data-theme="dark"]) .pd-l-aurora {
 }
 /* Wordmark: black on light, white on dark (the mark keeps its colours). */
 html[data-theme="light"] [style*="poridhi-logo.png"], html[data-theme="light"] .pd-l-logo, html:not([data-theme]) .pd-l-logo { background-image: url(/assets/poridhi-logo-black.png) !important; }
+
+/* Landing (Puku primitives) */
+.puku-btn { transition: filter .16s var(--puku-ease), background-color .16s var(--puku-ease), transform .12s var(--puku-ease); }
+.puku-btn:hover { filter: brightness(.96); }
+.puku-btn-outline:hover, .puku-btn-ghost:hover { background: var(--dashboard-hover) !important; filter: none; }
+.puku-btn:active { transform: scale(.97); }
+.puku-btn:focus-visible { outline: 2px solid var(--dashboard-accent); outline-offset: 4px; }
+.pd-eq { animation: pd-eq .9s ease-in-out infinite alternate; transform-origin: 50% 50%; }
+@keyframes pd-eq { to { transform: scaleY(.4); } }
+@media (max-width: 960px) {
+  .pd-l-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .pd-l-split { grid-template-columns: 1fr !important; }
+  .pd-l-ranks { grid-template-columns: repeat(3, 1fr) !important; }
+  .pd-l-2 { grid-template-columns: 1fr !important; }
+  .pd-l-stats { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 560px) { .pd-l-4 { grid-template-columns: 1fr !important; } }
+@media (prefers-reduced-motion: reduce) { .pd-eq { animation: none !important; } }
+.pd-caret { color: var(--dashboard-text) !important; }

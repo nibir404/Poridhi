@@ -9,13 +9,12 @@ import type { Theme } from "./theme";
  * Areas the design already draws dark (hero, navy panels, lab terminal) are left as designed.
  * Originals are stored so switching back to light restores the design exactly.
  */
-type Pal = { dark: boolean; desktop?: boolean; bg: string; card: string; inset: string; line: string; text: string; text2: string; text3: string; tintL: number };
+type Pal = { dark: boolean; bg: string; card: string; inset: string; line: string; text: string; text2: string; text3: string; tintL: number };
 /** Light and dark come from the Puku design system tokens (src/styles/puku-tokens.css). */
 const DS = { bg: "var(--dashboard-main)", card: "var(--dashboard-panel)", inset: "var(--dashboard-hover)", line: "var(--dashboard-border)", text: "var(--dashboard-text)", text2: "var(--dashboard-text)", text3: "var(--dashboard-muted)" };
 const PAL: Record<Theme, Pal> = {
   light: { dark: false, ...DS, tintL: 0 },
   dark: { dark: true, ...DS, tintL: 0.24 },
-  terminal: { dark: false, desktop: true, ...DS, tintL: 0 }, // Windows 98: the DS variables are redefined in globals.css
 };
 /** Design accent (#B0B3FC family) → the design system's accent; status hues → DS status tokens. */
 const isAccent = ([h, s, l]: readonly [number, number, number]) => h > 225 && h < 250 && s > 0.6 && l > 0.75 && l < 0.92;
@@ -62,7 +61,7 @@ const hsl = ([r, g, b]: RGB) => {
 };
 const css = (h: number, s: number, l: number, a = 1) => `hsl(${h.toFixed(0)} ${(s * 100).toFixed(0)}% ${(l * 100).toFixed(0)}% / ${a})`;
 
-function mapBg(c: RGB, p: Pal, isRoot: boolean, appWindow = false): string | null {
+function mapBg(c: RGB, p: Pal, isRoot: boolean): string | null {
   if (c[3] < 0.05) return null;
   const [h, s, l] = hsl(c);
   // Translucent grey/white fills (search boxes, chips drawn for a dark hero) vanish on a flat
@@ -73,13 +72,13 @@ function mapBg(c: RGB, p: Pal, isRoot: boolean, appWindow = false): string | nul
     if (p.text === DS.text && s < 0.12 && l >= 0.04) {
       if (p.dark) return l < 0.09 ? "var(--dashboard-sidebar)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-hover)";
       // Light mode: the design's dark work areas (lab workspace, consoles, panels) become light too.
-      if (!p.desktop) return l < 0.09 ? "var(--dashboard-hover)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-sidebar)";
+      return l < 0.09 ? "var(--dashboard-hover)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-sidebar)";
     }
     return null; // otherwise keep the design (brand navy, media)
   }
   if (s < 0.12) {
-    if (isRoot) return p.desktop && appWindow ? p.card : p.bg; // app screens are one silver window on the 98 desktop
-    if (l > 0.975 && l < 0.995) return p.desktop ? p.card : p.bg; // #FAFAFA page (inside windows on the 98 desktop)
+    if (isRoot) return p.bg;
+    if (l > 0.975 && l < 0.995) return p.bg; // #FAFAFA page
     if (l >= 0.995) return p.card; // white card
     if (l > 0.9) return p.inset; // #F4F4F4, #EFEFEF …
     return p.line; // mid greys used as fills (progress tracks, dividers)
@@ -125,16 +124,6 @@ function restore(el: HTMLElement | SVGElement) {
   saved.delete(el);
 }
 
-function isDarkZone(el: HTMLElement) {
-  // Inside an element the design paints dark (e.g. hero, navy cards, terminals): leave untouched.
-  let n: HTMLElement | null = el;
-  while (n && !n.classList.contains("pd-frame")) {
-    if (n.dataset.pdDark) return true;
-    if (n.dataset.pdLight) return false; // a light panel inside a dark area is its own light zone
-    n = n.parentElement;
-  }
-  return false;
-}
 
 export function recolor(root: HTMLElement, theme: Theme | null) {
   // Live components (data-pd-native) theme themselves from the tokens: leave them alone.
@@ -143,7 +132,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
     restore(el);
-    if (el instanceof HTMLElement) { delete el.dataset.pdImg; delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; delete el.dataset.w98; }
+    if (el instanceof HTMLElement) { delete el.dataset.pdImg; delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; }
   });
   if (!theme) return; // restore only
   const p = PAL[theme];
@@ -165,15 +154,14 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
   all.forEach((el) => {
     const html = el instanceof HTMLElement;
     // Light themes keep areas the design paints dark; dark mode recolours them too (except media and consoles).
-    // Gradient art (hero, product tiles) and media keep their colours; Windows 98 keeps designed-dark areas.
+    // Gradient art (hero, product tiles) and media keep their colours.
     if (el.closest("[data-pd-img], video, canvas")) return;
-    if (html && p.desktop && isDarkZone(el)) return;
     const cs = getComputedStyle(el);
     const set: [string, string][] = [];
     let nb: string | null | undefined = null;
     if (html) {
       const bg = parse(cs.backgroundColor);
-      nb = bg && mapBg(bg, p, el === root, !!root.closest(".pd-app"));
+      nb = bg && mapBg(bg, p, el === root);
       // Dark mode: thin coloured fills (progress bars, meters) in deep brand colours sink into the
       // dark surface; draw them in the bright accent instead.
       if (!nb && p.dark && bg && bg[3] > 0.5 && (el as HTMLElement).offsetHeight > 0 && (el as HTMLElement).offsetHeight <= 12) {
@@ -191,7 +179,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       (["top", "right", "bottom", "left"] as const).forEach((side) => {
         if (cs.getPropertyValue(`border-${side}-width`) === "0px") return;
         const b = parse(cs.getPropertyValue(`border-${side}-color`));
-        const inDark = !p.dark && !p.desktop && !!(el as HTMLElement).closest("[data-pd-dark]");
+        const inDark = !p.dark && !!(el as HTMLElement).closest("[data-pd-dark]");
         const nl = b && (inDark && hsl(b)[1] < 0.12 && parseFloat(cs.getPropertyValue(`border-${side}-width`)) < 2 ? p.line : mapLine(b, p, parseFloat(cs.getPropertyValue(`border-${side}-width`))));
         if (nl) set.push([`border-${side}-color`, nl]);
       });
@@ -204,7 +192,6 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
         if (nv) set.push([attr, nv]);
       }
     }
-    if (theme === "terminal" && html) tagW98(el, root, nb ?? null, cs);
     if (!set.length) return;
     set.forEach(([k, v]) => setProp(el, k, v));
   });
@@ -235,7 +222,8 @@ function backdrop(el: Element): RGB {
 
 export function guardContrast(root: HTMLElement) {
   const ink = parse(getComputedStyle(document.documentElement).getPropertyValue("--dashboard-text").trim()) ?? [0, 0, 0, 1];
-  root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
+  // Design layers and the inline spans inside them (code line numbers, timers).
+  root.querySelectorAll<HTMLElement>("[data-pid], [data-pid] span").forEach((el) => {
     if (!Array.from(el.childNodes).some((n) => n.nodeType === 3 && n.textContent!.trim())) return;
     if (!el.offsetWidth && !el.offsetHeight) return;
     const cs = getComputedStyle(el);
@@ -290,17 +278,4 @@ export function bindRecolor(root: HTMLElement, getTheme: () => Theme) {
   });
   mo.observe(root, { childList: true, subtree: true });
   return () => { mo.disconnect(); clearTimeout(t); window.removeEventListener("pd-theme", run); recolor(root, null); };
-}
-
-/** Windows 98 chrome: title bar, raised panels and buttons, sunken fields. Styled in globals.css. */
-function tagW98(el: HTMLElement, root: HTMLElement, nb: string | null, cs: CSSStyleDeclaration) {
-  const w = el.offsetWidth, h = el.offsetHeight;
-  if (!w || !h) return;
-  if (el === root.children[0] && h <= 90) { el.dataset.w98 = "title"; return; }
-  const filled = !!nb || cs.backgroundColor !== "rgba(0, 0, 0, 0)";
-  const bordered = cs.borderTopWidth !== "0px";
-  const text = (el.textContent ?? "").trim();
-  if (filled && h <= 48 && w <= 360 && text.length > 0 && text.length <= 40) { el.dataset.w98 = "button"; return; }
-  if (!filled && bordered && h >= 30 && h <= 48 && w >= 160 && el.children.length <= 4) { el.dataset.w98 = "field"; return; }
-  if ((nb === "var(--dashboard-panel)" || bordered) && w >= 120 && h >= 60) el.dataset.w98 = filled ? "panel" : "panel-fill";
 }

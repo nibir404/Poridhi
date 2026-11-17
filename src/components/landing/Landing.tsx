@@ -10,6 +10,8 @@ import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme } from "@/components/theme/theme";
 import { track } from "@/data/roadmap";
 import DotField from "./DotField";
+import { Button as PButton } from "./ui";
+import { Stats, Tracks, TimeBank, Interview, Ranks, Pricing, Faq } from "./Sections";
 import Bento from "./Bento";
 
 /**
@@ -33,12 +35,7 @@ function Reveal({ children, delay = 0, style, hero }: { children: React.ReactNod
 }
 
 function Pill({ href, children, solid }: { href: string; children: React.ReactNode; solid?: boolean }) {
-  return (
-    <Link href={href} className="pd-l-btn" data-primary={solid ? "1" : undefined}
-      style={{ display: "inline-flex", alignItems: "center", gap: 8, height: 40, padding: "0 16px", borderRadius: 999, textDecoration: "none", font: `500 14px/1 var(--font-sans)`, background: solid ? "var(--dashboard-text)" : "color-mix(in srgb, var(--dashboard-panel) 70%, transparent)", color: solid ? "var(--dashboard-main)" : "var(--dashboard-text)", border: solid ? "1px solid transparent" : "1px solid var(--dashboard-border)", backdropFilter: "blur(8px)" }}>
-      {children}
-    </Link>
-  );
+  return <PButton href={href} variant={solid ? "default" : "outline"}>{children}</PButton>;
 }
 
 function Hatch({ h = 36 }: { h?: number }) {
@@ -110,7 +107,7 @@ export default function Landing() {
               </Link>
             </Reveal>
             <Reveal hero delay={0.05}>
-              <h1 style={{ margin: 0, font: "500 clamp(44px, 6.2vw, 84px)/1 var(--font-sans)", letterSpacing: "-.045em" }}>Learn cloud &amp; AI<br />by actually doing it.</h1>
+              <h1 style={{ margin: 0, font: "500 clamp(30px, 4.6vw, 68px)/1.02 var(--font-sans)", letterSpacing: "-.045em" }}><span style={{ whiteSpace: "nowrap" }}>Learn cloud &amp; AI</span><br /><span style={{ whiteSpace: "nowrap" }}>by actually doing it.</span></h1>
             </Reveal>
             <Reveal hero delay={0.1}>
               <p style={{ margin: 0, maxWidth: 480, fontSize: 17, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>Read every track free. Then build in real Ubuntu VMs with VS Code, a terminal and AWS, right in your browser.</p>
@@ -131,6 +128,9 @@ export default function Landing() {
         </div>
       </section>
 
+      <Stats />
+
+      <div style={{ height: 40 }} />
       <Hatch />
 
       {/* Stack grid */}
@@ -175,6 +175,8 @@ export default function Landing() {
         </ol>
       </section>
 
+      <Tracks />
+
       {/* Track */}
       <section style={{ width: W, margin: "clamp(80px, 10vw, 140px) auto 0" }}>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "end", justifyContent: "space-between", gap: 16 }}>
@@ -195,6 +197,12 @@ export default function Landing() {
           </ol>
         </Reveal>
       </section>
+
+      <TimeBank />
+      <Interview />
+      <Ranks />
+      <Pricing />
+      <Faq />
 
       {/* Closing */}
       <section className="pd-l-hero" style={{ position: "relative", overflow: "hidden", marginTop: "clamp(80px, 10vw, 140px)", borderTop: "1px solid var(--dashboard-border)" }}>

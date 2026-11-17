@@ -9,7 +9,7 @@ import { track, doneCount, type Item, type ItemKind, type Module, type Status } 
  * (milestone → modules → items, like a Paper canvas), and a right bar with the story and outcomes
  * of whatever is selected. Selection is shared by all three and kept in the URL (?ms, ?mod, ?item).
  * Mounted over the design's body row; colours come from the theme tokens, so it is natively
- * light, dark or Windows 98.
+ * light or dark.
  */
 const KIND: Record<ItemKind, { label: string; icon: string }> = {
   class: { label: "Class", icon: "M3 5h18v14H3zM10 9l5 3-5 3z" },

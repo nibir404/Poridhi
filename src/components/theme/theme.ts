@@ -1,5 +1,5 @@
-export type Theme = "light" | "dark" | "terminal";
-export const THEMES: Theme[] = ["light", "dark", "terminal"];
+export type Theme = "light" | "dark";
+export const THEMES: Theme[] = ["light", "dark"];
 const KEY = "pd-theme";
 export function getTheme(): Theme {
   if (typeof window === "undefined") return "light";
@@ -21,7 +21,9 @@ export function wireDesignToggle(root: HTMLElement): (() => void) | null {
   const moon = Array.from(root.querySelectorAll("svg path")).find((p) => p.getAttribute("d")?.startsWith("M20 14.5A8"));
   const group = moon?.closest("svg")?.parentElement?.parentElement as HTMLElement | undefined;
   if (!group || group.children.length !== 3) return null;
-  const btns = Array.from(group.children) as HTMLElement[];
+  const all = Array.from(group.children) as HTMLElement[];
+  all[2].style.display = "none"; // the design's third (terminal) theme button: that theme is retired
+  const btns = all.slice(0, 2);
   const paint = () => {
     const cur = THEMES.indexOf(getTheme());
     btns.forEach((b, i) => {

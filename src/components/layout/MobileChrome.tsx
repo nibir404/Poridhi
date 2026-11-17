@@ -28,7 +28,6 @@ const FOCUS = /^\/app\/(lab(?!\/launch)|exam\/q|interview\/(session|terminal|fee
 const THEME_ICON: Record<Theme, string> = {
   light: "M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4",
   dark: "M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z",
-  terminal: "M5 7l5 5-5 5M12.5 17H19",
 };
 
 const Icon = ({ d, size = 22, color = "currentColor" }: { d: string; size?: number; color?: string }) => (

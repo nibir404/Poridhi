@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.3.0] - 2026-11-17
+
+### Added
+- Landing brings back every earlier section in the new design: stats strip, career tracks, time bank, AI interview rehearsal, ranks (Intern → Principal), pricing (Free / Pro) and an accessible FAQ accordion.
+- Puku primitives for the landing (`src/components/landing/ui.tsx`): Button (default / secondary / outline / ghost, 44px controls), Badge, Card, section heads, 4px spacing grid, 6px control and 12px panel radii.
+
+### Changed
+- Feature bento cards: the real product sits in a 16px inset frame with copy below on a 24px block; chips sit 16px from the frame edges.
+- Hero headline always fits on two lines.
+- Contrast guard also checks inline spans inside product screens (code line numbers, timers); audit of the landing: 0 failures in dark, light clean apart from the blinking caret (now theme-coloured).
+
+### Removed
+- The terminal (Windows 98) theme: light and dark remain; a saved terminal choice falls back to light.
+
 ## [2.2.0] - 2026-11-17
 
 ### Changed
