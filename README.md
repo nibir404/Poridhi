@@ -26,7 +26,7 @@ echo "PUKUSH_ACCESS_TOKEN=<your token>" >> .env.local
 
 ## Font
 
-Matter and TX-02 are licensed typefaces, so they are not committed to this public repository. Put `Matter.ttf` (variable, 300–800) and `TX-02.ttf` in `public/fonts/`; without them the site falls back to Helvetica Neue / system sans and Geist Mono.
+Matter and TX-02 come from the Puku design system's assets (ds.puku.sh/assets). They are licensed, so they are not committed to this public repository: put `Matter.woff2` and `TX-02.woff2` in `public/fonts/`. Without them the site falls back to Helvetica Neue / system sans and Geist Mono.
 
 ## Getting started
 
@@ -55,7 +55,7 @@ npm start
 Start at `/signin` and follow the buttons. The main path is:
 
 1. **Sign in** `/signin` → check email (code fills itself) → goal → level → plan → `/welcome`
-2. **Dashboard** `/app` → roadmap `/app/roadmap` → milestone `/app/roadmap/milestone-1`
+2. **Dashboard** `/app` → roadmap `/app/roadmap` → roadmap explorer `/app/roadmap/milestone-1` (pick a milestone, a module, then an item; drag and zoom the canvas)
 3. **Course** `/app/course` (Overview / Roadmap / Instructors / FAQ) → class `/app/learn/class` → quick check `/app/learn/check` → result → module complete → milestone complete
 4. **Lab** `/app/lab/launch` → boot (advances on its own) → running lab `/app/lab` → check my work → `/app/lab/complete`
 5. **AI interview** `/app/interview` → session → feedback → terminal stage → report

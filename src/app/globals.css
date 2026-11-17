@@ -150,9 +150,9 @@ html[data-theme="terminal"] :is(.pd-m-tabs button, .pd-theme-switch button) { bo
 /* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
 html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: invert(0.9) hue-rotate(180deg); }
 
-/* Matter (variable, 300–800), the Puku type face. */
-@font-face { font-family: "Matter"; src: url("/fonts/Matter.ttf") format("truetype"); font-weight: 300 800; font-display: swap; }
-@font-face { font-family: "TX-02"; src: url("/fonts/TX-02.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+/* Matter and TX-02 from the Puku design system (ds.puku.sh/assets), variable 100–900. */
+@font-face { font-family: "Matter"; src: url("/fonts/Matter.woff2") format("woff2"), url("/fonts/Matter.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "TX-02"; src: url("/fonts/TX-02.woff2") format("woff2"), url("/fonts/TX-02.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
 
 /* Phone app shell (MobileChrome). */
 .pd-m-top, .pd-m-tabs { position: fixed; left: 0; right: 0; z-index: 130; display: flex; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
@@ -166,3 +166,7 @@ body.pd-phone .pd-theme-switch { display: none !important; }
 html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) { background: color-mix(in srgb, var(--color-bg) 92%, transparent); border-color: var(--color-line); }
 html[data-theme="dark"] :is(.pd-m-top, .pd-m-tabs) button:not([aria-current]) { color: #E6E6E6 !important; }
 html[data-theme="dark"] .pd-m-title { color: #E6E6E6; }
+.pd-menu-row:hover, .pd-menu-row:focus-visible { background: var(--color-surface) !important; outline: none; }
+/* Windows 98: the logo sits on the navy title bar, so its wordmark turns white (the mark keeps its colours). */
+html[data-theme="terminal"] [style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }
+html[data-theme="terminal"] .pd-m-top span[style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }

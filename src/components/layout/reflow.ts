@@ -13,7 +13,7 @@ export function reflow(root: HTMLElement) {
   const vw = root.clientWidth || document.documentElement.clientWidth;
   const phone = vw < 768;
   const all = [root, ...Array.from(root.querySelectorAll<HTMLElement>("*"))].filter(
-    (el) => !(el instanceof SVGElement) || el.tagName.toLowerCase() === "svg",
+    (el) => (!(el instanceof SVGElement) || el.tagName.toLowerCase() === "svg") && !el.closest("[data-pd-native]"),
   );
 
   // Pass 1: sizes, spacing, type (cheap, no layout reads).

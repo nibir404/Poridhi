@@ -7,10 +7,12 @@ import DesignFrame from "@/components/layout/DesignFrame";
 import MobileChrome from "@/components/layout/MobileChrome";
 import { enhancePage } from "@/components/motion/enhance";
 import { applyGlow } from "@/components/motion/glow";
+import { wireCopy } from "@/components/motion/copyButtons";
 import { soften } from "@/components/motion/soften";
 import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
+import AccountMenu from "./AccountMenu";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
 import { screenBehaviours } from "./behaviours";
@@ -23,11 +25,14 @@ import { applyContext } from "./context";
  * - per-screen behaviours (OTP, timers, live states) seeded from src/data/seed.ts,
  * - the shared motion layer.
  */
+const bar0Early = (root: HTMLElement) => { const b = root.children[0] as HTMLElement | undefined; return b && b.offsetHeight <= 90 ? b : undefined; };
+
 export default function AppShell({ screen, children }: { screen: string; children: React.ReactNode }) {
   const router = useRouter();
   const host = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState(false);
   const [hasToggle, setHasToggle] = useState(true);
+  const [account, setAccount] = useState<DOMRect | null>(null);
   const [slot, setSlot] = useState<{ el: HTMLElement; dark: boolean } | null>(null);
 
   useEffect(() => {
@@ -112,6 +117,23 @@ export default function AppShell({ screen, children }: { screen: string; childre
 
     // Buttons ↔ seed entities (modules, labs, exam questions).
     applyContext(root, screen);
+
+    // App bar streak chip (flame icon + number) opens progress.
+    if (bar0Early(root)) Array.from(bar0Early(root)!.querySelectorAll<HTMLElement>("[data-pid]")).forEach((chip) => {
+      if (chip.querySelector('path[d^="M12 21a6 6 0 0 0 6-6"]') && /^\d+$/.test(chip.textContent?.trim() ?? "")) { chip.dataset.go = "/app/me/progress"; chip.style.cursor = "pointer"; chip.setAttribute("role", "link"); chip.setAttribute("aria-label", "Streak and progress"); }
+    });
+
+    // Avatar (round, outlined, last in the app bar) opens the account menu.
+    const bar0 = root.children[0] as HTMLElement | undefined;
+    const avatar = bar0 && bar0.offsetHeight <= 90 ? Array.from(bar0.querySelectorAll<HTMLElement>("[data-pid]")).reverse().find((e) => getComputedStyle(e).borderTopLeftRadius === "999px" && e.offsetWidth <= 44 && e.offsetWidth >= 28) : undefined;
+    const openAccount = (e: Event) => { e.stopPropagation(); setAccount((cur) => (cur ? null : avatar!.getBoundingClientRect())); };
+    if (avatar) {
+      avatar.style.cursor = "pointer";
+      avatar.setAttribute("role", "button");
+      avatar.setAttribute("aria-label", "Account menu");
+      avatar.tabIndex = 0;
+      avatar.addEventListener("click", openAccount);
+    }
 
     // Lab icon strip: each tool icon opens its panel (matched by icon shape, so order changes don't matter).
     if (screen.startsWith("Lab")) {
@@ -207,9 +229,12 @@ export default function AppShell({ screen, children }: { screen: string; childre
 
     soften(root);
     const undoGlow = applyGlow(root);
+    const undoCopy = wireCopy(root);
     const undoRecolor = bindRecolor(root, currentTheme);
     return () => {
       undoGlow();
+      undoCopy();
+      avatar?.removeEventListener("click", openAccount);
       undoRecolor();
       window.removeEventListener("pd-theme", paint);
       mount?.remove();
@@ -225,6 +250,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     <div ref={host} className="pd-app">
       <DesignFrame width={1600}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />
+      <AccountMenu anchor={account} onClose={() => setAccount(null)} />
       <MobileChrome variant="app" onSearch={() => setSearch(true)} />
       {!hasToggle && (slot ? createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el) : <ThemeSwitch />)}
     </div>

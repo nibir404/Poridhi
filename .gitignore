@@ -49,3 +49,4 @@ next-env.d.ts
 
 # Licensed font
 /public/fonts/TX-02.ttf
+/public/fonts/*.woff2

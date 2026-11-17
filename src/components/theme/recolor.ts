@@ -33,6 +33,7 @@ const cache = new Map<string, RGB | null>();
 /** Any CSS colour (rgb, hex, oklch, color-mix…) → sRGB via a 1×1 canvas. */
 const parse = (c: string): RGB | null => {
   if (!c || c === "none" || c === "transparent") return c === "transparent" ? [0, 0, 0, 0] : null;
+  if (c.includes("url(")) return null; // gradient / pattern paint (e.g. rank badges): never recolour
   if (cache.has(c)) return cache.get(c)!;
   let out: RGB | null = null;
   const m = c.startsWith("rgb") ? c.match(/[\d.]+/g) : null;
@@ -41,7 +42,8 @@ const parse = (c: string): RGB | null => {
     ctx ??= Object.assign(document.createElement("canvas"), { width: 1, height: 1 }).getContext("2d", { willReadFrequently: true });
     if (ctx) {
       ctx.clearRect(0, 0, 1, 1);
-      ctx.fillStyle = "#000"; ctx.fillStyle = c;
+      ctx.fillStyle = "#010203"; ctx.fillStyle = c;
+      if (ctx.fillStyle === "#010203") { cache.set(c, null); return null; } // not a colour
       ctx.fillRect(0, 0, 1, 1);
       const d = ctx.getImageData(0, 0, 1, 1).data;
       out = [d[0], d[1], d[2], d[3] / 255];
@@ -63,7 +65,11 @@ const css = (h: number, s: number, l: number, a = 1) => `hsl(${h.toFixed(0)} ${(
 function mapBg(c: RGB, p: Pal, isRoot: boolean, appWindow = false): string | null {
   if (c[3] < 0.05) return null;
   const [h, s, l] = hsl(c);
-  if (l < 0.45) return null; // already dark: keep the design
+  if (l < 0.45) {
+    // Dark mode: the design's own near-black surfaces join the DS palette (sidebar / panel / hover levels).
+    if (p.dark && p.text === DS.text && s < 0.12 && l >= 0.04) return l < 0.09 ? "var(--dashboard-sidebar)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-hover)";
+    return null; // otherwise keep the design (brand navy, media)
+  }
   if (s < 0.12) {
     if (isRoot) return p.desktop && appWindow ? p.card : p.bg; // app screens are one silver window on the 98 desktop
     if (l > 0.975 && l < 0.995) return p.desktop ? p.card : p.bg; // #FAFAFA page (inside windows on the 98 desktop)
@@ -88,12 +94,13 @@ function mapText(c: RGB, p: Pal): string | null {
   if (p.dark && l < 0.55) return css(h, Math.min(s, 0.8), 0.74, c[3]); // dark brand text → readable on dark
   return null;
 }
-function mapLine(c: RGB, p: Pal): string | null {
+function mapLine(c: RGB, p: Pal, width = 1): string | null {
   if (c[3] < 0.05) return null;
-  const [, s, l] = hsl(c);
-  if (s < 0.12 && l > 0.7) return p.line;
-  if (p.dark && s < 0.12 && l < 0.2) return p.text3; // dark outlines (selected cards) → visible
-  return null;
+  const [, s] = hsl(c);
+  if (s >= 0.12) return null; // coloured borders (status, accent) keep their colour
+  if (width >= 2 && hsl(c)[2] < 0.3) return p.dark ? "var(--dashboard-accent)" : null; // selected outline
+  if (!p.dark && hsl(c)[2] < 0.3) return null; // light themes keep intentional dark outlines
+  return p.line; // every grey hairline uses the quiet DS border
 }
 
 const saved = new WeakMap<Element, string | null>();
@@ -110,7 +117,8 @@ function isDarkZone(el: HTMLElement) {
 }
 
 export function recolor(root: HTMLElement, theme: Theme | null) {
-  const all = [root, ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))];
+  // Live components (data-pd-native) theme themselves from the tokens: leave them alone.
+  const all = [root, ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))].filter((e) => !e.closest("[data-pd-native]"));
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
     if (saved.has(el)) {
@@ -136,7 +144,9 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
 
   all.forEach((el) => {
     const html = el instanceof HTMLElement;
-    if (html && isDarkZone(el)) return;
+    // Light themes keep areas the design paints dark; dark mode recolours them too (except media and consoles).
+    if (html && isDarkZone(el) && !(p.dark && p.text === DS.text)) return;
+    if (el.closest(".pd-term, video, canvas")) return;
     const cs = getComputedStyle(el);
     const set: [string, string][] = [];
     let nb: string | null | undefined = null;
@@ -144,6 +154,8 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       const bg = parse(cs.backgroundColor);
       nb = bg && mapBg(bg, p, el === root, !!root.closest(".pd-app"));
       if (nb) set.push(["background-color", nb]);
+      // Dotted canvas grids: light dots become the quiet border colour in dark themes.
+      if (p.dark && cs.backgroundImage.startsWith("radial-gradient(rgb(2")) set.push(["background-image", "radial-gradient(var(--dashboard-border) 1px, transparent 1px)"]);
       if (nb === "var(--dashboard-accent)") el.dataset.pdAccent = "1";
       const onAccent = !!el.closest("[data-pd-accent]");
       const tx = parse(cs.color);
@@ -152,7 +164,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       (["top", "right", "bottom", "left"] as const).forEach((side) => {
         if (cs.getPropertyValue(`border-${side}-width`) === "0px") return;
         const b = parse(cs.getPropertyValue(`border-${side}-color`));
-        const nl = b && mapLine(b, p);
+        const nl = b && mapLine(b, p, parseFloat(cs.getPropertyValue(`border-${side}-width`)));
         if (nl) set.push([`border-${side}-color`, nl]);
       });
     } else {
@@ -160,7 +172,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
         const v = cs.getPropertyValue(attr);
         const c = parse(v);
         if (!c) continue;
-        const nv = (el as Element).closest("[data-pd-accent]") ? (c[3] > 0 && v !== "none" ? "var(--dashboard-accent-ink)" : null) : mapText(c, p);
+        const nv = (el as Element).closest("[data-pd-accent]") ? (c[3] > 0 && v !== "none" ? "var(--dashboard-accent-ink)" : null) : hsl(c)[1] < 0.12 ? mapText(c, p) : null; // icons in grey follow the theme; coloured art (coins, badges) keeps its colours
         if (nv) set.push([attr, nv]);
       }
     }

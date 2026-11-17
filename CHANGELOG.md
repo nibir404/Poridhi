@@ -2,6 +2,25 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.6.0] - 2026-11-17
+
+### Added
+- Roadmap explorer (`/app/roadmap/milestone-1`): left bar (milestones → modules → items), a canvas you can drag, scroll and zoom like a design canvas (Fit, Jump to me, zoom buttons, item filters, Hide done), and a right panel with the story and outcomes of the selected milestone or module, or the details, checks and next step of the selected item. Canvas, left bar and panel stay in sync and the selection is kept in the URL (`?ms`, `?mod`, `?item`). Native light, dark and Windows 98 colours from the design-system tokens.
+- Roadmap seed data (`src/data/roadmap.ts`): 6 milestones and 42 modules, each with a story and outcomes, plus items (class, reading, lab, quiz, AI interview, exam) with status and routes.
+- Track overview: every milestone and module opens the explorer focused on it.
+- Avatar menu in the app bar: Dashboard, Account, Settings, Log out.
+- Notes: course and module filters, search across all notes, pick a note to preview, play / edit / delete, sort, Export .md.
+- Routes for the app-bar time bank and streak chips and every remaining action found by the button audit (lab tabs and tools, schedule events, lab history, marketing Launch / Learn more / Verify, and more); Copy / Copy link / Reveal buttons work.
+
+### Changed
+- Fonts come from the Puku design system's assets (Matter and TX-02, variable woff2).
+- App screens fill the window height instead of stopping at the design's 960px.
+- Dark mode recolours areas the design draws dark too (sidebars, selected rows), keeps media and the lab console; borders use the quiet design-system border; dotted canvas grids are toned down.
+- Windows 98 theme shows the logo with a white wordmark on the title bar.
+
+### Fixed
+- Rank badges and coins keep their own colours in every theme.
+
 ## [1.5.0] - 2026-11-17
 
 ### Changed

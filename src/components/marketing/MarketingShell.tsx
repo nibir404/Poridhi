@@ -10,6 +10,7 @@ import ExploreMenu from "@/components/nav/ExploreMenu";
 import SearchPalette from "@/components/nav/SearchPalette";
 import { enhancePage } from "@/components/motion/enhance";
 import { applyGlow } from "@/components/motion/glow";
+import { wireCopy } from "@/components/motion/copyButtons";
 import { soften } from "@/components/motion/soften";
 import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme as currentTheme } from "@/components/theme/theme";
@@ -33,6 +34,23 @@ const LINKS: Record<string, string> = {
   "Career tracks": "/courses",
   "DevOps & Cloud Engineer": "/courses/devops",
   "Browse all topics →": "/courses",
+  "Learn more": "/courses/devops",
+  Launch: "/app/lab/launch",
+  "Launch lab": "/app/lab/launch",
+  "Start lab": "/app/lab/launch",
+  Continue: "/app/lab",
+  "Check my work": "/app/lab/complete",
+  "Submit answer": "/app/learn/check/result",
+  "Share on LinkedIn": "/u/rahim",
+  "Hire Rahim": "/u/rahim",
+  Roadmap: "/app/roadmap",
+  Verify: "/u/rahim",
+  "Start milestone 1 free": "/signin",
+  "Free preview": "/labs/guide/expose-docker-lb",
+  "Free this week· 5 labs": "/labs",
+  "Talk to us": "/app/me/support",
+  "DevOps & Cloud": "/courses/devops",
+  Passed: "/app/me/lab-history",
 };
 
 type Props = {
@@ -87,6 +105,7 @@ export default function MarketingShell({ children, extra }: Props) {
       logo.dataset.go = "/";
       logo.style.cursor = "pointer";
     }
+    const undoCopy = wireCopy(root);
     const onClick = (e: MouseEvent) => {
       const t = (e.target as HTMLElement).closest<HTMLElement>("[data-go]");
       if (!t || !root.contains(t)) return;
@@ -130,6 +149,7 @@ export default function MarketingShell({ children, extra }: Props) {
       mount?.remove();
       setSlot(null);
       undoGlow();
+      undoCopy();
       undoRecolor();
       undo();
       handlers.forEach(([el, h]) => el.removeEventListener("click", h));

@@ -51,7 +51,8 @@
   "id": "2RX-0",
   "name": "RoadmapMilestone",
   "route": "/app/roadmap/milestone-1",
-  "title": "Milestone 1"
+  "title": "Roadmap",
+  "extra": "RoadmapExplorer"
  },
  {
   "id": "6YW-0",

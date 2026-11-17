@@ -82,3 +82,11 @@ export const examQuestions: Question[] = [
   { n: 9, title: "EC2 instance initialisation", tool: "Ansible", level: "Medium", points: 100 },
   { n: 10, title: "CloudWatch monitoring", tool: "CloudFormation", level: "Hard", points: 160 },
 ];
+
+export type Note = { card: string; title: string; at?: string; course: "devops" | "k8s" | "go" | "lab"; module: "M1" | "M2" | "M3" | "lab"; highlight?: string; body: string; meta: string; tags: string[]; m?: string };
+/** Saved notes shown on /app/me/notes; `card` is the note's card layer in the design. */
+export const notes: Note[] = [
+  { card: "HMA-0", title: "Volumes vs bind mounts", at: "12:48", course: "devops", module: "M2", highlight: "A named volume lives outside the container's writable layer, so it survives docker rm.", body: "Use named volumes for databases. Bind mounts only for dev hot-reload.", meta: "M2 · DOCKER NETWORKING & STORAGE · MODULE 3", tags: ["#storage", "#postgres"], m: "docker-networking-and-storage" },
+  { card: "HMN-0", title: "Bridge vs host networks", at: "07:15", course: "devops", module: "M2", body: "Containers on the default bridge can't resolve each other by name. Create a user-defined network.", meta: "M2 · DOCKER NETWORKING & STORAGE · MODULE 3", tags: ["#networking", "#dns"], m: "docker-networking-and-storage" },
+  { card: "HMY-0", title: "Lab · Publish nginx through the LB", course: "lab", module: "lab", body: "LB targets the container port, not the host port. Fixed 502 by retargeting to :8080.", meta: "LAB · PUBLISH NGINX THROUGH THE LOAD BALANCER", tags: ["#loadbalancer", "#502"] },
+];

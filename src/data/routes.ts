@@ -1,3 +1,15 @@
+import { track } from "./roadmap";
+
+/** Track overview: every milestone and module opens the roadmap explorer focused on it. */
+function roadmapAllLinks(): Record<string, string> {
+  const out: Record<string, string> = { "Open milestone 1": "/app/roadmap/milestone-1?ms=1" };
+  track.milestones.forEach((ms) => {
+    out[ms.title] = `/app/roadmap/milestone-1?ms=${ms.n}`;
+    ms.modules.forEach((m) => (out[m.title] = `/app/roadmap/milestone-1?ms=${ms.n}&mod=${m.slug}`));
+  });
+  return out;
+}
+
 /** Visible label in the design → route. Shared by every app screen. */
 export const APP_LINKS: Record<string, string> = {
   // App bar
@@ -52,6 +64,23 @@ export const APP_LINKS: Record<string, string> = {
   "Start interview": "/app/interview/session",
   "End interview": "/app/interview/feedback",
   "View full report": "/app/interview/report",
+  // App bar chips and common actions
+  "2h 40m bank": "/app/me/time-bank",
+  "Ask a TA": "/app/me/support/book",
+  "Report issue": "/app/me/support",
+  "Back to roadmap": "/app/roadmap",
+  "Update payment method": "/app/me/subscription",
+  "Redeem": "/app/me/time-bank",
+  "+7 more modules": "/app/roadmap/milestone-1", "+2 more modules": "/app/roadmap/milestone-1", "+11 more modules": "/app/roadmap/milestone-1",
+  "+1 more module": "/app/roadmap/milestone-1", "+3 more modules": "/app/roadmap/milestone-1", "+16 more modules": "/app/roadmap/milestone-1",
+  "DEVOPS & CLOUD TRACK": "/app/course",
+  "Publish nginx through the LB": "/app/lab",
+  "M1 exam passed": "/app/exam/result",
+  "20:00 Live · Debugging DNS": "/app/learn/live", "20:00 Live · Volumes Q&A": "/app/learn/live", "20:00 Live · K8s services": "/app/learn/live", "20:00 Live · Ingress": "/app/learn/live",
+  "19:00 TA · Michael": "/app/me/support/book", "14:00 TA · Michael": "/app/me/support/book",
+  "Term 1···": "/app/lab", "Term 2": "/app/lab", ":8080": "/app/lab/expose", "66dbf3.lb.poridhi.io": "/app/lab/expose",
+  "+ Terminal": "/app/lab", "+ MongoDB": "/app/lab/database", "+ Redis": "/app/lab/database", "+ Expose port": "/app/lab/expose",
+  "+180 this week": "/app/me/time-bank", "7RAYou · up 31,240": "/leaderboard", "7RAYou · up 3 1,240": "/leaderboard",
 };
 
 /**
@@ -66,14 +95,10 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
     "Lab time bank2h 40m": "/app/me/time-bank", "Streak12 days": "/app/me/progress",
     "Labs passed142+9 this week": "/app/me/lab-history", MON17: "/app/me/schedule", TUE18: "/app/me/schedule",
   },
-  RoadmapAll: {
-    "Open milestone 1": "/app/roadmap/milestone-1", "Linux fundamentals": "/app/course", "Docker networking & storage": "/app/learn/class",
-    "Text processing & regex": "/app/learn/class", "Bash scripting": "/app/learn/class", "Network namespaces": "/app/learn/class",
-    "Overlay networking": "/app/learn/class", "Docker fundamentals": "/app/learn/class", "IAM & accounts": "/app/learn/locked",
-    "EC2 & autoscaling": "/app/learn/locked", "Load balancers": "/app/learn/locked", "S3 & CloudFront": "/app/learn/locked", "RDS & DynamoDB": "/app/learn/locked", "Serverless basics": "/app/learn/locked", "State & backends": "/app/learn/locked", "Terraform modules": "/app/learn/locked", "Workspaces & envs": "/app/learn/locked", "Ansible config": "/app/learn/locked", "Packer images": "/app/learn/locked", "Policy as code": "/app/learn/locked", "Services & ingress": "/app/learn/locked", "ConfigMaps & secrets": "/app/learn/locked", "Storage & PVCs": "/app/learn/locked", "Helm charts": "/app/learn/locked", "RBAC & security": "/app/learn/locked", "Autoscaling": "/app/learn/locked", "Metrics with Prometheus": "/app/learn/locked", "Grafana dashboards": "/app/learn/locked", "Logs with Loki": "/app/learn/locked", "Tracing with Tempo": "/app/learn/locked", "Alerting & SLOs": "/app/learn/locked", "On-call drills": "/app/learn/locked", "Cost monitoring": "/app/learn/locked", "GitHub Actions": "/app/learn/locked", "Build & cache": "/app/learn/locked", "Argo CD": "/app/learn/locked", "Progressive delivery": "/app/learn/locked", "Secrets in CI": "/app/learn/locked", "Capstone project": "/app/learn/locked", "Final review": "/app/learn/locked",
-    "VPC from scratch": "/app/learn/locked", "Terraform basics": "/app/learn/locked", "Pods & deployments": "/app/learn/locked",
-  },
+  RoadmapAll: roadmapAllLinks(),
+
   RoadmapMilestone: {
+    Continue: "/app/lab", "×": "/app/roadmap", "Docker networking & storage2/7": "/app/learn/class?m=docker-networking-and-storage",
     "Linux fundamentals12 / 12 · done": "/app/course", "Network namespaces10 items · ~4 h": "/app/learn/class",
     "Milestone 1 · 23 modules": "/app/course", "+ 16 more modules": "/app/course/roadmap",
   },
@@ -115,6 +140,8 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
     "2Milestone certificates": "/app/me/certificates", "Lean hireBest AI interview signal": "/app/interview/report", "96 hHands-on time in VMs": "/app/me/time-bank",
   },
   MeSubscription: { "Change plan": "/pricing" },
+  MeLabHistory: { Resume: "/app/lab", Retry: "/app/lab/launch" },
+  MeProgress: { "DevOps & Cloud Engineer": "/app/course" },
   MeSupport: { "Send ticket": "/app/me/support/book" },
   MeSupportBook: { "Book session": "/app/me/support/rate" },
   MeSupportRate: { "Send feedback": "/app/me/support", Later: "/app/me/support" },

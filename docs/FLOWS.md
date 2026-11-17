@@ -1,18 +1,18 @@
 # Screens and flows
 
-Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links (app bar, profile sidebar, common buttons) live in `APP_LINKS`; screen-specific buttons are listed below.
+Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links (app bar, profile sidebar, common buttons) live in `APP_LINKS`; screen-specific buttons are listed below. The track overview links every milestone and module into the roadmap explorer (`roadmapAllLinks`).
 
 | Screen | Route | Buttons → destination |
 |---|---|---|
-| AuthSignIn | `/signin` | global links only |
-| AuthCheckEmail | `/signin/check-email` | global links only |
-| AuthGoal | `/onboarding/goal` | Not sure yet — show me everything → `/onboarding/level`<br>Continue → `/onboarding/level` |
-| AuthLevel | `/onboarding/level` | Continue → `/onboarding/plan` |
-| AuthPlan | `/onboarding/plan` | global links only |
-| AuthWelcome | `/welcome` | global links only |
-| Dashboard | `/app` | Lab time bank2h 40m → `/app/me/time-bank`<br>Streak12 days → `/app/me/progress`<br>Labs passed142+9 this week → `/app/me/lab-history`<br>MON17 → `/app/me/schedule`<br>TUE18 → `/app/me/schedule` |
-| RoadmapAll | `/app/roadmap` | Open milestone 1 → `/app/roadmap/milestone-1`<br>Linux fundamentals → `/app/course`<br>Docker networking & storage → `/app/learn/class`<br>Text processing & regex → `/app/learn/class`<br>Bash scripting → `/app/learn/class`<br>Network namespaces → `/app/learn/class`<br>Overlay networking → `/app/learn/class`<br>Docker fundamentals → `/app/learn/class`<br>IAM & accounts → `/app/learn/locked`<br>EC2 & autoscaling → `/app/learn/locked`<br>Load balancers → `/app/learn/locked`<br>S3 & CloudFront → `/app/learn/locked`<br>RDS & DynamoDB → `/app/learn/locked`<br>Serverless basics → `/app/learn/locked`<br>State & backends → `/app/learn/locked`<br>Terraform modules → `/app/learn/locked`<br>Workspaces & envs → `/app/learn/locked`<br>Ansible config → `/app/learn/locked`<br>Packer images → `/app/learn/locked`<br>Policy as code → `/app/learn/locked`<br>Services & ingress → `/app/learn/locked`<br>ConfigMaps & secrets → `/app/learn/locked`<br>Storage & PVCs → `/app/learn/locked`<br>Helm charts → `/app/learn/locked`<br>RBAC & security → `/app/learn/locked`<br>Autoscaling → `/app/learn/locked`<br>Metrics with Prometheus → `/app/learn/locked`<br>Grafana dashboards → `/app/learn/locked`<br>Logs with Loki → `/app/learn/locked`<br>Tracing with Tempo → `/app/learn/locked`<br>Alerting & SLOs → `/app/learn/locked`<br>On-call drills → `/app/learn/locked`<br>Cost monitoring → `/app/learn/locked`<br>GitHub Actions → `/app/learn/locked`<br>Build & cache → `/app/learn/locked`<br>Argo CD → `/app/learn/locked`<br>Progressive delivery → `/app/learn/locked`<br>Secrets in CI → `/app/learn/locked`<br>Capstone project → `/app/learn/locked`<br>Final review → `/app/learn/locked`<br>VPC from scratch → `/app/learn/locked`<br>Terraform basics → `/app/learn/locked`<br>Pods & deployments → `/app/learn/locked` |
-| RoadmapMilestone | `/app/roadmap/milestone-1` | Linux fundamentals12 / 12 · done → `/app/course`<br>Network namespaces10 items · ~4 h → `/app/learn/class`<br>Milestone 1 · 23 modules → `/app/course`<br>+ 16 more modules → `/app/course/roadmap` |
+| Sign in | `/signin` | global links only |
+| Check your email | `/signin/check-email` | global links only |
+| Your goal | `/onboarding/goal` | Not sure yet — show me everything → `/onboarding/level`<br>Continue → `/onboarding/level` |
+| Your level | `/onboarding/level` | Continue → `/onboarding/plan` |
+| Choose a plan | `/onboarding/plan` | global links only |
+| Welcome | `/welcome` | global links only |
+| Dashboard | `/app` | Persist Postgres with volumes → `/app/lab/launch`<br>Networking quick check → `/app/learn/check`<br>Explain Docker volumes → `/app/interview`<br>Lab time bank2h 40m → `/app/me/time-bank`<br>Streak12 days → `/app/me/progress`<br>Labs passed142+9 this week → `/app/me/lab-history`<br>MON17 → `/app/me/schedule`<br>TUE18 → `/app/me/schedule` |
+| Roadmap | `/app/roadmap` | global links only |
+| Roadmap | `/app/roadmap/milestone-1` | Continue → `/app/lab`<br>× → `/app/roadmap`<br>Docker networking & storage2/7 → `/app/learn/class?m=docker-networking-and-storage`<br>Linux fundamentals12 / 12 · done → `/app/course`<br>Network namespaces10 items · ~4 h → `/app/learn/class`<br>Milestone 1 · 23 modules → `/app/course`<br>+ 16 more modules → `/app/course/roadmap` |
 | Lab | `/app/lab` | ← Previous → `/app/lab/launch`<br>Next step → → `/app/lab/complete`<br>IDE··· → `/app/lab/ide`<br>Retarget LB to :8080 → `/app/lab/expose`<br>Open raw response → `/app/lab/expose` |
 | AI interview | `/app/practice/interview` | Pause → `/app/interview/error`<br>Finish interview → `/app/interview/report`<br>Stop and send → `/app/interview/feedback`<br>Restart → `/app/interview/session` |
 | AI exam | `/app/practice/exam` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
@@ -46,10 +46,10 @@ Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links
 | Milestone complete | `/app/learn/milestone-complete` | Download PDF → `/app/me/certificates`<br>Share on LinkedIn → `/u/rahim`<br>● +300 coins → `/app/me/time-bank`<br>Rank · Engineer → `/leaderboard` |
 | Milestone exam | `/app/exam` | See questions → `/app/exam/questions` |
 | Exam questions | `/app/exam/questions` | Terraform → `/app/exam/q4/instructions`<br>AWS → `/app/exam/q4/instructions`<br>ELB → `/app/exam/q4/instructions`<br>Ansible → `/app/exam/q4/instructions`<br>CloudFormation → `/app/exam/q4/instructions`<br>Resume · 9:12 → `/app/exam/q4/instructions`<br>Start → `/app/exam/q4/instructions`<br>Retry → `/app/exam/q4/instructions`<br>Finish exam → `/app/exam/q4/finish` |
-| Q4 instructions | `/app/exam/q4/instructions` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
-| Q4 whiteboard | `/app/exam/q4/whiteboard` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
-| Submit Q4 | `/app/exam/q4/submit` | Keep working → `/app/exam/q4/whiteboard`<br>Save and submit → `/app/exam/q4/review`<br>All questions → `/app/exam/questions` |
-| Q4 review | `/app/exam/q4/review` | Retry Q4 → `/app/exam/q4/instructions`<br>Next: Q5 → `/app/exam/q4/finish`<br>All questions → `/app/exam/questions` |
+| Exam question | `/app/exam/q4/instructions` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
+| Exam whiteboard | `/app/exam/q4/whiteboard` | Submit Q4 → `/app/exam/q4/submit`<br>All questions → `/app/exam/questions` |
+| Submit answer | `/app/exam/q4/submit` | Keep working → `/app/exam/q4/whiteboard`<br>Save and submit → `/app/exam/q4/review`<br>All questions → `/app/exam/questions` |
+| Question result | `/app/exam/q4/review` | Retry Q4 → `/app/exam/q4/instructions`<br>Next: Q5 → `/app/exam/q4/finish`<br>All questions → `/app/exam/questions` |
 | Finish exam | `/app/exam/q4/finish` | Keep going → `/app/exam/questions`<br>Finish attempt → `/app/exam/result`<br>All questions → `/app/exam/questions` |
 | Exam passed | `/app/exam/result` | View certificate → `/app/me/certificates`<br>Back to course → `/app/course` |
 | Exam not passed | `/app/exam/result/retry` | Retry exam → `/app/exam`<br>Review weak spots → `/app/course` |
@@ -66,8 +66,8 @@ Generated from `design/app-manifest.json` and `src/data/routes.ts`. Global links
 | Support | `/app/me/support` | Send ticket → `/app/me/support/book` |
 | Book a TA | `/app/me/support/book` | Book session → `/app/me/support/rate` |
 | Rate session | `/app/me/support/rate` | Send feedback → `/app/me/support`<br>Later → `/app/me/support` |
-| Progress | `/app/me/progress` | global links only |
-| Lab history | `/app/me/lab-history` | global links only |
+| Progress | `/app/me/progress` | DevOps & Cloud Engineer → `/app/course` |
+| Lab history | `/app/me/lab-history` | Resume → `/app/lab`<br>Retry → `/app/lab/launch` |
 | Schedule | `/app/me/schedule` | global links only |
 | Settings | `/app/me/settings` | global links only |
 | Edit profile | `/app/me/edit` | Cancel → `/app/me`<br>Save changes → `/app/me` |

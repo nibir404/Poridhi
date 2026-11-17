@@ -42,6 +42,18 @@ export default function DesignFrame({ width = 1440, children }: { width?: number
       n.dataset.pdFull = "1";
       n.style.width = mode === "fluid" ? "100%" : `${width}px`;
     });
+    // Fill the window height: artboards are drawn at a fixed height (e.g. 960px), so on taller
+    // windows the page would stop half way. Grow the artboard (its main row is flex-grow) instead.
+    const root = el.querySelector<HTMLElement>("[data-pid]");
+    if (!root) return;
+    const fill = () => {
+      const zoom = mode === "scale" ? Math.min(1, document.documentElement.clientWidth / width) : 1;
+      if (/^\d+px$/.test(root.style.height)) { root.dataset.pdH = root.style.height; root.style.height = "auto"; }
+      root.style.minHeight = `max(${root.dataset.pdH ?? "0px"}, ${Math.ceil(window.innerHeight / zoom)}px)`;
+    };
+    fill();
+    window.addEventListener("resize", fill);
+    return () => window.removeEventListener("resize", fill);
   }, [mode, width]);
 
   const style: React.CSSProperties =
