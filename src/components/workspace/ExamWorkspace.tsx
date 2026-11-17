@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Tour from "./Tour";
 import Workspace, { type RailItem } from "./Workspace";
 import { Composer, Editor, Terminal, Thread, type Msg, type TermLine } from "./parts";
 import { examQuestions } from "@/data/entities";
@@ -48,6 +49,7 @@ export default function ExamWorkspace() {
 }
 
 function ExamInner() {
+  const [tourN, setTourN] = useState(0);
   const qs = useSearchParams();
   const q = examQuestions.find((x) => String(x.n) === qs.get("q")) ?? examQuestions[3];
   const [files, setFiles] = useState<Record<string, string>>({ "main.tf": START, "variables.tf": 'variable "region" {\n  default = "ap-south-1"\n}\n', "outputs.tf": 'output "alb_dns" {\n  value = aws_lb.web.dns_name\n}\n' });
@@ -107,8 +109,15 @@ function ExamInner() {
     </div>
   );
 
-  return (
-    <Workspace back="/app/exam/questions" crumb={`Milestone 1 · Milestone exam · Q${q.n} of 10`} title={q.title}
+  return (<>
+    <Tour id="exam" replay={tourN} steps={[
+      { target: "rail", title: "All ten questions", body: "Pick any question in any order. Each has its own 15-minute clock that starts when you open it." },
+      { target: "thread", title: "Task and proctor", body: "The task and its diagram are here. Ask the proctor to clarify anything; it won't give you the answer." },
+      { target: "tabs", title: "Editor, terminal and rubric", body: "Write Terraform in the editor, run terraform validate and plan in the terminal, and watch the rubric update live." },
+      { target: "timer", title: "Your clock", body: "Time left on this question. It turns amber in the last three minutes." },
+      { target: "actions", title: "Submit when ready", body: "Submit grades your work against the rubric. You can retry; your best attempt counts." },
+    ]} />
+    <Workspace onTour={() => setTourN((n) => n + 1)} back="/app/exam/questions" crumb={`Milestone 1 · Milestone exam · Q${q.n} of 10`} title={q.title}
       progress={{ done: results.filter((r) => r.ok).length, total: RUBRIC.length, label: "rubric items" }} timer={`${mm}:${String(ss).padStart(2, "0")} left`} timerTone={secs < 180 ? "warn" : "ok"}
       railTitle="Questions" railAction={{ label: "All questions", href: "/app/exam/questions" }} rail={rail}
       tab={tab} setTab={setTab}
@@ -120,5 +129,5 @@ function ExamInner() {
       actions={submitted == null ? <button type="button" onClick={submit} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 32, padding: "0 14px", borderRadius: "var(--puku-radius)", border: 0, background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, cursor: "pointer" }}>Submit Q{q.n}</button> : undefined}
       thread={<Thread msgs={msgs} typing={typing} composer={<Composer placeholder="Ask the proctor to clarify…" onSend={ask} chips={[{ label: "Which subnets?", value: "Which subnets should the ALB use?" }, { label: "Health check?", value: "What should the health check be?" }]} />} />}
     />
-  );
+  </>);
 }

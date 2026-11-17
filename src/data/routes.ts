@@ -90,6 +90,7 @@ export const APP_LINKS: Record<string, string> = {
  * ("Continue", "Next step →"). Checked before APP_LINKS. Keys are AppShell screen names.
  */
 export const SCREEN_LINKS: Record<string, Record<string, string>> = {
+  Leaderboard: { "Start a free lab": "/app/lab/launch" },
   AuthGoal: { "Not sure yet — show me everything": "/onboarding/level", Continue: "/onboarding/level" },
   AuthLevel: { Continue: "/onboarding/plan" },
   Dashboard: {

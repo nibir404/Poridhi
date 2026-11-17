@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Tour from "./Tour";
 import Workspace, { Ico, iconBtn, type RailItem } from "./Workspace";
 import { Composer, Editor, Terminal, Thread, type Msg, type TermLine } from "./parts";
 import { labs } from "@/data/entities";
@@ -148,6 +149,7 @@ function Preview({ status, lbTarget }: { status: Record<string, Status>; lbTarge
 }
 
 export default function LabWorkspace({ embedded = false }: { embedded?: boolean }) {
+  const [tourN, setTourN] = useState(0);
   const { plan, vm: vmState } = usePlan();
   const vm = embedded ? "on" : vmState; // the hero demo always runs
   const [e, setE] = useState<Engine>(() => initial(embedded));
@@ -240,11 +242,18 @@ export default function LabWorkspace({ embedded = false }: { embedded?: boolean 
   const Upgrade = <UpgradeDialog open={upgrade} onClose={() => setUpgrade(false)} title="Launch real VMs with Pro" />;
 
   const ws = (
-    <Workspace height={embedded ? "100%" : undefined} back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage&item=2" crumb="Milestone 1 · Docker networking & storage" title={labs["publish-nginx-lb"].title}
+    <Workspace onTour={() => setTourN((n) => n + 1)} height={embedded ? "100%" : undefined} back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage&item=2" crumb="Milestone 1 · Docker networking & storage" title={labs["publish-nginx-lb"].title}
       progress={{ done: e.checks, total: 4, label: "checks" }} timer={live ? timer : undefined} railTitle="This module" rail={rail}
       tab={tab} setTab={setTab} tabs={tabs} actions={embedded ? undefined : actions}
       thread={<Thread msgs={e.msgs} typing={typing} composer={<Composer placeholder="Ask the guide, or type a command ($ …)" onSend={send} chips={[{ label: next, value: next }, { label: "Give me a hint", value: "hint" }, { label: "Why a 502?", value: "Why a 502?" }]} />} />} />
   );
-  if (!embedded) return <>{ws}{Upgrade}</>;
+  const tour = <Tour id="lab" replay={tourN} steps={[
+    { target: "rail", title: "Your module", body: "Everything in this module, in order. Done items are green; the current lab is highlighted. Jump to any of them." },
+    { target: "thread", title: "Your lab guide", body: "The guide explains each step, posts check results and answers questions. Type a command starting with $ to run it, or just ask." },
+    { target: "tabs", title: "Guide, canvas and tools", body: "Read the full lab guide any time for free. With a running VM you also get the live canvas, terminal, editor and request preview." },
+    { target: "actions", title: "Launch your VM", body: "Launch the VM here (Pro). IDE, database, load balancer and cloud tray unlock once it runs. The power button stops it and pauses the clock." },
+    { target: "progress", title: "Auto-checks", body: "Four checks grade your work live. Pass all four to complete the lab and earn XP and coins." },
+  ]} />;
+  if (!embedded) return <>{ws}{Upgrade}{tour}</>;
   return embedded ? <div className="pd-ws-embed" style={{ height: 640, borderRadius: "var(--puku-radius-panel)", overflow: "hidden", border: "1px solid var(--dashboard-border)", boxShadow: "0 40px 80px -48px rgba(0,0,0,.45)" }}>{ws}</div> : ws;
 }

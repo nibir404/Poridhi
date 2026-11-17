@@ -2,6 +2,23 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { track } from "@/data/roadmap";
+import { stackLogos } from "@/data/stackLogos";
+
+/** Per-milestone cover: brand-ish gradient, dot texture and the stack's logo. */
+const COVER: Record<number, { logo: string; hue: [string, string] }> = {
+  1: { logo: "Linux", hue: ["#3F3F46", "#18181B"] }, 2: { logo: "AWS", hue: ["#EA580C", "#1E293B"] }, 3: { logo: "Terraform", hue: ["#7C3AED", "#4C1D95"] },
+  4: { logo: "Kubernetes", hue: ["#2563EB", "#1E3A8A"] }, 5: { logo: "Prometheus", hue: ["#EA580C", "#B91C1C"] }, 6: { logo: "GitHub Actions", hue: ["#2563EB", "#0EA5E9"] },
+};
+function Cover({ n }: { n: number }) {
+  const c = COVER[n] ?? COVER[1];
+  const p = stackLogos.find((l) => l.name === c.logo)?.path;
+  return (
+    <div aria-hidden style={{ position: "relative", height: 92, borderRadius: "12px 12px 0 0", overflow: "hidden", background: `radial-gradient(90% 140% at 100% 0%, ${c.hue[0]}, transparent 70%), linear-gradient(135deg, ${c.hue[1]}, #0B0B12)` }}>
+      <span style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,.22) 1px, transparent 1.2px)", backgroundSize: "7px 7px", maskImage: "linear-gradient(90deg, transparent 20%, #000)", WebkitMaskImage: "linear-gradient(90deg, transparent 20%, #000)" }} />
+      {p && <svg viewBox="0 0 24 24" width="52" height="52" style={{ position: "absolute", right: 18, top: 20 }}><path d={p} fill="#fff" /></svg>}
+    </div>
+  );
+}
 
 /**
  * Track roadmap as a free canvas: drag the background to pan, scroll or pinch to zoom, and drag any
@@ -19,6 +36,20 @@ export default function RoadmapCanvas() {
   const [open, setOpen] = useState<Record<number, boolean>>({});
   const box = useRef<HTMLDivElement>(null);
   const heights = useRef<Record<number, number>>({});
+  // Fill exactly the window under the app header, whatever scale the design frame applies.
+  const [fitH, setFitH] = useState<number | null>(null);
+  useEffect(() => {
+    const frameRoot = document.querySelector<HTMLElement>(".pd-frame [data-pid]");
+    if (frameRoot) { frameRoot.dataset.pdLocked = "1"; frameRoot.style.minHeight = "0"; }
+    const f = () => {
+      const el = box.current; if (!el) return;
+      const scale = el.offsetWidth ? el.getBoundingClientRect().width / el.offsetWidth : 1;
+      const top = document.querySelector<HTMLElement>(".pd-appheader")?.getBoundingClientRect().bottom ?? 64;
+      setFitH((window.innerHeight - top) / (scale || 1));
+    };
+    f(); const t = setTimeout(f, 400); window.addEventListener("resize", f);
+    return () => { clearTimeout(t); window.removeEventListener("resize", f); };
+  }, []);
 
   useEffect(() => { try { const s = localStorage.getItem(KEY); if (s) setPos({ ...defaultPos(), ...JSON.parse(s) }); } catch {} }, []);
   const save = (p: Pos) => { setPos(p); localStorage.setItem(KEY, JSON.stringify(p)); };
@@ -81,7 +112,7 @@ export default function RoadmapCanvas() {
   const btn: React.CSSProperties = { width: 32, height: 32, display: "grid", placeItems: "center", border: 0, borderRadius: 6, background: "transparent", color: "var(--dashboard-text)", cursor: "pointer", fontSize: 15 };
 
   return (
-    <div ref={box} onPointerDown={panDown} data-lenis-prevent style={{ position: "relative", height: "calc(100dvh - 64px)", overflow: "hidden", cursor: "grab", touchAction: "none", userSelect: "none", background: "var(--dashboard-main)", backgroundImage: "radial-gradient(var(--dashboard-border) 1px, transparent 1.2px)", backgroundSize: `${22 * view.k}px ${22 * view.k}px`, backgroundPosition: `${view.x}px ${view.y}px`, color: "var(--dashboard-text)", fontFamily: "var(--font-sans)" }}>
+    <div ref={box} onPointerDown={panDown} data-lenis-prevent style={{ position: "relative", height: fitH ?? "calc(100dvh - 64px)", overflow: "hidden", cursor: "grab", touchAction: "none", userSelect: "none", background: "var(--dashboard-main)", backgroundImage: "radial-gradient(var(--dashboard-border) 1px, transparent 1.2px)", backgroundSize: `${22 * view.k}px ${22 * view.k}px`, backgroundPosition: `${view.x}px ${view.y}px`, color: "var(--dashboard-text)", fontFamily: "var(--font-sans)" }}>
       {/* Title */}
       <div data-ui style={{ position: "absolute", left: 24, top: 20, zIndex: 2, display: "grid", gap: 2, pointerEvents: "none" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: ink.muted }}>Track</span>
@@ -98,6 +129,7 @@ export default function RoadmapCanvas() {
           return (
             <section key={m.n} data-card aria-label={`Milestone ${m.n}: ${m.title}`} ref={(el) => { if (el) heights.current[m.n] = el.offsetHeight; }}
               style={{ position: "absolute", left: pos[m.n].x, top: pos[m.n].y, width: W, borderRadius: 12, border: current ? "1px solid var(--dashboard-text)" : ink.border, background: "var(--dashboard-panel)", boxShadow: "0 12px 32px -20px rgba(0,0,0,.35)", cursor: "default" }}>
+              <div onPointerDown={cardDown(m.n)} style={{ cursor: "grab" }}><Cover n={m.n} /></div>
               <header onPointerDown={cardDown(m.n)} style={{ padding: "14px 16px 12px", cursor: "grab", display: "grid", gap: 8, borderBottom: ink.border }}>
                 <span style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: ink.muted }}>
                   <span>Milestone {m.n}{current ? " · current" : ""}</span><span aria-hidden>⋮⋮</span>

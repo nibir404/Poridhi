@@ -138,7 +138,7 @@ export default function NotesView() {
           <div style={{ padding: "32px 40px", display: "grid", gap: 24, maxWidth: 760, alignContent: "start" }}>
             <h2 style={{ margin: 0, fontSize: 32, fontWeight: 600, letterSpacing: "-.03em" }}>{cur.title}</h2>
             {cur.at && cur.m ? (
-              <Link href={`/app/learn/${cur.m}?t=${cur.at}`} className="pd-hatch" style={{ display: "flex", alignItems: "center", gap: 14, padding: 16, borderRadius: T.r, border: T.border, textDecoration: "none", color: "var(--dashboard-text)" }}>
+              <Link href={`/app/learn/class?m=${cur.m}&t=${cur.at}`} className="pd-hatch" style={{ display: "flex", alignItems: "center", gap: 14, padding: 16, borderRadius: T.r, border: T.border, textDecoration: "none", color: "var(--dashboard-text)" }}>
                 <span style={{ width: 40, height: 40, borderRadius: 999, display: "grid", placeItems: "center", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)" }}><Svg d="M8 5v14l11-7z" /></span>
                 <span style={{ display: "grid" }}><b style={{ fontSize: 14 }}>Jump to {cur.at} in the lesson</b><span style={{ fontSize: 13, color: T.muted }}>Opens the video and transcript at this moment</span></span>
               </Link>

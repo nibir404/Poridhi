@@ -2,6 +2,28 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## 2.8.0 · 2026-11-17
+
+### Added
+- First-time guided tours (with Skip, Back/Next, keyboard, replay via ?) in the lab, AI exam and AI interview workspaces.
+- Plans: the free plan is content only (classes, readings, lab guides). Lab VMs and tools, AI exams and AI interviews need Pro; shared upgrade dialog and full-screen Pro gate.
+- Lab: Launch lab opens the workspace with a free Guide tab; Launch VM (Pro) boots it and unlocks terminal, IDE, database, load balancer and cloud tray; tool pages redirect when the VM is off.
+- Manual "mark as complete" for any unlocked roadmap item, persisted; counts and module status follow.
+- Roadmap as a free canvas: pan, zoom, drag milestone cards (layout saved), milestone cover thumbnails.
+- Courses page rebuilt like the lab library: filter sidebar with counts, search, sort, card grid.
+- Dashboard activity: GitHub-style heatmap, weekly bars and stats. Exam intro sidebar with readiness, questions, attempts and rules. Richer lab launch guide.
+
+### Changed
+- AI interviews and exams live under Learn (module / milestone context); the Practice tab is gone.
+- Real Monthly / Yearly pricing toggle that updates prices.
+- Colourful textured banners; controls over textures get a solid backing; stronger closing-CTA texture.
+- Light mode: firmer borders, darker secondary text, lifted cards.
+- Smoother navigation: client-side routing everywhere, prefetch of linked routes, soft page transition.
+- Roadmap explorer and canvas fill the window exactly (no dead strip); explorer panels scroll inside.
+
+### Fixed
+- Support Tickets / Book a TA toggle; notes "Jump to lesson" link; quiz answers selectable; leaderboard CTA routes into the app; lab icon rail removed. Every link target verified against a real page.
+
 ## 2.7.0 · 2026-11-17
 
 ### Added

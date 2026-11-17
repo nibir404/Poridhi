@@ -30,7 +30,7 @@ export default function Workspace(props: {
   timer?: string; timerTone?: "ok" | "warn";
   railTitle: string; railAction?: { label: string; href: string }; rail: RailItem[];
   thread: React.ReactNode; tabs: Tab[]; tab: string; setTab: (id: string) => void;
-  actions?: React.ReactNode; height?: string;
+  actions?: React.ReactNode; height?: string; onTour?: () => void;
 }) {
   const [railOpen, setRailOpen] = useState(true);
   const [split, setSplit] = useState(0.46); // thread share of the main area
@@ -66,13 +66,14 @@ export default function Workspace(props: {
         </div>
         <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
           {props.progress && (
-            <span aria-label={`${props.progress.done} of ${props.progress.total} ${props.progress.label ?? "done"}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, height: 32, padding: "0 12px", borderRadius: "var(--puku-radius)", background: "var(--dashboard-hover)" }}>
+            <span data-tour="progress" aria-label={`${props.progress.done} of ${props.progress.total} ${props.progress.label ?? "done"}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, height: 32, padding: "0 12px", borderRadius: "var(--puku-radius)", background: "var(--dashboard-hover)" }}>
               <span style={{ display: "flex", gap: 3 }}>{Array.from({ length: props.progress.total }, (_, i) => <span key={i} style={{ width: 14, height: 4, borderRadius: 2, background: i < props.progress!.done ? "var(--dashboard-success)" : "var(--dashboard-border)" }} />)}</span>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: 12 }}>{props.progress.done} / {props.progress.total}</span>
             </span>
           )}
-          {props.timer && <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-mono)", fontSize: 13 }}><span style={{ width: 7, height: 7, borderRadius: 999, background: props.timerTone === "warn" ? "var(--dashboard-warning)" : "var(--dashboard-success)" }} />{props.timer}</span>}
-          {props.actions}
+          {props.timer && <span data-tour="timer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-mono)", fontSize: 13 }}><span style={{ width: 7, height: 7, borderRadius: 999, background: props.timerTone === "warn" ? "var(--dashboard-warning)" : "var(--dashboard-success)" }} />{props.timer}</span>}
+          <span data-tour="actions" style={{ display: "contents" }}>{props.actions}</span>
+          {props.onTour && <button type="button" onClick={props.onTour} aria-label="Take the tour" title="Take the tour" style={iconBtn}><Ico d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4M12 17h.01" /></button>}
           <ThemeSwitch inline />
           <button type="button" aria-label="Account menu" onClick={(e) => { e.stopPropagation(); const r = e.currentTarget.getBoundingClientRect(); setAccount((a) => (a ? null : r)); }} style={{ ...iconBtn, borderRadius: 999, border: "1px solid var(--dashboard-border)", background: "var(--dashboard-hover)", fontSize: 12, fontWeight: 600 }}>RA</button>
         </div>
@@ -80,7 +81,7 @@ export default function Workspace(props: {
 
       <div style={{ display: "grid", gridTemplateColumns: `${railOpen && !narrow ? "248px" : "0px"} minmax(0, 1fr)`, minHeight: 0, transition: "grid-template-columns .2s var(--puku-ease)" }}>
         {/* Rail */}
-        <aside aria-label={props.railTitle} style={{ overflow: "hidden", borderRight: railOpen && !narrow ? "1px solid var(--dashboard-border)" : 0, background: "var(--dashboard-sidebar)", display: "flex", flexDirection: "column", minHeight: 0 }}>
+        <aside data-tour="rail" aria-label={props.railTitle} style={{ overflow: "hidden", borderRight: railOpen && !narrow ? "1px solid var(--dashboard-border)" : 0, background: "var(--dashboard-sidebar)", display: "flex", flexDirection: "column", minHeight: 0 }}>
           <div style={{ padding: 12, display: "grid", gap: 8 }}>
             {props.railAction && <Link href={props.railAction.href} className="puku-btn puku-btn-outline" style={{ display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 12px", borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", color: "var(--dashboard-text)", textDecoration: "none", fontSize: 13, fontWeight: 500 }}><Ico d="M12 5v14M5 12h14" size={14} />{props.railAction.label}</Link>}
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--dashboard-muted)", padding: "8px 4px 0" }}>{props.railTitle}</span>
@@ -104,10 +105,10 @@ export default function Workspace(props: {
 
         {/* Thread ║ artifact */}
         <div ref={main} style={{ display: "grid", gridTemplateColumns: narrow ? "1fr" : `minmax(0, ${split}fr) 6px minmax(0, ${1 - split}fr)`, gridTemplateRows: narrow ? "minmax(0, 1fr) minmax(0, 1fr)" : undefined, minHeight: 0 }}>
-          <section aria-label="Conversation" style={{ minHeight: 0, display: "flex", flexDirection: "column" }}>{props.thread}</section>
+          <section data-tour="thread" aria-label="Conversation" style={{ minHeight: 0, display: "flex", flexDirection: "column" }}>{props.thread}</section>
           {!narrow && <div role="separator" aria-orientation="vertical" aria-label="Resize panes" tabIndex={0} onPointerDown={down} onKeyDown={key} onDoubleClick={() => setSplit(0.46)} className="pd-resizer" style={{ width: 6 }} />}
           <section aria-label="Workspace" style={{ minHeight: 0, display: "flex", flexDirection: "column", borderLeft: "1px solid var(--dashboard-border)", background: "var(--dashboard-panel)" }}>
-            <div role="tablist" aria-label="Workspace tools" style={{ display: "flex", gap: 2, padding: 6, borderBottom: "1px solid var(--dashboard-border)", overflowX: "auto" }}>
+            <div data-tour="tabs" role="tablist" aria-label="Workspace tools" style={{ display: "flex", gap: 2, padding: 6, borderBottom: "1px solid var(--dashboard-border)", overflowX: "auto" }}>
               {props.tabs.map((t) => (
                 <button key={t.id} role="tab" aria-selected={t.id === active.id} onClick={() => props.setTab(t.id)} style={{ display: "inline-flex", alignItems: "center", gap: 6, height: 30, padding: "0 10px", borderRadius: "var(--puku-radius)", border: 0, background: t.id === active.id ? "var(--dashboard-hover)" : "transparent", color: t.id === active.id ? "var(--dashboard-text)" : "var(--dashboard-muted)", font: `${t.id === active.id ? 600 : 500} 13px/1 var(--font-sans)`, cursor: "pointer", whiteSpace: "nowrap" }}>
                   <Ico d={t.icon} size={14} />{t.label}

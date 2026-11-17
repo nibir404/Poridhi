@@ -196,8 +196,8 @@ html[data-theme="dark"] .pd-l-aurora { opacity: .45; }
 /* Pure black and white. Overrides the design-system palette for light and dark with neutral
    greys (no tint); the accent is black on light and white on dark. Status colours keep meaning. */
 html[data-theme="light"], html:not([data-theme]) {
-  --dashboard-main: #FFFFFF; --dashboard-sidebar: #FAFAFA; --dashboard-panel: #FFFFFF; --dashboard-hover: #F2F2F2;
-  --dashboard-selected: #E8E8E8; --dashboard-border: #E5E5E5; --dashboard-text: #000000; --dashboard-muted: #5C5C5C;
+  --dashboard-main: #FFFFFF; --dashboard-sidebar: #F7F7F7; --dashboard-panel: #FFFFFF; --dashboard-hover: #EFEFEF;
+  --dashboard-selected: #E3E3E3; --dashboard-border: #D6D6D6; --dashboard-text: #000000; --dashboard-muted: #4D4D4D; /* light: firmer borders, darker secondary text */
   --dashboard-accent: #000000; --dashboard-accent-ink: #FFFFFF;
   --dashboard-success: #15803D; --dashboard-danger: #B91C1C; --dashboard-warning: #A16207;
 }
@@ -297,7 +297,7 @@ body.pd-phone .pd-siteheader { display: none !important; }
 @media (prefers-reduced-motion: reduce) { [style*="dither-card"] { animation: none; } }
 
 /* Route transition (template.tsx) */
-.pd-route { animation: pd-route-in .22s cubic-bezier(.2,.7,.2,1) both; }
+.pd-route { animation: pd-route-in .22s cubic-bezier(.2,.7,.2,1) backwards; }
 @keyframes pd-route-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .pd-route { animation: none; } }
 html { scroll-behavior: auto; }
@@ -310,3 +310,8 @@ html { scroll-behavior: auto; }
 /* Roadmap explorer: panels stick under the app header; each scrolls inside itself */
 .pd-roadmap { position: sticky; top: 64px; overflow: hidden; }
 .pd-roadmap > * { min-height: 0; height: 100%; overscroll-behavior: contain; }
+
+/* Light mode: lift cards off the page a little so they read as surfaces */
+html[data-theme="light"] .pd-course-card,
+html[data-theme="light"] .pd-ws section[aria-label="Workspace"],
+html[data-theme="light"] [data-card] { box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px -16px rgba(0,0,0,.18) !important; }

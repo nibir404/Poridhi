@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Tour from "./Tour";
 import Workspace, { type RailItem } from "./Workspace";
 import { usePlan } from "@/data/plan";
 import { ProWall } from "./ProGate";
@@ -35,6 +36,7 @@ export default function InterviewWorkspace() {
 }
 
 function InterviewInner() {
+  const [tourN, setTourN] = useState(0);
   const [stage, setStage] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
   const [msgs, setMsgs] = useState<Msg[]>(() => [
@@ -80,8 +82,14 @@ function InterviewInner() {
   const rail: RailItem[] = STAGES.map((s, i) => ({ id: s.name, title: `${i + 1}. ${s.name}`, meta: scores[i] != null ? `${scores[i]} / 100` : i === stage ? "In progress" : undefined, status: i < stage ? "done" : i === stage ? "current" : "todo", active: i === stage }));
   const mm = Math.floor(secs / 60), ss = secs % 60;
 
-  return (
-    <Workspace back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage" crumb="Milestone 1 · Docker networking & storage · AI interview" title="Design a URL shortener"
+  return (<>
+    <Tour id="interview" replay={tourN} steps={[
+      { target: "rail", title: "Five stages", body: "Requirements, high-level design, deep dive, trade-offs and wrap-up. Each stage is scored as you go." },
+      { target: "thread", title: "Talk to the interviewer", body: "Answer by typing, or press the mic to speak. Think out loud: reasoning is scored, not just the final answer." },
+      { target: "tabs", title: "Whiteboard and terminal", body: "Drag boxes on the whiteboard to sketch your design, and use the terminal when a question needs commands." },
+      { target: "progress", title: "Progress and report", body: "Stages completed so far. After the last one you get a full report with a hiring signal." },
+    ]} />
+    <Workspace onTour={() => setTourN((n) => n + 1)} back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage" crumb="Milestone 1 · Docker networking & storage · AI interview" title="Design a URL shortener"
       progress={{ done: Math.min(stage, 5), total: 5, label: "stages" }} timer={`${mm}:${String(ss).padStart(2, "0")}`}
       railTitle={avg != null ? `Stages · avg ${avg}` : "Stages"} railAction={{ label: "New interview", href: "/app/interview" }} rail={rail}
       tab={tab} setTab={setTab}
@@ -93,5 +101,5 @@ function InterviewInner() {
         ? <a href="/app/interview/report" className="puku-btn puku-btn-default pd-glow-btn" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: 44, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, textDecoration: "none" }}>Open the report</a>
         : <Composer placeholder={mic ? "Listening… press the mic again to send" : "Answer the interviewer…"} onSend={answer} mic={{ on: mic, toggle: toggleMic }} chips={[{ label: "Ask to clarify", value: "Can I assume 100M new URLs a month and a 100:1 read/write ratio?" }]} />} />}
     />
-  );
+  </>);
 }

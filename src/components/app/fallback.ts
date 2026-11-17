@@ -108,6 +108,31 @@ function filterList(root: HTMLElement, label: string) {
   });
 }
 
+/** Quiz answers: rows that start with a lettered badge (A–D) become a single-choice question. */
+function quiz(root: HTMLElement, offs: (() => void)[]) {
+  const badges = Array.from(root.querySelectorAll<HTMLElement>("[data-pid]")).filter((e) => !e.children.length && /^[A-D]$/.test(txt(e)));
+  const rows = new Map<HTMLElement, HTMLElement[]>();
+  badges.forEach((b) => {
+    let row: HTMLElement | null = b.parentElement;
+    while (row && row.parentElement && !Array.from(row.parentElement.children).some((sib) => sib !== row && Array.from(sib.querySelectorAll("[data-pid]")).some((x) => !x.children.length && /^[A-D]$/.test(txt(x))))) row = row.parentElement;
+    if (!row?.parentElement) return;
+    const list = rows.get(row.parentElement) ?? []; list.push(row); rows.set(row.parentElement, list);
+  });
+  rows.forEach((items, group) => {
+    if (items.length < 2) return;
+    group.setAttribute("role", "radiogroup"); group.setAttribute("aria-label", "Answers");
+    items.forEach((it) => {
+      mark(it, "radio"); it.setAttribute("aria-checked", "false");
+      onAct(it, () => items.forEach((o) => {
+        const on = o === it;
+        o.setAttribute("aria-checked", String(on));
+        o.style.outline = on ? "2px solid var(--dashboard-text)" : "none"; o.style.outlineOffset = "-2px"; o.style.borderRadius = o.style.borderRadius || "6px";
+        o.style.background = on ? "var(--dashboard-hover)" : "";
+      }), offs);
+    });
+  });
+}
+
 /** "− 8080 +", "−100%+": the minus and plus change the number between them. */
 function steppers(root: HTMLElement, offs: (() => void)[]) {
   root.querySelectorAll<HTMLElement>("[data-pid]").forEach((box) => {
@@ -153,6 +178,7 @@ export function wireFallback(root: HTMLElement): () => void {
     Object.assign(b.style, { position: "relative", zIndex: "1", background: "var(--dashboard-panel)", border: "1px solid var(--dashboard-border)", borderRadius: "8px", padding: b.style.padding || "6px 12px", boxShadow: "0 4px 14px -6px rgba(0,0,0,.35)" });
   });
   steppers(root, offs);
+  quiz(root, offs);
   segments(root, offs);
   root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
     if (isWired(el) || !looksBtn(el)) return;
