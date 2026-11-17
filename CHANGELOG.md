@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.0.0] - 2026-11-17
+
+### Changed
+- New landing page built natively on the Puku design-system tokens, in the spirit of puku.sh: floating blurred pill nav, a calm statement over the live network grid, one primary CTA and a mono command pill, the real product (lab, AI interview, AI exam, roadmap) in a framed window on a dotted panel that settles in as you scroll, a mono stats strip, how it works, the three practice surfaces, the career track as a window, and a closing CTA. Light, dark and Windows 98 come straight from the tokens; reveals are CSS scroll-driven and fully visible without support or with reduced motion.
+- Product-preview tabs use the design-system accent and surfaces.
+- Dark mode uses the white-wordmark logo everywhere.
+- Lab, AI interview and AI exam screens: coloured icons that fall below 3:1 move to the matching design-system colour (accent, or success / warning / danger for status), so tinted icon tiles stay readable in every theme.
+
 ## [1.11.0] - 2026-11-17
 
 ### Added

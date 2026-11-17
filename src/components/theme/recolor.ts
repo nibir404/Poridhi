@@ -138,7 +138,8 @@ function isDarkZone(el: HTMLElement) {
 
 export function recolor(root: HTMLElement, theme: Theme | null) {
   // Live components (data-pd-native) theme themselves from the tokens: leave them alone.
-  const all = [root, ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))].filter((e) => !e.closest("[data-pd-native]"));
+  // (A non-design host element, e.g. the landing page's showcase frame, is not recoloured itself.)
+  const all = [...(root.dataset.pid ? [root] : []), ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))].filter((e) => !e.closest("[data-pd-native]"));
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
     restore(el);
@@ -255,9 +256,18 @@ export function guardContrast(root: HTMLElement) {
     for (const attr of ["stroke", "fill"] as const) {
       const c = parse(cs.getPropertyValue(attr));
       if (!c || c[3] < 0.5) continue;
-      if (ratio(c, bg) >= (hsl(c)[1] < 0.12 ? 3 : 1.6)) continue; // grey icons need 3:1; coloured ones (status checks) only if nearly invisible
-      const options: [string, RGB][] = [["var(--dashboard-text)", ink], ["#FFFFFF", [255, 255, 255, 1]], ["#000000", [0, 0, 0, 1]]];
-      setProp(el, attr, options.map(([css, o]) => [css, ratio(o, bg)] as const).sort((a, b) => b[1] - a[1])[0][0]);
+      if (ratio(c, bg) >= 3) continue;
+      const [h, s] = hsl(c);
+      const ds = (v: string) => parse(getComputedStyle(document.documentElement).getPropertyValue(v).trim());
+      const options: [string, RGB | null][] = [];
+      if (s >= 0.12) {
+        // Coloured icons keep their meaning: status hues → DS status colours, others → the accent.
+        const tok = h >= 95 && h <= 170 ? "--dashboard-success" : h <= 12 || h >= 340 ? "--dashboard-danger" : h > 12 && h <= 45 ? "--dashboard-warning" : "--dashboard-accent";
+        options.push([`var(${tok})`, ds(tok)]);
+      }
+      options.push(["var(--dashboard-text)", ink], ["#FFFFFF", [255, 255, 255, 1]], ["#000000", [0, 0, 0, 1]]);
+      const pickC = options.find(([, o]) => o && ratio(o, bg) >= 3) ?? options[options.length - 1];
+      setProp(el, attr, pickC[0]);
     }
   });
 }

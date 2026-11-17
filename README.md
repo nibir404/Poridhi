@@ -1,6 +1,6 @@
 # Poridhi — web platform
 
-The Poridhi learning platform: the marketing site (home, labs, courses, pricing, leaderboard, public profile) and the student app (onboarding, dashboard, roadmap, courses and classes, cloud labs, AI interview, AI exam, profile).
+The Poridhi learning platform: the marketing site (landing page built natively on the design system, plus labs, courses, pricing, leaderboard, public profile) and the student app (onboarding, dashboard, roadmap, courses and classes, cloud labs, AI interview, AI exam, profile).
 
 Every screen is built 1:1 from the Paper design file and runs on seed data, so the full student journey can be clicked through without a backend.
 

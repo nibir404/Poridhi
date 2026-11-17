@@ -74,20 +74,20 @@ export default function PlatformShowcase({ width }: { width: number }) {
   const T = TABS[i];
   return (
     <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} style={{ width, display: "flex", flexDirection: "column", gap: 14 }}>
-      <div role="tablist" data-lenis-prevent style={{ display: "flex", gap: 6, alignSelf: "center", maxWidth: "100%", overflowX: "auto", scrollbarWidth: "none", padding: 4, borderRadius: 6, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.14)", backdropFilter: "blur(10px)" }}>
+      <div role="tablist" data-lenis-prevent style={{ display: "flex", gap: 6, alignSelf: "center", maxWidth: "100%", overflowX: "auto", scrollbarWidth: "none", padding: 4, borderRadius: 6, background: "var(--dashboard-panel)", border: "1px solid var(--dashboard-border)", backdropFilter: "blur(10px)" }}>
         {TABS.map((t, k) => (
           <button key={t.key} role="tab" aria-selected={k === i} onClick={() => setI(k)}
-            style={{ position: "relative", flexShrink: 0, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 14px", border: 0, borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: k === i ? "#242449" : "rgba(255,255,255,.8)", background: k === i ? "#BFC2FF" : "transparent", overflow: "hidden", transition: "background .2s,color .2s" }}>
+            style={{ position: "relative", flexShrink: 0, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 14px", border: 0, borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: k === i ? "var(--dashboard-accent-ink)" : "var(--dashboard-text)", background: k === i ? "var(--dashboard-accent)" : "transparent", overflow: "hidden", transition: "background .2s,color .2s" }}>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon} /></svg>
             {t.label}
             {k === i && !paused && (
               <motion.span key={`p${i}`} initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: ROTATE_MS / 1000, ease: "linear" }}
-                style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 2, background: "#242449", transformOrigin: "0 50%" }} />
+                style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 2, background: "var(--dashboard-accent-ink)", transformOrigin: "0 50%" }} />
             )}
           </button>
         ))}
       </div>
-      <div className="pd-glow" style={{ position: "relative", width, height: 960 * zoom, borderRadius: 6, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 40px 100px -40px rgba(10,10,30,.8)", background: "#fff" }}>
+      <div className="pd-glow" style={{ position: "relative", width, height: 960 * zoom, borderRadius: 6, overflow: "hidden", border: "1px solid var(--dashboard-border)", boxShadow: "0 40px 100px -48px rgba(0,0,0,.5)", background: "var(--dashboard-panel)" }}>
         <div key={T.key} ref={screen} className="pd-screen-in" style={{ width: 1600, height: 960, zoom } as React.CSSProperties}>
           <T.C />
         </div>

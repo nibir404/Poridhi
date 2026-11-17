@@ -1,11 +1,6 @@
-import MarketingShell from "@/components/marketing/MarketingShell";
-import HomeDesign from "@/design/HomeDesign";
-import HomeInteractions from "@/components/motion/HomeInteractions";
+import Landing from "@/components/landing/Landing";
 
+/** Landing page, built natively on the Puku design-system tokens. */
 export default function Home() {
-  return (
-    <MarketingShell extra={<HomeInteractions />}>
-      <HomeDesign />
-    </MarketingShell>
-  );
+  return <Landing />;
 }
