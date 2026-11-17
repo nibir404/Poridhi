@@ -37,7 +37,10 @@ import { applyContext } from "./context";
 const bar0Early = (root: HTMLElement) => { const b = root.children[0] as HTMLElement | undefined; return b && b.offsetHeight <= 90 ? b : undefined; };
 
 export default function AppShell({ screen, children, width = 1600 }: { screen: string; children: React.ReactNode; width?: number }) {
-  const withHeader = !screen.startsWith("Auth"); // every /app screen; sign-in uses the site header
+  // Focus screens (lab workspace, exam in progress, live interview) use their own task bar as the
+  // single header; every other /app screen gets the app header; sign-in uses the site header.
+  const focus = /^(Lab|ExamQuestions|ExamInstructions|ExamWhiteboard|ExamSubmit|ExamState|ExamIDE|InterviewWhiteboard|InterviewFeedback|InterviewTerminal|InterviewError|InterviewVoice)/.test(screen);
+  const withHeader = !screen.startsWith("Auth") && !focus;
   const router = useRouter();
   const host = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState(false);
@@ -337,7 +340,7 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
 
   return (
     <div ref={host} className="pd-app">
-      {!withHeader && <SiteHeader />}
+      {screen.startsWith("Auth") && <SiteHeader />}
       {withHeader && <AppHeader onSearch={() => setSearch(true)} onChip={(which, at) => setChip((c) => (c?.which === which ? null : { which, at }))} onAccount={(at) => setAccount((a) => (a ? null : at))} />}
       <DesignFrame width={width}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />

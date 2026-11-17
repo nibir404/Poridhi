@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.6.1] - 2026-11-17
+
+### Changed
+- Lab workspace, exams in progress and live interviews use their own task bar as the single header (back, breadcrumb, progress, timer, tools, theme); the app header stays on every other /app screen.
+
 ## [2.6.0] - 2026-11-17
 
 ### Added
