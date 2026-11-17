@@ -9,6 +9,8 @@ for s in json.load(open("design/app-manifest.json")):
         print("missing", s["id"]); continue
     subprocess.run(["python3", "scripts/paper2tsx.py", src, s["name"], f"src/design/app/{s['name']}.tsx"], check=True, capture_output=True)
     d = "src/app" + s["route"]
+    if s.get("custom"):  # hand-written page (live component); never overwrite
+        print("custom", s["route"]); continue
     os.makedirs(d, exist_ok=True)
     # Optional "extra": a live component rendered over the design body (e.g. the roadmap explorer).
     extra = s.get("extra")

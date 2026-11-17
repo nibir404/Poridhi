@@ -1,12 +1,7 @@
-import AppShell from "@/components/app/AppShell";
-import InterviewWhiteboard from "@/design/app/InterviewWhiteboard";
+import InterviewWorkspace from "@/components/workspace/InterviewWorkspace";
 
-export const metadata = { title: "Interview · Poridhi" };
+export const metadata = { title: "AI interview · Poridhi" };
 
 export default function Page() {
-  return (
-    <AppShell screen="InterviewWhiteboard">
-      <InterviewWhiteboard />
-    </AppShell>
-  );
+  return <InterviewWorkspace />;
 }

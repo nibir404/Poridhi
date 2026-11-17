@@ -43,6 +43,7 @@ export const APP_LINKS: Record<string, string> = {
   Notes: "/app/me/notes",
   Schedule: "/app/me/schedule",
   Support: "/app/me/support",
+  Support1: "/app/me/support",
   "Sign out": "/signin",
   "Edit profile": "/app/me/edit",
   Cancel: "/app/me",

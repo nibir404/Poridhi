@@ -8,7 +8,7 @@ import DotField from "./DotField";
 import { Button as PButton } from "./ui";
 import { Stats, Tracks, TimeBank, Interview, Ranks, Pricing, Faq } from "./Sections";
 import Bento from "./Bento";
-import LabDiagram from "./LabDiagram";
+import LabWorkspace from "@/components/workspace/LabWorkspace";
 import Footer from "./Footer";
 import { Steps, FeatureTabs, Capabilities, Proof } from "./Showcase";
 import { SectionHead } from "./ui";
@@ -79,7 +79,7 @@ export default function Landing() {
         </div>
         {/* Product: a live lab environment */}
         <div className="pd-rise" style={{ position: "relative", width: W, margin: "0 auto", paddingBottom: "clamp(40px, 6vw, 80px)", animationDelay: ".25s" }}>
-          <LabDiagram />
+          <LabWorkspace embedded />
         </div>
       </section>
 
@@ -156,6 +156,7 @@ export default function Landing() {
       {/* Closing */}
       <section className="pd-l-hero" style={{ position: "relative", overflow: "hidden", marginTop: "clamp(80px, 10vw, 140px)", borderTop: "1px solid var(--dashboard-border)" }}>
         <div aria-hidden className="pd-l-aurora pd-l-aurora-2" />
+        <div aria-hidden className="pd-cta-tex" />
         <div style={{ position: "relative", width: W, margin: "0 auto", padding: "clamp(72px, 9vw, 128px) 0", display: "grid", gap: 18, justifyItems: "center", textAlign: "center" }}>
           <h2 style={h2}>Your first lab is 30 seconds away.</h2>
           <p style={{ margin: 0, maxWidth: 520, fontSize: 16, lineHeight: 1.6, color: "var(--dashboard-muted)" }}>Start with 30 free minutes. Read everything without paying. Upgrade only when you want more VM time.</p>

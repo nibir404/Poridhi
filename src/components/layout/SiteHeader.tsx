@@ -39,7 +39,7 @@ export default function SiteHeader() {
       <header className="pd-siteheader" style={{ position: "sticky", top: 0, zIndex: 90, height: 64, display: "flex", alignItems: "center", gap: 8, padding: "0 max(20px, calc((100% - 1200px) / 2))", background: scrolled ? "color-mix(in srgb, var(--dashboard-main) 88%, transparent)" : "var(--dashboard-main)", backdropFilter: "saturate(1.4) blur(12px)", WebkitBackdropFilter: "saturate(1.4) blur(12px)", borderBottom: "1px solid var(--dashboard-border)", fontFamily: "var(--font-sans)" }}>
         <Link href="/" aria-label="Poridhi home" className="pd-l-logo" style={{ display: "block", width: 112, height: 20, flexShrink: 0, background: "url(/assets/poridhi-logo.png) left center/contain no-repeat", marginRight: 20 }} />
         <nav aria-label="Main" className="pd-l-links" style={{ display: "flex", gap: 2 }}>
-          <button type="button" style={link(explore)} onClick={() => setExplore((v) => !v)} aria-expanded={explore} aria-haspopup="true">Explore</button>
+          <button type="button" style={link(explore)} onClick={() => setExplore((v) => !v)} aria-expanded={explore} aria-haspopup="true">Explore<svg className="pd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden style={{ marginLeft: 6 }}><path d="M6 9l6 6 6-6" /></svg></button>
           {LINKS.map((l) => <Link key={l.href} href={l.href} style={link(l.match.test(path))} aria-current={l.match.test(path) ? "page" : undefined}>{l.label}</Link>)}
         </nav>
         <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>

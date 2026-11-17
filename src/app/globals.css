@@ -86,10 +86,10 @@ html.lenis, html.lenis body { height: auto; }
 }
 .pd-glow:hover::before { opacity: 1; }
 .pd-glow-btn { position: relative; transition: box-shadow .25s; }
-.pd-glow-btn:hover { box-shadow: 0 0 0 1px var(--dashboard-accent), 0 0 18px 2px color-mix(in srgb, var(--dashboard-accent) 45%, transparent), 0 0 42px 6px color-mix(in srgb, var(--dashboard-accent) 22%, transparent); }
+.pd-glow-btn:hover { box-shadow: 0 0 0 1px #B0B3FC, 0 0 18px 2px rgba(176,179,252,.55), 0 0 42px 4px rgba(153,65,215,.25); } /* the purple glow */
 .pd-glow-btn::before {
-  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; pointer-events: none;
-  background: conic-gradient(from var(--pd-angle, 0deg), transparent 0 70%, var(--dashboard-accent-ink) 80%, var(--dashboard-accent) 90%, transparent 100%);
+  content: ""; position: absolute; inset: -3px; border-radius: calc(var(--puku-radius) + 3px); padding: 2px; pointer-events: none;
+  background: conic-gradient(from var(--pd-angle, 0deg), transparent 0 62%, #9941D7 76%, #B0B3FC 88%, var(--dashboard-text) 96%, transparent 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   opacity: 0; transition: opacity .2s;
 }
@@ -258,3 +258,24 @@ body.pd-phone .pd-siteheader { display: none !important; }
 .pd-resizer::after { content: ""; position: absolute; inset: 0 2px; border-radius: 2px; background: var(--dashboard-border); opacity: 0; transition: opacity .15s; }
 .pd-resizer:hover::after, .pd-resizer:focus-visible::after { opacity: 1; background: var(--dashboard-text); }
 .pd-resizer:focus-visible { outline: none; }
+
+/* Closing CTA: slow-drifting diagonal hatch + dot grid, faded at the edges */
+.pd-cta-tex{position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:repeating-linear-gradient(-45deg,var(--dashboard-border) 0 1px,transparent 1px 9px),radial-gradient(var(--dashboard-border) 1px,transparent 1.2px);
+  background-size:auto,22px 22px;
+  -webkit-mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 70% at 50% 45%,#000 0%,transparent 75%);
+  animation:pd-cta-drift 28s linear infinite}
+@keyframes pd-cta-drift{to{background-position:90px 0,22px 22px}}
+@media (prefers-reduced-motion:reduce){.pd-cta-tex{animation:none}}
+
+/* Real checkbox mark for design-generated filter lists */
+.pd-check{flex:0 0 auto;width:18px;height:18px;display:grid;place-items:center;border-radius:5px;border:1.5px solid var(--dashboard-muted);color:transparent;background:transparent;transition:background .15s,border-color .15s,color .15s}
+[aria-checked="true"]>.pd-check{background:var(--dashboard-accent);border-color:var(--dashboard-accent);color:var(--dashboard-accent-ink)}
+[role="checkbox"]:hover>.pd-check{border-color:var(--dashboard-text)}
+[role="checkbox"]:focus-visible{outline:2px solid var(--dashboard-text);outline-offset:2px;border-radius:4px}
+
+/* CTA arrow: always visible, nudges right on hover */
+.pd-cta-arrow { flex: 0 0 auto; transition: transform .2s var(--puku-ease, ease); }
+.pd-glow-btn:hover .pd-cta-arrow, a:hover > .pd-cta-arrow, button:hover > .pd-cta-arrow { transform: translateX(3px); }
+.pd-chev { transition: transform .2s; opacity: .8; }
+[aria-expanded="true"] > .pd-chev { transform: rotate(180deg); }

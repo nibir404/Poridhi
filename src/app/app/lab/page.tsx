@@ -1,12 +1,7 @@
-import AppShell from "@/components/app/AppShell";
-import LabRunning from "@/design/app/LabRunning";
+import LabWorkspace from "@/components/workspace/LabWorkspace";
 
 export const metadata = { title: "Lab · Poridhi" };
 
 export default function Page() {
-  return (
-    <AppShell screen="LabRunning">
-      <LabRunning />
-    </AppShell>
-  );
+  return <LabWorkspace />;
 }

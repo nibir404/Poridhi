@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## 2.7.0 · 2026-11-17
+
+### Added
+- Claude/Codex-style workspace (task bar, rail, thread, resizable artifact pane) for the lab, AI interview and AI exam, with working terminal, editor, whiteboard, rubric grading and staged interview scoring.
+- The landing hero is now the real, interactive lab workspace.
+- Notes rebuilt as a three-pane reader: library (courses → modules, highlights, tags), searchable list, reader with jump-to-lesson and Markdown export.
+- Fallback wiring on every design screen: filters and tabs select (and filter lists), steppers change values, and remaining actions (calendar, photo upload, tags, sort, pause, delete…) work.
+
+### Changed
+- Primary CTAs show an arrow and a travelling purple light line around the border on hover; Explore has a dropdown chevron.
+- Closing CTA has a subtle animated hatch/dot texture (off with reduced motion).
+- Lab library filters use real checkboxes (keyboard accessible).
+- Custom pages are marked `custom` in the app manifest so the generator never overwrites them.
+
 ## [2.6.1] - 2026-11-17
 
 ### Changed

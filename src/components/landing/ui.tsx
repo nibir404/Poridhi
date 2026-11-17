@@ -24,7 +24,8 @@ export function Button({ href, children, variant = "default", size = "md", onCli
     color: variant === "default" ? "var(--dashboard-accent-ink)" : "var(--dashboard-text)",
   };
   const cls = `puku-btn puku-btn-${variant}${variant === "default" ? " pd-glow-btn" : ""}`; // primary CTAs keep the glowing hover
-  return href ? <Link href={href} className={cls} style={style}>{children}</Link> : <button type="button" onClick={onClick} className={cls} style={style}>{children}</button>;
+  const body = variant === "default" ? <>{children}<svg className="pd-cta-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M9 6l6 6-6 6" /></svg></> : children;
+  return href ? <Link href={href} className={cls} style={style}>{body}</Link> : <button type="button" onClick={onClick} className={cls} style={style}>{body}</button>;
 }
 
 export const Badge = ({ children, tone = "neutral" }: { children: React.ReactNode; tone?: "neutral" | "accent" | "success" }) => (

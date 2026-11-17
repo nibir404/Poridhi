@@ -21,6 +21,7 @@ import RedeemDialog from "./RedeemDialog";
 import { getWallet, fmtBank, openRedeem } from "@/data/wallet";
 import { seed } from "@/data/seed";
 import { wireIcons } from "./iconLinks";
+import { wireFallback } from "./fallback";
 import { stickyIn } from "@/components/motion/stickyIn";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
@@ -320,7 +321,10 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
     const undoGlow = applyGlow(root);
     const undoCopy = wireCopy(root);
     const undoRecolor = bindRecolor(root, currentTheme);
+    let undoFallback = () => {};
+    const fbT = setTimeout(() => { undoFallback = wireFallback(root); }, 60);
     return () => {
+      clearTimeout(fbT); undoFallback();
       undoGlow();
       chipOffs.forEach((f) => f());
       stickies.forEach((f) => f());

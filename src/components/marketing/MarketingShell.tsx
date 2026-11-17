@@ -14,6 +14,7 @@ import { applyGlow } from "@/components/motion/glow";
 import { wireCopy } from "@/components/motion/copyButtons";
 import { soften } from "@/components/motion/soften";
 import { bindRecolor } from "@/components/theme/recolor";
+import { wireFallback } from "@/components/app/fallback";
 import { getTheme as currentTheme } from "@/components/theme/theme";
 
 /** Text on the page → route. Applied to any leaf element with exactly this text. */
@@ -146,7 +147,10 @@ export default function MarketingShell({ children, extra }: Props) {
       const m = getComputedStyle(nav!).backgroundColor.match(/[\d.]+/g)?.map(Number) ?? [255, 255, 255];
       setSlot({ el: mount, dark: !(m[3] !== undefined && m[3] < 0.5) && m[0] + m[1] + m[2] < 300 });
     }
+    let undoFallback = () => {};
+    const fbT = setTimeout(() => { undoFallback = wireFallback(root); }, 60);
     return () => {
+      clearTimeout(fbT); undoFallback();
       undoToggle?.();
       mount?.remove();
       setSlot(null);

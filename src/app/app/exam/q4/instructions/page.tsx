@@ -1,12 +1,8 @@
-import AppShell from "@/components/app/AppShell";
-import ExamInstructions from "@/design/app/ExamInstructions";
+import { Suspense } from "react";
+import ExamWorkspace from "@/components/workspace/ExamWorkspace";
 
 export const metadata = { title: "Exam question · Poridhi" };
 
 export default function Page() {
-  return (
-    <AppShell screen="ExamInstructions">
-      <ExamInstructions />
-    </AppShell>
-  );
+  return <Suspense fallback={null}><ExamWorkspace /></Suspense>;
 }
