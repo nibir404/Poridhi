@@ -32,12 +32,41 @@ export default function LabFilters() {
     });
     const checked = (el: HTMLElement) => el.getAttribute("aria-checked") === "true";
     const setMark = (el: HTMLElement, on: boolean) => el.setAttribute("aria-checked", String(on));
+    // Real search field in place of the static placeholder.
+    let query = "";
+    const ph = $("299-0");
+    const input = document.createElement("input");
+    if (ph) {
+      input.type = "search"; input.placeholder = ph.textContent?.trim() || "Search labs"; input.setAttribute("aria-label", "Search labs");
+      Object.assign(input.style, { flex: "1", minWidth: "0", border: "0", outline: "0", background: "transparent", color: "var(--dashboard-text)", font: "15px/18px var(--font-sans)" });
+      ph.style.display = "none"; ph.after(input);
+      const box = ph.parentElement!; delete box.dataset.go; box.style.cursor = "text";
+      box.addEventListener("click", () => input.focus());
+      input.addEventListener("input", () => { query = input.value.trim().toLowerCase(); apply(); });
+    }
+    // Sort: cycles Most active → A–Z → Most labs, reordering the cards.
+    const SORTS = ["Most active", "A–Z", "Most labs"];
+    let sortI = 0;
+    const sortEl = $("311-0");
+    const original = [...cards];
+    const labsIn = (c: HTMLElement) => Number((c.textContent ?? "").match(/(\d+)\s*labs/)?.[1] ?? 0);
+    const titleOf = (c: HTMLElement) => (c.querySelector("[data-pid]:not(:has([data-pid]))")?.textContent ?? c.textContent ?? "").trim();
+    const resort = () => {
+      const order = sortI === 0 ? original : [...original].sort(sortI === 1 ? (a, b) => titleOf(a).localeCompare(titleOf(b)) : (a, b) => labsIn(b) - labsIn(a));
+      order.forEach((c) => grid.insertBefore(c, empty));
+      if (sortEl) sortEl.textContent = `Sort: ${SORTS[sortI]} ▾`;
+    };
+    if (sortEl) {
+      Object.assign(sortEl.style, { cursor: "pointer", userSelect: "none" }); sortEl.setAttribute("role", "button"); sortEl.tabIndex = 0; sortEl.dataset.fb = "1";
+      const f = () => { sortI = (sortI + 1) % SORTS.length; resort(); };
+      sortEl.addEventListener("click", f); sortEl.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); f(); } });
+    }
     const apply = () => {
       const topics = boxes.filter((b) => group(b) === "29C-0" && checked(b)).map((b) => label(b).split(" ")[0].toLowerCase());
       let n = 0;
       cards.forEach((c) => {
         const t = (c.textContent ?? "").toLowerCase();
-        const show = !topics.length || topics.some((k) => t.includes(k));
+        const show = (!topics.length || topics.some((k) => t.includes(k))) && (!query || query.split(/\s+/).every((w) => t.includes(w)));
         c.style.display = show ? "" : "none";
         if (show) n++;
       });
@@ -54,7 +83,7 @@ export default function LabFilters() {
     });
     boxes.forEach((b) => setMark(b, false));
     apply();
-    return () => { unstick(); handlers.forEach((u) => u()); empty.remove(); side.querySelectorAll(".pd-check").forEach((x) => x.remove()); };
+    return () => { unstick(); handlers.forEach((u) => u()); empty.remove(); input.remove(); side.querySelectorAll(".pd-check").forEach((x) => x.remove()); };
   }, []);
   return null;
 }

@@ -315,3 +315,4 @@ html { scroll-behavior: auto; }
 html[data-theme="light"] .pd-course-card,
 html[data-theme="light"] .pd-ws section[aria-label="Workspace"],
 html[data-theme="light"] [data-card] { box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px -16px rgba(0,0,0,.18) !important; }
+@media (max-width: 900px) { .pd-labgroup { grid-template-columns: 1fr !important; } .pd-labgroup > aside { position: static !important; height: 60vh !important; } }
