@@ -22,6 +22,7 @@ import { getWallet, fmtBank, openRedeem } from "@/data/wallet";
 import { seed } from "@/data/seed";
 import { wireIcons } from "./iconLinks";
 import { wireFallback } from "./fallback";
+import { getVm } from "@/data/plan";
 import { stickyIn } from "@/components/motion/stickyIn";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
@@ -50,6 +51,10 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
   const [chip, setChip] = useState<{ which: Chip; at: DOMRect } | null>(null);
   const [slot, setSlot] = useState<{ el: HTMLElement; dark: boolean } | null>(null);
 
+  // Lab tools (IDE, database, load balancer, cloud tray…) need a running VM; otherwise back to the lab.
+  useEffect(() => {
+    if (/^Lab/.test(screen) && screen !== "LabLaunch" && getVm() !== "on") window.location.replace("/app/lab");
+  }, [screen]);
   useEffect(() => {
     const root = host.current?.querySelector<HTMLElement>("[data-pid]");
     if (!root) return;

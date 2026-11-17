@@ -3,6 +3,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Workspace, { Ico, iconBtn, type RailItem } from "./Workspace";
 import { Composer, Editor, Terminal, Thread, type Msg, type TermLine } from "./parts";
 import { labs } from "@/data/entities";
+import { setPlan, setVm, usePlan } from "@/data/plan";
+import Link from "next/link";
 
 /**
  * Lab workspace (Claude / Codex layout): guide thread on the left, the working pane on the right
@@ -25,16 +27,42 @@ let seq = 0;
 type NoId<T> = T extends unknown ? Omit<T, "id"> : never; // distributes over the Msg union
 const m = (x: NoId<Msg>): Msg => ({ ...x, id: ++seq } as Msg);
 
-function initial(): Engine {
+function initial(vmOn = true): Engine {
   return {
-    status: { browser: "idle", lb: "idle", vm: "live", nginx: "idle", db: "idle" }, checks: 0, lbTarget: 80,
+    status: { browser: "idle", lb: "idle", vm: vmOn ? "live" : "idle", nginx: "idle", db: "idle" }, checks: 0, lbTarget: 80,
     term: [{ text: "Welcome to lab-01 (Ubuntu 22.04). Time counts only while this VM runs.", tone: "dim" }],
     msgs: [
       m({ from: "system", text: "Milestone 1 · Docker networking & storage · Lab 3 of 7" }),
-      m({ from: "guide", text: <><b>Goal:</b> run nginx in Docker, prove it answers on 8080, then expose it at a public URL. Your VM is ready.</> }),
+      m({ from: "guide", text: <><b>Goal:</b> run nginx in Docker, prove it answers on 8080, then expose it at a public URL. {vmOn ? "Your VM is ready." : "Read the guide on the right as long as you like: the clock only starts when you launch the VM."}</> }),
       m({ from: "guide", text: <><b>Step 1.</b> {STEP_TEXT[0]}</> }),
     ],
   };
+}
+
+/** The lab document: always readable, with or without a VM. */
+function Guide({ checks }: { checks: number }) {
+  const card: React.CSSProperties = { padding: 14, borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", background: "var(--dashboard-main)" };
+  const code: React.CSSProperties = { display: "block", marginTop: 8, padding: "8px 10px", borderRadius: 6, background: "var(--dashboard-hover)", fontFamily: "var(--font-mono)", fontSize: 12, whiteSpace: "pre-wrap" };
+  const cmds = ["docker run -d -p 8080:80 nginx", "curl -sI localhost:8080", "lb target 8080\ncurl -sI https://66dbf3.lb.poridhi.io", "docker compose up -d --scale web=3"];
+  return (
+    <div style={{ padding: 20, display: "grid", gap: 16, maxWidth: 720 }}>
+      <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--dashboard-muted)" }}>Lab guide · ~40 min · free to read</span>
+      <h2 style={{ margin: 0, fontSize: 22, letterSpacing: "-.02em" }}>{labs["publish-nginx-lb"].title}</h2>
+      <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6 }}>Run nginx in Docker, prove it answers on 8080, then expose it at a public URL through the load balancer. You'll meet a real <b>502 Bad Gateway</b> on the way and learn why it happens.</p>
+      <div style={{ ...card, display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 12 }}><span>internet</span><span>→</span><span>load balancer :80</span><span>→</span><span>lab-01 :8080</span><span>→</span><span>nginx :80</span></div>
+      {CHECKS.map((c, i) => (
+        <div key={c} style={card}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--dashboard-muted)" }}>{String(i + 1).padStart(2, "0")}</span>
+            <b style={{ flex: 1, fontSize: 15 }}>{c}</b>
+            <span style={{ fontSize: 12, color: i < checks ? "var(--dashboard-success)" : "var(--dashboard-muted)" }}>{i < checks ? "✓ passed" : "auto-check"}</span>
+          </div>
+          <p style={{ margin: "8px 0 0", fontSize: 14, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>{STEP_TEXT[i]}</p>
+          <code style={code}>{cmds[i]}</code>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 function run(e: Engine, raw: string): Engine {
@@ -119,18 +147,38 @@ function Preview({ status, lbTarget }: { status: Record<string, Status>; lbTarge
 }
 
 export default function LabWorkspace({ embedded = false }: { embedded?: boolean }) {
-  const [e, setE] = useState<Engine>(initial);
-  const [tab, setTab] = useState(embedded ? "canvas" : "terminal");
+  const { plan, vm: vmState } = usePlan();
+  const vm = embedded ? "on" : vmState; // the hero demo always runs
+  const [e, setE] = useState<Engine>(() => initial(embedded));
+  const [tab, setTab] = useState(embedded ? "canvas" : "guide");
+  const [upgrade, setUpgrade] = useState(false);
+  const prevVm = useRef(vm);
+  useEffect(() => {
+    if (prevVm.current !== "on" && vm === "on" && !embedded) {
+      setE((x) => ({ ...x, status: { ...x.status, vm: "live" }, msgs: [...x.msgs, m({ from: "system", text: "VM launched · lab-01 · Ubuntu 22.04 · the clock is running" }), m({ from: "guide", text: <>Your VM is up. Open the <b>Terminal</b> and start with step {Math.min(x.checks + 1, 4)}.</> })] }));
+      setTab("terminal");
+    }
+    if (vm === "off") setE((x) => ({ ...x, status: { ...x.status, vm: "idle" } }));
+    prevVm.current = vm;
+  }, [vm, embedded]);
+  const launch = () => { if (plan !== "pro") { setUpgrade(true); return; } setVm("booting"); setTimeout(() => setVm("on"), 2200); };
   const [typing, setTyping] = useState(false);
   const [files, setFiles] = useState<Record<string, string>>({ "default.conf": "server {\n  listen 80;\n  location / {\n    root /usr/share/nginx/html;\n  }\n}\n", "compose.yaml": "services:\n  web:\n    image: nginx\n    ports:\n      - \"8080:80\"\n", "README.md": "# Publish nginx through the load balancer\n" });
   const [file, setFile] = useState("default.conf");
   const [secs, setSecs] = useState(38 * 60);
-  useEffect(() => { const t = setInterval(() => setSecs((s) => s + 1), 1000); return () => clearInterval(t); }, []);
+  useEffect(() => { if (vm !== "on") return; const t = setInterval(() => setSecs((s) => s + 1), 1000); return () => clearInterval(t); }, [vm]);
   const timer = `${String(Math.floor(secs / 3600)).padStart(2, "0")}h${String(Math.floor(secs / 60) % 60).padStart(2, "0")}m`;
 
   const exec = (cmd: string) => setE((x) => run(x, cmd));
   const send = (text: string) => {
-    if (/^\$|^(docker|curl|lb|ls|pwd|whoami|clear)\b/.test(text)) { exec(text); setTab(embedded ? "canvas" : "terminal"); return; }
+    if (/^\$|^(docker|curl|lb|ls|pwd|whoami|clear)\b/.test(text)) {
+      if (vm !== "on") {
+        setE((x) => ({ ...x, msgs: [...x.msgs, m({ from: "you", text }), m({ from: "guide", tone: "hint", text: plan === "pro" ? <>Commands run on your VM. Launch it first with <b>Launch VM</b> at the top.</> : <>Commands need a running VM, which comes with Pro. You can keep reading the guide and asking me questions for free.</> })] }));
+        if (plan !== "pro") setUpgrade(true);
+        return;
+      }
+      exec(text); setTab(embedded ? "canvas" : "terminal"); return;
+    }
     setE((x) => ({ ...x, msgs: [...x.msgs, m({ from: "you", text })] }));
     setTyping(true);
     setTimeout(() => {
@@ -154,24 +202,60 @@ export default function LabWorkspace({ embedded = false }: { embedded?: boolean 
     { id: "g", title: "Module exam", meta: "Unlocks at 6 / 7", status: "locked" },
   ], [e.checks]);
 
+  const Gate = (
+    <div className="pd-hatch" style={{ height: "100%", minHeight: 360, display: "grid", placeItems: "center", padding: 24 }}>
+      <div style={{ maxWidth: 420, display: "grid", gap: 12, justifyItems: "center", textAlign: "center", padding: 28, borderRadius: "var(--puku-radius-panel, 12px)", border: "1px solid var(--dashboard-border)", background: "var(--dashboard-panel)" }}>
+        <span style={{ width: 44, height: 44, borderRadius: 999, display: "grid", placeItems: "center", background: "var(--dashboard-hover)" }}><Ico d={vm === "booting" ? "M12 3a9 9 0 1 0 9 9" : plan === "pro" ? "M12 3v8M7 6.5a7 7 0 1 0 10 0" : "M6 11h12v10H6zM8 11V7a4 4 0 0 1 8 0v4"} size={20} /></span>
+        <b style={{ fontSize: 18 }}>{vm === "booting" ? "Booting lab-01…" : plan === "pro" ? "Your VM is off" : "VM access is part of Pro"}</b>
+        <span style={{ fontSize: 14, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>{vm === "booting" ? "Ubuntu 22.04 · 2 vCPU · 4 GB. Ready in a few seconds." : plan === "pro" ? "Launch it to use the terminal, IDE, database, load balancer and cloud tray. Time counts only while it runs." : "The guide is free to read. Upgrade to launch a real VM and unlock the terminal, IDE, database, load balancer and cloud tray."}</span>
+        {vm !== "booting" && <button type="button" onClick={launch} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 40, padding: "0 18px", border: 0, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, cursor: "pointer" }}>{plan === "pro" ? "Launch VM" : "Upgrade to launch VM"}</button>}
+        {vm !== "booting" && <button type="button" onClick={() => setTab("guide")} style={{ border: 0, background: "transparent", color: "var(--dashboard-text)", textDecoration: "underline", fontSize: 13, cursor: "pointer" }}>Keep reading the guide</button>}
+      </div>
+    </div>
+  );
+  const live = vm === "on";
   const tabs = [
-    { id: "canvas", label: "Canvas", icon: "M4 6h6v6H4zM14 12h6v6h-6zM10 9h4v6", body: <Canvas status={e.status} /> },
-    { id: "terminal", label: "Terminal", icon: "M3 4h18v16H3zM7 10l3 2.5L7 15M12.5 15H17", body: <Terminal lines={e.term} onRun={exec} suggestions={[next.replace(/^\$ /, "")]} /> },
-    { id: "editor", label: "Editor", icon: "M8 8l-4 4 4 4M16 8l4 4-4 4", body: <Editor files={files} active={file} setActive={setFile} onChange={(f, v) => setFiles((x) => ({ ...x, [f]: v }))} /> },
-    { id: "preview", label: "Preview", icon: "M3 12h18M12 3a9 9 0 1 1 0 18a9 9 0 0 1 0-18", body: <Preview status={e.status} lbTarget={e.lbTarget} /> },
+    { id: "guide", label: "Guide", icon: "M6 3h9l3 3v15H6zM9 9h6M9 13h6M9 17h4", body: <Guide checks={e.checks} /> },
+    { id: "canvas", label: "Canvas", icon: "M4 6h6v6H4zM14 12h6v6h-6zM10 9h4v6", body: live ? <Canvas status={e.status} /> : Gate },
+    { id: "terminal", label: "Terminal", icon: "M3 4h18v16H3zM7 10l3 2.5L7 15M12.5 15H17", body: live ? <Terminal lines={e.term} onRun={exec} suggestions={[next.replace(/^\$ /, "")]} /> : Gate },
+    { id: "editor", label: "Editor", icon: "M8 8l-4 4 4 4M16 8l4 4-4 4", body: live ? <Editor files={files} active={file} setActive={setFile} onChange={(f, v) => setFiles((x) => ({ ...x, [f]: v }))} /> : Gate },
+    { id: "preview", label: "Preview", icon: "M3 12h18M12 3a9 9 0 1 1 0 18a9 9 0 0 1 0-18", body: live ? <Preview status={e.status} lbTarget={e.lbTarget} /> : Gate },
   ];
+  const tool = (href: string, label: string, d: string) => live
+    ? <Link key={label} href={href} aria-label={label} title={label} style={iconBtn}><Ico d={d} /></Link>
+    : <button key={label} type="button" aria-label={`${label} (needs a running VM)`} title={`${label} · launch the VM first`} onClick={launch} style={{ ...iconBtn, opacity: 0.4 }}><Ico d={d} /></button>;
   const actions = (
     <>
-      <a href="/app/lab/cloud-tray" aria-label="Cloud tray" title="Cloud tray" style={iconBtn}><Ico d="M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.6 7 4.5 4.5 0 0 1 17 18z" /></a>
-      <a href="/app/lab/menu" aria-label="End lab" title="End lab" style={{ ...iconBtn, color: "var(--dashboard-danger)" }}><Ico d="M12 3v8M7 6.5a7 7 0 1 0 10 0" /></a>
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, whiteSpace: "nowrap" }}><span style={{ width: 7, height: 7, borderRadius: 999, background: live ? "var(--dashboard-success)" : vm === "booting" ? "var(--dashboard-warning)" : "var(--dashboard-muted)" }} />{live ? "VM on" : vm === "booting" ? "Booting…" : "VM off"}</span>
+      {tool("/app/lab/ide", "IDE", "M8 8l-4 4 4 4M16 8l4 4-4 4")}
+      {tool("/app/lab/database", "Database", "M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3")}
+      {tool("/app/lab/expose", "Load balancer", "M12 4v6M12 10l-6 8M12 10l6 8")}
+      {tool("/app/lab/cloud-tray", "Cloud tray", "M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.6 7 4.5 4.5 0 0 1 17 18z")}
+      {live
+        ? <button type="button" onClick={() => setVm("off")} aria-label="Stop VM" title="Stop VM (saves your time)" style={{ ...iconBtn, color: "var(--dashboard-danger)" }}><Ico d="M12 3v8M7 6.5a7 7 0 1 0 10 0" /></button>
+        : vm !== "booting" && <button type="button" onClick={launch} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 32, padding: "0 14px", border: 0, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, fontSize: 13, cursor: "pointer", whiteSpace: "nowrap" }}>{plan === "pro" ? "Launch VM" : "Go Pro to launch"}</button>}
     </>
+  );
+  const Upgrade = upgrade && (
+    <div role="dialog" aria-modal="true" aria-label="Upgrade to Pro" onClick={() => setUpgrade(false)} style={{ position: "fixed", inset: 0, zIndex: 50, display: "grid", placeItems: "center", background: "rgba(0,0,0,.5)" }}>
+      <div onClick={(ev) => ev.stopPropagation()} style={{ width: "min(440px, calc(100% - 32px))", display: "grid", gap: 14, padding: 24, borderRadius: 12, background: "var(--dashboard-panel)", color: "var(--dashboard-text)", border: "1px solid var(--dashboard-border)" }}>
+        <b style={{ fontSize: 20 }}>Launch real VMs with Pro</b>
+        <span style={{ fontSize: 14, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>Guides stay free. Pro adds 40 hours of VM time a month, plus the terminal, IDE, databases, load balancer and cloud tray in every lab.</span>
+        <div style={{ display: "grid", gap: 6, fontSize: 14 }}>{["Ubuntu VM in ~30 seconds", "Terminal, IDE, databases, load balancer", "AI guide, interviews and exams", "Time counts only while the VM runs"].map((x) => <span key={x}>✓ {x}</span>)}</div>
+        <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
+          <Link href="/pricing" style={{ height: 40, display: "inline-flex", alignItems: "center", padding: "0 14px", borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", color: "var(--dashboard-text)", textDecoration: "none", fontSize: 14 }}>See pricing</Link>
+          <button type="button" onClick={() => { setPlan("pro"); setUpgrade(false); }} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 40, padding: "0 16px", border: 0, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, cursor: "pointer" }}>Start Pro · ৳1,500 / month</button>
+        </div>
+      </div>
+    </div>
   );
 
   const ws = (
     <Workspace height={embedded ? "100%" : undefined} back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage&item=2" crumb="Milestone 1 · Docker networking & storage" title={labs["publish-nginx-lb"].title}
-      progress={{ done: e.checks, total: 4, label: "checks" }} timer={timer} railTitle="This module" railAction={{ label: "New lab", href: "/app/lab/launch" }} rail={rail}
+      progress={{ done: e.checks, total: 4, label: "checks" }} timer={live ? timer : undefined} railTitle="This module" rail={rail}
       tab={tab} setTab={setTab} tabs={tabs} actions={embedded ? undefined : actions}
       thread={<Thread msgs={e.msgs} typing={typing} composer={<Composer placeholder="Ask the guide, or type a command ($ …)" onSend={send} chips={[{ label: next, value: next }, { label: "Give me a hint", value: "hint" }, { label: "Why a 502?", value: "Why a 502?" }]} />} />} />
   );
+  if (!embedded) return <>{ws}{Upgrade}</>;
   return embedded ? <div className="pd-ws-embed" style={{ height: 640, borderRadius: "var(--puku-radius-panel)", overflow: "hidden", border: "1px solid var(--dashboard-border)", boxShadow: "0 40px 80px -48px rgba(0,0,0,.45)" }}>{ws}</div> : ws;
 }

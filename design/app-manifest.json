@@ -45,7 +45,8 @@
     "id": "3PF-0",
     "name": "RoadmapAll",
     "route": "/app/roadmap",
-    "title": "Roadmap"
+    "title": "Roadmap",
+    "custom": true
   },
   {
     "id": "2RX-0",

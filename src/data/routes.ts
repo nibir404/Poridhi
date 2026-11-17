@@ -56,7 +56,7 @@ export const APP_LINKS: Record<string, string> = {
   FAQ: "/app/course/faq",
   "Check answer": "/app/learn/check/result",
   // Lab
-  "Start lab": "/app/lab/boot",
+  "Start lab": "/app/lab",
   "Check my work": "/app/lab/complete",
   // Exam & interview
   "Start exam": "/app/exam/questions",
@@ -104,7 +104,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
     "Linux fundamentals12 / 12 · done": "/app/course", "Network namespaces10 items · ~4 h": "/app/learn/class",
     "Milestone 1 · 23 modules": "/app/course", "+ 16 more modules": "/app/course/roadmap",
   },
-  LabLaunch: { "Launch lab": "/app/lab/boot", Terminal: "/app/lab/boot", "VS Code": "/app/lab/ide", "Load balancer": "/app/lab/expose", "Cloud tray": "/app/lab/cloud-tray" },
+  LabLaunch: { "Launch lab": "/app/lab", Terminal: "/app/lab", "VS Code": "/app/lab", "Load balancer": "/app/lab", "Cloud tray": "/app/lab" },
   LabBoot: { "← Previous": "/app/lab/launch", "Next step →": "/app/lab" },
   LabRunning: { "← Previous": "/app/lab/launch", "Next step →": "/app/lab/complete", "IDE···": "/app/lab/ide", "Retarget LB to :8080": "/app/lab/expose", "Open raw response": "/app/lab/expose" },
   LabTimeLow: { "← Previous": "/app/lab", "Next step →": "/app/lab/complete", "+15 min from bank": "/app/lab", "+30": "/app/lab", Later: "/app/lab", Resume: "/app/lab" },
