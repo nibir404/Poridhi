@@ -148,7 +148,7 @@ html[data-theme="terminal"] .pd-m-top { background: linear-gradient(90deg, #0000
 html[data-theme="terminal"] .pd-m-top button, html[data-theme="terminal"] .pd-m-title { color: #FFFFFF !important; }
 html[data-theme="terminal"] :is(.pd-m-tabs button, .pd-theme-switch button) { border-radius: 0 !important; }
 /* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
-html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: invert(0.9) hue-rotate(180deg); }
+/* Lab console: recoloured with the rest of the screen (light in light mode, dark in dark mode, black in 98). */
 
 /* Matter and TX-02 from the Puku design system (ds.puku.sh/assets), variable 100–900. */
 @font-face { font-family: "Matter"; src: url("/fonts/Matter.woff2") format("woff2"), url("/fonts/Matter.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }

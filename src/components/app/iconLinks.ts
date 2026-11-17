@@ -58,11 +58,32 @@ const key = (svg: SVGElement) => {
   return r ? `rect:${r.getAttribute("x")}:${r.getAttribute("y")}` : "";
 };
 
+/** Text in the lab top bar: breadcrumb and title open the roadmap, progress and timer open their panels. */
+const LAB_BAR: [RegExp, string][] = [
+  [/^Milestone \d+ · /, "/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage"],
+  [/^Publish nginx through the load balancer$/, "/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage&item=2"],
+  [/^\d+ \/ \d+$/, "/app/lab/complete"],
+  [/^\d+h\d+m$/, "/app/lab/time"],
+];
+
 /** Tags icon buttons with data-go, and makes whiteboard tools a single-select group. */
 export function wireIcons(root: HTMLElement, screen: string) {
   const map = iconMapFor(screen);
   if (!map) return () => {};
   const tools: HTMLElement[] = [];
+  const bar = root.children[0] as HTMLElement | undefined;
+  if (screen.startsWith("Lab") && bar && bar.offsetHeight <= 90) {
+    bar.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
+      if (el.children.length || el.closest("[data-go]")) return;
+      const t = el.textContent?.trim() ?? "";
+      const hit = LAB_BAR.find(([re]) => re.test(t));
+      if (!hit) return;
+      const target = (el.parentElement && el.parentElement !== bar && el.parentElement.children.length <= 3 && /\d+ \/ \d+|h\d+m/.test(t) ? el.parentElement : el) as HTMLElement;
+      target.dataset.go = hit[1];
+      target.style.cursor = "pointer";
+      target.setAttribute("role", "link");
+    });
+  }
   root.querySelectorAll<HTMLElement>("[data-pid]").forEach((btn) => {
     if (btn.dataset.go || btn.textContent?.trim() || btn.children.length !== 1) return;
     const svg = btn.querySelector<SVGElement>(":scope > svg");

@@ -14,6 +14,7 @@ import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import AccountMenu from "./AccountMenu";
 import { wireIcons } from "./iconLinks";
+import { stickyIn } from "@/components/motion/stickyIn";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
 import { screenBehaviours } from "./behaviours";
@@ -136,6 +137,27 @@ export default function AppShell({ screen, children }: { screen: string; childre
       avatar.addEventListener("click", openAccount);
     }
 
+    // Sticky chrome: the app bar stays at the top, side columns stay in view below it.
+    const stickies: (() => void)[] = [];
+    const appBar = bar0Early(root);
+    const bodyRow = root.children[1] as HTMLElement | undefined;
+    if (appBar && bodyRow && !root.closest(".pd-reflow")) {
+      Object.assign(appBar.style, { position: "relative", zIndex: "60" });
+      if (getComputedStyle(appBar).backgroundColor === "rgba(0, 0, 0, 0)") appBar.style.backgroundColor = "var(--dashboard-main)"; // opaque while content scrolls under it
+      stickies.push(stickyIn(appBar, root, 0));
+      const barH = appBar.offsetHeight;
+      (Array.from(bodyRow.children) as HTMLElement[]).forEach((col) => {
+        const w = col.offsetWidth;
+        const cs = getComputedStyle(col);
+        if (w < 48 || w > 440 || cs.flexShrink !== "0" || col.offsetHeight < 300) return; // side columns only
+        const zoom = col.getBoundingClientRect().width / (w || 1) || 1;
+        col.style.height = `${Math.round(window.innerHeight / zoom - barH)}px`;
+        col.style.overflowY = "auto";
+        col.setAttribute("data-lenis-prevent", "");
+        stickies.push(stickyIn(col, bodyRow, barH));
+      });
+    }
+
     // Icon-only buttons on lab, exam and interview screens.
     const undoIcons = wireIcons(root, screen);
 
@@ -237,6 +259,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     const undoRecolor = bindRecolor(root, currentTheme);
     return () => {
       undoGlow();
+      stickies.forEach((f) => f());
       undoIcons();
       undoCopy();
       avatar?.removeEventListener("click", openAccount);

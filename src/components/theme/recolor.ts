@@ -67,7 +67,11 @@ function mapBg(c: RGB, p: Pal, isRoot: boolean, appWindow = false): string | nul
   const [h, s, l] = hsl(c);
   if (l < 0.45) {
     // Dark mode: the design's own near-black surfaces join the DS palette (sidebar / panel / hover levels).
-    if (p.dark && p.text === DS.text && s < 0.12 && l >= 0.04) return l < 0.09 ? "var(--dashboard-sidebar)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-hover)";
+    if (p.text === DS.text && s < 0.12 && l >= 0.04) {
+      if (p.dark) return l < 0.09 ? "var(--dashboard-sidebar)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-hover)";
+      // Light mode: the design's dark work areas (lab workspace, consoles, panels) become light too.
+      if (!p.desktop) return l < 0.09 ? "var(--dashboard-hover)" : l < 0.16 ? "var(--dashboard-panel)" : "var(--dashboard-sidebar)";
+    }
     return null; // otherwise keep the design (brand navy, media)
   }
   if (s < 0.12) {
@@ -136,7 +140,7 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
     restore(el);
-    if (el instanceof HTMLElement) { delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; delete el.dataset.w98; }
+    if (el instanceof HTMLElement) { delete el.dataset.pdImg; delete el.dataset.pdDark; delete el.dataset.pdLight; delete el.dataset.pdAccent; delete el.dataset.w98; }
   });
   if (!theme) return; // restore only
   const p = PAL[theme];
@@ -148,15 +152,16 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
     const bg = parse(cs.backgroundColor);
     const darkFill = bg && bg[3] > 0.5 && hsl(bg)[2] < 0.3;
     const darkImage = cs.backgroundImage.includes("gradient") && !cs.backgroundImage.includes("255, 255, 255");
-    if ((darkFill || darkImage) && el.offsetWidth > 60 && el.offsetHeight > 40) el.dataset.pdDark = "1";
+    if ((darkFill || darkImage) && el.offsetWidth > 60 && el.offsetHeight > 40) { el.dataset.pdDark = "1"; if (darkImage) el.dataset.pdImg = "1"; }
     else if (bg && bg[3] > 0.9 && hsl(bg)[2] > 0.9 && el.offsetWidth > 120 && el.offsetHeight > 80) el.dataset.pdLight = "1";
   });
 
   all.forEach((el) => {
     const html = el instanceof HTMLElement;
     // Light themes keep areas the design paints dark; dark mode recolours them too (except media and consoles).
-    if (html && isDarkZone(el) && !(p.dark && p.text === DS.text)) return;
-    if (el.closest(".pd-term, video, canvas")) return;
+    // Gradient art (hero, product tiles) and media keep their colours; Windows 98 keeps designed-dark areas.
+    if (el.closest("[data-pd-img], video, canvas")) return;
+    if (html && p.desktop && isDarkZone(el)) return;
     const cs = getComputedStyle(el);
     const set: [string, string][] = [];
     let nb: string | null | undefined = null;
@@ -174,7 +179,8 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
       (["top", "right", "bottom", "left"] as const).forEach((side) => {
         if (cs.getPropertyValue(`border-${side}-width`) === "0px") return;
         const b = parse(cs.getPropertyValue(`border-${side}-color`));
-        const nl = b && mapLine(b, p, parseFloat(cs.getPropertyValue(`border-${side}-width`)));
+        const inDark = !p.dark && !p.desktop && !!(el as HTMLElement).closest("[data-pd-dark]");
+        const nl = b && (inDark && hsl(b)[1] < 0.12 && parseFloat(cs.getPropertyValue(`border-${side}-width`)) < 2 ? p.line : mapLine(b, p, parseFloat(cs.getPropertyValue(`border-${side}-width`))));
         if (nl) set.push([`border-${side}-color`, nl]);
       });
     } else {
@@ -241,7 +247,7 @@ export function guardContrast(root: HTMLElement) {
     for (const attr of ["stroke", "fill"] as const) {
       const c = parse(cs.getPropertyValue(attr));
       if (!c || c[3] < 0.5) continue;
-      if (ratio(c, bg) >= 3) continue;
+      if (ratio(c, bg) >= (hsl(c)[1] < 0.12 ? 3 : 1.6)) continue; // grey icons need 3:1; coloured ones (status checks) only if nearly invisible
       const options: [string, RGB][] = [["var(--dashboard-text)", ink], ["#FFFFFF", [255, 255, 255, 1]], ["#000000", [0, 0, 0, 1]]];
       setProp(el, attr, options.map(([css, o]) => [css, ratio(o, bg)] as const).sort((a, b) => b[1] - a[1])[0][0]);
     }

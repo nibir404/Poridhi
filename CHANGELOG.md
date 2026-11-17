@@ -2,6 +2,18 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.8.0] - 2026-11-17
+
+### Added
+- App bar and side columns (profile sidebar, lab rail and guide, class lists) stay in place while the page scrolls.
+- Lab top bar text is clickable: breadcrumb and title open the roadmap at this lab, progress opens the completion check, the timer opens the time panel.
+
+### Changed
+- Light mode recolours the design's dark work areas too (lab workspace, tab strip, preview panel, console), so the light theme is light throughout; gradient art and media keep their colours.
+
+### Fixed
+- Green check circles and other coloured icons no longer turned black from the icon contrast check (coloured graphics are only adjusted when nearly invisible).
+
 ## [1.7.0] - 2026-11-17
 
 ### Added
