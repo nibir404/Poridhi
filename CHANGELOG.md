@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## 2.9.0 · 2026-11-17
+
+### Added
+- Lab group page for 100+ modules: sticky sidebar with search, status / level / length / topic filters with live counts, a self-scrolling module list and the selected module's labs.
+- Lab library search box and sort (Most active, A–Z, Most labs) now work.
+
+### Changed
+- Search palette uses the design system (black / white / greys) in both themes, matches multiple words, ranks title matches first and adds Go-to page shortcuts.
+- Lab launch page: header and side panes stay fixed; only the guide scrolls.
+
+### Fixed
+- Search results that pointed at missing pages (/app/practice, /courses/devops) now open the interview, exam, lab or course.
+
 ## 2.8.0 · 2026-11-17
 
 ### Added
