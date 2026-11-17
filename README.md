@@ -12,7 +12,11 @@ Every screen is built 1:1 from the Paper design file and runs on seed data, so t
 | Styling | Tailwind CSS v4, inline design styles generated from Paper |
 | Motion | GSAP, Framer Motion, Lenis smooth scroll |
 | 3D / shaders | three.js, React Three Fiber, drei |
-| Font | Helvetica Neue (system), Geist Mono |
+| Font | Matter (licensed, see below), Geist Mono |
+
+## Font
+
+Matter is a licensed typeface, so it is not committed to this public repository. Put `Matter.ttf` (variable, weights 300–800) at `public/fonts/Matter.ttf`; without it the site falls back to Helvetica Neue / system sans.
 
 ## Getting started
 
@@ -88,7 +92,8 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DESIGN-PIPELINE
 
 ## Design rules
 
-- Helvetica Neue everywhere; semibold (600), never bold.
+- Matter everywhere; semibold (600), never bold.
+- Colours follow the Puku palette in light and dark.
 - 6px corner radius; buttons at most 40px tall.
 - Accent `#B0B3FC` only on action items.
 - Rewards are **coins**, not points. Lab time counts only while the VM runs.

@@ -20,6 +20,7 @@ export function reflow(root: HTMLElement) {
   for (const el of all) {
     const s = el.style;
     if (el instanceof SVGElement) continue;
+    if (!el.children.length && (el.textContent ?? "").trim().length <= 12) s.whiteSpace = "nowrap"; // badges, chips, numbers
     const w = px(s.width);
     if (w > vw - 24) { s.width = "100%"; s.maxWidth = "100%"; }
     const mw = px(s.minWidth);

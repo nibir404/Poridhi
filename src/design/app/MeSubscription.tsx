@@ -90,7 +90,7 @@ export default function MeSubscription() {
         <div data-pid="F0Q-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="F1K-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="F1R-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="F1S-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="F1S-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IHE-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeSubscription() {
               </svg>
             </div>
             <div data-pid="F1L-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="F1Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="F1Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="F1M-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="F1O-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="F1P-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="F1P-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="F1N-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="F1N-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeSubscription() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="F1G-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F1G-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeSubscription() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HE5-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="F1C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F1C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeSubscription() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="F17-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F17-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeSubscription() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
             </svg>
-            <div data-pid="F12-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F12-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeSubscription() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="F0X-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F0X-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeSubscription() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FCG-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FCF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FCF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeSubscription() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FCC-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FCB-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FCB-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeSubscription() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeSubscription() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FC6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FC6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeSubscription() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FC1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FC1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="FC0-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="FBY-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="FBZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="FBZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,17 +225,17 @@ export default function MeSubscription() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F0T-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="F0S-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="F0S-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
         </div>
         <div data-pid="F7W-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '20px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="F7X-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <div data-pid="F7Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+            <div data-pid="F7Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
               Subscription
             </div>
-            <div data-pid="F7Z-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F7Z-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               One plan opens every course, lab, exam and interview.
             </div>
           </div>
@@ -245,21 +245,21 @@ export default function MeSubscription() {
                 <div data-pid="F83-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   <div data-pid="F84-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                     <div data-pid="F85-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '2px', paddingInline: '8px' }}>
-                      <div data-pid="F86-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', fontWeight: 500, lineHeight: '14px' }}>
+                      <div data-pid="F86-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '11px', fontWeight: 500, lineHeight: '14px' }}>
                         PRO
                       </div>
                     </div>
-                    <div data-pid="F87-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                    <div data-pid="F87-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                       Pro · Yearly
                     </div>
                   </div>
-                  <div data-pid="F88-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="F88-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Renews 2 Mar 2027 · paid with bKash ••• 4471
                   </div>
                 </div>
                 <div data-pid="F89-0" style={{ alignItems: 'center', backgroundColor: '#EDF8F1', borderRadius: '999px', boxSizing: 'border-box', display: 'flex', gap: '6px', paddingBlock: '4px', paddingInline: '10px' }}>
                   <div data-pid="F8A-0" style={{ backgroundColor: '#22A55B', borderRadius: '3px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '6px' }} />
-                  <div data-pid="F8B-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F8B-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Active
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export default function MeSubscription() {
                   <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F8E-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M5 12l5 5 9-10" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                   </svg>
-                  <div data-pid="F8G-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F8G-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     All courses, live classes and recordings
                   </div>
                 </div>
@@ -277,7 +277,7 @@ export default function MeSubscription() {
                   <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F8I-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M5 12l5 5 9-10" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                   </svg>
-                  <div data-pid="F8K-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F8K-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     12h lab time every month, plus what you earn with coins
                   </div>
                 </div>
@@ -285,7 +285,7 @@ export default function MeSubscription() {
                   <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F8M-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M5 12l5 5 9-10" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                   </svg>
-                  <div data-pid="F8O-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F8O-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     Unlimited AI interviews and milestone exams
                   </div>
                 </div>
@@ -293,77 +293,77 @@ export default function MeSubscription() {
                   <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F8Q-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M5 12l5 5 9-10" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                   </svg>
-                  <div data-pid="F8S-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F8S-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     Verified certificates and a public profile
                   </div>
                 </div>
               </div>
               <div data-pid="F8T-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '8px', paddingTop: '4px' }}>
                 <div data-pid="F8U-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '10px', paddingInline: '16px' }}>
-                  <div data-pid="F8V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="F8V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Change plan
                   </div>
                 </div>
                 <div data-pid="F8W-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '10px', paddingInline: '16px' }}>
-                  <div data-pid="F8X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="F8X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Update payment method
                   </div>
                 </div>
                 <div data-pid="F8Y-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
                 <div data-pid="F8Z-0" style={{ boxSizing: 'border-box', paddingBlock: '10px', paddingInline: '4px' }}>
-                  <div data-pid="F90-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
+                  <div data-pid="F90-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
                     Cancel subscription
                   </div>
                 </div>
               </div>
             </div>
             <div data-pid="F91-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, gap: '10px', width: '360px' }}>
-              <div data-pid="F92-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.08em', lineHeight: '14px' }}>
+              <div data-pid="F92-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', lineHeight: '14px' }}>
                 PLANS
               </div>
               <div data-pid="F93-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', padding: '16px' }}>
                 <div data-pid="F94-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                  <div data-pid="F95-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F95-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     Monthly
                   </div>
-                  <div data-pid="F96-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F96-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Cancel any time
                   </div>
                 </div>
-                <div data-pid="F97-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="F97-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '14px', lineHeight: '18px' }}>
                   ৳2,500<span style={{ color: '#808080', fontSize: '11px', lineHeight: '14px' }}>/mo</span>
                 </div>
               </div>
               <div data-pid="F98-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#0E0E0E', borderRadius: '6px', borderStyle: 'solid', borderWidth: '2px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', padding: '16px' }}>
                 <div data-pid="F99-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
                   <div data-pid="F9A-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
-                    <div data-pid="F9B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                    <div data-pid="F9B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                       Yearly
                     </div>
                     <div data-pid="F9C-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                      <div data-pid="F9D-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                      <div data-pid="F9D-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                         CURRENT
                       </div>
                     </div>
                   </div>
-                  <div data-pid="F9E-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F9E-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     2 months free
                   </div>
                 </div>
-                <div data-pid="F9F-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="F9F-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '14px', lineHeight: '18px' }}>
                   ৳25,000<span style={{ color: '#808080', fontSize: '11px', lineHeight: '14px' }}>/yr</span>
                 </div>
               </div>
               <div data-pid="F9G-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', padding: '16px' }}>
                 <div data-pid="F9H-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                  <div data-pid="F9I-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F9I-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     Teams
                   </div>
-                  <div data-pid="F9J-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F9J-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     5+ seats, shared dashboard
                   </div>
                 </div>
-                <div data-pid="F9K-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
+                <div data-pid="F9K-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
                   Contact us
                 </div>
               </div>
@@ -371,41 +371,41 @@ export default function MeSubscription() {
           </div>
           <div data-pid="F9L-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
             <div data-pid="F9M-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-              <div data-pid="F9N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="F9N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Billing history
               </div>
             </div>
             <div data-pid="F9O-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="F9P-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="F9P-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', width: '110px' }}>
                 2 Mar 2026
               </div>
-              <div data-pid="F9Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="F9Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Pro · Yearly
               </div>
-              <div data-pid="F9R-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="F9R-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 ৳25,000
               </div>
-              <div data-pid="F9S-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '70px' }}>
+              <div data-pid="F9S-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '70px' }}>
                 Paid
               </div>
-              <div data-pid="F9T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
+              <div data-pid="F9T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
                 Invoice
               </div>
             </div>
             <div data-pid="F9U-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="F9V-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="F9V-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', width: '110px' }}>
                 2 Feb 2026
               </div>
-              <div data-pid="F9W-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="F9W-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Pro · Monthly
               </div>
-              <div data-pid="F9X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="F9X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 ৳2,500
               </div>
-              <div data-pid="F9Y-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '70px' }}>
+              <div data-pid="F9Y-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '70px' }}>
                 Paid
               </div>
-              <div data-pid="F9Z-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
+              <div data-pid="F9Z-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
                 Invoice
               </div>
             </div>

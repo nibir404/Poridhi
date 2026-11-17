@@ -1,7 +1,7 @@
 import type { Theme } from "./theme";
 
 /**
- * Dark / terminal themes by recolouring computed styles (the screens use inline design colours).
+  * Themes by recolouring computed styles (the screens use inline design colours).
  * Light surfaces map to three distinct dark levels so page, card and inset never blend:
  *   page background → bg, white cards → card, light greys (#F4F4F4…) → inset.
  * Dark text becomes light text with AA contrast or better; tinted soft fills become dark tints;
@@ -9,10 +9,12 @@ import type { Theme } from "./theme";
  * Areas the design already draws dark (hero, navy panels, lab terminal) are left as designed.
  * Originals are stored so switching back to light restores the design exactly.
  */
-type Pal = { bg: string; card: string; inset: string; line: string; text: string; text2: string; text3: string; tintL: number };
-const PAL: Record<Exclude<Theme, "light">, Pal> = {
-  dark: { bg: "#121216", card: "#1C1C22", inset: "#26262E", line: "#34343D", text: "#EDEDF0", text2: "#B4B4BE", text3: "#9A9AA6", tintL: 0.2 },
-  terminal: { bg: "#0B140E", card: "#122017", inset: "#1A2C20", line: "#28402F", text: "#D2F7DD", text2: "#9FD0AE", text3: "#86B796", tintL: 0.18 },
+type Pal = { dark: boolean; bg: string; card: string; inset: string; line: string; text: string; text2: string; text3: string; tintL: number };
+/** Light and dark follow the Puku palette (puku.sh): warm olive-grey neutrals, indigo accent. */
+const PAL: Record<Theme, Pal> = {
+  light: { dark: false, bg: "oklch(95.4% 0.009 100)", card: "oklch(98.4% 0.007 106.5)", inset: "oklch(91.8% 0.013 111.3)", line: "oklch(84.2% 0.018 120.7)", text: "oklch(28.6% 0.019 125.3)", text2: "oklch(40% 0.02 124)", text3: "oklch(50.5% 0.022 123.2)", tintL: 0 },
+  dark: { dark: true, bg: "oklch(19.8% 0.004 128.7)", card: "oklch(22.9% 0.006 121.9)", inset: "oklch(26.4% 0.011 122.2)", line: "oklch(32.8% 0.014 118.6)", text: "oklch(94.7% 0.012 106.6)", text2: "oklch(82% 0.016 113)", text3: "oklch(70.2% 0.02 119.9)", tintL: 0.24 },
+  terminal: { dark: true, bg: "#0B140E", card: "#122017", inset: "#1A2C20", line: "#28402F", text: "#D2F7DD", text2: "#9FD0AE", text3: "#86B796", tintL: 0.18 },
 };
 
 type RGB = [number, number, number, number];
@@ -41,25 +43,25 @@ function mapBg(c: RGB, p: Pal, isRoot: boolean): string | null {
     if (l > 0.9) return p.inset; // #F4F4F4, #EFEFEF …
     return p.line; // mid greys used as fills (progress tracks, dividers)
   }
-  if (l > 0.85) return css(h, Math.min(s, 0.45), p.tintL, c[3]); // soft tints → dark tints
+  if (p.dark && l > 0.85) return css(h, Math.min(s, 0.45), p.tintL, c[3]); // soft tints → dark tints
   return null; // saturated fills (accent buttons, status colours) stay
 }
 function mapText(c: RGB, p: Pal): string | null {
   const [h, s, l] = hsl(c);
   if (s < 0.12) {
-    if (l > 0.6) return null; // already light
+    if (l > 0.6) return null; // already light (text on dark fills)
     if (l < 0.25) return p.text;
     if (l < 0.45) return p.text2;
     return p.text3;
   }
-  if (l < 0.55) return css(h, Math.min(s, 0.8), 0.74, c[3]); // dark brand text → readable on dark
+  if (p.dark && l < 0.55) return css(h, Math.min(s, 0.8), 0.74, c[3]); // dark brand text → readable on dark
   return null;
 }
 function mapLine(c: RGB, p: Pal): string | null {
   if (c[3] < 0.05) return null;
   const [, s, l] = hsl(c);
   if (s < 0.12 && l > 0.7) return p.line;
-  if (s < 0.12 && l < 0.2) return p.text3; // dark outlines (selected cards) → visible
+  if (p.dark && s < 0.12 && l < 0.2) return p.text3; // dark outlines (selected cards) → visible
   return null;
 }
 
@@ -76,7 +78,7 @@ function isDarkZone(el: HTMLElement) {
   return false;
 }
 
-export function recolor(root: HTMLElement, theme: Theme) {
+export function recolor(root: HTMLElement, theme: Theme | null) {
   const all = [root, ...Array.from(root.querySelectorAll<HTMLElement | SVGElement>("[data-pid], [data-pid] *"))];
   // Restore first, so switching dark → terminal starts from the design colours.
   all.forEach((el) => {
@@ -87,7 +89,7 @@ export function recolor(root: HTMLElement, theme: Theme) {
     }
     if (el instanceof HTMLElement) { delete el.dataset.pdDark; delete el.dataset.pdLight; }
   });
-  if (theme === "light") return;
+  if (!theme) return; // restore only
   const p = PAL[theme];
 
   // Mark dark zones on the design colours.
@@ -139,5 +141,5 @@ export function bindRecolor(root: HTMLElement, getTheme: () => Theme) {
   const run = () => recolor(root, getTheme());
   run();
   window.addEventListener("pd-theme", run);
-  return () => { window.removeEventListener("pd-theme", run); recolor(root, "light"); };
+  return () => { window.removeEventListener("pd-theme", run); recolor(root, null); };
 }

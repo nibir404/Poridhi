@@ -79,6 +79,10 @@ body = re.sub(r' id="([0-9A-Z]+-0)"', r' data-pid="\1"', body)
 body = body.replace(" class=", " className=")
 body = re.sub(r"xlink:href", "xlinkHref", body)
 body = body.replace("fontWeight: 700", "fontWeight: 600")  # semibold everywhere, not bold
+# One type system: Matter (sans) and the mono token, whatever the design layer named.
+body = re.sub(r"fontFamily: '\"HelveticaNeue[^']*'", "fontFamily: 'var(--font-sans)'", body)
+body = body.replace("fontFamily: 'system-ui, sans-serif'", "fontFamily: 'var(--font-sans)'")
+body = re.sub(r"fontFamily: '\"Geist Mono\"[^']*'", "fontFamily: 'var(--font-mono)'", body)
 
 tsx = f"""/* Auto-generated from Paper by scripts/paper2tsx.py. Do not hand-edit layout here;
    regenerate from the design and add behaviour in wrapper components. */

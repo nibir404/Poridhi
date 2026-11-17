@@ -90,7 +90,7 @@ export default function MeCertificates() {
         <div data-pid="EVD-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="EW7-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="EWE-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="EWF-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="EWF-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IH1-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeCertificates() {
               </svg>
             </div>
             <div data-pid="EW8-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="EWD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="EWD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="EW9-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="EWB-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="EWC-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="EWC-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="EWA-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="EWA-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeCertificates() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EW3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EW3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeCertificates() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HE2-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EVZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EVZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeCertificates() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EVU-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EVU-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeCertificates() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EVP-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EVP-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeCertificates() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EVK-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EVK-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeCertificates() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FBU-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FBT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FBT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeCertificates() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FBQ-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FBP-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FBP-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeCertificates() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HB9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HB9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeCertificates() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FBK-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FBK-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeCertificates() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FBF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FBF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="FBE-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="FBC-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="FBD-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="FBD-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MeCertificates() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EVG-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EVF-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EVF-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -233,14 +233,14 @@ export default function MeCertificates() {
         <div data-pid="F5P-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '20px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="F5Q-0" style={{ alignItems: 'end', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
             <div data-pid="F5R-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <div data-pid="F5S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+              <div data-pid="F5S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
                 Certificates
               </div>
-              <div data-pid="F5T-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="F5T-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Earned by passing a milestone exam. Each one has a public link anyone can verify.
               </div>
             </div>
-            <div data-pid="F5U-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+            <div data-pid="F5U-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
               2 earned · 4 to go
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function MeCertificates() {
             <div data-pid="F5W-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', overflow: 'clip' }}>
               <div data-pid="F5X-0" style={{ backgroundColor: '#0E0E0E', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, height: '200px', justifyContent: 'space-between', overflow: 'clip', padding: '22px', position: 'relative' }}>
                 <div data-pid="F5Z-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-                  <div data-pid="F60-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.12em', lineHeight: '12px' }}>
+                  <div data-pid="F60-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em', lineHeight: '12px' }}>
                     PORIDHI · CERTIFICATE
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F61-0" style={{ display: 'inline-block', flexShrink: 0 }}>
@@ -257,10 +257,10 @@ export default function MeCertificates() {
                   </svg>
                 </div>
                 <div data-pid="F64-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <div data-pid="F65-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                  <div data-pid="F65-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                     Linux, Scripting &amp; Containers
                   </div>
-                  <div data-pid="F66-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F66-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Milestone 1 · DevOps &amp; Cloud track
                   </div>
                 </div>
@@ -268,21 +268,21 @@ export default function MeCertificates() {
               </div>
               <div data-pid="F67-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '14px', paddingInline: '18px' }}>
                 <div data-pid="F68-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                  <div data-pid="F69-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="F69-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Exam 78/100 · 14 Nov 2026
                   </div>
-                  <div data-pid="F6A-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="F6A-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     ID PRD-M1-7Q2A
                   </div>
                 </div>
                 <div data-pid="F6B-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                   <div data-pid="F6C-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '10px' }}>
-                    <div data-pid="F6D-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F6D-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       PDF
                     </div>
                   </div>
                   <div data-pid="F6E-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '10px' }}>
-                    <div data-pid="F6F-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F6F-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Share
                     </div>
                   </div>
@@ -292,7 +292,7 @@ export default function MeCertificates() {
             <div data-pid="F6G-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', overflow: 'clip' }}>
               <div data-pid="F6H-0" style={{ backgroundColor: '#0E0E0E', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, height: '200px', justifyContent: 'space-between', overflow: 'clip', padding: '22px', position: 'relative' }}>
                 <div data-pid="F6J-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-                  <div data-pid="F6K-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', letterSpacing: '0.12em', lineHeight: '12px' }}>
+                  <div data-pid="F6K-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.12em', lineHeight: '12px' }}>
                     PORIDHI · CERTIFICATE
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F6L-0" style={{ display: 'inline-block', flexShrink: 0 }}>
@@ -301,10 +301,10 @@ export default function MeCertificates() {
                   </svg>
                 </div>
                 <div data-pid="F6O-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <div data-pid="F6P-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                  <div data-pid="F6P-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                     Docker Networking &amp; Storage
                   </div>
-                  <div data-pid="F6Q-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="F6Q-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Milestone 2 · DevOps &amp; Cloud track
                   </div>
                 </div>
@@ -312,21 +312,21 @@ export default function MeCertificates() {
               </div>
               <div data-pid="F6R-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '14px', paddingInline: '18px' }}>
                 <div data-pid="F6S-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                  <div data-pid="F6T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="F6T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Exam 84/100 · 2 Nov 2026
                   </div>
-                  <div data-pid="F6U-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="F6U-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     ID PRD-M2-K8D1
                   </div>
                 </div>
                 <div data-pid="F6V-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                   <div data-pid="F6W-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '10px' }}>
-                    <div data-pid="F6X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F6X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       PDF
                     </div>
                   </div>
                   <div data-pid="F6Y-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '10px' }}>
-                    <div data-pid="F6Z-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F6Z-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Share
                     </div>
                   </div>
@@ -335,7 +335,7 @@ export default function MeCertificates() {
             </div>
           </div>
           <div data-pid="F70-0" style={{ boxSizing: 'border-box', paddingTop: '4px' }}>
-            <div data-pid="F71-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+            <div data-pid="F71-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
               Next up
             </div>
           </div>
@@ -346,17 +346,17 @@ export default function MeCertificates() {
                   <circle cx="12" cy="9" r="6" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                   <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="F78-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="F78-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   M3
                 </div>
               </div>
-              <div data-pid="F79-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="F79-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Kubernetes Fundamentals
               </div>
               <div data-pid="F7A-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px' }}>
                 <div data-pid="F7B-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '2px', boxSizing: 'border-box', width: 'round(34%, 1px)' }} />
               </div>
-              <div data-pid="F7C-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="F7C-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 8 of 23 modules · exam locked
               </div>
             </div>
@@ -366,15 +366,15 @@ export default function MeCertificates() {
                   <circle cx="12" cy="9" r="6" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                   <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="F7I-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="F7I-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   M4
                 </div>
               </div>
-              <div data-pid="F7J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="F7J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 CI/CD Pipelines
               </div>
               <div data-pid="F7K-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px' }} />
-              <div data-pid="F7L-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="F7L-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Not started
               </div>
             </div>
@@ -384,15 +384,15 @@ export default function MeCertificates() {
                   <circle cx="12" cy="9" r="6" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                   <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#A5A5A5" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="F7R-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="F7R-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   M5–M6
                 </div>
               </div>
-              <div data-pid="F7S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="F7S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Observability · Cloud at scale
               </div>
               <div data-pid="F7T-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px' }} />
-              <div data-pid="F7U-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="F7U-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Track certificate at the end
               </div>
             </div>

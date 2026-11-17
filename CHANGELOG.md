@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.3.0] - 2026-11-17
+
+### Changed
+- Type: Matter (variable 300–800) everywhere, through `--font-sans`; design layers no longer name Helvetica Neue.
+- Light and dark themes use the Puku palette (puku.sh): warm olive-grey page, panel, inset and border levels, olive-tinted text, indigo accent text. Light mode is now recoloured too, so both modes share one system.
+
+### Security
+- Next.js 15.5.4 → 15.5.29 (CVE-2025-66478; Vercel was blocking deploys).
+- `overrides` pin patched postcss and sharp; `npm audit` reports 0 vulnerabilities.
+
+### Fixed
+- Active phone tab label readable in dark mode; short chips and numbers no longer wrap letter by letter on phones.
+
 ## [1.2.0] - 2026-11-17
 
 ### Added

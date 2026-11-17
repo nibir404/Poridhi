@@ -33,7 +33,7 @@
   --color-accent: #B0B3FC; --color-accent-hover: #9EA2F7; --color-on-accent: #242449;
   --color-accent-text: #5257C8; --color-accent-on-dark: #BFC2FF;
 
-  --font-sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-sans: "Matter", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --radius: 6px;
 }
@@ -103,11 +103,18 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Themes. Design screens are recoloured at runtime (src/components/theme/recolor.ts);
    these tokens cover everything drawn with CSS variables (search, menus, switches, phone bars). */
+/* Puku palette (puku.sh). Light is the default; tokens cover everything drawn with CSS variables. */
+:root {
+  --color-bg: oklch(98.4% 0.007 106.5); --color-surface: oklch(91.8% 0.013 111.3); --color-surface-2: oklch(85.6% 0.021 119);
+  --color-line: oklch(84.2% 0.018 120.7); --color-ink: oklch(28.6% 0.019 125.3); --color-ink-2: oklch(40% 0.02 124); --color-ink-3: oklch(50.5% 0.022 123.2);
+  --color-white-100: oklch(95.4% 0.009 100); --color-accent-text: oklch(49.8% 0.198 274.9);
+}
+body { background: oklch(95.4% 0.009 100); }
 html[data-theme="dark"] {
-  --color-bg: #1C1C22; --color-surface: #26262E; --color-surface-2: #2E2E37; --color-line: #34343D;
-  --color-ink: #EDEDF0; --color-ink-2: #B4B4BE; --color-ink-3: #9A9AA6;
-  --color-white-100: #16161B; --color-blue-50: #2A2C4A; --color-blue-700: #C6C8FF; --color-grey-900: #EDEDF0;
-  --color-accent-text: #C6C8FF; --color-ember-soft: #3A2219; color-scheme: dark;
+  --color-bg: oklch(22.9% 0.006 121.9); --color-surface: oklch(26.4% 0.011 122.2); --color-surface-2: oklch(30.5% 0.012 122.2);
+  --color-line: oklch(32.8% 0.014 118.6); --color-ink: oklch(94.7% 0.012 106.6); --color-ink-2: oklch(82% 0.016 113); --color-ink-3: oklch(70.2% 0.02 119.9);
+  --color-white-100: oklch(19.8% 0.004 128.7); --color-blue-50: oklch(30% 0.05 280); --color-blue-700: oklch(79.1% 0.103 281.9); --color-grey-900: oklch(94.7% 0.012 106.6);
+  --color-accent-text: oklch(79.1% 0.103 281.9); --color-ember-soft: oklch(28% 0.04 40); color-scheme: dark;
 }
 html[data-theme="terminal"] {
   --color-bg: #122017; --color-surface: #1A2C20; --color-surface-2: #213628; --color-line: #28402F;
@@ -115,22 +122,18 @@ html[data-theme="terminal"] {
   --color-white-100: #0E1A12; --color-blue-50: #1F3A28; --color-blue-700: #9FF0BC; --color-grey-900: #D2F7DD;
   --color-accent-text: #9FF0BC; --color-ember-soft: #33261A; color-scheme: dark;
 }
-html[data-theme="dark"] body { background: #121216; }
+html[data-theme="dark"] body { background: oklch(19.8% 0.004 128.7); }
 html[data-theme="terminal"] body { background: #0B140E; }
 /* Lab terminal follows the theme: light in light mode (design draws it dark), as designed in dark modes. */
 html:not([data-theme="dark"]):not([data-theme="terminal"]) .pd-term { filter: invert(0.9) hue-rotate(180deg); }
 
-/* Helvetica Neue ships no 600 face; map semibold to its Medium cut so 600 reads lighter than Bold.
-   All weights are declared because an @font-face family replaces the system family entirely. */
-@font-face { font-family: "Helvetica Neue"; font-weight: 300; src: local("HelveticaNeue-Light"), local("Helvetica Neue Light"); }
-@font-face { font-family: "Helvetica Neue"; font-weight: 400; src: local("HelveticaNeue"), local("Helvetica Neue"); }
-@font-face { font-family: "Helvetica Neue"; font-weight: 500 600; src: local("HelveticaNeue-Medium"), local("Helvetica Neue Medium"); }
-@font-face { font-family: "Helvetica Neue"; font-weight: 700 900; src: local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"); }
+/* Matter (variable, 300–800), the Puku type face. */
+@font-face { font-family: "Matter"; src: url("/fonts/Matter.ttf") format("truetype"); font-weight: 300 800; font-display: swap; }
 
 /* Phone app shell (MobileChrome). */
-.pd-m-top, .pd-m-tabs { position: fixed; left: 0; right: 0; z-index: 130; display: flex; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
-.pd-m-top { top: 0; align-items: center; gap: 4px; height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 8px 0; border-bottom: 1px solid #EFEFEF; }
-.pd-m-tabs { bottom: 0; height: calc(64px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid #EFEFEF; }
+.pd-m-top, .pd-m-tabs { position: fixed; left: 0; right: 0; z-index: 130; display: flex; background: color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+.pd-m-top { top: 0; align-items: center; gap: 4px; height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 8px 0; border-bottom: 1px solid var(--color-line); }
+.pd-m-tabs { bottom: 0; height: calc(64px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); border-top: 1px solid var(--color-line); }
 .pd-m-tabs button:active, .pd-m-top button:active { transform: scale(.94); transition: transform .08s; }
 .pd-m-title { font: 600 15px/18px var(--font-sans); color: #0E0E0E; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 body.pd-phone { padding-top: calc(56px + env(safe-area-inset-top)); -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }

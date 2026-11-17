@@ -90,7 +90,7 @@ export default function MeSettings() {
         <div data-pid="GMO-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="GO4-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="GOB-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="GOC-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="GOC-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IF8-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeSettings() {
               </svg>
             </div>
             <div data-pid="GO5-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="GOA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="GOA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="GO6-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="GO8-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="GO9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="GO9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="GO7-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GO7-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeSettings() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GO0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GO0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeSettings() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HEQ-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="GNW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GNW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeSettings() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GNR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GNR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeSettings() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GNM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GNM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeSettings() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="GNH-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GNH-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeSettings() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GNE-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GND-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GND-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeSettings() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GNA-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GN9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GN9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeSettings() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HCD-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HCD-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeSettings() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GN4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GN4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeSettings() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GMZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GMZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="GMY-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="GMW-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="GMX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GMX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,17 +225,17 @@ export default function MeSettings() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GMR-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GMQ-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="GMQ-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
         </div>
         <div data-pid="H60-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '18px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="H61-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <div data-pid="H62-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+            <div data-pid="H62-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
               Settings
             </div>
-            <div data-pid="H63-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="H63-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Account, notifications, privacy and lab defaults.
             </div>
           </div>
@@ -243,51 +243,51 @@ export default function MeSettings() {
             <div data-pid="H65-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '16px' }}>
               <div data-pid="H66-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
                 <div data-pid="H67-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-                  <div data-pid="H68-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="H68-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                     Account
                   </div>
                 </div>
                 <div data-pid="H69-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
                   <div data-pid="H6A-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    <div data-pid="H6B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Email
                     </div>
-                    <div data-pid="H6C-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6C-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       rahim@example.com
                     </div>
                   </div>
                   <div data-pid="H6D-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                    <div data-pid="H6E-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="H6E-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Change
                     </div>
                   </div>
                 </div>
                 <div data-pid="H6F-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
                   <div data-pid="H6G-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    <div data-pid="H6H-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6H-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Sign-in
                     </div>
-                    <div data-pid="H6I-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6I-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Google · GitHub connected
                     </div>
                   </div>
                   <div data-pid="H6J-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                    <div data-pid="H6K-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="H6K-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Manage
                     </div>
                   </div>
                 </div>
                 <div data-pid="H6L-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
                   <div data-pid="H6M-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    <div data-pid="H6N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Time zone
                     </div>
-                    <div data-pid="H6O-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H6O-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Asia/Dhaka (GMT+6)
                     </div>
                   </div>
                   <div data-pid="H6P-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                    <div data-pid="H6Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="H6Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Change
                     </div>
                   </div>
@@ -295,12 +295,12 @@ export default function MeSettings() {
               </div>
               <div data-pid="H6R-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
                 <div data-pid="H6S-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-                  <div data-pid="H6T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="H6T-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                     Notifications
                   </div>
                 </div>
                 <div data-pid="H6U-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H6V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H6V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Live class starts in 15 min
                   </div>
                   <div data-pid="H6W-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', justifyContent: 'end', padding: '2px', width: '34px' }}>
@@ -308,7 +308,7 @@ export default function MeSettings() {
                   </div>
                 </div>
                 <div data-pid="H6Y-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H6Z-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H6Z-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Lab time running low
                   </div>
                   <div data-pid="H70-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', justifyContent: 'end', padding: '2px', width: '34px' }}>
@@ -316,7 +316,7 @@ export default function MeSettings() {
                   </div>
                 </div>
                 <div data-pid="H72-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H73-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H73-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Ticket replies from TAs
                   </div>
                   <div data-pid="H74-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', justifyContent: 'end', padding: '2px', width: '34px' }}>
@@ -324,7 +324,7 @@ export default function MeSettings() {
                   </div>
                 </div>
                 <div data-pid="H76-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H77-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H77-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Weekly progress email
                   </div>
                   <div data-pid="H78-0" style={{ backgroundColor: '#D3D3D3', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', padding: '2px', width: '34px' }}>
@@ -336,12 +336,12 @@ export default function MeSettings() {
             <div data-pid="H7A-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, gap: '16px', width: '420px' }}>
               <div data-pid="H7B-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
                 <div data-pid="H7C-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-                  <div data-pid="H7D-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="H7D-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                     Public profile
                   </div>
                 </div>
                 <div data-pid="H7E-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H7F-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H7F-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Show certificates
                   </div>
                   <div data-pid="H7G-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', justifyContent: 'end', padding: '2px', width: '34px' }}>
@@ -349,7 +349,7 @@ export default function MeSettings() {
                   </div>
                 </div>
                 <div data-pid="H7I-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H7J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H7J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Show interview signals
                   </div>
                   <div data-pid="H7K-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', justifyContent: 'end', padding: '2px', width: '34px' }}>
@@ -357,7 +357,7 @@ export default function MeSettings() {
                   </div>
                 </div>
                 <div data-pid="H7M-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H7N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H7N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Show on leaderboard
                   </div>
                   <div data-pid="H7O-0" style={{ backgroundColor: '#D3D3D3', borderRadius: '10px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '20px', padding: '2px', width: '34px' }}>
@@ -367,31 +367,31 @@ export default function MeSettings() {
               </div>
               <div data-pid="H7Q-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
                 <div data-pid="H7R-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-                  <div data-pid="H7S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="H7S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                     Lab defaults
                   </div>
                 </div>
                 <div data-pid="H7T-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
                   <div data-pid="H7U-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                    <div data-pid="H7V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H7V-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Auto-pause when idle
                     </div>
-                    <div data-pid="H7W-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                    <div data-pid="H7W-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                       Saves Time Bank
                     </div>
                   </div>
                   <div data-pid="H7X-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                    <div data-pid="H7Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="H7Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       After 10 min
                     </div>
                   </div>
                 </div>
                 <div data-pid="H7Z-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '20px' }}>
-                  <div data-pid="H80-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H80-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Editor theme
                   </div>
                   <div data-pid="H81-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                    <div data-pid="H82-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="H82-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                       Light
                     </div>
                   </div>
@@ -399,15 +399,15 @@ export default function MeSettings() {
               </div>
               <div data-pid="H83-0" style={{ alignItems: 'center', borderColor: '#F3D0D0', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '14px', paddingInline: '20px' }}>
                 <div data-pid="H84-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                  <div data-pid="H85-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="H85-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Delete account
                   </div>
-                  <div data-pid="H86-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="H86-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Removes progress and certificates
                   </div>
                 </div>
                 <div data-pid="H87-0" style={{ borderColor: '#F3D0D0', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                  <div data-pid="H88-0" style={{ boxSizing: 'border-box', color: '#D94141', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="H88-0" style={{ boxSizing: 'border-box', color: '#D94141', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Delete
                   </div>
                 </div>

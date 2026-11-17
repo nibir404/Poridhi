@@ -263,20 +263,20 @@ export default function ExamIntro() {
               <div data-pid="BGM-0" style={{ backgroundImage: 'url(/assets/dither-card-ink.svg)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', height: '280px', opacity: '0.14', position: 'absolute', right: '0px', top: '0px', width: '480px' }} />
               <div data-pid="BGN-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px', position: 'relative' }}>
                 <div data-pid="BGO-0" style={{ alignItems: 'center', borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '6px', paddingBlock: '4px', paddingInline: '8px' }}>
-                  <div data-pid="BGP-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
+                  <div data-pid="BGP-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
                     MILESTONE 1 EXAM
                   </div>
                 </div>
                 <div data-pid="BGQ-0" style={{ borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '4px', paddingInline: '8px' }}>
-                  <div data-pid="BGR-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="BGR-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     HANDS-ON · CLOUD IDE · AI GRADED
                   </div>
                 </div>
               </div>
-              <div data-pid="BGS-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: '36px', position: 'relative' }}>
+              <div data-pid="BGS-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: '36px', position: 'relative' }}>
                 VPC deployment with Terraform
               </div>
-              <div data-pid="BGT-0" style={{ boxSizing: 'border-box', color: '#A3A3A3', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px', position: 'relative' }}>
+              <div data-pid="BGT-0" style={{ boxSizing: 'border-box', color: '#A3A3A3', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px', position: 'relative' }}>
                 Ten real AWS tasks in a cloud IDE. Each one is checked live, then reviewed by AI.
               </div>
             </div>
@@ -286,10 +286,10 @@ export default function ExamIntro() {
                   <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M8 9h8M8 13h8M8 17h5" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="BGZ-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="BGZ-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   10 questions
                 </div>
-                <div data-pid="BH0-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="BH0-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   1000 points, pick any order
                 </div>
               </div>
@@ -298,10 +298,10 @@ export default function ExamIntro() {
                   <circle cx="12" cy="13" r="8" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M12 9v4l3 2M9 2h6" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="BH5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="BH5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   15 min each
                 </div>
-                <div data-pid="BH6-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="BH6-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   The clock runs per question
                 </div>
               </div>
@@ -310,10 +310,10 @@ export default function ExamIntro() {
                   <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M9 12l2 2 4-4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="BHB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="BHB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   Pass 7 of 10
                 </div>
-                <div data-pid="BHC-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="BHC-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Unlocks the milestone certificate
                 </div>
               </div>
@@ -322,23 +322,23 @@ export default function ExamIntro() {
                   <path d="M4 12a8 8 0 1 0 3-6.2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M4 4v4h4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="BHH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="BHH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   5 / 5 left
                 </div>
-                <div data-pid="BHI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="BHI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Best attempt counts
                 </div>
               </div>
             </div>
             <div data-pid="BHJ-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '14px', paddingBlock: '20px', paddingInline: '24px' }}>
-              <div data-pid="BHK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="BHK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Before you begin
               </div>
               <div data-pid="BHL-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="BHM-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="BHO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="BHO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Each question opens a cloud IDE with Terraform and an AWS sandbox
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function ExamIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="BHQ-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="BHS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="BHS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   A question's clock starts when you open it, not before
                 </div>
               </div>
@@ -354,7 +354,7 @@ export default function ExamIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="BHU-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="BHW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="BHW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Work auto-saves. Draw your design on the whiteboard; it's graded too
                 </div>
               </div>
@@ -362,7 +362,7 @@ export default function ExamIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="BHY-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="BI0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="BI0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Docs and man pages are allowed. Puku AI is off during the exam
                 </div>
               </div>
@@ -370,23 +370,23 @@ export default function ExamIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="BI2-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="BI4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="BI4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Exam time is free. It does not use your Time Bank
                 </div>
               </div>
             </div>
             <div data-pid="BI5-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingTop: '4px' }}>
-              <div data-pid="BI6-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="BI6-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Last attempt: none yet
               </div>
               <div data-pid="BI7-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <div data-pid="BI8-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '12px', paddingInline: '18px' }}>
-                  <div data-pid="BI9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="BI9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     See questions
                   </div>
                 </div>
                 <div data-pid="BIA-0" style={{ backgroundColor: '#B0B3FC', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '12px', paddingInline: '22px' }}>
-                  <div data-pid="BIB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="BIB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                     Start exam
                   </div>
                 </div>

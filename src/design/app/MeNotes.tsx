@@ -90,7 +90,7 @@ export default function MeNotes() {
         <div data-pid="HIK-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="HK5-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="HKC-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="HKD-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="HKD-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IEI-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeNotes() {
               </svg>
             </div>
             <div data-pid="HK6-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="HKB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="HKB-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="HK7-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="HK9-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="HKA-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="HKA-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="HK8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="HK8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeNotes() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="HK1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="HK1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeNotes() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HJY-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="HJX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="HJX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeNotes() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="HJS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="HJS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeNotes() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="HJN-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="HJN-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeNotes() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="HJI-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="HJI-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeNotes() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HJF-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="HJE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HJE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeNotes() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HJB-0" style={{ display: 'inline-block', stroke: 'rgb(77, 77, 77)', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="HJA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HJA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeNotes() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HJ5-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HJ5-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeNotes() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="HJ0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HJ0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeNotes() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="HIV-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HIV-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="HIU-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="HIS-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="HIT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="HIT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MeNotes() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HIN-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="HIM-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="HIM-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -233,10 +233,10 @@ export default function MeNotes() {
         <div data-pid="HLK-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '16px', height: 'fit-content', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="HLL-0" style={{ alignItems: 'end', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
             <div data-pid="HLM-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <div data-pid="HLN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+              <div data-pid="HLN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
                 Notes
               </div>
-              <div data-pid="HLO-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HLO-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Everything you saved from transcripts and classes, in one place.
               </div>
             </div>
@@ -246,12 +246,12 @@ export default function MeNotes() {
                   <circle cx="11" cy="11" r="7" fill="none" stroke="#808080" strokeWidth="2" />
                   <path d="M20 20l-3.5-3.5" fill="none" stroke="#808080" strokeWidth="2" />
                 </svg>
-                <div data-pid="HLU-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="HLU-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Search notes
                 </div>
               </div>
               <div data-pid="HLV-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '9px', paddingInline: '12px' }}>
-                <div data-pid="HLW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="HLW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Export .md
                 </div>
               </div>
@@ -345,25 +345,25 @@ export default function MeNotes() {
                     <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
                     <path d="M10 9l5 3-5 3z" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
                   </svg>
-                  <div data-pid="HMF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HMF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Volumes vs bind mounts
                   </div>
                   <div data-pid="HMG-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '2px', paddingInline: '6px' }}>
-                    <div data-pid="HMH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                    <div data-pid="HMH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                       12:48
                     </div>
                   </div>
                   <div data-pid="HMI-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
-                  <div data-pid="HMJ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HMJ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     2 days ago
                   </div>
                 </div>
                 <div data-pid="HMK-0" style={{ backgroundColor: '#FAFAFA', borderLeftColor: '#B0B3FC', borderLeftStyle: 'solid', borderLeftWidth: '3px', boxSizing: 'border-box', paddingBlock: '8px', paddingInline: '12px' }}>
-                  <div data-pid="HML-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '19px' }}>
+                  <div data-pid="HML-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '19px' }}>
                     "A named volume lives outside the container's writable layer, so it survives docker rm."
                   </div>
                 </div>
-                <div data-pid="HMM-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '21px' }}>
+                <div data-pid="HMM-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '21px' }}>
                   Use named volumes for databases. Bind mounts only for dev hot-reload.
                 </div>
               </div>
@@ -373,20 +373,20 @@ export default function MeNotes() {
                     <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
                     <path d="M10 9l5 3-5 3z" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
                   </svg>
-                  <div data-pid="HMS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HMS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Bridge vs host networks
                   </div>
                   <div data-pid="HMT-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '2px', paddingInline: '6px' }}>
-                    <div data-pid="HMU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                    <div data-pid="HMU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                       07:15
                     </div>
                   </div>
                   <div data-pid="HMV-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
-                  <div data-pid="HMW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HMW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     5 days ago
                   </div>
                 </div>
-                <div data-pid="HMX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '21px' }}>
+                <div data-pid="HMX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '21px' }}>
                   Containers on the default bridge can't resolve each other by name. Create a user-defined network.
                 </div>
               </div>
@@ -395,22 +395,22 @@ export default function MeNotes() {
                   <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HN0-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
                   </svg>
-                  <div data-pid="HN2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HN2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Lab · Publish nginx through the LB
                   </div>
                   <div data-pid="HN3-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
-                  <div data-pid="HN4-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="HN4-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Today
                   </div>
                 </div>
-                <div data-pid="HN5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '21px' }}>
+                <div data-pid="HN5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '21px' }}>
                   LB targets the container port, not the host port. Fixed 502 by retargeting to :8080.
                 </div>
               </div>
             </div>
             <div data-pid="HN6-0" style={{ alignSelf: 'start', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, width: '420px' }}>
               <div data-pid="HN7-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '14px', paddingInline: '18px' }}>
-                <div data-pid="HN8-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="HN8-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                   Volumes vs bind mounts
                 </div>
                 <div data-pid="HN9-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
@@ -428,25 +428,25 @@ export default function MeNotes() {
                     <path d="M8 5l11 7-11 7z" fill="#FFFFFF" />
                   </svg>
                 </div>
-                <div data-pid="HNI-0" style={{ bottom: '10px', boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', left: '14px', lineHeight: '14px', position: 'absolute' }}>
+                <div data-pid="HNI-0" style={{ bottom: '10px', boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', left: '14px', lineHeight: '14px', position: 'absolute' }}>
                   Jump to 12:48
                 </div>
               </div>
               <div data-pid="HNJ-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '10px', paddingBlock: '16px', paddingInline: '18px' }}>
-                <div data-pid="HNK-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '19px' }}>
+                <div data-pid="HNK-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '19px' }}>
                   M2 · DOCKER NETWORKING &amp; STORAGE · MODULE 3
                 </div>
-                <div data-pid="HNL-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '19px' }}>
+                <div data-pid="HNL-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '19px' }}>
                   Use named volumes for databases. Bind mounts only for dev hot-reload.
                 </div>
                 <div data-pid="HNM-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                   <div data-pid="HNN-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '3px', paddingInline: '8px' }}>
-                    <div data-pid="HNO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '19px' }}>
+                    <div data-pid="HNO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '19px' }}>
                       #storage
                     </div>
                   </div>
                   <div data-pid="HNP-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '3px', paddingInline: '8px' }}>
-                    <div data-pid="HNQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '19px' }}>
+                    <div data-pid="HNQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '19px' }}>
                       #postgres
                     </div>
                   </div>

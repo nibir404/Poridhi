@@ -952,13 +952,13 @@ export default function HomeDesign() {
             <div data-pid="1EH-0" style={{ backgroundColor: 'var(--color-white-100)', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', padding: '28px', position: 'relative' }}>
               <svg width="100%" height="340" viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" data-pid="1EI-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <rect x="30" y="140" width="120" height="60" rx="6" fill="#FFFFFF" stroke="#0E0E0E" strokeWidth="1.5" />
-                <text x="90" y="175" textAnchor="middle" fontFamily="Helvetica Neue" fontSize="14" fill="#0E0E0E">{"Browser"}</text>
+                <text x="90" y="175" textAnchor="middle" fontFamily="Matter, Helvetica Neue, sans-serif" fontSize="14" fill="#0E0E0E">{"Browser"}</text>
                 <rect x="230" y="140" width="140" height="60" rx="6" fill="#EDEDF6" stroke="#484FA3" strokeWidth="1.5" />
-                <text x="300" y="175" textAnchor="middle" fontFamily="Helvetica Neue" fontSize="14" fill="#1E2144">{"Redirect service"}</text>
+                <text x="300" y="175" textAnchor="middle" fontFamily="Matter, Helvetica Neue, sans-serif" fontSize="14" fill="#1E2144">{"Redirect service"}</text>
                 <rect x="470" y="60" width="150" height="60" rx="6" fill="#FFFFFF" stroke="#0E0E0E" strokeWidth="1.5" />
-                <text x="545" y="95" textAnchor="middle" fontFamily="Helvetica Neue" fontSize="14" fill="#0E0E0E">{"Cache (Redis)"}</text>
+                <text x="545" y="95" textAnchor="middle" fontFamily="Matter, Helvetica Neue, sans-serif" fontSize="14" fill="#0E0E0E">{"Cache (Redis)"}</text>
                 <rect x="470" y="220" width="150" height="60" rx="6" fill="#FFFFFF" stroke="#0E0E0E" strokeWidth="1.5" />
-                <text x="545" y="255" textAnchor="middle" fontFamily="Helvetica Neue" fontSize="14" fill="#0E0E0E">{"URL table"}</text>
+                <text x="545" y="255" textAnchor="middle" fontFamily="Matter, Helvetica Neue, sans-serif" fontSize="14" fill="#0E0E0E">{"URL table"}</text>
                 <path d="M150 170h76M370 160l96-60M370 180l96 60" fill="none" stroke="#0E0E0E" strokeWidth="1.5" />
                 <path d="M226 170l-8-5v10z" fill="#0E0E0E" />
                 <text x="190" y="160" textAnchor="middle" fontFamily="Geist Mono" fontSize="11" fill="#808080">{"GET /abc"}</text>

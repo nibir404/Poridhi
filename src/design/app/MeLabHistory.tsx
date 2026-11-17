@@ -90,7 +90,7 @@ export default function MeLabHistory() {
         <div data-pid="GAY-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="GCE-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="GCL-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="GCM-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="GCM-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IE5-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeLabHistory() {
               </svg>
             </div>
             <div data-pid="GCF-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="GCK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="GCK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="GCG-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="GCI-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="GCJ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="GCJ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="GCH-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GCH-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeLabHistory() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GCA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GCA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeLabHistory() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HEK-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="GC6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GC6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeLabHistory() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GC1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GC1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeLabHistory() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GBW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GBW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeLabHistory() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="GBR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="GBR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeLabHistory() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GBO-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GBN-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GBN-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeLabHistory() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GBK-0" style={{ display: 'inline-block', stroke: 'rgb(255, 255, 255)', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GBJ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GBJ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeLabHistory() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HC3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HC3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeLabHistory() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeLabHistory() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="GB9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GB9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="GB8-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="GB6-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="GB7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GB7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MeLabHistory() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GB1-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="GB0-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="GB0-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -233,31 +233,31 @@ export default function MeLabHistory() {
         <div data-pid="GYE-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '18px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="GYF-0" style={{ alignItems: 'end', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
             <div data-pid="GYG-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <div data-pid="GYH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+              <div data-pid="GYH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
                 Lab history
               </div>
-              <div data-pid="GYI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GYI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Every lab you've run, with time spent and checks passed.
               </div>
             </div>
             <div data-pid="GYJ-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
               <div data-pid="GYK-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                <div data-pid="GYL-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GYL-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   All · 34
                 </div>
               </div>
               <div data-pid="GYM-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '999px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                <div data-pid="GYN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GYN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Passed · 24
                 </div>
               </div>
               <div data-pid="GYO-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '999px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                <div data-pid="GYP-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GYP-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   In progress · 2
                 </div>
               </div>
               <div data-pid="GYQ-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '999px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '12px' }}>
-                <div data-pid="GYR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GYR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Not passed · 8
                 </div>
               </div>
@@ -265,31 +265,31 @@ export default function MeLabHistory() {
           </div>
           <div data-pid="GYS-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
             <div data-pid="GYT-0" style={{ alignItems: 'center', backgroundColor: '#FAFAFA', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="GYU-0" style={{ boxSizing: 'border-box', color: '#808080', flexBasis: '0%', flexGrow: '1', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
+              <div data-pid="GYU-0" style={{ boxSizing: 'border-box', color: '#808080', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
                 LAB
               </div>
-              <div data-pid="GYV-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '150px' }}>
+              <div data-pid="GYV-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '150px' }}>
                 CHECKS
               </div>
-              <div data-pid="GYW-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '90px' }}>
+              <div data-pid="GYW-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '90px' }}>
                 ATTEMPTS
               </div>
-              <div data-pid="GYX-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '100px' }}>
+              <div data-pid="GYX-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '100px' }}>
                 TIME
               </div>
-              <div data-pid="GYY-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '110px' }}>
+              <div data-pid="GYY-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', width: '110px' }}>
                 LAST RUN
               </div>
-              <div data-pid="GYZ-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', textAlign: 'right', width: '100px' }}>
+              <div data-pid="GYZ-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px', textAlign: 'right', width: '100px' }}>
                 STATUS
               </div>
             </div>
             <div data-pid="GZ0-0" style={{ alignItems: 'center', backgroundColor: '#FAFAFF', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', paddingBlock: '14px', paddingInline: '20px' }}>
               <div data-pid="GZ1-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="GZ2-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="GZ2-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Publish nginx through the LB
                 </div>
-                <div data-pid="GZ3-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GZ3-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   M2 · Docker networking · Docker · LB
                 </div>
               </div>
@@ -299,18 +299,18 @@ export default function MeLabHistory() {
                 <div data-pid="GZ7-0" style={{ backgroundColor: '#D94141', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
                 <div data-pid="GZ8-0" style={{ backgroundColor: '#E6E6E6', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
               </div>
-              <div data-pid="GZ9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="GZ9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
                 2
               </div>
-              <div data-pid="GZA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="GZA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 38m
               </div>
-              <div data-pid="GZB-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="GZB-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
                 1 hour ago
               </div>
               <div data-pid="GZC-0" style={{ boxSizing: 'border-box', display: 'flex', flexShrink: 0, justifyContent: 'end', width: '100px' }}>
                 <div data-pid="GZD-0" style={{ backgroundColor: '#B0B3FC', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '10px' }}>
-                  <div data-pid="GZE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', fontWeight: 500, lineHeight: '16px' }}>
+                  <div data-pid="GZE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 500, lineHeight: '16px' }}>
                     Resume
                   </div>
                 </div>
@@ -318,10 +318,10 @@ export default function MeLabHistory() {
             </div>
             <div data-pid="GZF-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', paddingBlock: '14px', paddingInline: '20px' }}>
               <div data-pid="GZG-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="GZH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="GZH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Persist Postgres with volumes
                 </div>
-                <div data-pid="GZI-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GZI-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   M2 · Docker storage · Postgres · Volumes
                 </div>
               </div>
@@ -330,30 +330,30 @@ export default function MeLabHistory() {
                 <div data-pid="GZL-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
                 <div data-pid="GZM-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
               </div>
-              <div data-pid="GZN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="GZN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
                 1
               </div>
-              <div data-pid="GZO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="GZO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 24m
               </div>
-              <div data-pid="GZP-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="GZP-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
                 2 days ago
               </div>
               <div data-pid="GZQ-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', flexShrink: 0, gap: '6px', justifyContent: 'end', width: '100px' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GZR-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2.6" />
                 </svg>
-                <div data-pid="GZT-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GZT-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Passed
                 </div>
               </div>
             </div>
             <div data-pid="GZU-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', paddingBlock: '14px', paddingInline: '20px' }}>
               <div data-pid="GZV-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="GZW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="GZW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Bridge networks between containers
                 </div>
-                <div data-pid="GZX-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GZX-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   M2 · Docker networking · Docker
                 </div>
               </div>
@@ -363,30 +363,30 @@ export default function MeLabHistory() {
                 <div data-pid="H01-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
                 <div data-pid="H02-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
               </div>
-              <div data-pid="H03-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="H03-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
                 3
               </div>
-              <div data-pid="H04-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="H04-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 1h 12m
               </div>
-              <div data-pid="H05-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="H05-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
                 5 days ago
               </div>
               <div data-pid="H06-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', flexShrink: 0, gap: '6px', justifyContent: 'end', width: '100px' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="H07-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2.6" />
                 </svg>
-                <div data-pid="H09-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="H09-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Passed
                 </div>
               </div>
             </div>
             <div data-pid="H0A-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', paddingBlock: '14px', paddingInline: '20px' }}>
               <div data-pid="H0B-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="H0C-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="H0C-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Write a multi-stage Dockerfile
                 </div>
-                <div data-pid="H0D-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="H0D-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   M1 · Containers · Docker · Go
                 </div>
               </div>
@@ -395,18 +395,18 @@ export default function MeLabHistory() {
                 <div data-pid="H0G-0" style={{ backgroundColor: '#D94141', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
                 <div data-pid="H0H-0" style={{ backgroundColor: '#D94141', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
               </div>
-              <div data-pid="H0I-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="H0I-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
                 2
               </div>
-              <div data-pid="H0J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="H0J-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 52m
               </div>
-              <div data-pid="H0K-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="H0K-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
                 1 week ago
               </div>
               <div data-pid="H0L-0" style={{ boxSizing: 'border-box', display: 'flex', flexShrink: 0, justifyContent: 'end', width: '100px' }}>
                 <div data-pid="H0M-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '10px' }}>
-                  <div data-pid="H0N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="H0N-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Retry
                   </div>
                 </div>
@@ -414,10 +414,10 @@ export default function MeLabHistory() {
             </div>
             <div data-pid="H0O-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', paddingBlock: '14px', paddingInline: '20px' }}>
               <div data-pid="H0P-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="H0Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="H0Q-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Bash scripting: log rotation
                 </div>
-                <div data-pid="H0R-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="H0R-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   M1 · Scripting · Bash · cron
                 </div>
               </div>
@@ -426,30 +426,30 @@ export default function MeLabHistory() {
                 <div data-pid="H0U-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
                 <div data-pid="H0V-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '6px', width: '22px' }} />
               </div>
-              <div data-pid="H0W-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="H0W-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '90px' }}>
                 1
               </div>
-              <div data-pid="H0X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
+              <div data-pid="H0X-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', width: '100px' }}>
                 31m
               </div>
-              <div data-pid="H0Y-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
+              <div data-pid="H0Y-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '110px' }}>
                 3 weeks ago
               </div>
               <div data-pid="H0Z-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', flexShrink: 0, gap: '6px', justifyContent: 'end', width: '100px' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="H10-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2.6" />
                 </svg>
-                <div data-pid="H12-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="H12-0" style={{ boxSizing: 'border-box', color: '#22A55B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Passed
                 </div>
               </div>
             </div>
           </div>
           <div data-pid="H13-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-            <div data-pid="H14-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+            <div data-pid="H14-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
               Showing 5 of 34 · total 96h in VMs
             </div>
-            <div data-pid="H15-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
+            <div data-pid="H15-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px', textDecoration: 'underline 1px', textUnderlinePosition: 'from-font' }}>
               Load more
             </div>
           </div>

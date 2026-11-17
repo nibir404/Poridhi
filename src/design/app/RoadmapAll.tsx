@@ -157,14 +157,14 @@ export default function RoadmapAll() {
                 <div data-pid="3ZH-0" style={{ boxSizing: 'border-box', color: '#5257C8', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 1 · CURRENT
                 </div>
-                <div data-pid="3ZI-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="3ZI-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Linux, Scripting &amp; Containerization
                 </div>
                 <div data-pid="3ZJ-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="3ZK-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }}>
                     <div data-pid="3ZL-0" style={{ backgroundColor: 'var(--color-primary)', borderRadius: '2px', boxSizing: 'border-box', height: '4px', width: 'round(34%, 1px)' }} />
                   </div>
-                  <div data-pid="3ZM-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="3ZM-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     34% · 23 mod
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function RoadmapAll() {
                 <circle cx="12" cy="12" r="11" fill="#22B866" />
                 <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round" />
               </svg>
-              <div data-pid="3ZS-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="3ZS-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Linux fundamentals
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function RoadmapAll() {
                 <circle cx="12" cy="12" r="11" fill="#22B866" />
                 <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round" />
               </svg>
-              <div data-pid="3ZX-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="3ZX-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Text processing &amp; regex
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function RoadmapAll() {
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#C6C8E2" strokeWidth="3" />
                 <path d="M12 2.5a9.5 9.5 0 019.5 9.5" fill="none" stroke="#484FA3" strokeWidth="3" strokeLinecap="round" />
               </svg>
-              <div data-pid="402-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="402-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Docker networking &amp; storage
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="404-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="406-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="406-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Bash scripting
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="408-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="40A-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="40A-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Network namespaces
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="40C-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="40E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="40E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Overlay networking
               </div>
             </div>
@@ -226,12 +226,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="40G-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="40I-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="40I-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Docker fundamentals
               </div>
             </div>
             <div data-pid="40J-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="40K-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="40K-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +16 more modules
               </div>
             </div>
@@ -242,10 +242,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="40Q-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="40R-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="40R-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="40S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="40S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · unlocks at 6 / 7
                 </div>
               </div>
@@ -256,10 +256,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="40X-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="40Y-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="40Y-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="40Z-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="40Z-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +300 coins on pass
                 </div>
               </div>
@@ -277,12 +277,12 @@ export default function RoadmapAll() {
                 <div data-pid="417-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-3)', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 2 · NEXT
                 </div>
-                <div data-pid="418-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="418-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Cloud fundamentals with AWS
                 </div>
                 <div data-pid="419-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="41A-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }} />
-                  <div data-pid="41B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="41B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     0% · 14 mod
                   </div>
                 </div>
@@ -293,7 +293,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41E-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="41G-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="41G-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 IAM &amp; accounts
               </div>
             </div>
@@ -301,7 +301,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41I-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="41K-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="41K-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 VPC from scratch
               </div>
             </div>
@@ -309,7 +309,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41M-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="41O-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="41O-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 EC2 &amp; autoscaling
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41Q-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="41S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="41S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Load balancers
               </div>
             </div>
@@ -325,7 +325,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41U-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="41W-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="41W-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 S3 &amp; CloudFront
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="41Y-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="420-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="420-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 RDS &amp; DynamoDB
               </div>
             </div>
@@ -341,12 +341,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="422-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="424-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="424-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Serverless basics
               </div>
             </div>
             <div data-pid="425-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="426-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="426-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +7 more modules
               </div>
             </div>
@@ -357,10 +357,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="42C-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="42D-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="42D-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="42E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="42E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · Pro
                 </div>
               </div>
@@ -371,10 +371,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="42J-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="42K-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="42K-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="42L-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="42L-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +400 coins on pass
                 </div>
               </div>
@@ -392,12 +392,12 @@ export default function RoadmapAll() {
                 <div data-pid="447-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-3)', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 3
                 </div>
-                <div data-pid="446-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="446-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Infrastructure as Code
                 </div>
                 <div data-pid="443-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="445-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }} />
-                  <div data-pid="444-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="444-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     0% · 9 mod
                   </div>
                 </div>
@@ -408,7 +408,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43Y-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43X-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43X-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Terraform basics
               </div>
             </div>
@@ -416,7 +416,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43U-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 State &amp; backends
               </div>
             </div>
@@ -424,7 +424,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43Q-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43P-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43P-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Terraform modules
               </div>
             </div>
@@ -432,7 +432,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43M-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43L-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43L-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Workspaces &amp; envs
               </div>
             </div>
@@ -440,7 +440,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43I-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43H-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43H-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Ansible config
               </div>
             </div>
@@ -448,7 +448,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43E-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="43D-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="43D-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Packer images
               </div>
             </div>
@@ -456,12 +456,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="43A-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="439-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="439-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Policy as code
               </div>
             </div>
             <div data-pid="436-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="437-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="437-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +2 more modules
               </div>
             </div>
@@ -472,10 +472,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="42Z-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="431-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="431-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="430-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="430-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · Pro
                 </div>
               </div>
@@ -486,10 +486,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="42S-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="42U-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="42U-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="42T-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="42T-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +500 coins on pass
                 </div>
               </div>
@@ -507,12 +507,12 @@ export default function RoadmapAll() {
                 <div data-pid="45T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-3)', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 4
                 </div>
-                <div data-pid="45S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="45S-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Kubernetes mastery
                 </div>
                 <div data-pid="45P-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="45R-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }} />
-                  <div data-pid="45Q-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="45Q-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     0% · 18 mod
                   </div>
                 </div>
@@ -523,7 +523,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="45K-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="45J-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="45J-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Pods &amp; deployments
               </div>
             </div>
@@ -531,7 +531,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="45G-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="45F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="45F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Services &amp; ingress
               </div>
             </div>
@@ -539,7 +539,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="45C-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="45B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="45B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 ConfigMaps &amp; secrets
               </div>
             </div>
@@ -547,7 +547,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="458-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="457-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="457-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Storage &amp; PVCs
               </div>
             </div>
@@ -555,7 +555,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="454-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="453-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="453-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Helm charts
               </div>
             </div>
@@ -563,7 +563,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="450-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="44Z-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="44Z-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 RBAC &amp; security
               </div>
             </div>
@@ -571,12 +571,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="44W-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="44V-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="44V-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Autoscaling
               </div>
             </div>
             <div data-pid="44S-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="44T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="44T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +11 more modules
               </div>
             </div>
@@ -587,10 +587,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="44L-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="44N-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="44N-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="44M-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="44M-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · Pro
                 </div>
               </div>
@@ -601,10 +601,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="44E-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="44G-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="44G-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="44F-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="44F-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +600 coins on pass
                 </div>
               </div>
@@ -622,12 +622,12 @@ export default function RoadmapAll() {
                 <div data-pid="47F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-3)', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 5
                 </div>
-                <div data-pid="47E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="47E-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Observability stack
                 </div>
                 <div data-pid="47B-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="47D-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }} />
-                  <div data-pid="47C-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="47C-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     0% · 8 mod
                   </div>
                 </div>
@@ -638,7 +638,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="476-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="475-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="475-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Metrics with Prometheus
               </div>
             </div>
@@ -646,7 +646,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="472-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="471-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="471-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Grafana dashboards
               </div>
             </div>
@@ -654,7 +654,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="46Y-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="46X-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="46X-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Logs with Loki
               </div>
             </div>
@@ -662,7 +662,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="46U-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="46T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="46T-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Tracing with Tempo
               </div>
             </div>
@@ -670,7 +670,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="46Q-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="46P-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="46P-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Alerting &amp; SLOs
               </div>
             </div>
@@ -678,7 +678,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="46M-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="46L-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="46L-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 On-call drills
               </div>
             </div>
@@ -686,12 +686,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="46I-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="46H-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="46H-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Cost monitoring
               </div>
             </div>
             <div data-pid="46E-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="46F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="46F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +1 more module
               </div>
             </div>
@@ -702,10 +702,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="467-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="469-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="469-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="468-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="468-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · Pro
                 </div>
               </div>
@@ -716,10 +716,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="460-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="462-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="462-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="461-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="461-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +700 coins on pass
                 </div>
               </div>
@@ -737,12 +737,12 @@ export default function RoadmapAll() {
                 <div data-pid="491-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-3)', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.08em', lineHeight: '12px' }}>
                   MILESTONE 6 · CAPSTONE
                 </div>
-                <div data-pid="490-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
+                <div data-pid="490-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, lineHeight: '18px' }}>
                   Production CI/CD &amp; GitOps
                 </div>
                 <div data-pid="48X-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                   <div data-pid="48Z-0" style={{ backgroundColor: 'var(--color-surface-2)', borderRadius: '2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '4px' }} />
-                  <div data-pid="48Y-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="48Y-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     0% · 10 mod
                   </div>
                 </div>
@@ -753,7 +753,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="48S-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="48R-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="48R-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 GitHub Actions
               </div>
             </div>
@@ -761,7 +761,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="48O-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="48N-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="48N-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Build &amp; cache
               </div>
             </div>
@@ -769,7 +769,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="48K-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="48J-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="48J-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Argo CD
               </div>
             </div>
@@ -777,7 +777,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="48G-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="48F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="48F-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Progressive delivery
               </div>
             </div>
@@ -785,7 +785,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="48C-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="48B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="48B-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Secrets in CI
               </div>
             </div>
@@ -793,7 +793,7 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="488-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="487-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="487-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Capstone project
               </div>
             </div>
@@ -801,12 +801,12 @@ export default function RoadmapAll() {
               <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="484-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <circle cx="12" cy="12" r="9.5" fill="none" stroke="#D3D3D3" strokeWidth="2.4" />
               </svg>
-              <div data-pid="483-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="483-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Final review
               </div>
             </div>
             <div data-pid="480-0" style={{ alignItems: 'center', borderColor: 'var(--color-white-600)', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '28px', justifyContent: 'center' }}>
-              <div data-pid="481-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="481-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 +3 more modules
               </div>
             </div>
@@ -817,10 +817,10 @@ export default function RoadmapAll() {
                 <path d="M9 8h6M9 12h6M9 16h3" fill="none" stroke="#5257C8" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="47T-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="47V-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="47V-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Milestone exam
                 </div>
-                <div data-pid="47U-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="47U-0" style={{ boxSizing: 'border-box', color: 'var(--color-ink-2)', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   AI exam · Pro
                 </div>
               </div>
@@ -831,10 +831,10 @@ export default function RoadmapAll() {
                 <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" fill="none" stroke="#BFC2FF" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <div data-pid="47M-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
-                <div data-pid="47O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
+                <div data-pid="47O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', fontWeight: 600, lineHeight: '16px' }}>
                   Certificate
                 </div>
-                <div data-pid="47N-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="47N-0" style={{ boxSizing: 'border-box', color: '#BFC2FF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                   <span style={{ color: '#E3A21A' }}>●</span> +800 coins · Staff badge
                 </div>
               </div>

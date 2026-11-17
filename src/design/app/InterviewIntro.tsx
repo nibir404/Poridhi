@@ -263,20 +263,20 @@ export default function InterviewIntro() {
               <div data-pid="CCF-0" style={{ backgroundImage: 'url(/assets/dither-card-ink.svg)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', height: '280px', opacity: '0.14', position: 'absolute', right: '0px', top: '0px', width: '480px' }} />
               <div data-pid="CCA-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '8px', position: 'relative' }}>
                 <div data-pid="CCD-0" style={{ alignItems: 'center', borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '6px', paddingBlock: '4px', paddingInline: '8px' }}>
-                  <div data-pid="CCE-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
+                  <div data-pid="CCE-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
                     AI INTERVIEW
                   </div>
                 </div>
                 <div data-pid="CCB-0" style={{ borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '4px', paddingInline: '8px' }}>
-                  <div data-pid="CCC-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="CCC-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     VOICE OR TEXT · WHITEBOARD · TERMINAL
                   </div>
                 </div>
               </div>
-              <div data-pid="CC9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: '36px', position: 'relative' }}>
+              <div data-pid="CC9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: '36px', position: 'relative' }}>
                 Design a URL shortener
               </div>
-              <div data-pid="CC8-0" style={{ boxSizing: 'border-box', color: '#A3A3A3', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px', position: 'relative' }}>
+              <div data-pid="CC8-0" style={{ boxSizing: 'border-box', color: '#A3A3A3', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px', position: 'relative' }}>
                 A mock system-design round. An AI interviewer asks, listens, and gives feedback on every answer.
               </div>
             </div>
@@ -286,10 +286,10 @@ export default function InterviewIntro() {
                   <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M8 9h8M8 13h8M8 17h5" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="CC3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="CC3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   5 stages
                 </div>
-                <div data-pid="CC2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="CC2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Requirements → deep dive
                 </div>
               </div>
@@ -298,10 +298,10 @@ export default function InterviewIntro() {
                   <circle cx="12" cy="13" r="8" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M12 9v4l3 2M9 2h6" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="CBX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="CBX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   ~35 min
                 </div>
-                <div data-pid="CBW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="CBW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   No hard clock. Pause any time
                 </div>
               </div>
@@ -310,10 +310,10 @@ export default function InterviewIntro() {
                   <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M9 12l2 2 4-4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="CBR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="CBR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   Report
                 </div>
-                <div data-pid="CBQ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="CBQ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Scored per stage, with a hire signal
                 </div>
               </div>
@@ -322,23 +322,23 @@ export default function InterviewIntro() {
                   <path d="M4 12a8 8 0 1 0 3-6.2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M4 4v4h4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="CBL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+                <div data-pid="CBL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                   Unlimited
                 </div>
-                <div data-pid="CBK-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="CBK-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Retry any stage
                 </div>
               </div>
             </div>
             <div data-pid="CAW-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '14px', paddingBlock: '20px', paddingInline: '24px' }}>
-              <div data-pid="CBH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="CBH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Before you begin
               </div>
               <div data-pid="CBD-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="CBF-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="CBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="CBE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Allow your microphone, or switch to text at any time
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function InterviewIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="CBB-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="CBA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="CBA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Think out loud. The AI scores reasoning, not just the final answer
                 </div>
               </div>
@@ -354,7 +354,7 @@ export default function InterviewIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="CB7-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="CB6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="CB6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Draw on the whiteboard. The AI reads your diagram too
                 </div>
               </div>
@@ -362,7 +362,7 @@ export default function InterviewIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="CB3-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="CB2-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="CB2-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Some questions open a terminal for commands
                 </div>
               </div>
@@ -370,23 +370,23 @@ export default function InterviewIntro() {
                 <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="CAZ-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2" />
                 </svg>
-                <div data-pid="CAY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                <div data-pid="CAY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                   Audio is transcribed and then deleted. Only text is kept
                 </div>
               </div>
             </div>
             <div data-pid="CAP-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingTop: '4px' }}>
-              <div data-pid="CAV-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="CAV-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Last session: none yet
               </div>
               <div data-pid="CAQ-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <div data-pid="CAT-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '12px', paddingInline: '18px' }}>
-                  <div data-pid="CAU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="CAU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     Test microphone
                   </div>
                 </div>
                 <div data-pid="CAR-0" style={{ backgroundColor: '#B0B3FC', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '12px', paddingInline: '22px' }}>
-                  <div data-pid="CAS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                  <div data-pid="CAS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                     Start interview
                   </div>
                 </div>

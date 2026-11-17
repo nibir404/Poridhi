@@ -43,3 +43,6 @@ next-env.d.ts
 # local tooling
 .claude/
 .DS_Store
+
+# Licensed font: not redistributed in this public repo (see README)
+/public/fonts/Matter.ttf

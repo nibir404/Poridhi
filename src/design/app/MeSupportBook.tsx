@@ -90,7 +90,7 @@ export default function MeSupportBook() {
         <div data-pid="FLL-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="FN1-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="FN8-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="FN9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="FN9-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IFY-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeSupportBook() {
               </svg>
             </div>
             <div data-pid="FN2-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="FN7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="FN7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="FN3-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="FN5-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="FN6-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="FN6-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="FN4-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="FN4-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeSupportBook() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="FMX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="FMX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeSupportBook() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HEB-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="FMT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="FMT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeSupportBook() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="FMO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="FMO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeSupportBook() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="FMJ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="FMJ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeSupportBook() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="FME-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="FME-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeSupportBook() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FMB-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FMA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FMA-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeSupportBook() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FM7-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FM6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FM6-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeSupportBook() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HBO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HBO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeSupportBook() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FM1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FM1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeSupportBook() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FLW-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FLW-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="FLV-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="FLT-0" style={{ backgroundColor: '#333333', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="FLU-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="FLU-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MeSupportBook() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FLO-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="FLN-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="FLN-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -233,21 +233,21 @@ export default function MeSupportBook() {
         <div data-pid="FXE-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '18px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="FXF-0" style={{ alignItems: 'end', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
             <div data-pid="FXG-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <div data-pid="FXH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+              <div data-pid="FXH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
                 Support
               </div>
-              <div data-pid="FXI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FXI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 30-minute sessions with a TA. Included in Pro, 2 per week.
               </div>
             </div>
             <div data-pid="FXJ-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', padding: '3px' }}>
               <div data-pid="FXK-0" style={{ boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '14px' }}>
-                <div data-pid="FXL-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="FXL-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Tickets
                 </div>
               </div>
               <div data-pid="FXM-0" style={{ backgroundColor: '#FFFFFF', borderRadius: '5px', boxShadow: '#00000014 0px 1px 2px', boxSizing: 'border-box', paddingBlock: '7px', paddingInline: '14px' }}>
-                <div data-pid="FXN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="FXN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Book a TA
                 </div>
               </div>
@@ -256,55 +256,55 @@ export default function MeSupportBook() {
           <div data-pid="FXO-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '12px' }}>
             <div data-pid="FXP-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', gap: '12px', padding: '14px' }}>
               <div data-pid="FXQ-0" style={{ alignItems: 'center', backgroundColor: '#F4F4F4', borderRadius: '20px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '40px', justifyContent: 'center', width: '40px' }}>
-                <div data-pid="FXR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="FXR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   SC
                 </div>
               </div>
               <div data-pid="FXS-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="FXT-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="FXT-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                   Sarah Chen
                 </div>
-                <div data-pid="FXU-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="FXU-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Python · Backend · AWS
                 </div>
               </div>
-              <div data-pid="FXV-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="FXV-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 ★ 4.9
               </div>
             </div>
             <div data-pid="FXW-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#0E0E0E', borderRadius: '6px', borderStyle: 'solid', borderWidth: '2px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', gap: '12px', padding: '14px' }}>
               <div data-pid="FXX-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '20px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '40px', justifyContent: 'center', width: '40px' }}>
-                <div data-pid="FXY-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="FXY-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   MR
                 </div>
               </div>
               <div data-pid="FXZ-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="FY0-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="FY0-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                   Michael Rodriguez
                 </div>
-                <div data-pid="FY1-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="FY1-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   DevOps · Docker · K8s
                 </div>
               </div>
-              <div data-pid="FY2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="FY2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 ★ 4.8
               </div>
             </div>
             <div data-pid="FY3-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', gap: '12px', padding: '14px' }}>
               <div data-pid="FY4-0" style={{ alignItems: 'center', backgroundColor: '#F4F4F4', borderRadius: '20px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '40px', justifyContent: 'center', width: '40px' }}>
-                <div data-pid="FY5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="FY5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   PP
                 </div>
               </div>
               <div data-pid="FY6-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '3px' }}>
-                <div data-pid="FY7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="FY7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                   Priya Patel
                 </div>
-                <div data-pid="FY8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="FY8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Databases · System design
                 </div>
               </div>
-              <div data-pid="FY9-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="FY9-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 ★ 4.9
               </div>
             </div>
@@ -312,14 +312,14 @@ export default function MeSupportBook() {
           <div data-pid="FYA-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '20px' }}>
             <div data-pid="FYB-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '16px', paddingBlock: '18px', paddingInline: '20px' }}>
               <div data-pid="FYC-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-                <div data-pid="FYD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="FYD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   Michael's availability
                 </div>
                 <div data-pid="FYE-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FYF-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                     <path d="M15 5l-7 7 7 7" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                   </svg>
-                  <div data-pid="FYH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="FYH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     17 – 23 Nov
                   </div>
                   <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FYI-0" style={{ display: 'inline-block', flexShrink: 0 }}>
@@ -329,110 +329,110 @@ export default function MeSupportBook() {
               </div>
               <div data-pid="FYK-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '8px' }}>
                 <div data-pid="FYL-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FYM-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FYM-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     MON
                   </div>
-                  <div data-pid="FYN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FYN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     17
                   </div>
-                  <div data-pid="FYO-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FYO-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     3 slots
                   </div>
                 </div>
                 <div data-pid="FYP-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FYQ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FYQ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     TUE
                   </div>
-                  <div data-pid="FYR-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FYR-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     18
                   </div>
-                  <div data-pid="FYS-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FYS-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     5 slots
                   </div>
                 </div>
                 <div data-pid="FYT-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FYU-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FYU-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     WED
                   </div>
-                  <div data-pid="FYV-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FYV-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     19
                   </div>
-                  <div data-pid="FYW-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FYW-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     2 slots
                   </div>
                 </div>
                 <div data-pid="FYX-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FYY-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FYY-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     THU
                   </div>
-                  <div data-pid="FYZ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FYZ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     20
                   </div>
-                  <div data-pid="FZ0-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FZ0-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     Full
                   </div>
                 </div>
                 <div data-pid="FZ1-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FZ2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FZ2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     FRI
                   </div>
-                  <div data-pid="FZ3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FZ3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     21
                   </div>
-                  <div data-pid="FZ4-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FZ4-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     4 slots
                   </div>
                 </div>
                 <div data-pid="FZ5-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px', paddingBlock: '10px' }}>
-                  <div data-pid="FZ6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="FZ6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                     SAT
                   </div>
-                  <div data-pid="FZ7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+                  <div data-pid="FZ7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                     22
                   </div>
-                  <div data-pid="FZ8-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="FZ8-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '10px', lineHeight: '12px' }}>
                     6 slots
                   </div>
                 </div>
               </div>
               <div data-pid="FZ9-0" style={{ boxSizing: 'border-box', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 <div data-pid="FZA-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZB-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center', textDecoration: 'line-through 1px', textUnderlinePosition: 'from-font' }}>
+                  <div data-pid="FZB-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'center', textDecoration: 'line-through 1px', textUnderlinePosition: 'from-font' }}>
                     10:00
                   </div>
                 </div>
                 <div data-pid="FZC-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
+                  <div data-pid="FZD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
                     11:30
                   </div>
                 </div>
                 <div data-pid="FZE-0" style={{ borderColor: '#0E0E0E', borderRadius: '6px', borderStyle: 'solid', borderWidth: '2px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZF-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px', textAlign: 'center' }}>
+                  <div data-pid="FZF-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '13px', fontWeight: 500, lineHeight: '16px', textAlign: 'center' }}>
                     14:00
                   </div>
                 </div>
                 <div data-pid="FZG-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
+                  <div data-pid="FZH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
                     15:30
                   </div>
                 </div>
                 <div data-pid="FZI-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZJ-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
+                  <div data-pid="FZJ-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
                     19:00
                   </div>
                 </div>
                 <div data-pid="FZK-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', flexShrink: 0, paddingBlock: '10px', textAlign: 'center', width: '110px' }}>
-                  <div data-pid="FZL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
+                  <div data-pid="FZL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
                     20:30
                   </div>
                 </div>
               </div>
-              <div data-pid="FZM-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="FZM-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Times in Dhaka (GMT+6). Sessions run on Google Meet.
               </div>
             </div>
             <div data-pid="FZN-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, gap: '14px', paddingBlock: '18px', paddingInline: '20px', width: '340px' }}>
-              <div data-pid="FZO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="FZO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Your booking
               </div>
               <div data-pid="FZP-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -441,7 +441,7 @@ export default function MeSupportBook() {
                     <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#0E0E0E" strokeWidth="1.8" />
                     <path d="M3 10h18" fill="none" stroke="#0E0E0E" strokeWidth="1.8" />
                   </svg>
-                  <div data-pid="FZU-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="FZU-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Tue 18 Nov · 14:00 – 14:30
                   </div>
                 </div>
@@ -450,17 +450,17 @@ export default function MeSupportBook() {
                     <circle cx="12" cy="8" r="4" fill="none" stroke="#0E0E0E" strokeWidth="1.8" />
                     <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#0E0E0E" strokeWidth="1.8" />
                   </svg>
-                  <div data-pid="FZZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="FZZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Michael Rodriguez
                   </div>
                 </div>
               </div>
               <div data-pid="G00-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <div data-pid="G01-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="G01-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Link it to
                 </div>
                 <div data-pid="G02-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '10px', paddingInline: '12px' }}>
-                  <div data-pid="G03-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="G03-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Ticket #2041 · LB 502
                   </div>
                   <svg width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="G04-0" style={{ display: 'inline-block', flexShrink: 0 }}>
@@ -468,11 +468,11 @@ export default function MeSupportBook() {
                   </svg>
                 </div>
               </div>
-              <div data-pid="G06-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="G06-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 1 of 2 weekly sessions left after this.
               </div>
               <div data-pid="G07-0" style={{ backgroundColor: '#B0B3FC', borderRadius: '6px', boxSizing: 'border-box', padding: '11px', textAlign: 'center' }}>
-                <div data-pid="G08-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px', textAlign: 'center' }}>
+                <div data-pid="G08-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px', textAlign: 'center' }}>
                   Book session
                 </div>
               </div>

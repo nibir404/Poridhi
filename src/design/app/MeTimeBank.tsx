@@ -90,7 +90,7 @@ export default function MeTimeBank() {
         <div data-pid="EQ0-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="EQU-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="ER1-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="ER2-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="ER2-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IGO-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeTimeBank() {
               </svg>
             </div>
             <div data-pid="EQV-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="ER0-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="ER0-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="EQW-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="EQY-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="EQZ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="EQZ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="EQX-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="EQX-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeTimeBank() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EQQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EQQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeTimeBank() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HDZ-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EQM-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EQM-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeTimeBank() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EQH-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EQH-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeTimeBank() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EQC-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EQC-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeTimeBank() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EQ7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EQ7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeTimeBank() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FB8-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FB7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FB7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeTimeBank() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FB4-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FB3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FB3-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeTimeBank() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HB4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HB4-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeTimeBank() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FAY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FAY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeTimeBank() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FAT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FAT-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="FAS-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="FAQ-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="FAR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="FAR-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,17 +225,17 @@ export default function MeTimeBank() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EQ3-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EQ2-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EQ2-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
         </div>
         <div data-pid="F2Z-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '20px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="F30-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <div data-pid="F31-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+            <div data-pid="F31-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
               Time bank &amp; coins
             </div>
-            <div data-pid="F32-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="F32-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Content is free to read. Lab time is the currency: it only counts while a VM is running.
             </div>
           </div>
@@ -246,15 +246,15 @@ export default function MeTimeBank() {
                 <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="F37-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9" fill="none" stroke="#A5A5A5" strokeWidth="1.8" />
                 </svg>
-                <div data-pid="F39-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.1em', lineHeight: '14px' }}>
+                <div data-pid="F39-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.1em', lineHeight: '14px' }}>
                   LAB TIME LEFT THIS MONTH
                 </div>
               </div>
               <div data-pid="F3A-0" style={{ alignItems: 'baseline', boxSizing: 'border-box', display: 'flex', gap: '10px', position: 'relative' }}>
-                <div data-pid="F3B-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '56px' }}>
+                <div data-pid="F3B-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '56px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '56px' }}>
                   2h 40m
                 </div>
-                <div data-pid="F3C-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', lineHeight: '18px' }}>
+                <div data-pid="F3C-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '15px', lineHeight: '18px' }}>
                   of 12h Pro allowance
                 </div>
               </div>
@@ -262,10 +262,10 @@ export default function MeTimeBank() {
                 <div data-pid="F3E-0" style={{ backgroundColor: '#B0B3FC', boxSizing: 'border-box', width: 'round(22%, 1px)' }} />
               </div>
               <div data-pid="F3F-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', position: 'relative' }}>
-                <div data-pid="F3G-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="F3G-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   9h 20m used · 41 sessions
                 </div>
-                <div data-pid="F3H-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="F3H-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Refills to 12h on 1 Dec
                 </div>
               </div>
@@ -276,42 +276,42 @@ export default function MeTimeBank() {
                   <circle cx="12" cy="12" r="9" fill="none" stroke="#808080" strokeWidth="1.8" />
                   <path d="M12 7v10M9 10h6" fill="none" stroke="#808080" strokeWidth="1.8" />
                 </svg>
-                <div data-pid="F3N-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.1em', lineHeight: '14px' }}>
+                <div data-pid="F3N-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.1em', lineHeight: '14px' }}>
                   COINS
                 </div>
               </div>
-              <div data-pid="F3O-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '40px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: '48px' }}>
+              <div data-pid="F3O-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '40px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: '48px' }}>
                 1,240
               </div>
-              <div data-pid="F3P-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '19px' }}>
+              <div data-pid="F3P-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '19px' }}>
                 Earn coins by passing labs, exams and interviews. Swap them for extra lab time.
               </div>
               <div data-pid="F3Q-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <div data-pid="F3R-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '14px' }}>
-                  <div data-pid="F3S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F3S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     +1h lab time
                   </div>
                   <div data-pid="F3T-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                    <div data-pid="F3U-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F3U-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                       <span style={{ color: '#E3A21A' }}>●</span> 500 coins
                     </div>
                     <div data-pid="F3V-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '12px' }}>
-                      <div data-pid="F3W-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                      <div data-pid="F3W-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                         Redeem
                       </div>
                     </div>
                   </div>
                 </div>
                 <div data-pid="F3X-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '12px', paddingInline: '14px' }}>
-                  <div data-pid="F3Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+                  <div data-pid="F3Y-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                     +2h lab time
                   </div>
                   <div data-pid="F3Z-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                    <div data-pid="F40-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                    <div data-pid="F40-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                       <span style={{ color: '#E3A21A' }}>●</span> 1,000 coins
                     </div>
                     <div data-pid="F41-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '12px' }}>
-                      <div data-pid="F42-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                      <div data-pid="F42-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                         Redeem
                       </div>
                     </div>
@@ -322,10 +322,10 @@ export default function MeTimeBank() {
           </div>
           <div data-pid="F43-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '16px', paddingBlock: '20px', paddingInline: '24px' }}>
             <div data-pid="F44-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-              <div data-pid="F45-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="F45-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Lab time used · November
               </div>
-              <div data-pid="F46-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="F46-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Minutes per day
               </div>
             </div>
@@ -362,62 +362,62 @@ export default function MeTimeBank() {
               <div data-pid="F51-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: 'round(0%, 1px)' }} />
             </div>
             <div data-pid="F52-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-              <div data-pid="F53-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="F53-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 1 Nov
               </div>
-              <div data-pid="F54-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="F54-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 Today · 16 Nov
               </div>
-              <div data-pid="F55-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="F55-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                 30 Nov
               </div>
             </div>
           </div>
           <div data-pid="F56-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
             <div data-pid="F57-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '14px', paddingInline: '20px' }}>
-              <div data-pid="F58-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="F58-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Activity
               </div>
             </div>
             <div data-pid="F59-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="F5A-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="F5A-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
                 16 Nov
               </div>
-              <div data-pid="F5B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="F5B-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Lab · Publish nginx through the LB
               </div>
-              <div data-pid="F5C-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5C-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 −38m
               </div>
-              <div data-pid="F5D-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5D-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 <span style={{ color: '#E3A21A' }}>●</span> +40 coins
               </div>
             </div>
             <div data-pid="F5E-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="F5F-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="F5F-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
                 14 Nov
               </div>
-              <div data-pid="F5G-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="F5G-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Milestone 1 exam · passed
               </div>
-              <div data-pid="F5H-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5H-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 free
               </div>
-              <div data-pid="F5I-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5I-0" style={{ boxSizing: 'border-box', color: '#22A55B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 <span style={{ color: '#E3A21A' }}>●</span> +300 coins
               </div>
             </div>
             <div data-pid="F5J-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '11px', paddingInline: '20px' }}>
-              <div data-pid="F5K-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
+              <div data-pid="F5K-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', width: '90px' }}>
                 10 Nov
               </div>
-              <div data-pid="F5L-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="F5L-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexBasis: '0%', flexGrow: '1', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 Redeemed 500 coins
               </div>
-              <div data-pid="F5M-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5M-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 +1h
               </div>
-              <div data-pid="F5N-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
+              <div data-pid="F5N-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px', textAlign: 'right', width: '90px' }}>
                 <span style={{ color: '#E3A21A' }}>●</span> −500 coins
               </div>
             </div>

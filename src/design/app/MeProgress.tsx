@@ -90,7 +90,7 @@ export default function MeProgress() {
         <div data-pid="G53-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="G6J-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="G6Q-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="G6R-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="G6R-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IDS-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MeProgress() {
               </svg>
             </div>
             <div data-pid="G6K-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="G6P-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="G6P-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="G6L-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="G6N-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="G6O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="G6O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="G6M-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="G6M-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MeProgress() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="G6F-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="G6F-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MeProgress() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HEH-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="G6B-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="G6B-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MeProgress() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="G66-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="G66-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MeProgress() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="G61-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="G61-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MeProgress() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="G5W-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="G5W-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MeProgress() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="G5T-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
               </svg>
-              <div data-pid="G5S-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="G5S-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MeProgress() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="G5P-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="G5O-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="G5O-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MeProgress() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HBY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HBY-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MeProgress() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="G5J-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="G5J-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MeProgress() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="G5E-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="G5E-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="G5D-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="G5B-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="G5C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="G5C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MeProgress() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="G56-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="G55-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="G55-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -233,15 +233,15 @@ export default function MeProgress() {
         <div data-pid="GVE-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '18px', minWidth: '0px', overflow: 'clip', paddingBlock: '32px', paddingInline: '40px' }}>
           <div data-pid="GVF-0" style={{ alignItems: 'end', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
             <div data-pid="GVG-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <div data-pid="GVH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
+              <div data-pid="GVH-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '26px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '32px' }}>
                 Progress
               </div>
-              <div data-pid="GVI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="GVI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Where you are in each course, milestone and content type.
               </div>
             </div>
             <div data-pid="GVJ-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '8px', paddingBlock: '9px', paddingInline: '12px' }}>
-              <div data-pid="GVK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="GVK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                 DevOps &amp; Cloud Engineer
               </div>
               <svg width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GVL-0" style={{ display: 'inline-block', flexShrink: 0 }}>
@@ -251,11 +251,11 @@ export default function MeProgress() {
           </div>
           <div data-pid="GVN-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', gap: '32px', overflow: 'clip', paddingBlock: '24px', paddingInline: '28px', position: 'relative' }}>
             <div data-pid="GVO-0" style={{ backgroundImage: 'url(/assets/dither-card-ink.svg)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', height: '280px', opacity: '0.14', position: 'absolute', right: '0px', top: '0px', width: '480px' }} />
-            <div data-pid="GVP-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '48px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '58px', position: 'relative' }}>
+            <div data-pid="GVP-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '48px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '58px', position: 'relative' }}>
               34%
             </div>
             <div data-pid="GVQ-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '10px', position: 'relative' }}>
-              <div data-pid="GVR-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', lineHeight: '20px' }}>
+              <div data-pid="GVR-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', lineHeight: '20px' }}>
                 Milestone 3 of 6 · 2 certificates earned
               </div>
               <div data-pid="GVS-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '4px' }}>
@@ -269,22 +269,22 @@ export default function MeProgress() {
                 <div data-pid="GVZ-0" style={{ backgroundColor: '#3A3A3A', borderRadius: '3px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '6px' }} />
               </div>
               <div data-pid="GW0-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between' }}>
-                <div data-pid="GW1-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW1-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M1
                 </div>
-                <div data-pid="GW2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M2
                 </div>
-                <div data-pid="GW3-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW3-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M3
                 </div>
-                <div data-pid="GW4-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW4-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M4
                 </div>
-                <div data-pid="GW5-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW5-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M5
                 </div>
-                <div data-pid="GW6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="GW6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   M6
                 </div>
               </div>
@@ -297,14 +297,14 @@ export default function MeProgress() {
                   <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M10 9l5 3-5 3z" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="GWD-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GWD-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   62%
                 </div>
               </div>
-              <div data-pid="GWE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+              <div data-pid="GWE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                 31 / 50
               </div>
-              <div data-pid="GWF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="GWF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Recorded classes
               </div>
               <div data-pid="GWG-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px' }}>
@@ -317,14 +317,14 @@ export default function MeProgress() {
                   <circle cx="12" cy="12" r="2" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="GWN-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GWN-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   40%
                 </div>
               </div>
-              <div data-pid="GWO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+              <div data-pid="GWO-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                 6 / 15
               </div>
-              <div data-pid="GWP-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="GWP-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Live classes attended
               </div>
               <div data-pid="GWQ-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px' }}>
@@ -336,14 +336,14 @@ export default function MeProgress() {
                 <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="GWU-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="GWW-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GWW-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   71%
                 </div>
               </div>
-              <div data-pid="GWX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+              <div data-pid="GWX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                 24 / 34
               </div>
-              <div data-pid="GWY-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="GWY-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Labs passed
               </div>
               <div data-pid="GWZ-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px' }}>
@@ -356,14 +356,14 @@ export default function MeProgress() {
                   <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                   <path d="M9 12l2 2 4-4" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 </svg>
-                <div data-pid="GX6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GX6-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   avg 81
                 </div>
               </div>
-              <div data-pid="GX7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
+              <div data-pid="GX7-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '20px', fontWeight: 500, lineHeight: '24px' }}>
                 5 / 12
               </div>
-              <div data-pid="GX8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="GX8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Exams + interviews
               </div>
               <div data-pid="GX9-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px' }}>
@@ -373,10 +373,10 @@ export default function MeProgress() {
           </div>
           <div data-pid="GXB-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column' }}>
             <div data-pid="GXC-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '14px', paddingInline: '20px' }}>
-              <div data-pid="GXD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="GXD-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Milestone 3 · Kubernetes Fundamentals
               </div>
-              <div data-pid="GXE-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="GXE-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 8 of 23 modules
               </div>
             </div>
@@ -387,74 +387,74 @@ export default function MeProgress() {
                 </svg>
               </div>
               <div data-pid="GXJ-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="GXK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="GXK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Pods and the control plane
                 </div>
-                <div data-pid="GXL-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GXL-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   5 classes · 3 labs · interview passed
                 </div>
               </div>
               <div data-pid="GXM-0" style={{ backgroundColor: '#22A55B', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px', width: '200px' }} />
-              <div data-pid="GXN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
+              <div data-pid="GXN-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
                 100%
               </div>
             </div>
             <div data-pid="GXO-0" style={{ alignItems: 'center', backgroundColor: '#FAFAFA', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '12px', paddingInline: '20px' }}>
               <div data-pid="GXP-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '30px', justifyContent: 'center', width: '30px' }}>
-                <div data-pid="GXQ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GXQ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   09
                 </div>
               </div>
               <div data-pid="GXR-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="GXS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="GXS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Services and networking
                 </div>
-                <div data-pid="GXT-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GXT-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   3 of 7 done · next: Lab · ClusterIP vs NodePort
                 </div>
               </div>
               <div data-pid="GXU-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '4px', width: '200px' }}>
                 <div data-pid="GXV-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '2px', boxSizing: 'border-box', width: 'round(43%, 1px)' }} />
               </div>
-              <div data-pid="GXW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
+              <div data-pid="GXW-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
                 43%
               </div>
             </div>
             <div data-pid="GXX-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '12px', paddingInline: '20px' }}>
               <div data-pid="GXY-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '30px', justifyContent: 'center', width: '30px' }}>
-                <div data-pid="GXZ-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GXZ-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   10
                 </div>
               </div>
               <div data-pid="GY0-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="GY1-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="GY1-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   ConfigMaps and Secrets
                 </div>
-                <div data-pid="GY2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GY2-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   6 items · interview pending
                 </div>
               </div>
               <div data-pid="GY3-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px', width: '200px' }} />
-              <div data-pid="GY4-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
+              <div data-pid="GY4-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
                 0%
               </div>
             </div>
             <div data-pid="GY5-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px', paddingBlock: '12px', paddingInline: '20px' }}>
               <div data-pid="GY6-0" style={{ alignItems: 'center', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '30px', justifyContent: 'center', width: '30px' }}>
-                <div data-pid="GY7-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="GY7-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   11
                 </div>
               </div>
               <div data-pid="GY8-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="GY9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="GY9-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Persistent volumes
                 </div>
-                <div data-pid="GYA-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="GYA-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   5 items
                 </div>
               </div>
               <div data-pid="GYB-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px', width: '200px' }} />
-              <div data-pid="GYC-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
+              <div data-pid="GYC-0" style={{ boxSizing: 'border-box', color: '#808080', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px', textAlign: 'right', width: '44px' }}>
                 0%
               </div>
             </div>

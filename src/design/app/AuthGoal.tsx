@@ -7,27 +7,27 @@ export default function AuthGoal() {
         <div data-pid="HR7-0" style={{ backgroundImage: 'url(/assets/dither-card-ink.svg)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', height: '374px', opacity: '0.14', position: 'absolute', right: '0px', top: '0px', width: '640px' }} />
         <div data-pid="HR6-0" style={{ backgroundImage: 'url(/assets/poridhi-logo.png)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', filter: 'brightness(0%) invert(100%)', flexShrink: 0, height: '20px', position: 'relative', width: '120px' }} />
         <div data-pid="HR1-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '20px', position: 'relative' }}>
-          <div data-pid="HR5-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '44px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '50px', whiteSpace: 'pre-wrap' }}>
+          <div data-pid="HR5-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '44px', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: '50px', whiteSpace: 'pre-wrap' }}>
             Content is free.<br />Time is the currency.
           </div>
-          <div data-pid="HR4-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', lineHeight: '24px', width: '460px' }}>
+          <div data-pid="HR4-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '16px', lineHeight: '24px', width: '460px' }}>
             Read every course for free. Spend lab time on real VMs, prove it in AI-graded exams and interviews.
           </div>
           <div data-pid="HR2-0" style={{ backgroundColor: '#141414', borderColor: '#262626', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '16px', paddingInline: '18px', whiteSpace: 'nowrap' }}>
-            <div data-pid="HR3-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '20px', whiteSpace: 'pre' }}>
+            <div data-pid="HR3-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '20px', whiteSpace: 'pre' }}>
               <span style={{ color: '#22A55B' }}>you@poridhi</span>:~$ kubectl get pods<br />NAME{'          '}READY{'   '}STATUS<br />web-7d9f8c{'    '}1/1{'     '}Running<br /><span style={{ color: '#22A55B' }}>✓ Check 3 of 4 passed</span> · +40 XP
             </div>
           </div>
         </div>
         <div data-pid="HQX-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '28px', position: 'relative' }}>
-          <div data-pid="HR0-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
-            <span style={{ color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>12,400+</span> learners
+          <div data-pid="HR0-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
+            <span style={{ color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontWeight: 500 }}>12,400+</span> learners
           </div>
-          <div data-pid="HQZ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
-            <span style={{ color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>340</span> hands-on labs
+          <div data-pid="HQZ-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
+            <span style={{ color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontWeight: 500 }}>340</span> hands-on labs
           </div>
-          <div data-pid="HQY-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
-            <span style={{ color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontWeight: 500 }}>4.8</span> avg rating
+          <div data-pid="HQY-0" style={{ boxSizing: 'border-box', color: '#A5A5A5', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
+            <span style={{ color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontWeight: 500 }}>4.8</span> avg rating
           </div>
         </div>
       </div>
@@ -38,16 +38,16 @@ export default function AuthGoal() {
             <div data-pid="HVF-0" style={{ backgroundColor: '#E6E6E6', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px', width: '32px' }} />
             <div data-pid="HVG-0" style={{ backgroundColor: '#E6E6E6', borderRadius: '2px', boxSizing: 'border-box', flexShrink: 0, height: '4px', width: '32px' }} />
             <div data-pid="HVH-0" style={{ boxSizing: 'border-box', paddingLeft: '6px' }}>
-              <div data-pid="HVI-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="HVI-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                 STEP 1 OF 3
               </div>
             </div>
           </div>
           <div data-pid="HVJ-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div data-pid="HVK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: '36px' }}>
+            <div data-pid="HVK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: '36px' }}>
               What do you want to become?
             </div>
-            <div data-pid="HVL-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', lineHeight: '18px' }}>
+            <div data-pid="HVL-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '15px', lineHeight: '18px' }}>
               We'll build your roadmap around it. You can switch any time.
             </div>
           </div>
@@ -59,10 +59,10 @@ export default function AuthGoal() {
                 </svg>
               </div>
               <div data-pid="HVR-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="HVS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="HVS-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   DevOps &amp; Cloud Engineer
                 </div>
-                <div data-pid="HVT-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="HVT-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Linux, Docker, Kubernetes, Terraform, AWS · 6 milestones
                 </div>
               </div>
@@ -81,10 +81,10 @@ export default function AuthGoal() {
                 </svg>
               </div>
               <div data-pid="HW3-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="HW4-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="HW4-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   Backend &amp; System Design
                 </div>
-                <div data-pid="HW5-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="HW5-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Go, Python, databases, distributed systems · 7 milestones
                 </div>
               </div>
@@ -99,23 +99,23 @@ export default function AuthGoal() {
                 </svg>
               </div>
               <div data-pid="HWD-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                <div data-pid="HWE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="HWE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   MLOps
                 </div>
-                <div data-pid="HWF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="HWF-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Pipelines, model serving, GPUs on Kubernetes · 5 milestones
                 </div>
               </div>
             </div>
             <div data-pid="HWG-0" style={{ alignItems: 'center', borderColor: '#D3D3D3', borderRadius: '6px', borderStyle: 'dashed', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '14px', padding: '16px' }}>
-              <div data-pid="HWH-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HWH-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Not sure yet — show me everything
               </div>
             </div>
           </div>
           <div data-pid="HWI-0" style={{ boxSizing: 'border-box', display: 'flex', justifyContent: 'end' }}>
             <div data-pid="HWJ-0" style={{ backgroundColor: '#B0B3FC', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '12px', paddingInline: '22px' }}>
-              <div data-pid="HWK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="HWK-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 500, lineHeight: '18px' }}>
                 Continue
               </div>
             </div>

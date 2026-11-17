@@ -90,7 +90,7 @@ export default function MePortfolio() {
         <div data-pid="EIP-0" style={{ backgroundColor: '#FFFFFF', borderRightColor: '#E6E6E6', borderRightStyle: 'solid', borderRightWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: '0', gap: '4px', paddingBlock: '24px', paddingInline: '16px', width: '260px' }}>
           <div data-pid="EIQ-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '12px', paddingBottom: '20px', paddingInline: '8px' }}>
             <div data-pid="EIR-0" style={{ alignItems: 'center', backgroundColor: '#0E0E0E', borderRadius: '22px', boxSizing: 'border-box', display: 'flex', flexShrink: 0, height: '44px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '44px' }}>
-              <div data-pid="EIS-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
+              <div data-pid="EIS-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '16px', fontWeight: 500, lineHeight: '20px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="ID2-0" style={{ position: 'absolute', left: '28px', top: '26px', width: '20px', height: '22px' }}>
@@ -110,16 +110,16 @@ export default function MePortfolio() {
               </svg>
             </div>
             <div data-pid="EIT-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <div data-pid="EIU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+              <div data-pid="EIU-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                 Rahim Ahmed
               </div>
               <div data-pid="EIV-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
                 <div data-pid="EIW-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '4px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '6px' }}>
-                  <div data-pid="EIX-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
+                  <div data-pid="EIX-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '10px', fontWeight: 500, lineHeight: '12px' }}>
                     PRO
                   </div>
                 </div>
-                <div data-pid="EIY-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="EIY-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   Engineer · #7
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function MePortfolio() {
               <circle cx="12" cy="8" r="4" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
               <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EJ3-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EJ3-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Profile
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MePortfolio() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="HAU-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M6 3h12M6 21h12M7 3v3a5 5 0 0 0 10 0V3M7 21v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EJ7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EJ7-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Time bank &amp; coins
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function MePortfolio() {
               <circle cx="12" cy="9" r="6" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EJC-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EJC-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Certificates
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function MePortfolio() {
               <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               <path d="M3 10h18M7 15h4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EJH-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EJH-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Subscription
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function MePortfolio() {
               <path d="M10.3 3.6a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1.1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1.1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1.1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1.1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1.1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1.1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1.1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1.1z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               <circle cx="12" cy="12" r="3" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
             </svg>
-            <div data-pid="EJM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+            <div data-pid="EJM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
               Settings
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MePortfolio() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FA3-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FA5-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FA5-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Progress
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function MePortfolio() {
               <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="FA7-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FA9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FA9-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Lab history
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function MePortfolio() {
                 <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
                 <path d="M15 3v4h4M8 12h8M8 16h5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" strokeLinejoin="round" />
               </svg>
-              <div data-pid="HB1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="HB1-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Notes
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function MePortfolio() {
                 <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M3 10h18M8 3v4M16 3v4" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FAE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FAE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Schedule
               </div>
             </div>
@@ -209,12 +209,12 @@ export default function MePortfolio() {
                 <circle cx="12" cy="12" r="9" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.5" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="FAJ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '14px', lineHeight: '18px' }}>
+              <div data-pid="FAJ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '14px', lineHeight: '18px' }}>
                 Support
               </div>
               <div data-pid="FAK-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1' }} />
               <div data-pid="FAL-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '999px', boxSizing: 'border-box', paddingBlock: '1px', paddingInline: '7px' }}>
-                <div data-pid="FAM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="FAM-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   1
                 </div>
               </div>
@@ -225,7 +225,7 @@ export default function MePortfolio() {
             <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EJP-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10" fill="none" stroke="#808080" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EJR-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EJR-0" style={{ boxSizing: 'border-box', color: '#808080', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Sign out
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function MePortfolio() {
           <div data-pid="EJU-0" style={{ alignItems: 'end', backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', gap: '24px', overflow: 'clip', padding: '32px', position: 'relative' }}>
             <div data-pid="EJV-0" style={{ backgroundImage: 'url(/assets/dither-card-ink.svg)', backgroundPosition: '50%', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', boxSizing: 'border-box', height: '280px', opacity: '0.14', position: 'absolute', right: '0px', top: '0px', width: '480px' }} />
             <div data-pid="EJW-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderRadius: '48px', boxSizing: 'border-box', display: 'flex', flexShrink: '0', height: '96px', justifyContent: 'center', overflow: 'visible', position: 'relative', width: '96px' }}>
-              <div data-pid="EJX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
+              <div data-pid="EJX-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '32px', fontWeight: 500, lineHeight: '40px' }}>
                 RA
               </div>
               <svg width="132" height="146" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg" data-pid="IHR-0" style={{ position: 'absolute', left: '64px', top: '58px', width: '38px', height: '42px' }}>
@@ -254,20 +254,20 @@ export default function MePortfolio() {
               </svg>
             </div>
             <div data-pid="EJY-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '8px', position: 'relative' }}>
-              <div data-pid="EJZ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '36px' }}>
+              <div data-pid="EJZ-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-sans)', fontSize: '30px', fontWeight: 500, letterSpacing: '-0.015em', lineHeight: '36px' }}>
                 Rahim Ahmed
               </div>
-              <div data-pid="EK0-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', lineHeight: '18px' }}>
+              <div data-pid="EK0-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-sans)', fontSize: '15px', lineHeight: '18px' }}>
                 Aspiring DevOps engineer · Dhaka
               </div>
               <div data-pid="EK1-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '8px', paddingTop: '4px' }}>
                 <div data-pid="EK2-0" style={{ borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '4px', paddingInline: '10px' }}>
-                  <div data-pid="EK3-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="EK3-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     DEVOPS &amp; CLOUD TRACK
                   </div>
                 </div>
                 <div data-pid="EK4-0" style={{ borderColor: '#3A3A3A', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '4px', paddingInline: '10px' }}>
-                  <div data-pid="EK5-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                  <div data-pid="EK5-0" style={{ boxSizing: 'border-box', color: '#CFCFCF', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                     OPEN TO WORK
                   </div>
                 </div>
@@ -278,7 +278,7 @@ export default function MePortfolio() {
                 <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EK8-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M4 20l4-1 11-11-3-3L5 16z" fill="none" stroke="#FFFFFF" strokeWidth="1.8" />
                 </svg>
-                <div data-pid="EKA-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="EKA-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Edit
                 </div>
               </div>
@@ -286,7 +286,7 @@ export default function MePortfolio() {
                 <svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EKC-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                   <path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1" fill="none" stroke="#0E0E0E" strokeWidth="1.8" />
                 </svg>
-                <div data-pid="EKE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+                <div data-pid="EKE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
                   Share public profile
                 </div>
               </div>
@@ -521,10 +521,10 @@ export default function MePortfolio() {
               <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="EKH-0" style={{ display: 'inline-block', flexShrink: 0 }}>
                 <path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
               </svg>
-              <div data-pid="EKJ-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
+              <div data-pid="EKJ-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
                 142
               </div>
-              <div data-pid="EKK-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="EKK-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Labs passed
               </div>
             </div>
@@ -533,10 +533,10 @@ export default function MePortfolio() {
                 <circle cx="12" cy="9" r="6" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 <path d="M9 14.5L8 22l4-2 4 2-1-7.5" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
               </svg>
-              <div data-pid="EKP-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
+              <div data-pid="EKP-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
                 2
               </div>
-              <div data-pid="EKQ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="EKQ-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Milestone certificates
               </div>
             </div>
@@ -545,10 +545,10 @@ export default function MePortfolio() {
                 <rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 <path d="M5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
               </svg>
-              <div data-pid="EKV-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
+              <div data-pid="EKV-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
                 Lean hire
               </div>
-              <div data-pid="EKW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="EKW-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Best AI interview signal
               </div>
             </div>
@@ -557,10 +557,10 @@ export default function MePortfolio() {
                 <circle cx="12" cy="13" r="8" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
                 <path d="M12 9v4l3 2M9 2h6" fill="none" stroke="#0E0E0E" strokeWidth="1.6" />
               </svg>
-              <div data-pid="EL1-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
+              <div data-pid="EL1-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '22px', fontWeight: 500, lineHeight: '28px' }}>
                 96 h
               </div>
-              <div data-pid="EL2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="EL2-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 Hands-on time in VMs
               </div>
             </div>
@@ -568,66 +568,66 @@ export default function MePortfolio() {
           <div data-pid="EL3-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '20px' }}>
             <div data-pid="EL4-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1' }}>
               <div data-pid="EL5-0" style={{ alignItems: 'center', borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', paddingBlock: '16px', paddingInline: '20px' }}>
-                <div data-pid="EL6-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="EL6-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   Verified skills
                 </div>
-                <div data-pid="EL7-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="EL7-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                   From labs, exams and interviews
                 </div>
               </div>
               <div data-pid="EL8-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '14px', paddingBlock: '16px', paddingInline: '20px' }}>
                 <div data-pid="EL9-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px' }}>
-                  <div data-pid="ELA-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
+                  <div data-pid="ELA-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
                     Linux
                   </div>
                   <div data-pid="ELB-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '3px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', height: '6px' }}>
                     <div data-pid="ELC-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '3px', boxSizing: 'border-box', height: '6px', width: 'round(86%, 1px)' }} />
                   </div>
-                  <div data-pid="ELD-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
+                  <div data-pid="ELD-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
                     ADVANCED
                   </div>
                 </div>
                 <div data-pid="ELE-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px' }}>
-                  <div data-pid="ELF-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
+                  <div data-pid="ELF-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
                     Docker
                   </div>
                   <div data-pid="ELG-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '3px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', height: '6px' }}>
                     <div data-pid="ELH-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '3px', boxSizing: 'border-box', height: '6px', width: 'round(78%, 1px)' }} />
                   </div>
-                  <div data-pid="ELI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
+                  <div data-pid="ELI-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
                     ADVANCED
                   </div>
                 </div>
                 <div data-pid="ELJ-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px' }}>
-                  <div data-pid="ELK-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
+                  <div data-pid="ELK-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
                     Terraform
                   </div>
                   <div data-pid="ELL-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '3px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', height: '6px' }}>
                     <div data-pid="ELM-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '3px', boxSizing: 'border-box', height: '6px', width: 'round(62%, 1px)' }} />
                   </div>
-                  <div data-pid="ELN-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
+                  <div data-pid="ELN-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
                     SOLID
                   </div>
                 </div>
                 <div data-pid="ELO-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px' }}>
-                  <div data-pid="ELP-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
+                  <div data-pid="ELP-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
                     Networking
                   </div>
                   <div data-pid="ELQ-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '3px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', height: '6px' }}>
                     <div data-pid="ELR-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '3px', boxSizing: 'border-box', height: '6px', width: 'round(55%, 1px)' }} />
                   </div>
-                  <div data-pid="ELS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
+                  <div data-pid="ELS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
                     SOLID
                   </div>
                 </div>
                 <div data-pid="ELT-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '14px' }}>
-                  <div data-pid="ELU-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
+                  <div data-pid="ELU-0" style={{ boxSizing: 'border-box', color: '#000000', flexShrink: 0, fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', width: '130px' }}>
                     Kubernetes
                   </div>
                   <div data-pid="ELV-0" style={{ backgroundColor: '#EFEFEF', borderRadius: '3px', boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexGrow: '1', height: '6px' }}>
                     <div data-pid="ELW-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '3px', boxSizing: 'border-box', height: '6px', width: 'round(28%, 1px)' }} />
                   </div>
-                  <div data-pid="ELX-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
+                  <div data-pid="ELX-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px', textAlign: 'right', width: '70px' }}>
                     LEARNING
                   </div>
                 </div>
@@ -635,7 +635,7 @@ export default function MePortfolio() {
             </div>
             <div data-pid="ELY-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', flexShrink: 0, width: '420px' }}>
               <div data-pid="ELZ-0" style={{ borderBottomColor: '#EFEFEF', borderBottomStyle: 'solid', borderBottomWidth: '1px', boxSizing: 'border-box', paddingBlock: '16px', paddingInline: '20px' }}>
-                <div data-pid="EM0-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
+                <div data-pid="EM0-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 500, lineHeight: '18px' }}>
                   Recent proof
                 </div>
               </div>
@@ -647,10 +647,10 @@ export default function MePortfolio() {
                   </svg>
                 </div>
                 <div data-pid="EM6-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                  <div data-pid="EM7-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="EM7-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Milestone 1 certificate
                   </div>
-                  <div data-pid="EM8-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="EM8-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Exam 78/100 · 14 Nov
                   </div>
                 </div>
@@ -663,10 +663,10 @@ export default function MePortfolio() {
                   </svg>
                 </div>
                 <div data-pid="EME-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                  <div data-pid="EMF-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="EMF-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     URL shortener interview
                   </div>
-                  <div data-pid="EMG-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="EMG-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Lean hire · 12 Nov
                   </div>
                 </div>
@@ -678,10 +678,10 @@ export default function MePortfolio() {
                   </svg>
                 </div>
                 <div data-pid="EML-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '2px' }}>
-                  <div data-pid="EMM-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                  <div data-pid="EMM-0" style={{ boxSizing: 'border-box', color: '#000000', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                     Publish nginx through the LB
                   </div>
-                  <div data-pid="EMN-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                  <div data-pid="EMN-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                     Lab · 4/4 checks · 10 Nov
                   </div>
                 </div>
@@ -693,13 +693,13 @@ export default function MePortfolio() {
               <circle cx="12" cy="12" r="9" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
               <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="#6B6B6B" strokeWidth="1.8" />
             </svg>
-            <div data-pid="EMS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EMS-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Public at
             </div>
-            <div data-pid="EMT-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EMT-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
               poridhi.io/u/rahim
             </div>
-            <div data-pid="EMU-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="EMU-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               · recruiters see skills, certificates and interview signals. You choose what's shown in Settings.
             </div>
           </div>

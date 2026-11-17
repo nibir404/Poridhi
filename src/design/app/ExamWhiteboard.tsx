@@ -12,10 +12,10 @@ export default function ExamWhiteboard() {
             </svg>
           </div>
           <div data-pid="DNQ-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '1px' }}>
-            <div data-pid="DNS-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+            <div data-pid="DNS-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
               VPC deployment with Terraform · Q4 of 10
             </div>
-            <div data-pid="DNR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Bold", "Helvetica Neue", system-ui, sans-serif', fontSize: '15px', fontWeight: 600, lineHeight: '18px' }}>
+            <div data-pid="DNR-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '15px', fontWeight: 600, lineHeight: '18px' }}>
               Load balancer configuration
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function ExamWhiteboard() {
                 <circle cx="12" cy="13" r="8" fill="none" stroke="#0E0E0E" strokeWidth="2" />
                 <path d="M12 9v4l3 2M9 2h6" fill="none" stroke="#0E0E0E" strokeWidth="2" />
               </svg>
-              <div data-pid="DNL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+              <div data-pid="DNL-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                 09:12 left
               </div>
             </div>
@@ -36,12 +36,12 @@ export default function ExamWhiteboard() {
             </div>
           </div>
           <div data-pid="DNF-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '9px', paddingInline: '14px' }}>
-            <div data-pid="DNG-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="DNG-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               All questions
             </div>
           </div>
           <div data-pid="DND-0" style={{ borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '9px', paddingInline: '14px' }}>
-            <div data-pid="DNE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+            <div data-pid="DNE-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
               Finish exam
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function ExamWhiteboard() {
             <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="DNB-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="#0E0E0E" strokeWidth="2.2" />
             </svg>
-            <div data-pid="DNA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
+            <div data-pid="DNA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px' }}>
               Submit Q4
             </div>
           </div>
@@ -106,12 +106,12 @@ export default function ExamWhiteboard() {
           </div>
           <div data-pid="DM6-0" style={{ backgroundColor: '#F4F4F4', borderRadius: '6px', boxSizing: 'border-box', display: 'flex', marginLeft: '16px', marginRight: '16px', marginTop: '12px', padding: '3px' }}>
             <div data-pid="DM9-0" style={{ backgroundColor: '#FFFFFF', borderRadius: '5px', boxShadow: '#00000014 0px 1px 2px', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', padding: '7px', textAlign: 'center' }}>
-              <div data-pid="DMA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', fontWeight: 500, lineHeight: '16px', textAlign: 'center' }}>
+              <div data-pid="DMA-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '13px', fontWeight: 500, lineHeight: '16px', textAlign: 'center' }}>
                 Question
               </div>
             </div>
             <div data-pid="DM7-0" style={{ boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', padding: '7px', textAlign: 'center' }}>
-              <div data-pid="DM8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
+              <div data-pid="DM8-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px', textAlign: 'center' }}>
                 Instructions
               </div>
             </div>
@@ -119,95 +119,95 @@ export default function ExamWhiteboard() {
           <div data-pid="DKP-0" style={{ boxSizing: 'border-box', display: 'flex', flexBasis: '0%', flexDirection: 'column', flexGrow: '1', gap: '14px', overflow: 'clip', paddingBlock: '16px', paddingInline: '20px' }}>
             <div data-pid="DLZ-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '6px' }}>
               <div data-pid="DM4-0" style={{ borderColor: '#E6E6E6', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '3px', paddingInline: '8px' }}>
-                <div data-pid="DM5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="DM5-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   MEDIUM
                 </div>
               </div>
               <div data-pid="DM2-0" style={{ borderColor: '#E6E6E6', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '3px', paddingInline: '8px' }}>
-                <div data-pid="DM3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="DM3-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   100 PTS
                 </div>
               </div>
               <div data-pid="DM0-0" style={{ borderColor: '#E6E6E6', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '3px', paddingInline: '8px' }}>
-                <div data-pid="DM1-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+                <div data-pid="DM1-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '11px', lineHeight: '14px' }}>
                   15 MIN
                 </div>
               </div>
             </div>
-            <div data-pid="DLY-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"HelveticaNeue-Medium", "Helvetica Neue", system-ui, sans-serif', fontSize: '18px', fontWeight: 500, lineHeight: '24px' }}>
+            <div data-pid="DLY-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-sans)', fontSize: '18px', fontWeight: 500, lineHeight: '24px' }}>
               Put an ALB in front of two EC2 instances
             </div>
-            <div data-pid="DLX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '20px' }}>
+            <div data-pid="DLX-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '20px' }}>
               Use the VPC from Q1. Create an Application Load Balancer in the public subnets that forwards port 80 to two instances in the private subnets.
             </div>
             <div data-pid="DLL-0" style={{ alignItems: 'center', backgroundColor: '#FAFAFA', borderColor: '#EFEFEF', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', justifyContent: 'space-between', padding: '14px' }}>
               <div data-pid="DLV-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#D3D3D3', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '8px', paddingInline: '10px' }}>
-                <div data-pid="DLW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="DLW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   Internet
                 </div>
               </div>
               <div data-pid="DLU-0" style={{ backgroundColor: '#C2C2C2', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '1px' }} />
               <div data-pid="DLS-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', paddingBlock: '8px', paddingInline: '10px' }}>
-                <div data-pid="DLT-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                <div data-pid="DLT-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                   ALB :80
                 </div>
               </div>
               <div data-pid="DLR-0" style={{ backgroundColor: '#C2C2C2', boxSizing: 'border-box', flexBasis: '0%', flexGrow: '1', height: '1px' }} />
               <div data-pid="DLM-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <div data-pid="DLP-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#D3D3D3', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '8px' }}>
-                  <div data-pid="DLQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="DLQ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                     ec2-a
                   </div>
                 </div>
                 <div data-pid="DLN-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#D3D3D3', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', paddingBlock: '6px', paddingInline: '8px' }}>
-                  <div data-pid="DLO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '10px', lineHeight: '12px' }}>
+                  <div data-pid="DLO-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '10px', lineHeight: '12px' }}>
                     ec2-b
                   </div>
                 </div>
               </div>
             </div>
-            <div data-pid="DLK-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
+            <div data-pid="DLK-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
               WHAT TO DEPLOY
             </div>
             <div data-pid="DL6-0" style={{ boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div data-pid="DLH-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                <div data-pid="DLJ-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLJ-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   1
                 </div>
-                <div data-pid="DLI-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLI-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Security group: 80 open from 0.0.0.0/0 on the ALB only
                 </div>
               </div>
               <div data-pid="DLD-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                <div data-pid="DLG-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLG-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   2
                 </div>
-                <div data-pid="DLF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLF-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Target group with health check on
                 </div>
-                <div data-pid="DLE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLE-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   /health
                 </div>
               </div>
               <div data-pid="DLA-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                <div data-pid="DLC-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLC-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   3
                 </div>
-                <div data-pid="DLB-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DLB-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Listener on port 80 → target group
                 </div>
               </div>
               <div data-pid="DL7-0" style={{ boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
-                <div data-pid="DL9-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DL9-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   4
                 </div>
-                <div data-pid="DL8-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DL8-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Output the ALB DNS name
                 </div>
               </div>
             </div>
             <div data-pid="DL4-0" style={{ boxSizing: 'border-box', paddingTop: '4px' }}>
-              <div data-pid="DL5-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
+              <div data-pid="DL5-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.06em', lineHeight: '14px' }}>
                 DELIVERABLES
               </div>
             </div>
@@ -218,25 +218,25 @@ export default function ExamWhiteboard() {
                     <path d="M5 12l5 5 9-10" fill="none" stroke="#FFFFFF" strokeWidth="3" />
                   </svg>
                 </div>
-                <div data-pid="DL0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DL0-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   main.tf
                 </div>
-                <div data-pid="DKZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DKZ-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   applies cleanly
                 </div>
               </div>
               <div data-pid="DKU-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <div data-pid="DKX-0" style={{ borderColor: '#C2C2C2', borderRadius: '3px', borderStyle: 'solid', borderWidth: '1.5px', boxSizing: 'border-box', flexShrink: 0, height: '14px', width: '14px' }} />
-                <div data-pid="DKW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DKW-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: '13px', lineHeight: '16px' }}>
                   curl $ALB_DNS
                 </div>
-                <div data-pid="DKV-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DKV-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   returns 200
                 </div>
               </div>
               <div data-pid="DKR-0" style={{ alignItems: 'center', boxSizing: 'border-box', display: 'flex', gap: '10px' }}>
                 <div data-pid="DKT-0" style={{ borderColor: '#C2C2C2', borderRadius: '3px', borderStyle: 'solid', borderWidth: '1.5px', boxSizing: 'border-box', flexShrink: 0, height: '14px', width: '14px' }} />
-                <div data-pid="DKS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '13px', lineHeight: '16px' }}>
+                <div data-pid="DKS-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '13px', lineHeight: '16px' }}>
                   Diagram on the whiteboard
                 </div>
               </div>
@@ -284,44 +284,44 @@ export default function ExamWhiteboard() {
                 <rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
                 <rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="#4D4D4D" strokeWidth="1.8" />
               </svg>
-              <div data-pid="E5H-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="E5H-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
                 AWS icons
               </div>
             </div>
           </div>
           <div data-pid="E5I-0" style={{ borderColor: '#808080', borderRadius: '8px', borderStyle: 'dashed', borderWidth: '1.5px', boxSizing: 'border-box', flexShrink: 0, height: '520px', left: '90px', position: 'relative', top: '120px', width: '860px' }}>
             <div data-pid="E5J-0" style={{ backgroundColor: '#FAFAFA', boxSizing: 'border-box', left: '12px', paddingInline: '6px', position: 'absolute', top: '-10px' }}>
-              <div data-pid="E5K-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="E5K-0" style={{ boxSizing: 'border-box', color: '#6B6B6B', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                 VPC 10.0.0.0/16
               </div>
             </div>
             <div data-pid="E5L-0" style={{ backgroundColor: '#FFFFFFB3', borderColor: '#C2C2C2', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', height: '150px', left: '30px', position: 'absolute', top: '40px', width: '800px' }}>
-              <div data-pid="E5M-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', left: '10px', lineHeight: '14px', position: 'absolute', top: '8px' }}>
+              <div data-pid="E5M-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', left: '10px', lineHeight: '14px', position: 'absolute', top: '8px' }}>
                 public subnets
               </div>
               <div data-pid="E5N-0" style={{ backgroundColor: '#0E0E0E', borderRadius: '6px', boxSizing: 'border-box', left: '300px', paddingBlock: '16px', paddingInline: '28px', position: 'absolute', top: '46px' }}>
-                <div data-pid="E5O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="E5O-0" style={{ boxSizing: 'border-box', color: '#FFFFFF', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                   ALB :80
                 </div>
               </div>
             </div>
             <div data-pid="E5P-0" style={{ backgroundColor: '#FFFFFFB3', borderColor: '#C2C2C2', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', height: '180px', left: '30px', position: 'absolute', top: '300px', width: '800px' }}>
-              <div data-pid="E5Q-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '11px', left: '10px', lineHeight: '14px', position: 'absolute', top: '8px' }}>
+              <div data-pid="E5Q-0" style={{ boxSizing: 'border-box', color: '#808080', fontFamily: 'var(--font-mono)', fontSize: '11px', left: '10px', lineHeight: '14px', position: 'absolute', top: '8px' }}>
                 private subnets
               </div>
               <div data-pid="E5R-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#0E0E0E', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1.5px', boxSizing: 'border-box', left: '150px', paddingBlock: '14px', paddingInline: '22px', position: 'absolute', top: '60px' }}>
-                <div data-pid="E5S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="E5S-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                   ec2-a
                 </div>
               </div>
               <div data-pid="E5T-0" style={{ backgroundColor: '#FFFFFF', borderColor: '#0E0E0E', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1.5px', boxSizing: 'border-box', left: '520px', paddingBlock: '14px', paddingInline: '22px', position: 'absolute', top: '60px' }}>
-                <div data-pid="E5U-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+                <div data-pid="E5U-0" style={{ boxSizing: 'border-box', color: '#0E0E0E', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                   ec2-b
                 </div>
               </div>
             </div>
             <div data-pid="E5Y-0" style={{ backgroundColor: '#FFF8E6', borderColor: '#F3DFA8', borderRadius: '4px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', left: '560px', paddingBlock: '6px', paddingInline: '10px', position: 'absolute', top: '205px' }}>
-              <div data-pid="E5Z-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '11px', lineHeight: '14px' }}>
+              <div data-pid="E5Z-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-sans)', fontSize: '11px', lineHeight: '14px' }}>
                 TG health: /health
               </div>
             </div>
@@ -333,15 +333,15 @@ export default function ExamWhiteboard() {
             </svg>
           </div>
           <div data-pid="E60-0" style={{ alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E6E6E6', borderRadius: '6px', borderStyle: 'solid', borderWidth: '1px', boxSizing: 'border-box', display: 'flex', gap: '2px', height: 'fit-content', left: '16px', padding: '4px', position: 'absolute', top: '848px', width: 'fit-content' }}>
-            <div data-pid="E61-0" style={{ alignContent: 'center', boxSizing: 'border-box', color: '#3A3A3A', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', height: '28px', lineHeight: '16px', textAlign: 'center', width: '28px' }}>
+            <div data-pid="E61-0" style={{ alignContent: 'center', boxSizing: 'border-box', color: '#3A3A3A', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', height: '28px', lineHeight: '16px', textAlign: 'center', width: '28px' }}>
               −
             </div>
             <div data-pid="E62-0" style={{ boxSizing: 'border-box', paddingInline: '6px' }}>
-              <div data-pid="E63-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+              <div data-pid="E63-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', fontFamily: 'var(--font-mono)', fontSize: '12px', lineHeight: '16px' }}>
                 90%
               </div>
             </div>
-            <div data-pid="E64-0" style={{ alignContent: 'center', boxSizing: 'border-box', color: '#3A3A3A', flexShrink: 0, fontFamily: '"Geist Mono", system-ui, sans-serif', fontSize: '12px', height: '28px', lineHeight: '16px', textAlign: 'center', width: '28px' }}>
+            <div data-pid="E64-0" style={{ alignContent: 'center', boxSizing: 'border-box', color: '#3A3A3A', flexShrink: 0, fontFamily: 'var(--font-mono)', fontSize: '12px', height: '28px', lineHeight: '16px', textAlign: 'center', width: '28px' }}>
               +
             </div>
             <div data-pid="E65-0" style={{ backgroundColor: '#E6E6E6', boxSizing: 'border-box', flexShrink: 0, height: '18px', width: '1px' }} />
@@ -355,7 +355,7 @@ export default function ExamWhiteboard() {
             <svg width="13" height="13" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-pid="E6A-0" style={{ display: 'inline-block', flexShrink: 0 }}>
               <path d="M5 12l5 5 9-10" fill="none" stroke="#22A55B" strokeWidth="2.4" />
             </svg>
-            <div data-pid="E6C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: '"HelveticaNeue", "Helvetica Neue", system-ui, sans-serif', fontSize: '12px', lineHeight: '16px' }}>
+            <div data-pid="E6C-0" style={{ boxSizing: 'border-box', color: '#3A3A3A', display: 'inline-block', fontFamily: 'var(--font-sans)', fontSize: '12px', lineHeight: '16px' }}>
               Saved with Q4 · graded with your code
             </div>
           </div>
