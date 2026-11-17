@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.6.0] - 2026-11-17
+
+### Added
+- Interactive landing visuals: run the hero lab yourself (type at the prompt or press "Run next step"; Autoplay to hand back), click any node in the lab diagram for what it does; the platform showcase screens are clickable and open the real screen ("Open the real …" on hover).
+- Every capability and proof card has a small live UI snippet (editor, terminals, load-balancer route, databases, cloud tray, share URL, credentials with a working Reveal, file tree, checks, score ring, certificate, portfolio, interview bars, rank badges, leaderboard, TA slots).
+- Lab workspace fills the window: the page no longer scrolls, only the guide panel does; panes are resizable with drag handles (guide ↔ workspace, terminal ↔ preview), arrow keys on a focused handle, double-click to reset.
+
+### Fixed
+- White flash when switching product-screen tabs in dark mode: newly shown screens are recoloured before the browser paints.
+
 ## [2.5.0] - 2026-11-17
 
 ### Changed

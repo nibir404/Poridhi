@@ -8,6 +8,7 @@ import RoadmapAll from "@/design/app/RoadmapAll";
 import MeTimeBank from "@/design/app/MeTimeBank";
 import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme } from "@/components/theme/theme";
+import { MINIS } from "./Minis";
 import { Arrow, Badge, Button, Card, Check, Icon, Reveal, S, SectionHead, WIDTH, eyebrow, mono } from "./ui";
 
 /* ---------------- Read. Launch. Pass. ---------------- */
@@ -93,9 +94,10 @@ export function FeatureTabs() {
           })}
         </div>
         <div ref={host} style={{ display: "grid", gap: S(4) }}>
-          <div key={T.k} className="pd-screen-in" style={{ position: "relative", height: 520, borderRadius: "var(--puku-radius-panel)", overflow: "hidden", border: "1px solid var(--dashboard-border)", background: "var(--dashboard-main)", boxShadow: "0 32px 64px -40px rgba(0,0,0,.45)" }}>
+          <Link href={T.href} aria-label={`Open ${T.k} in the app`} key={T.k} className="pd-screen-in pd-live-screen" style={{ display: "block", position: "relative", height: 520, borderRadius: "var(--puku-radius-panel)", overflow: "hidden", border: "1px solid var(--dashboard-border)", background: "var(--dashboard-main)", boxShadow: "0 32px 64px -40px rgba(0,0,0,.45)" }}>
             <div aria-hidden style={{ position: "absolute", left: 0, top: 0, width: 1600, height: 960, transformOrigin: "0 0", transform: `scale(${T.crop.scale}) translate(${-T.crop.x}px, ${-T.crop.y}px)`, pointerEvents: "none" }}><T.C /></div>
-          </div>
+            <span className="pd-live-cta" style={{ position: "absolute", right: S(4), bottom: S(4), display: "inline-flex", alignItems: "center", gap: S(2), height: 36, padding: `0 ${S(3)}px`, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", font: "600 13px/1 var(--font-sans)" }}>Open the real {T.k.toLowerCase()} <Arrow /></span>
+          </Link>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: S(5) }}>
             {T.points.map((p) => <span key={p} style={{ display: "inline-flex", alignItems: "center", gap: S(2), fontSize: 14 }}><Check color="var(--dashboard-text)" />{p}</span>)}
             <span style={{ marginLeft: "auto" }}><Button href={T.href} variant="outline" size="sm">Open {T.k.toLowerCase()} <Arrow /></Button></span>
@@ -115,7 +117,8 @@ function Grid({ k, title, body, items }: { k: string; title: string; body: strin
         {items.map((x, n) => (
           <Reveal key={x.t} delay={(n % 4) * 0.03}>
             <div style={{ height: "100%", padding: S(6), borderRight: "1px solid var(--dashboard-border)", borderBottom: "1px solid var(--dashboard-border)", display: "grid", gap: S(3), alignContent: "start" }}>
-              <span style={{ width: 36, height: 36, borderRadius: "var(--puku-radius)", display: "grid", placeItems: "center", background: "var(--dashboard-hover)" }}><Icon d={x.i} /></span>
+              <div style={{ minHeight: 108, display: "grid", alignItems: "center", padding: S(3), borderRadius: "var(--puku-radius-panel)", background: "var(--dashboard-sidebar)", backgroundImage: "radial-gradient(var(--dashboard-border) 1px, transparent 1px)", backgroundSize: "12px 12px" }}>{MINIS[x.t]}</div>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: S(2), color: "var(--dashboard-muted)" }}><Icon d={x.i} size={16} /></span>
               <h3 style={{ margin: 0, font: "500 16px/1.3 var(--font-sans)" }}>{x.t}</h3>
               <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>{x.d}</p>
             </div>

@@ -251,3 +251,10 @@ body.pd-phone .pd-siteheader { display: none !important; }
 .pd-term-line { animation: pd-chip-in .3s ease both; }
 @media (max-width: 960px) { .pd-footer { grid-template-columns: repeat(2, 1fr) !important; } .pd-tabs, .pd-ld-body { grid-template-columns: 1fr !important; } }
 @media (prefers-reduced-motion: reduce) { .pd-boot, .pd-tabbar, .pd-flow, .pd-term-line { animation: none !important; } }
+.pd-live-screen .pd-live-cta { opacity: 0; transform: translateY(6px); transition: opacity .2s var(--puku-ease), transform .2s var(--puku-ease); }
+.pd-live-screen:hover .pd-live-cta, .pd-live-screen:focus-visible .pd-live-cta { opacity: 1; transform: none; }
+.pd-live-screen:hover { border-color: var(--dashboard-text) !important; }
+.pd-resizer { flex: 0 0 6px; width: 6px; align-self: stretch; cursor: col-resize; position: relative; background: transparent; z-index: 5; }
+.pd-resizer::after { content: ""; position: absolute; inset: 0 2px; border-radius: 2px; background: var(--dashboard-border); opacity: 0; transition: opacity .15s; }
+.pd-resizer:hover::after, .pd-resizer:focus-visible::after { opacity: 1; background: var(--dashboard-text); }
+.pd-resizer:focus-visible { outline: none; }

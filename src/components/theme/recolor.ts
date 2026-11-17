@@ -273,8 +273,13 @@ export function bindRecolor(root: HTMLElement, getTheme: () => Theme) {
   const mo = new MutationObserver((list) => {
     const added = list.some((m) => Array.from(m.addedNodes).some((n) => n instanceof HTMLElement && (n.dataset.pid || n.querySelector("[data-pid]"))));
     if (!added) return;
+    // Recolour right away: observer callbacks run before the next paint, so a newly shown
+    // screen never flashes in its original (light) colours.
     clearTimeout(t);
-    t = window.setTimeout(run, 120);
+    mo.disconnect();
+    recolor(root, getTheme());
+    guardContrast(root);
+    mo.observe(root, { childList: true, subtree: true });
   });
   mo.observe(root, { childList: true, subtree: true });
   return () => { mo.disconnect(); clearTimeout(t); window.removeEventListener("pd-theme", run); recolor(root, null); };

@@ -38,13 +38,39 @@ const pill = (s: Status): React.CSSProperties => ({
 });
 const label: Record<Status, string> = { live: "Live", booting: "Starting", failing: "502", idle: "Idle" };
 
+const COMMANDS = SCRIPT.map((s, i) => ({ i, cmd: s.line.startsWith("poridhian@") ? s.line.replace("poridhian@lab-01:~$ ", "") : null })).filter((c) => c.cmd) as { i: number; cmd: string }[];
+const ABOUT: Record<string, string> = {
+  browser: "Anyone on the internet. They reach your lab through the load balancer's public URL.",
+  lb: "Public entry point. Forwards :80 to a port on the VM; point it at the port nginx listens on.",
+  vm: "A fresh Ubuntu 22.04 machine with VS Code and terminals. Time counts only while it runs.",
+  nginx: "The container you run. Published on host port 8080.",
+  db: "A Postgres container with a named volume, so data survives container restarts.",
+};
+
 export default function LabDiagram() {
   const [step, setStep] = useState(0);
+  const [manual, setManual] = useState(false); // the visitor took over: stop auto-play
+  const [picked, setPicked] = useState<string | null>(null);
+  const [typed, setTyped] = useState("");
   useEffect(() => {
+    if (manual) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setStep(SCRIPT.length); return; }
     const t = setInterval(() => setStep((s) => (s >= SCRIPT.length + 3 ? 0 : s + 1)), 900);
     return () => clearInterval(t);
-  }, []);
+  }, [manual]);
+  // Run the next command (and the output lines that follow it).
+  const runNext = () => {
+    setManual(true);
+    setStep((s) => {
+      let n = Math.min(s, SCRIPT.length);
+      if (n >= SCRIPT.length) return 0;
+      n++;
+      while (n < SCRIPT.length && !SCRIPT[n].line.startsWith("poridhian@")) n++;
+      return n;
+    });
+    setTyped("");
+  };
+  const nextCmd = COMMANDS.find((c) => c.i >= Math.min(step, SCRIPT.length))?.cmd;
   const shown = SCRIPT.slice(0, Math.min(step, SCRIPT.length));
   const status: Record<string, Status> = { browser: "idle", lb: "idle", vm: "booting", nginx: "idle", db: "idle" };
   let checks = 0;
@@ -78,10 +104,15 @@ export default function LabDiagram() {
                 return <path key={a + b} d={d} fill="none" stroke={bad ? "var(--dashboard-danger)" : live ? "var(--dashboard-text)" : "var(--dashboard-muted)"} strokeWidth={live ? 1.6 : 1.2} strokeDasharray={live ? undefined : "4 4"} className={live ? "pd-flow" : undefined} />;
               })}
             </svg>
+            {picked && (() => { const n = byId[picked]; const p = pos(n); return (
+              <div role="status" style={{ position: "absolute", left: Math.min(p.left, W - 260), top: p.top + CH + 8, width: 260, zIndex: 3, padding: S(3), borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", background: "var(--dashboard-panel)", boxShadow: "0 16px 32px -16px rgba(0,0,0,.4)", fontSize: 13, lineHeight: 1.5 }}>
+                <b>{n.name}</b> · <span style={{ color: "var(--dashboard-muted)" }}>{label[status[n.id]]}</span><br />{ABOUT[n.id]}
+              </div>
+            ); })()}
             {NODES.map((n) => {
               const p = pos(n), s = status[n.id];
               return (
-                <div key={n.id} style={{ position: "absolute", ...p, width: CW, height: CH, display: "flex", alignItems: "center", gap: S(3), padding: `0 ${S(3)}px`, borderRadius: "var(--puku-radius)", border: `1px solid ${s === "failing" ? "var(--dashboard-danger)" : "var(--dashboard-border)"}`, background: "var(--dashboard-main)", transition: "border-color .3s" }}>
+                <button type="button" key={n.id} onClick={() => setPicked(picked === n.id ? null : n.id)} aria-pressed={picked === n.id} aria-label={`${n.name}: ${ABOUT[n.id]}`} style={{ position: "absolute", ...p, width: CW, height: CH, cursor: "pointer", textAlign: "left", color: "var(--dashboard-text)", font: "inherit", outlineOffset: 2, boxShadow: picked === n.id ? "0 0 0 2px var(--dashboard-text)" : undefined, display: "flex", alignItems: "center", gap: S(3), padding: `0 ${S(3)}px`, borderRadius: "var(--puku-radius)", border: `1px solid ${s === "failing" ? "var(--dashboard-danger)" : "var(--dashboard-border)"}`, background: "var(--dashboard-main)", transition: "border-color .3s" }}>
                   <span style={{ width: 32, height: 32, borderRadius: "var(--puku-radius)", display: "grid", placeItems: "center", background: "var(--dashboard-hover)", flexShrink: 0 }}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d={n.icon} /></svg>
                   </span>
@@ -90,7 +121,7 @@ export default function LabDiagram() {
                     <span style={{ ...mono, fontSize: 11, color: "var(--dashboard-muted)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{n.kind}</span>
                   </span>
                   <span style={pill(s)}>{label[s]}</span>
-                </div>
+                </button>
               );
             })}
           </div>
@@ -104,8 +135,19 @@ export default function LabDiagram() {
             {shown.map((s, i) => (
               <div key={i} className="pd-term-line" style={{ color: s.tone === "ok" ? "var(--dashboard-success)" : s.tone === "err" ? "var(--dashboard-danger)" : s.tone === "dim" ? "var(--dashboard-muted)" : "var(--dashboard-text)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{s.line}</div>
             ))}
-            <span className="pd-caret">▍</span>
+            {!manual && <span className="pd-caret">▍</span>}
           </div>
+          <form onSubmit={(e) => { e.preventDefault(); runNext(); }} style={{ borderTop: "1px solid var(--dashboard-border)", padding: S(3), display: "grid", gap: S(2) }}>
+            <label style={{ display: "flex", alignItems: "center", gap: S(2), ...mono, fontSize: 12.5 }}>
+              <span style={{ color: "var(--dashboard-success)" }}>$</span>
+              <input value={typed} onChange={(e) => setTyped(e.target.value)} onFocus={() => setManual(true)} placeholder={nextCmd ? `${nextCmd}  (press Enter)` : "Press Enter to start over"} aria-label="Lab terminal: press Enter to run the next step"
+                style={{ flex: 1, minWidth: 0, background: "transparent", border: 0, outline: 0, color: "var(--dashboard-text)", ...mono, fontSize: 12.5 }} />
+            </label>
+            <div style={{ display: "flex", gap: S(2), flexWrap: "wrap" }}>
+              <button type="submit" className="puku-btn puku-btn-default" style={{ height: 32, padding: `0 ${S(3)}px`, borderRadius: "var(--puku-radius)", border: 0, background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", font: "600 13px/1 var(--font-sans)", cursor: "pointer" }}>{step >= SCRIPT.length ? "Run it again" : "Run next step"}</button>
+              {manual && <button type="button" onClick={() => { setManual(false); setStep(0); }} className="puku-btn puku-btn-ghost" style={{ height: 32, padding: `0 ${S(3)}px`, borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", background: "transparent", color: "var(--dashboard-text)", font: "500 13px/1 var(--font-sans)", cursor: "pointer" }}>Autoplay</button>}
+            </div>
+          </form>
         </div>
       </div>
     </div>
