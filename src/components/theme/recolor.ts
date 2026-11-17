@@ -168,6 +168,12 @@ export function recolor(root: HTMLElement, theme: Theme | null) {
     if (html) {
       const bg = parse(cs.backgroundColor);
       nb = bg && mapBg(bg, p, el === root, !!root.closest(".pd-app"));
+      // Dark mode: thin coloured fills (progress bars, meters) in deep brand colours sink into the
+      // dark surface; draw them in the bright accent instead.
+      if (!nb && p.dark && bg && bg[3] > 0.5 && (el as HTMLElement).offsetHeight > 0 && (el as HTMLElement).offsetHeight <= 12) {
+        const [, s2, l2] = hsl(bg);
+        if (s2 >= 0.2 && l2 < 0.5) nb = "var(--dashboard-accent)";
+      }
       if (nb) set.push(["background-color", nb]);
       // Dotted canvas grids: light dots become the quiet border colour in dark themes.
       if (p.dark && cs.backgroundImage.startsWith("radial-gradient(rgb(2")) set.push(["background-image", "radial-gradient(var(--dashboard-border) 1px, transparent 1px)"]);

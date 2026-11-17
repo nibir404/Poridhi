@@ -78,7 +78,7 @@ export default function PlatformShowcase({ width }: { width: number }) {
         {TABS.map((t, k) => (
           <button key={t.key} role="tab" aria-selected={k === i} onClick={() => setI(k)}
             style={{ position: "relative", flexShrink: 0, whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 8, height: 36, padding: "0 14px", border: 0, borderRadius: 4, cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, color: k === i ? "#242449" : "rgba(255,255,255,.8)", background: k === i ? "#BFC2FF" : "transparent", overflow: "hidden", transition: "background .2s,color .2s" }}>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon} /></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={t.icon} /></svg>
             {t.label}
             {k === i && !paused && (
               <motion.span key={`p${i}`} initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: ROTATE_MS / 1000, ease: "linear" }}

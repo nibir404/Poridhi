@@ -117,7 +117,7 @@ html.lenis, html.lenis body { height: auto; }
   --font-mono: var(--font-tx02), var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 body { background: var(--dashboard-main); }
-html[data-theme="dark"] { --color-blue-50: color-mix(in oklab, var(--dashboard-accent) 18%, var(--dashboard-panel)); --color-blue-700: var(--dashboard-accent); --color-grey-900: var(--dashboard-text); --color-ember-soft: color-mix(in oklab, var(--dashboard-warning) 16%, var(--dashboard-panel)); }
+html[data-theme="dark"] { --color-primary: var(--dashboard-accent); --color-blue-50: color-mix(in oklab, var(--dashboard-accent) 18%, var(--dashboard-panel)); --color-blue-700: var(--dashboard-accent); --color-grey-900: var(--dashboard-text); --color-ember-soft: color-mix(in oklab, var(--dashboard-warning) 16%, var(--dashboard-panel)); }
 /* Terminal theme: a Windows 98 desktop. Redefines the design-system variables, so the recolour,
    overlays and phone bars pick it up; bevels, square corners and the title bar are added below. */
 html[data-theme="terminal"] {
@@ -170,3 +170,8 @@ html[data-theme="dark"] .pd-m-title { color: #E6E6E6; }
 /* Windows 98: the logo sits on the navy title bar, so its wordmark turns white (the mark keeps its colours). */
 html[data-theme="terminal"] [style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }
 html[data-theme="terminal"] .pd-m-top span[style*="poridhi-logo.png"] { background-image: url(/assets/poridhi-logo-white.png) !important; }
+
+/* One icon style everywhere: 24-grid line icons, round caps and joins, optical stroke by size
+   (2px at 12–14px, 1.8px at 15–24px). Overrides the mixed stroke widths in the design exports. */
+.pd-frame svg[viewBox="0 0 24 24"]:is([width="15"], [width="16"], [width="18"], [width="20"], [width="22"], [width="24"]) :is(path, circle, rect, line, polyline, polygon, ellipse)[stroke]:not([stroke="none"]) { stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.pd-frame svg[viewBox="0 0 24 24"]:is([width="12"], [width="13"], [width="14"]) :is(path, circle, rect, line, polyline, polygon, ellipse)[stroke]:not([stroke="none"]) { stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

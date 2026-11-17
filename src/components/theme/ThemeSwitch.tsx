@@ -23,7 +23,7 @@ export default function ThemeSwitch({ inline = false, dark = false }: { inline?:
       {THEMES.map((k) => (
         <button key={k} role="radio" aria-checked={t === k} aria-label={`${k} theme`} onClick={() => setTheme(k)}
           style={{ width: inline ? 28 : 32, height: inline ? 28 : 32, display: "flex", alignItems: "center", justifyContent: "center", border: t === k && !dark ? "1px solid #E6E6E6" : "1px solid transparent", borderRadius: 4, background: t === k ? (dark ? "rgba(255,255,255,.16)" : "var(--color-bg)") : "transparent", cursor: "pointer" }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={t === k ? (dark ? "#FFFFFF" : "var(--color-ink)") : dark ? "#A5A5A5" : "var(--color-ink-3)"} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"><path d={ICON[k]} /></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={t === k ? (dark ? "#FFFFFF" : "var(--color-ink)") : dark ? "#A5A5A5" : "var(--color-ink-3)"} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={ICON[k]} /></svg>
         </button>
       ))}
     </div>

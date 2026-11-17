@@ -59,7 +59,7 @@ export function enhancePage({ sections = [], cardGroups = [], countUp, stickyNav
       Object.assign(nav.style, { position: "sticky", top: "0px", zIndex: "50", transition: "background-color .3s, box-shadow .3s, backdrop-filter .3s" });
       const onScroll = () => {
         const on = window.scrollY > 8;
-        nav.style.backgroundColor = on ? "rgba(255,255,255,0.82)" : "";
+        nav.style.setProperty("background-color", on ? "color-mix(in srgb, var(--dashboard-main) 86%, transparent)" : "", on ? "important" : ""); // theme-aware frosted bar
         nav.style.backdropFilter = on ? "saturate(1.4) blur(12px)" : "";
         nav.style.boxShadow = on ? "0 1px 0 var(--color-line)" : "";
       };

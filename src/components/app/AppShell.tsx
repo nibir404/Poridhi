@@ -13,6 +13,10 @@ import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import AccountMenu from "./AccountMenu";
+import ChipPopover, { type Chip } from "./ChipPopover";
+import RedeemDialog from "./RedeemDialog";
+import { getWallet, fmtBank, openRedeem } from "@/data/wallet";
+import { seed } from "@/data/seed";
 import { wireIcons } from "./iconLinks";
 import { stickyIn } from "@/components/motion/stickyIn";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
@@ -35,6 +39,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
   const [search, setSearch] = useState(false);
   const [hasToggle, setHasToggle] = useState(true);
   const [account, setAccount] = useState<DOMRect | null>(null);
+  const [chip, setChip] = useState<{ which: Chip; at: DOMRect } | null>(null);
   const [slot, setSlot] = useState<{ el: HTMLElement; dark: boolean } | null>(null);
 
   useEffect(() => {
@@ -120,10 +125,48 @@ export default function AppShell({ screen, children }: { screen: string; childre
     // Buttons ↔ seed entities (modules, labs, exam questions).
     applyContext(root, screen);
 
-    // App bar streak chip (flame icon + number) opens progress.
-    if (bar0Early(root)) Array.from(bar0Early(root)!.querySelectorAll<HTMLElement>("[data-pid]")).forEach((chip) => {
-      if (chip.querySelector('path[d^="M12 21a6 6 0 0 0 6-6"]') && /^\d+$/.test(chip.textContent?.trim() ?? "")) { chip.dataset.go = "/app/me/progress"; chip.style.cursor = "pointer"; chip.setAttribute("role", "link"); chip.setAttribute("aria-label", "Streak and progress"); }
+    // App bar: logo → landing page; time-bank and streak chips open their flows.
+    const chipOffs: (() => void)[] = [];
+    const barEl = bar0Early(root);
+    if (barEl) Array.from(barEl.querySelectorAll<HTMLElement>("[data-pid]")).forEach((el) => {
+      if (el.style.backgroundImage.includes("poridhi-logo")) { el.dataset.go = "/"; el.style.cursor = "pointer"; el.setAttribute("role", "link"); el.setAttribute("aria-label", "Poridhi home"); return; }
+      const t = el.textContent?.trim() ?? "";
+      const flame = !!el.querySelector('path[d^="M12 21a6 6 0 0 0 6-6"]');
+      const glass = !!el.querySelector('path[d^="M7 3h10M7 21h10"]');
+      if (el.children.length > 3 || !((flame && /^\d+$/.test(t)) || (glass && /bank$/.test(t)))) return;
+      const which: Chip = flame ? "streak" : "bank";
+      delete el.dataset.go;
+      el.style.cursor = "pointer";
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-haspopup", "dialog");
+      el.setAttribute("aria-label", which === "bank" ? "Time bank" : "Streak");
+      const open = (e: Event) => { e.stopPropagation(); e.preventDefault(); setChip((c) => (c?.which === which ? null : { which, at: el.getBoundingClientRect() })); };
+      el.addEventListener("click", open, true);
+      chipOffs.push(() => el.removeEventListener("click", open, true));
     });
+
+    // Redeem actions open the redeem dialog; coin and bank figures follow the wallet.
+    root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
+      const t = el.textContent?.trim() ?? "";
+      if (el.children.length) return;
+      if (/^Redeem( →| coins)?$/.test(t)) {
+        const btn = (el.parentElement && el.parentElement.children.length <= 2 ? el.parentElement : el) as HTMLElement;
+        btn.dataset.go = "redeem"; btn.style.cursor = "pointer"; btn.setAttribute("role", "button");
+      }
+      const coins = seed.coins.toLocaleString("en-US");
+      if (t === coins) el.dataset.wallet = "coins";
+      else if (t === `${fmtBank(seed.timeBank.minutes)} bank`) el.dataset.wallet = "bank";
+      else if (t === fmtBank(seed.timeBank.minutes)) el.dataset.wallet = "bankshort";
+    });
+    const syncWallet = () => {
+      const w = getWallet();
+      root.querySelectorAll<HTMLElement>("[data-wallet]").forEach((el) => {
+        el.textContent = el.dataset.wallet === "coins" ? w.coins.toLocaleString("en-US") : el.dataset.wallet === "bank" ? `${fmtBank(w.minutes)} bank` : fmtBank(w.minutes);
+      });
+    };
+    syncWallet();
+    window.addEventListener("pd-wallet", syncWallet);
+    chipOffs.push(() => window.removeEventListener("pd-wallet", syncWallet));
 
     // Avatar (round, outlined, last in the app bar) opens the account menu.
     const bar0 = root.children[0] as HTMLElement | undefined;
@@ -236,6 +279,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     const onClick = (e: MouseEvent) => {
       const t = (e.target as HTMLElement).closest<HTMLElement>("[data-go]");
       if (t?.dataset.go === "search") { e.preventDefault(); setSearch(true); return; }
+      if (t?.dataset.go === "redeem") { e.preventDefault(); openRedeem(); return; }
       if (!t || !root.contains(t)) return;
       e.preventDefault();
       router.push(t.dataset.go!);
@@ -259,6 +303,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
     const undoRecolor = bindRecolor(root, currentTheme);
     return () => {
       undoGlow();
+      chipOffs.forEach((f) => f());
       stickies.forEach((f) => f());
       undoIcons();
       undoCopy();
@@ -279,6 +324,8 @@ export default function AppShell({ screen, children }: { screen: string; childre
       <DesignFrame width={1600}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />
       <AccountMenu anchor={account} onClose={() => setAccount(null)} />
+      <ChipPopover chip={chip?.which ?? null} anchor={chip?.at ?? null} onClose={() => setChip(null)} />
+      <RedeemDialog />
       <MobileChrome variant="app" onSearch={() => setSearch(true)} />
       {!hasToggle && (slot ? createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el) : <ThemeSwitch />)}
     </div>

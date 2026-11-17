@@ -89,7 +89,7 @@ export default function MobileChrome({ variant, onSearch }: { variant: "app" | "
         {focus ? (
           <button aria-label="Back" style={btn} onClick={() => router.back()}><Icon d="M15 5l-7 7 7 7" /></button>
         ) : (
-          <button aria-label="Home" onClick={() => router.push(variant === "app" ? "/app" : "/")} style={{ ...btn, width: "auto", padding: "0 4px" }}>
+          <button aria-label="Home" onClick={() => router.push("/")} style={{ ...btn, width: "auto", padding: "0 4px" }}>
             <span style={{ display: "block", width: 104, height: 18, background: "url(/assets/poridhi-logo.png) left center/contain no-repeat" }} />
           </button>
         )}

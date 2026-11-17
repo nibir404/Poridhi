@@ -67,12 +67,10 @@ export const APP_LINKS: Record<string, string> = {
   // App bar chips and common actions
   Instructions: "/app/exam/q4/instructions", Question: "/app/exam/q4/whiteboard", "main.tf": "/app/practice/exam", "default.conf": "/app/lab/ide",
   "Finish interview": "/app/interview/report", Client: "/app/interview/session", "staging-cluster": "/app/interview/terminal",
-  "2h 40m bank": "/app/me/time-bank",
   "Ask a TA": "/app/me/support/book",
   "Report issue": "/app/me/support",
   "Back to roadmap": "/app/roadmap",
   "Update payment method": "/app/me/subscription",
-  "Redeem": "/app/me/time-bank",
   "+7 more modules": "/app/roadmap/milestone-1", "+2 more modules": "/app/roadmap/milestone-1", "+11 more modules": "/app/roadmap/milestone-1",
   "+1 more module": "/app/roadmap/milestone-1", "+3 more modules": "/app/roadmap/milestone-1", "+16 more modules": "/app/roadmap/milestone-1",
   "DEVOPS & CLOUD TRACK": "/app/course",

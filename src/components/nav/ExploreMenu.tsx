@@ -43,7 +43,7 @@ export default function ExploreMenu({ open, onClose, top = 72 }: { open: boolean
                 <button key={t} onMouseEnter={() => setTopic(t)} onFocus={() => setTopic(t)} onClick={() => go("/courses")}
                   style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 44, padding: "0 12px", border: 0, borderRadius: 6, cursor: "pointer", fontFamily: "inherit", fontSize: 15, textAlign: "left", background: topic === t ? "var(--color-surface)" : "transparent", color: topic === t ? "var(--color-ink)" : "var(--color-ink-2)", fontWeight: topic === t ? 500 : 400 }}>
                   {t}
-                  {topic === t && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" strokeWidth="2.2" strokeLinecap="round"><path d="M9 6l6 6-6 6" /></svg>}
+                  {topic === t && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink)" strokeWidth="1.8" strokeLinecap="round"><path d="M9 6l6 6-6 6" /></svg>}
                 </button>
               ))}
               <button onClick={() => go("/courses")} style={{ marginTop: "auto", height: 44, padding: "0 12px", border: 0, borderTop: "1px solid var(--color-line)", background: "transparent", textAlign: "left", color: "var(--color-accent-text)", fontSize: 15, fontWeight: 500, cursor: "pointer", fontFamily: "inherit" }}>Browse all topics →</button>

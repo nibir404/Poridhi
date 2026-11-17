@@ -47,7 +47,7 @@ export function ItemIcon({ item, size = 44 }: { item: Item; size?: number }) {
   const ic = itemIcon(item);
   return (
     <div style={{ width: size, height: size, borderRadius: 6, background: ic.bg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-      <svg width={size / 2} height={size / 2} viewBox="0 0 24 24" fill="none" stroke={ic.stroke} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d={ic.path} /></svg>
+      <svg width={size / 2} height={size / 2} viewBox="0 0 24 24" fill="none" stroke={ic.stroke} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d={ic.path} /></svg>
     </div>
   );
 }

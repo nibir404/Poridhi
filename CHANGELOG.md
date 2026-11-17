@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.9.0] - 2026-11-17
+
+### Added
+- Time bank and streak flows from the app-bar chips: the bank popover explains how VM time works, how to earn it and shows recent activity; the streak popover shows this week, the next reward and streak freezes. Both link onward (time bank, progress, keep going).
+- Redeem flow: every "Redeem" action opens a dialog to turn coins into lab time (500-coin steps, 1,000 coins = 2 h) with a preview, confirmation and success state. Coins and bank figures update everywhere and persist across pages (`src/data/wallet.ts`).
+- Logo goes to the landing page from every screen (app bar, phone top bar).
+
+### Changed
+- One icon style everywhere: round caps and joins, optical stroke widths by size (2 px at 12–14 px, 1.8 px above).
+- Dark mode draws thin progress bars and meters in the bright accent so they stay visible.
+
+### Fixed
+- Marketing header turning white while scrolling in dark mode; the frosted bar now uses the theme background.
+
 ## [1.8.0] - 2026-11-17
 
 ### Added
