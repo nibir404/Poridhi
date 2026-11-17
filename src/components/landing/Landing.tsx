@@ -2,13 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import PlatformShowcase from "@/components/marketing/PlatformShowcase";
-import ThemeSwitch from "@/components/theme/ThemeSwitch";
-import ExploreMenu from "@/components/nav/ExploreMenu";
-import SearchPalette from "@/components/nav/SearchPalette";
 import MobileChrome from "@/components/layout/MobileChrome";
+import SiteHeader from "@/components/layout/SiteHeader";
 import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme } from "@/components/theme/theme";
 import { track } from "@/data/roadmap";
+import { stackLogos } from "@/data/stackLogos";
 import DotField from "./DotField";
 import { Button as PButton } from "./ui";
 import { Stats, Tracks, TimeBank, Interview, Ranks, Pricing, Faq } from "./Sections";
@@ -42,40 +41,11 @@ function Hatch({ h = 36 }: { h?: number }) {
   return <div aria-hidden className="pd-hatch" style={{ height: h, borderTop: "1px solid var(--dashboard-border)", borderBottom: "1px solid var(--dashboard-border)" }} />;
 }
 
-function Nav({ onExplore, onSearch }: { onExplore: () => void; onSearch: () => void }) {
-  const link: React.CSSProperties = { height: 34, display: "inline-flex", alignItems: "center", padding: "0 12px", borderRadius: 999, color: "var(--dashboard-text)", textDecoration: "none", font: "400 14px/1 var(--font-sans)", background: "transparent", border: 0, cursor: "pointer" };
-  return (
-    <header className="pd-l-nav" style={{ position: "relative", zIndex: 5, width: W, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, height: 72 }}>
-      <Link href="/" aria-label="Poridhi home" className="pd-l-logo" style={{ display: "block", width: 112, height: 20, background: "url(/assets/poridhi-logo.png) left center/contain no-repeat", marginRight: 28 }} />
-      <nav aria-label="Main" style={{ display: "flex", gap: 2 }} className="pd-l-links">
-        <button style={link} onClick={onExplore} aria-haspopup="true">Explore</button>
-        <Link href="/labs" style={link}>Labs</Link>
-        <Link href="/courses" style={link}>Courses</Link>
-        <Link href="/pricing" style={link}>Pricing</Link>
-      </nav>
-      <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
-        <button onClick={onSearch} aria-label="Search" className="pd-l-search" style={{ ...link, gap: 8, color: "var(--dashboard-muted)" }}>
-          <Icon d="M11 11m-6.5 0a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0-13 0M20 20l-4.4-4.4" size={15} /><span style={{ ...mono, fontSize: 12 }}>⌘K</span>
-        </button>
-        <ThemeSwitch inline />
-        <Link href="/signin" style={{ ...link, border: "1px solid var(--dashboard-border)" }}>Log in</Link>
-        <Pill href="/signin" solid>Start free</Pill>
-      </div>
-    </header>
-  );
-}
-
 export default function Landing() {
-  const [explore, setExplore] = useState(false);
-  const [search, setSearch] = useState(false);
   const showcase = useRef<HTMLDivElement>(null);
   const [showW, setShowW] = useState(1100);
 
-  useEffect(() => {
-    const k = (e: KeyboardEvent) => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setSearch(true); } if (e.key === "Escape") { setExplore(false); setSearch(false); } };
-    window.addEventListener("keydown", k);
-    return () => window.removeEventListener("keydown", k);
-  }, []);
+;
   // The embedded product screens are Paper exports: keep them in the active theme.
   useEffect(() => {
     const el = showcase.current;
@@ -87,17 +57,16 @@ export default function Landing() {
     return () => { ro.disconnect(); undo(); };
   }, []);
 
-  const stack = ["Linux", "Docker", "Kubernetes", "AWS", "Terraform", "Ansible", "Prometheus", "Grafana", "GitHub Actions", "Argo CD", "Go", "Python"];
 
   return (
     <div className="pd-landing" style={{ minHeight: "100vh", background: "var(--dashboard-main)", color: "var(--dashboard-text)", fontFamily: "var(--font-sans)", overflowX: "clip" }}>
-      <MobileChrome variant="site" onSearch={() => setSearch(true)} />
+      <MobileChrome variant="site" onSearch={() => window.dispatchEvent(new Event("pd-open-search"))} />
+      <SiteHeader />
 
       {/* Hero: gradient light, statement, cube field, product bleeding off */}
       <section className="pd-l-hero" style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid var(--dashboard-border)" }}>
         <div aria-hidden className="pd-l-aurora" />
         <div aria-hidden className="pd-l-noise" />
-        <Nav onExplore={() => setExplore((v) => !v)} onSearch={() => setSearch(true)} />
         <div style={{ position: "relative", width: W, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1.05fr) minmax(0, .95fr)", alignItems: "center", gap: 24, padding: "clamp(40px, 7vw, 96px) 0 clamp(32px, 5vw, 64px)" }} className="pd-l-hero-grid">
           <div style={{ display: "grid", gap: 20, justifyItems: "start" }}>
             <Reveal hero>
@@ -136,8 +105,13 @@ export default function Landing() {
       {/* Stack grid */}
       <section style={{ width: W, margin: "0 auto" }}>
         <div className="pd-l-stack" style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", borderLeft: "1px solid var(--dashboard-border)" }}>
-          {stack.map((s) => (
-            <div key={s} style={{ height: 88, display: "grid", placeItems: "center", borderRight: "1px solid var(--dashboard-border)", borderBottom: "1px solid var(--dashboard-border)", ...mono, fontSize: 14, color: "var(--dashboard-muted)" }}>{s}</div>
+          {stackLogos.map((l) => (
+            <div key={l.name} className="pd-stack-cell" style={{ height: 112, display: "grid", placeItems: "center", alignContent: "center", gap: 10, borderRight: "1px solid var(--dashboard-border)", borderBottom: "1px solid var(--dashboard-border)", color: "var(--dashboard-muted)" }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden fill={l.path ? "currentColor" : "none"} stroke={l.path ? "none" : "currentColor"} strokeWidth={l.path ? 0 : 1.8} strokeLinecap="round" strokeLinejoin="round">
+                <path d={l.path ?? "M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.6 7 4.5 4.5 0 0 1 17 18z"} />
+              </svg>
+              <span style={{ fontSize: 14 }}>{l.name}</span>
+            </div>
           ))}
         </div>
       </section>
@@ -224,8 +198,6 @@ export default function Landing() {
         </nav>
       </footer>
 
-      <ExploreMenu open={explore} onClose={() => setExplore(false)} top={72} />
-      <SearchPalette open={search} onClose={() => setSearch(false)} />
     </div>
   );
 }

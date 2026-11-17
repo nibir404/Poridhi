@@ -234,3 +234,10 @@ html[data-theme="light"] [style*="poridhi-logo.png"], html[data-theme="light"] .
 @media (max-width: 560px) { .pd-l-4 { grid-template-columns: 1fr !important; } }
 @media (prefers-reduced-motion: reduce) { .pd-eq { animation: none !important; } }
 .pd-caret { color: var(--dashboard-text) !important; }
+
+/* One app header (AppHeader); phones use the app-style top bar instead. */
+body.pd-phone .pd-appheader { display: none !important; }
+@media (max-width: 1180px) { .pd-ah-search { width: 40px !important; overflow: hidden; } }
+body.pd-phone .pd-siteheader { display: none !important; }
+.pd-stack-cell { transition: color .16s var(--puku-ease), background-color .16s var(--puku-ease); }
+.pd-stack-cell:hover { color: var(--dashboard-text) !important; background: var(--dashboard-hover); }

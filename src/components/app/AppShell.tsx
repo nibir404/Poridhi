@@ -13,6 +13,8 @@ import { bindRecolor } from "@/components/theme/recolor";
 import { getTheme as currentTheme } from "@/components/theme/theme";
 import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import AccountMenu from "./AccountMenu";
+import AppHeader from "./AppHeader";
+import SiteHeader from "@/components/layout/SiteHeader";
 import ChipPopover, { type Chip } from "./ChipPopover";
 import RedeemDialog from "./RedeemDialog";
 import { getWallet, fmtBank, openRedeem } from "@/data/wallet";
@@ -34,6 +36,7 @@ import { applyContext } from "./context";
 const bar0Early = (root: HTMLElement) => { const b = root.children[0] as HTMLElement | undefined; return b && b.offsetHeight <= 90 ? b : undefined; };
 
 export default function AppShell({ screen, children }: { screen: string; children: React.ReactNode }) {
+  const withHeader = !screen.startsWith("Auth"); // every /app screen; sign-in uses the site header
   const router = useRouter();
   const host = useRef<HTMLDivElement>(null);
   const [search, setSearch] = useState(false);
@@ -180,25 +183,32 @@ export default function AppShell({ screen, children }: { screen: string; childre
       avatar.addEventListener("click", openAccount);
     }
 
-    // Sticky chrome: the app bar stays at the top, side columns stay in view below it.
+    // One header everywhere: the native AppHeader replaces the design's global app bar. Task bars
+    // (lab, exam, interview) stay, sticky right under it; side columns stay in view below both.
     const stickies: (() => void)[] = [];
     const appBar = bar0Early(root);
     const bodyRow = root.children[1] as HTMLElement | undefined;
+    const isGlobalBar = !!appBar && ["Home", "Learn", "Labs", "Practice", "Me"].every((t) => Array.from(appBar.querySelectorAll("[data-pid]")).some((e) => !e.children.length && e.textContent?.trim() === t));
+    if (withHeader && isGlobalBar) appBar!.style.display = "none";
     if (appBar && bodyRow && !root.closest(".pd-reflow")) {
-      Object.assign(appBar.style, { position: "relative", zIndex: "60" });
-      if (getComputedStyle(appBar).backgroundColor === "rgba(0, 0, 0, 0)") appBar.style.backgroundColor = "var(--dashboard-main)"; // opaque while content scrolls under it
-      stickies.push(stickyIn(appBar, root, 0));
-      appBar.style.alignSelf = "stretch"; // full width (the sticky helper shrinks items to content)
-      const barH = appBar.offsetHeight;
+      const zoom = root.getBoundingClientRect().width / (root.offsetWidth || 1) || 1;
+      const headerH = withHeader ? 64 / zoom : 0; // native header height, in design px
+      let top = headerH;
+      if (!(withHeader && isGlobalBar)) {
+        Object.assign(appBar.style, { position: "relative", zIndex: "60" });
+        if (getComputedStyle(appBar).backgroundColor === "rgba(0, 0, 0, 0)") appBar.style.backgroundColor = "var(--dashboard-main)";
+        stickies.push(stickyIn(appBar, root, headerH));
+        appBar.style.alignSelf = "stretch";
+        top += appBar.offsetHeight;
+      }
       (Array.from(bodyRow.children) as HTMLElement[]).forEach((col) => {
         const w = col.offsetWidth;
         const cs = getComputedStyle(col);
         if (w < 48 || w > 440 || cs.flexShrink !== "0" || col.offsetHeight < 300) return; // side columns only
-        const zoom = col.getBoundingClientRect().width / (w || 1) || 1;
-        col.style.height = `${Math.round(window.innerHeight / zoom - barH)}px`;
+        col.style.height = `${Math.round(window.innerHeight / zoom - top)}px`;
         col.style.overflowY = "auto";
         col.setAttribute("data-lenis-prevent", "");
-        stickies.push(stickyIn(col, bodyRow, barH));
+        stickies.push(stickyIn(col, bodyRow, top));
       });
     }
 
@@ -322,13 +332,15 @@ export default function AppShell({ screen, children }: { screen: string; childre
 
   return (
     <div ref={host} className="pd-app">
+      {!withHeader && <SiteHeader />}
+      {withHeader && <AppHeader onSearch={() => setSearch(true)} onChip={(which, at) => setChip((c) => (c?.which === which ? null : { which, at }))} onAccount={(at) => setAccount((a) => (a ? null : at))} />}
       <DesignFrame width={1600}>{children}</DesignFrame>
       <SearchPalette open={search} onClose={() => setSearch(false)} />
       <AccountMenu anchor={account} onClose={() => setAccount(null)} />
       <ChipPopover chip={chip?.which ?? null} anchor={chip?.at ?? null} onClose={() => setChip(null)} />
       <RedeemDialog />
       <MobileChrome variant="app" onSearch={() => setSearch(true)} />
-      {!hasToggle && (slot ? createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el) : <ThemeSwitch />)}
+      {!withHeader && !hasToggle && (slot ? createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el) : <ThemeSwitch />)}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { wireDesignToggle } from "@/components/theme/theme";
 import { useRouter } from "next/navigation";
 import DesignFrame from "@/components/layout/DesignFrame";
 import MobileChrome from "@/components/layout/MobileChrome";
+import SiteHeader from "@/components/layout/SiteHeader";
 import ExploreMenu from "@/components/nav/ExploreMenu";
 import SearchPalette from "@/components/nav/SearchPalette";
 import { enhancePage } from "@/components/motion/enhance";
@@ -82,7 +83,8 @@ export default function MarketingShell({ children, extra }: Props) {
         return c.every((x) => getComputedStyle(x).borderRadius === "6px" && x.offsetWidth > 140 && x.offsetHeight > 120);
       })
       .map((el) => el.dataset.pid!);
-    const undo = enhancePage({ sections, cardGroups: groups, stickyNav: nav?.dataset.pid });
+    if (nav) nav.style.display = "none"; // the shared SiteHeader replaces the design nav
+    const undo = enhancePage({ sections, cardGroups: groups });
 
     // Tag links / triggers with data attributes, then handle clicks with one delegated listener.
     root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {
@@ -159,6 +161,7 @@ export default function MarketingShell({ children, extra }: Props) {
 
   return (
     <div ref={host}>
+      <SiteHeader />
       <DesignFrame width={1440}>{children}</DesignFrame>
       {extra}
       {slot && createPortal(<ThemeSwitch inline dark={slot.dark} />, slot.el)}

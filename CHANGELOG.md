@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [2.4.0] - 2026-11-17
+
+### Added
+- One header everywhere. `SiteHeader` on the landing, every marketing page and the sign-in flow (Explore, Labs, Courses, Pricing, Leaderboard, search, theme, Log in / Start free, or Go to dashboard during sign-in). `AppHeader` on every `/app` screen (Home, Learn, Labs, Practice, Me with the current section highlighted, search, time bank, streak, theme, account menu). Lab, exam and interview keep their task bar right under it; side columns stay in view below both.
+- Stack grid shows real logos (Simple Icons, CC0; AWS uses a plain cloud icon because Simple Icons does not ship it), muted until hover.
+
+### Changed
+- The design exports' own nav bars are hidden in favour of the shared headers.
+
 ## [2.3.0] - 2026-11-17
 
 ### Added
