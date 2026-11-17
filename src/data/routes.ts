@@ -144,9 +144,9 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   MeSubscription: { "Change plan": "/pricing" },
   MeLabHistory: { Resume: "/app/lab", Retry: "/app/lab/launch" },
   MeProgress: { "DevOps & Cloud Engineer": "/app/course" },
-  MeSupport: { "Send ticket": "/app/me/support/book" },
-  MeSupportBook: { "Book session": "/app/me/support/rate" },
-  MeSupportRate: { "Send feedback": "/app/me/support", Later: "/app/me/support" },
+  MeSupport: { "Send ticket": "/app/me/support/book", Tickets: "/app/me/support", "Book a TA": "/app/me/support/book" },
+  MeSupportBook: { "Book session": "/app/me/support/rate", Tickets: "/app/me/support", "Book a TA": "/app/me/support/book" },
+  MeSupportRate: { "Send feedback": "/app/me/support", Later: "/app/me/support", Tickets: "/app/me/support", "Book a TA": "/app/me/support/book" },
   MeCertificates: { PDF: "/u/rahim", Share: "/u/rahim" },
   MeEditProfile: { Cancel: "/app/me", "Save changes": "/app/me" },
 
