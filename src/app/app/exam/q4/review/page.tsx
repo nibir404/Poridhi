@@ -1,7 +1,7 @@
 import AppShell from "@/components/app/AppShell";
 import ExamState2 from "@/design/app/ExamState2";
 
-export const metadata = { title: "Q4 review · Poridhi" };
+export const metadata = { title: "Question result · Poridhi" };
 
 export default function Page() {
   return (

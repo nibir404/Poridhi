@@ -62,6 +62,7 @@ export const SCREEN_LINKS: Record<string, Record<string, string>> = {
   AuthGoal: { "Not sure yet — show me everything": "/onboarding/level", Continue: "/onboarding/level" },
   AuthLevel: { Continue: "/onboarding/plan" },
   Dashboard: {
+    "Persist Postgres with volumes": "/app/lab/launch", "Networking quick check": "/app/learn/check", "Explain Docker volumes": "/app/interview",
     "Lab time bank2h 40m": "/app/me/time-bank", "Streak12 days": "/app/me/progress",
     "Labs passed142+9 this week": "/app/me/lab-history", MON17: "/app/me/schedule", TUE18: "/app/me/schedule",
   },

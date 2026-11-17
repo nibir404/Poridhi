@@ -23,3 +23,11 @@ Elements are found by their Paper layer id (`data-pid`) or their visible text. `
 ## Themes
 
 `src/components/theme/` keeps the theme in `localStorage` (`pd-theme`) and on `<html data-theme>`. A small inline script in the root layout applies it before paint. `recolor.ts` maps the design's computed colours to the theme palette (page, card, inset, line, three text levels), skipping areas the design draws dark; CSS variable overrides in `globals.css` theme everything drawn with tokens (search, menus, phone bars). Lab terminal panels (`.pd-term`) are drawn light in light mode and as designed in dark modes. `soften.ts` tones pure-black fills down to lavender chips or navy panels.
+
+## Seed entities and context
+
+`src/data/entities.ts` holds the modules, labs and exam questions that buttons point at. `src/components/app/context.ts` runs on every app screen:
+
+1. Links into `/app/learn/*` or `/app/lab*` whose text names a module or lab get `?m=` / `?lab=`; exam question rows get `?q=`.
+2. The opened screen replaces the design's sample text (e.g. "Volumes vs bind mounts", "Load balancer configuration", "Q4") with the chosen item.
+3. Onward links in the same flow keep the id.

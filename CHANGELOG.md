@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.2.0] - 2026-11-17
+
+### Added
+- Seed entities behind buttons (`src/data/entities.ts`): 43 roadmap modules with their milestone and first lesson, 3 labs, 10 exam questions.
+- Buttons carry the item they open (`?m=`, `?lab=`, `?q=`); the opened screen shows that item and keeps it through the flow (class → quick check, lab launch → running → complete, question → submit → result). See `src/components/app/context.ts`.
+- Exam question rows each open their own question; passed ones open the result.
+- Lab icon strip links to guide, files, cloud resources, credentials and info.
+
+### Changed
+- Readable page titles for sign-in, onboarding, dashboard, roadmap and exam screens.
+
 ## [1.1.0] - 2026-11-17
 
 ### Added

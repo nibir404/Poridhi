@@ -1,7 +1,7 @@
 import AppShell from "@/components/app/AppShell";
 import AuthCheckEmail from "@/design/app/AuthCheckEmail";
 
-export const metadata = { title: "AuthCheckEmail · Poridhi" };
+export const metadata = { title: "Check your email · Poridhi" };
 
 export default function Page() {
   return (

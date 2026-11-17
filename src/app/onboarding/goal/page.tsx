@@ -1,7 +1,7 @@
 import AppShell from "@/components/app/AppShell";
 import AuthGoal from "@/design/app/AuthGoal";
 
-export const metadata = { title: "AuthGoal · Poridhi" };
+export const metadata = { title: "Your goal · Poridhi" };
 
 export default function Page() {
   return (

@@ -2,47 +2,56 @@
  {
   "id": "HNS-0",
   "name": "AuthSignIn",
-  "route": "/signin"
+  "route": "/signin",
+  "title": "Sign in"
  },
  {
   "id": "HOY-0",
   "name": "AuthCheckEmail",
-  "route": "/signin/check-email"
+  "route": "/signin/check-email",
+  "title": "Check your email"
  },
  {
   "id": "HQ3-0",
   "name": "AuthGoal",
-  "route": "/onboarding/goal"
+  "route": "/onboarding/goal",
+  "title": "Your goal"
  },
  {
   "id": "HR8-0",
   "name": "AuthLevel",
-  "route": "/onboarding/level"
+  "route": "/onboarding/level",
+  "title": "Your level"
  },
  {
   "id": "HSD-0",
   "name": "AuthPlan",
-  "route": "/onboarding/plan"
+  "route": "/onboarding/plan",
+  "title": "Choose a plan"
  },
  {
   "id": "HTI-0",
   "name": "AuthWelcome",
-  "route": "/welcome"
+  "route": "/welcome",
+  "title": "Welcome"
  },
  {
   "id": "4A9-0",
   "name": "Dashboard",
-  "route": "/app"
+  "route": "/app",
+  "title": "Dashboard"
  },
  {
   "id": "3PF-0",
   "name": "RoadmapAll",
-  "route": "/app/roadmap"
+  "route": "/app/roadmap",
+  "title": "Roadmap"
  },
  {
   "id": "2RX-0",
   "name": "RoadmapMilestone",
-  "route": "/app/roadmap/milestone-1"
+  "route": "/app/roadmap/milestone-1",
+  "title": "Milestone 1"
  },
  {
   "id": "6YW-0",
@@ -246,25 +255,25 @@
   "id": "DDF-0",
   "name": "ExamInstructions",
   "route": "/app/exam/q4/instructions",
-  "title": "Q4 instructions"
+  "title": "Exam question"
  },
  {
   "id": "DIO-0",
   "name": "ExamWhiteboard",
   "route": "/app/exam/q4/whiteboard",
-  "title": "Q4 whiteboard"
+  "title": "Exam whiteboard"
  },
  {
   "id": "DNX-0",
   "name": "ExamSubmit",
   "route": "/app/exam/q4/submit",
-  "title": "Submit Q4"
+  "title": "Submit answer"
  },
  {
   "id": "DYF-0",
   "name": "ExamState2",
   "route": "/app/exam/q4/review",
-  "title": "Q4 review"
+  "title": "Question result"
  },
  {
   "id": "DT6-0",

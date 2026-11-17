@@ -1,7 +1,7 @@
 import AppShell from "@/components/app/AppShell";
 import ExamInstructions from "@/design/app/ExamInstructions";
 
-export const metadata = { title: "Q4 instructions · Poridhi" };
+export const metadata = { title: "Exam question · Poridhi" };
 
 export default function Page() {
   return (

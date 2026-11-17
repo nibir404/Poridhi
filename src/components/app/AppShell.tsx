@@ -14,6 +14,7 @@ import ThemeSwitch from "@/components/theme/ThemeSwitch";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
 import { screenBehaviours } from "./behaviours";
+import { applyContext } from "./context";
 
 /**
  * Wraps a generated Paper app screen (1600px artboard) with:
@@ -108,6 +109,34 @@ export default function AppShell({ screen, children }: { screen: string; childre
       const p = target.parentElement;
       if (p && p !== root && Array.from(p.children).every((c) => (c as HTMLElement).style.display === "none")) p.style.display = "none";
     });
+
+    // Buttons ↔ seed entities (modules, labs, exam questions).
+    applyContext(root, screen);
+
+    // Lab icon strip: each tool icon opens its panel (matched by icon shape, so order changes don't matter).
+    if (screen.startsWith("Lab")) {
+      const RAIL: [string, string, string][] = [
+        ["M6 3h9l4 4v14H", "/app/lab", "Lab guide"],
+        ["M3 7h7l2 2h9v1", "/app/lab/files", "Files"],
+        ["M7 18a4.5 4.5", "/app/lab/resources", "Cloud resources"],
+        ["M11 12l9-9M17", "/app/lab/credentials", "Credentials"],
+        ["M12 11v6M12 7.", "/app/lab/info", "Lab info"],
+      ];
+      root.querySelectorAll<HTMLElement>("[data-pid]").forEach((rail) => {
+        const kids = Array.from(rail.children) as HTMLElement[];
+        if (rail.style.flexDirection !== "column" || kids.length < 3 || !kids.every((k) => !k.textContent?.trim() && k.querySelector("svg"))) return;
+        kids.forEach((k) => {
+          const d = k.querySelector("path")?.getAttribute("d") ?? "";
+          const hit = RAIL.find(([p]) => d.startsWith(p));
+          if (!hit) return;
+          k.dataset.go = hit[1];
+          k.style.cursor = "pointer";
+          k.setAttribute("role", "link");
+          k.setAttribute("aria-label", hit[2]);
+          k.title = hit[2];
+        });
+      });
+    }
 
     // Lab terminal: large dark mono panels (plus their dark tab strips) follow the theme via .pd-term.
     if (screen.startsWith("Lab")) {
