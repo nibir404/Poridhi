@@ -18,7 +18,7 @@ function Extra() {
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
         {[["~40 min", "Estimated"], ["Beginner", "Level"], ["4 auto-checks", "Graded live"], ["+40 XP · +20 coins", "On completion"]].map(([v, k]) => (
-          <div key={k} style={{ ...card, gap: 2, padding: 12 }}><b style={{ fontSize: 15 }}>{v}</b><span style={{ fontSize: 12, color: muted }}>{k}</span></div>
+          <div key={k} style={{ ...card, gap: 2, padding: 12 }}><span style={{ fontSize: 15, fontWeight: 600, fontStyle: "normal" }}>{v}</span><span style={{ fontSize: 12, color: muted }}>{k}</span></div>
         ))}
       </div>
 

@@ -215,7 +215,7 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
     // The design's global app bar, or a website nav on pages that moved into the app (leaderboard).
     const isGlobalBar = hasAll(["Explore", "Pricing"]) || !!appBar && ["Home", "Learn", "Labs", "Practice", "Me"].every((t) => Array.from(appBar.querySelectorAll("[data-pid]")).some((e) => !e.children.length && e.textContent?.trim() === t));
     if (withHeader && isGlobalBar) appBar!.style.display = "none";
-    const isLabWorkspace = screen.startsWith("Lab") && !["LabLaunch", "LabBoot", "LabComplete"].includes(screen);
+    const isLabWorkspace = screen.startsWith("Lab") && !["LabBoot", "LabComplete"].includes(screen);
     if (isLabWorkspace) stickies.push(labLayout(root, withHeader ? 64 : 0)); // lab fills the window; only the guide scrolls
     if (!isLabWorkspace && appBar && bodyRow && !root.closest(".pd-reflow")) {
       const zoom = root.getBoundingClientRect().width / (root.offsetWidth || 1) || 1;
