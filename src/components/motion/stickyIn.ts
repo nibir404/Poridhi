@@ -6,6 +6,7 @@ export function stickyIn(el: HTMLElement, container: HTMLElement, topPx = 88) {
   let raf = 0;
   const update = () => {
     raf = 0;
+    if (el.closest(".pd-reflow")) { el.style.transform = ""; el.style.alignSelf = ""; return; } // phone/tablet: stacked, not sticky
     const zoom = el.getBoundingClientRect().width / (el.offsetWidth || 1) || 1;
     el.style.transform = "";
     const c = container.getBoundingClientRect(), s = el.getBoundingClientRect();

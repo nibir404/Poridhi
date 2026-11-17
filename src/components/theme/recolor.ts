@@ -65,6 +65,9 @@ const css = (h: number, s: number, l: number, a = 1) => `hsl(${h.toFixed(0)} ${(
 function mapBg(c: RGB, p: Pal, isRoot: boolean, appWindow = false): string | null {
   if (c[3] < 0.05) return null;
   const [h, s, l] = hsl(c);
+  // Translucent grey/white fills (search boxes, chips drawn for a dark hero) vanish on a flat
+  // theme background: give them the inset surface so they read as fields.
+  if (c[3] < 0.35 && s < 0.12) return p.inset;
   if (l < 0.45) {
     // Dark mode: the design's own near-black surfaces join the DS palette (sidebar / panel / hover levels).
     if (p.text === DS.text && s < 0.12 && l >= 0.04) {
@@ -100,11 +103,10 @@ function mapText(c: RGB, p: Pal): string | null {
 }
 function mapLine(c: RGB, p: Pal, width = 1): string | null {
   if (c[3] < 0.05) return null;
-  const [, s] = hsl(c);
+  const [, s, l] = hsl(c);
   if (s >= 0.12) return null; // coloured borders (status, accent) keep their colour
-  if (width >= 2 && hsl(c)[2] < 0.3) return p.dark ? "var(--dashboard-accent)" : null; // selected outline
-  if (!p.dark && hsl(c)[2] < 0.3) return null; // light themes keep intentional dark outlines
-  return p.line; // every grey hairline uses the quiet DS border
+  if (width >= 2 && l < 0.3) return "var(--dashboard-accent)"; // selected outline: accent, not black
+  return p.line; // every grey border, light or dark, uses the quiet DS border
 }
 
 /** Only the properties the theme set are remembered and restored, so animation state

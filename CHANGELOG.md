@@ -2,6 +2,19 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.10.0] - 2026-11-17
+
+### Changed
+- Home hero background: the wavy shader and drifting dither are replaced by a quiet network grid where small packets travel between nodes and light them up (canvas 2D, paused off-screen, static with reduced motion).
+- Borders are subtle in every theme: all grey borders use the design-system border colour; 2px selected outlines use the accent.
+
+### Fixed
+- Translucent search fields and chips blending into the background; they now use the inset surface.
+- Lab guide's "On this page" list overlapping the article on phones.
+
+### Removed
+- `ShaderBackground` (unused after the hero change).
+
 ## [1.9.0] - 2026-11-17
 
 ### Added

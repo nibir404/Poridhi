@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ShaderBackground from "./ShaderBackground";
+import NetworkBackground from "./NetworkBackground";
 import PlatformShowcase from "@/components/marketing/PlatformShowcase";
 import { startProductDemos } from "./productDemos";
 
@@ -36,16 +36,9 @@ export default function HomeInteractions() {
     }
 
     const ctx = gsap.context(() => {
-      // Animated dither texture over the shader: slow drift + shimmer, brighter near the cursor.
+      // The wavy dither texture is retired; the network grid replaces it.
       const dither = q("1M5-0");
-      if (dither && card) {
-        Object.assign(dither.style, {
-          zIndex: "1", opacity: "0.22", width: "200%", left: "-50%", right: "auto",
-          backgroundSize: "864px 240px", backgroundRepeat: "repeat", mixBlendMode: "screen",
-        });
-        gsap.to(dither, { backgroundPositionX: "+=864px", backgroundPositionY: "+=240px", duration: 40, ease: "none", repeat: -1 });
-        gsap.to(dither, { opacity: 0.32, duration: 2.6, yoyo: true, repeat: -1, ease: "sine.inOut" });
-      }
+      if (dither) dither.style.display = "none";
 
       // Hero entrance
       const copy = q("1M6-0");
@@ -79,7 +72,7 @@ export default function HomeInteractions() {
 
   return (
     <>
-      {heroCard && createPortal(<ShaderBackground className="pointer-events-none absolute inset-0" />, heroCard)}
+      {heroCard && createPortal(<NetworkBackground className="pointer-events-none absolute inset-0" />, heroCard)}
       {stage && createPortal(<PlatformShowcase width={stage.w} />, stage.el)}
     </>
   );
