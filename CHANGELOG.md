@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows Keep a Changelog and the project uses semantic versioning.
 
+## [1.11.0] - 2026-11-17
+
+### Added
+- Track overview toolbar works: Done / In progress / Not started toggle which modules are highlighted, Track / Milestone / Module switch views (milestone and module open the roadmap explorer), and the % control zooms the board (40 → 60 → 80 → 100 %).
+
+### Fixed
+- Sticky app bar shrinking to its content on wide screens; it spans the full width again.
+
 ## [1.10.0] - 2026-11-17
 
 ### Changed

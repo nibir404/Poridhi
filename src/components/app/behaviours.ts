@@ -2,6 +2,7 @@
 import { gsap } from "gsap";
 import { seed } from "@/data/seed";
 import { notes } from "@/data/entities";
+import { track } from "@/data/roadmap";
 
 type Behaviour = (root: HTMLElement, go: (to: string) => void) => (() => void) | void;
 const $ = (root: HTMLElement, pid: string) => root.querySelector<HTMLElement>(`[data-pid="${pid}"]`);
@@ -169,5 +170,49 @@ export const screenBehaviours: Record<string, Behaviour> = {
     pick(picked);
     render();
     return () => { offs.forEach((f) => f()); empty.remove(); };
+  },
+
+  // Track overview toolbar: status legend filters modules, view switch, zoom.
+  RoadmapAll(root, go) {
+    const offs: (() => void)[] = [];
+    const leaf = (t: string) => Array.from(root.querySelectorAll<HTMLElement>("[data-pid]")).find((e) => !e.children.length && e.textContent?.trim() === t);
+    const chipOf = (el?: HTMLElement) => (el?.parentElement && el.parentElement.children.length <= 3 ? el.parentElement : el) as HTMLElement | undefined;
+    const statusOf: Record<string, "done" | "progress" | "todo"> = {};
+    track.milestones.forEach((m) => m.modules.forEach((x) => (statusOf[x.title] = x.status === "done" ? "done" : x.status === "current" ? "progress" : "todo")));
+    const rows = Object.keys(statusOf).map((t) => ({ t, el: chipOf(leaf(t)) })).filter((r) => r.el) as { t: string; el: HTMLElement }[];
+    const on = { done: true, progress: true, todo: true };
+    const legend: [string, keyof typeof on][] = [["Done", "done"], ["In progress", "progress"], ["Not started", "todo"]];
+    const paint = () => {
+      rows.forEach(({ t, el }) => { const show = on[statusOf[t]]; el.style.opacity = show ? "" : "0.22"; el.style.transition = "opacity .2s"; });
+      legend.forEach(([label, k]) => { const c = chipOf(leaf(label)); if (c) { c.style.opacity = on[k] ? "" : "0.5"; c.style.textDecoration = on[k] ? "" : "line-through"; c.setAttribute("aria-pressed", String(on[k])); } });
+    };
+    legend.forEach(([label, k]) => {
+      const c = chipOf(leaf(label));
+      if (!c) return;
+      c.style.cursor = "pointer"; c.setAttribute("role", "button"); c.title = `Show or hide ${label.toLowerCase()} modules`;
+      const f = () => { on[k] = !on[k]; if (!on.done && !on.progress && !on.todo) { on.done = on.progress = on.todo = true; } paint(); };
+      c.addEventListener("click", f); offs.push(() => c.removeEventListener("click", f));
+    });
+    // View switch.
+    ([["Milestone", "/app/roadmap/milestone-1?ms=1"], ["Module", "/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage"]] as const).forEach(([t, to]) => {
+      const c = chipOf(leaf(t)); if (!c) return;
+      c.style.cursor = "pointer"; c.setAttribute("role", "link");
+      const f = () => go(to); c.addEventListener("click", f); offs.push(() => c.removeEventListener("click", f));
+    });
+    // Zoom the board: 40 → 60 → 80 → 100 → 40 %.
+    const pctLeaf = leaf("40%");
+    const a = leaf(track.milestones[0].title), b = leaf(track.milestones[track.milestones.length - 1].title);
+    let board: HTMLElement | null = a ?? null;
+    while (board && b && !board.contains(b)) board = board.parentElement;
+    const zoomBtn = chipOf(pctLeaf);
+    if (zoomBtn && pctLeaf && board) {
+      const steps = [40, 60, 80, 100];
+      let i = 0;
+      zoomBtn.style.cursor = "pointer"; zoomBtn.setAttribute("role", "button"); zoomBtn.setAttribute("aria-label", "Zoom the track board");
+      const f = () => { i = (i + 1) % steps.length; pctLeaf.textContent = `${steps[i]}%`; (board!.style as CSSStyleDeclaration & { zoom: string }).zoom = String(steps[i] / 40); board!.style.transformOrigin = "0 0"; };
+      zoomBtn.addEventListener("click", f); offs.push(() => zoomBtn.removeEventListener("click", f));
+    }
+    paint();
+    return () => offs.forEach((x) => x());
   },
 };

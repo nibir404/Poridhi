@@ -188,6 +188,7 @@ export default function AppShell({ screen, children }: { screen: string; childre
       Object.assign(appBar.style, { position: "relative", zIndex: "60" });
       if (getComputedStyle(appBar).backgroundColor === "rgba(0, 0, 0, 0)") appBar.style.backgroundColor = "var(--dashboard-main)"; // opaque while content scrolls under it
       stickies.push(stickyIn(appBar, root, 0));
+      appBar.style.alignSelf = "stretch"; // full width (the sticky helper shrinks items to content)
       const barH = appBar.offsetHeight;
       (Array.from(bodyRow.children) as HTMLElement[]).forEach((col) => {
         const w = col.offsetWidth;
