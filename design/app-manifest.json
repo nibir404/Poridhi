@@ -247,7 +247,8 @@
     "id": "BBN-0",
     "name": "ExamIntro",
     "route": "/app/exam",
-    "title": "Milestone exam"
+    "title": "Milestone exam",
+    "extra": "ExamSidebar"
   },
   {
     "id": "D1Q-0",
