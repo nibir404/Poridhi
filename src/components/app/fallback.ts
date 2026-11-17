@@ -142,6 +142,16 @@ const ACTIONS: [RegExp, (el: HTMLElement, root: HTMLElement) => void][] = [
 /** Wire whatever is still dead. Returns an undo. */
 export function wireFallback(root: HTMLElement): () => void {
   const offs: (() => void)[] = [];
+  // Controls drawn over a textured banner get a solid backing so they stay readable.
+  const tex = Array.from(root.querySelectorAll<HTMLElement>('[style*="dither-card"]')).map((t) => t.getBoundingClientRect());
+  if (tex.length) root.querySelectorAll<HTMLElement>('[data-go], [role="button"], [role="link"]').forEach((b) => {
+    const r = b.getBoundingClientRect();
+    if (r.width > 260 || r.height > 56 || r.height < 16) return;
+    if (!tex.some((t) => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top)) return;
+    const bg = getComputedStyle(b).backgroundColor;
+    if (bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent") return;
+    Object.assign(b.style, { position: "relative", zIndex: "1", background: "var(--dashboard-panel)", border: "1px solid var(--dashboard-border)", borderRadius: "8px", padding: b.style.padding || "6px 12px", boxShadow: "0 4px 14px -6px rgba(0,0,0,.35)" });
+  });
   steppers(root, offs);
   segments(root, offs);
   root.querySelectorAll<HTMLElement>("[data-pid]").forEach((el) => {

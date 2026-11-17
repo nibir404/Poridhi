@@ -308,5 +308,5 @@ html { scroll-behavior: auto; }
 @media (max-width: 860px) { .pd-courses { grid-template-columns: 1fr !important; } .pd-courses > aside { position: static !important; } }
 
 /* Roadmap explorer: panels stick under the app header; each scrolls inside itself */
-.pd-roadmap { position: sticky; top: 64px; height: calc(100dvh - 64px) !important; overflow: hidden; }
+.pd-roadmap { position: sticky; top: 64px; overflow: hidden; }
 .pd-roadmap > * { min-height: 0; height: 100%; overscroll-behavior: contain; }

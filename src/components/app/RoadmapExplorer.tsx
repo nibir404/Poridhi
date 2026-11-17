@@ -2,6 +2,7 @@
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useRouter, useSearchParams } from "next/navigation";
+import { setItemDone, useProgress } from "@/data/progress";
 import { track, doneCount, type Item, type ItemKind, type Module, type Status } from "@/data/roadmap";
 
 /**
@@ -39,6 +40,23 @@ export default function RoadmapExplorer() {
 }
 
 function Explorer() {
+  useProgress(); // re-render when the learner marks something complete
+  // Fill the window exactly under the app header (no dead strip below the panels).
+  const fitRef = useRef<HTMLDivElement>(null);
+  const [fitH, setFitH] = useState<number | null>(null);
+  useEffect(() => {
+    const fit = () => {
+      const el = fitRef.current; if (!el) return;
+      const scale = el.offsetWidth ? el.getBoundingClientRect().width / el.offsetWidth : 1;
+      const top = document.querySelector<HTMLElement>(".pd-appheader")?.getBoundingClientRect().bottom ?? 64;
+      setFitH((window.innerHeight - top) / (scale || 1));
+    };
+    // The explorer sizes itself; stop the frame from padding the page to full height.
+    const frameRoot = document.querySelector<HTMLElement>(".pd-frame [data-pid]");
+    if (frameRoot) { frameRoot.dataset.pdLocked = "1"; frameRoot.style.minHeight = "0"; }
+    fit(); const t = setTimeout(fit, 400); window.addEventListener("resize", fit);
+    return () => { clearTimeout(t); window.removeEventListener("resize", fit); };
+  }, []);
   const router = useRouter();
   const qs = useSearchParams();
   const [host, setHost] = useState<HTMLElement | null>(null);
@@ -77,7 +95,7 @@ function Explorer() {
 
   if (!host) return null;
   return createPortal(
-    <div className="pd-roadmap" style={{ display: "grid", gridTemplateColumns: "300px minmax(0,1fr) 380px", width: "100%", height: "100%", minHeight: 0, background: "var(--dashboard-main)", color: "var(--dashboard-text)", fontFamily: "var(--font-sans)" }}>
+    <div ref={fitRef} className="pd-roadmap" style={{ display: "grid", gridTemplateColumns: "300px minmax(0,1fr) 380px", width: "100%", height: fitH ?? "100%", minHeight: 0, background: "var(--dashboard-main)", color: "var(--dashboard-text)", fontFamily: "var(--font-sans)" }}>
       <LeftBar msN={msN} mod={mod} itemIdx={itemIdx} select={select} />
       <Canvas msN={msN} mod={mod} itemIdx={itemIdx} select={select} filter={filter} setFilter={setFilter} hideDone={hideDone} setHideDone={setHideDone} />
       <RightBar msN={msN} mod={mod} item={item} itemIdx={itemIdx} select={select} go={(h) => router.push(h)} />
@@ -237,7 +255,7 @@ function Canvas({ msN, mod, itemIdx, select, filter, setFilter, hideDone, setHid
           </svg>
           {/* Milestone */}
           <button onClick={() => select({ mod: null, item: null })} aria-label={`Milestone ${ms.n}: ${ms.title}`}
-            style={{ position: "absolute", left: 0, top: msY, width: W.ms, padding: 20, border: !mod ? "2px solid var(--dashboard-accent)" : "1px solid var(--dashboard-border)", borderRadius: 12, background: "linear-gradient(150deg, color-mix(in oklab, var(--dashboard-accent) 32%, var(--dashboard-panel)), var(--dashboard-panel))", color: "var(--dashboard-text)", textAlign: "left", cursor: "pointer" }}>
+            style={{ position: "absolute", left: 0, top: msY, width: W.ms, padding: 20, border: !mod ? "2px solid var(--dashboard-accent)" : "1px solid var(--dashboard-border)", borderRadius: 12, background: "linear-gradient(150deg, color-mix(in oklab, #8B5CF6 22%, var(--dashboard-panel)), color-mix(in oklab, #3B82F6 8%, var(--dashboard-panel)))", color: "var(--dashboard-text)", textAlign: "left", cursor: "pointer" }}>
             <div style={{ font: "400 12px/16px var(--font-sans)", color: "var(--dashboard-muted)" }}>Milestone {ms.n} · {mods.length} modules</div>
             <div style={{ font: "600 19px/24px var(--font-sans)", margin: "10px 0 18px" }}>{ms.title}</div>
             <Bar v={pct(ms)} label={`${pct(ms)}%`} />
@@ -334,6 +352,12 @@ function RightBar({ msN, mod, item, itemIdx, select, go }: { msN: number; mod: M
               {item.checks.map((c, i) => <li key={c} style={{ display: "flex", gap: 10, font: "400 13.5px/19px var(--font-sans)", color: i < (item.checksDone ?? 0) ? "var(--dashboard-text)" : "var(--dashboard-muted)" }}><Dot s={i < (item.checksDone ?? 0) ? "done" : "todo"} />{c}</li>)}
             </ul></>)}
           {item.kind === "lab" && <p style={{ font: "400 13px/18px var(--font-sans)", color: "var(--dashboard-muted)", marginTop: 18 }}>VM time counts only after you launch · Bank: 2h 40m</p>}
+          {item.status !== "locked" && (
+            <button type="button" onClick={() => setItemDone(mod.slug, itemIdx!, item.status !== "done")} aria-pressed={item.status === "done"}
+              style={{ width: "100%", height: 40, marginTop: 18, display: "flex", alignItems: "center", justifyContent: "center", gap: 8, border: "1px solid var(--dashboard-border)", borderRadius: 6, background: item.status === "done" ? "color-mix(in oklab, var(--dashboard-success) 18%, transparent)" : "transparent", color: "var(--dashboard-text)", font: "500 14px/1 var(--font-sans)", cursor: "pointer" }}>
+              <Icon d="M6 12l4 4 8-8" size={15} />{item.status === "done" ? "Completed · undo" : "Mark as complete"}
+            </button>
+          )}
           {cta(item.status === "locked" ? "Locked" : item.status === "done" ? "Review" : item.status === "current" ? (item.kind === "lab" ? "Resume lab" : "Continue") : item.kind === "lab" ? "Launch lab" : "Start", item.href, item.status === "locked")}
           <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
             {itemIdx! > 0 && <Ghost onClick={() => select({ item: itemIdx! - 1 })}>← Previous</Ghost>}
@@ -350,9 +374,12 @@ function RightBar({ msN, mod, item, itemIdx, select, go }: { msN: number; mod: M
           {head("In this module")}
           <div style={{ display: "grid", gap: 6 }}>
             {mod.items.map((it, i) => (
-              <button key={i} onClick={() => select({ item: i })} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", border: "1px solid var(--dashboard-border)", borderRadius: 6, background: "transparent", color: "var(--dashboard-text)", textAlign: "left", cursor: "pointer", font: "400 13px/17px var(--font-sans)" }}>
-                <Dot s={it.status} /><span style={{ flex: 1 }}>{it.title}</span><span style={{ color: "var(--dashboard-muted)" }}>{KIND[it.kind].label}</span>
-              </button>
+              <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <MarkToggle done={it.status === "done"} locked={it.status === "locked"} onToggle={() => setItemDone(mod.slug, i, it.status !== "done")} label={it.title} />
+                <button onClick={() => select({ item: i })} style={{ flex: 1, display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", border: "1px solid var(--dashboard-border)", borderRadius: 6, background: "transparent", color: "var(--dashboard-text)", textAlign: "left", cursor: "pointer", font: "400 13px/17px var(--font-sans)" }}>
+                  <span style={{ flex: 1, textDecoration: it.status === "done" ? "line-through" : undefined, textDecorationColor: "var(--dashboard-muted)" }}>{it.title}</span><span style={{ color: "var(--dashboard-muted)" }}>{KIND[it.kind].label}</span>
+                </button>
+              </div>
             ))}
           </div>
           {(() => { const next = mod.items.findIndex((i) => i.status === "current" || i.status === "todo"); return mod.status === "locked" ? cta("Locked: finish the previous module", "#", true) : next < 0 ? cta("Review module", mod.items[0].href) : cta(mod.items[next].status === "current" ? "Continue" : "Start module", mod.items[next].href); })()}
@@ -383,3 +410,14 @@ const Tag = ({ children }: { children: React.ReactNode }) => <span style={{ font
 const Ghost = ({ children, onClick }: { children: React.ReactNode; onClick: () => void }) => (
   <button onClick={onClick} style={{ flex: 1, height: 36, border: "1px solid var(--dashboard-border)", borderRadius: 6, background: "transparent", color: "var(--dashboard-text)", font: "400 13px/16px var(--font-sans)", cursor: "pointer" }}>{children}</button>
 );
+
+/** Round check you can tick to mark an item complete by hand (locked items can't be ticked). */
+function MarkToggle({ done, locked, onToggle, label }: { done: boolean; locked: boolean; onToggle: () => void; label: string }) {
+  return (
+    <button type="button" role="checkbox" aria-checked={done} aria-label={`${done ? "Mark not complete" : "Mark complete"}: ${label}`} disabled={locked} onClick={(e) => { e.stopPropagation(); onToggle(); }}
+      title={locked ? "Locked" : done ? "Completed · click to undo" : "Mark as complete"}
+      style={{ width: 22, height: 22, flexShrink: 0, display: "grid", placeItems: "center", borderRadius: 999, border: done ? 0 : "1.5px solid var(--dashboard-border)", background: done ? "var(--dashboard-success)" : "transparent", color: "var(--dashboard-main)", cursor: locked ? "not-allowed" : "pointer", opacity: locked ? 0.4 : 1, transition: "background .15s" }}>
+      {done && <Icon d="M6 12l4 4 8-8" size={13} />}
+    </button>
+  );
+}

@@ -50,7 +50,9 @@ export default function DesignFrame({ width = 1440, children }: { width?: number
       if (root.dataset.pdLocked) return; // a screen that sizes itself to the window (lab workspace)
       const zoom = mode === "scale" ? Math.min(1, document.documentElement.clientWidth / width) : 1;
       if (/^\d+px$/.test(root.style.height)) { root.dataset.pdH = root.style.height; root.style.height = "auto"; }
-      root.style.minHeight = `max(${root.dataset.pdH ?? "0px"}, ${Math.ceil(window.innerHeight / zoom)}px)`;
+      // Fill what's left under any sticky header above the frame, not the whole window (no dead strip).
+      const above = Math.max(0, (ref.current?.getBoundingClientRect().top ?? 0) + window.scrollY);
+      root.style.minHeight = `max(${root.dataset.pdH ?? "0px"}, ${Math.floor((window.innerHeight - above) / zoom)}px)`;
     };
     fill();
     window.addEventListener("resize", fill);
