@@ -39,7 +39,8 @@
     "id": "4A9-0",
     "name": "Dashboard",
     "route": "/app",
-    "title": "Dashboard"
+    "title": "Dashboard",
+    "extra": "DashboardViz"
   },
   {
     "id": "3PF-0",

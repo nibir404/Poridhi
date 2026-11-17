@@ -3,7 +3,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Workspace, { Ico, iconBtn, type RailItem } from "./Workspace";
 import { Composer, Editor, Terminal, Thread, type Msg, type TermLine } from "./parts";
 import { labs } from "@/data/entities";
-import { setPlan, setVm, usePlan } from "@/data/plan";
+import { setVm, usePlan } from "@/data/plan";
+import { UpgradeDialog } from "./ProGate";
 import Link from "next/link";
 
 /**
@@ -236,19 +237,7 @@ export default function LabWorkspace({ embedded = false }: { embedded?: boolean 
         : vm !== "booting" && <button type="button" onClick={launch} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 32, padding: "0 14px", border: 0, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, fontSize: 13, cursor: "pointer", whiteSpace: "nowrap" }}>{plan === "pro" ? "Launch VM" : "Go Pro to launch"}</button>}
     </>
   );
-  const Upgrade = upgrade && (
-    <div role="dialog" aria-modal="true" aria-label="Upgrade to Pro" onClick={() => setUpgrade(false)} style={{ position: "fixed", inset: 0, zIndex: 50, display: "grid", placeItems: "center", background: "rgba(0,0,0,.5)" }}>
-      <div onClick={(ev) => ev.stopPropagation()} style={{ width: "min(440px, calc(100% - 32px))", display: "grid", gap: 14, padding: 24, borderRadius: 12, background: "var(--dashboard-panel)", color: "var(--dashboard-text)", border: "1px solid var(--dashboard-border)" }}>
-        <b style={{ fontSize: 20 }}>Launch real VMs with Pro</b>
-        <span style={{ fontSize: 14, lineHeight: 1.55, color: "var(--dashboard-muted)" }}>Guides stay free. Pro adds 40 hours of VM time a month, plus the terminal, IDE, databases, load balancer and cloud tray in every lab.</span>
-        <div style={{ display: "grid", gap: 6, fontSize: 14 }}>{["Ubuntu VM in ~30 seconds", "Terminal, IDE, databases, load balancer", "AI guide, interviews and exams", "Time counts only while the VM runs"].map((x) => <span key={x}>✓ {x}</span>)}</div>
-        <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
-          <Link href="/pricing" style={{ height: 40, display: "inline-flex", alignItems: "center", padding: "0 14px", borderRadius: "var(--puku-radius)", border: "1px solid var(--dashboard-border)", color: "var(--dashboard-text)", textDecoration: "none", fontSize: 14 }}>See pricing</Link>
-          <button type="button" onClick={() => { setPlan("pro"); setUpgrade(false); }} className="puku-btn puku-btn-default pd-glow-btn" style={{ height: 40, padding: "0 16px", border: 0, borderRadius: "var(--puku-radius)", background: "var(--dashboard-accent)", color: "var(--dashboard-accent-ink)", fontWeight: 600, cursor: "pointer" }}>Start Pro · ৳1,500 / month</button>
-        </div>
-      </div>
-    </div>
-  );
+  const Upgrade = <UpgradeDialog open={upgrade} onClose={() => setUpgrade(false)} title="Launch real VMs with Pro" />;
 
   const ws = (
     <Workspace height={embedded ? "100%" : undefined} back="/app/roadmap/milestone-1?ms=1&mod=docker-networking-and-storage&item=2" crumb="Milestone 1 · Docker networking & storage" title={labs["publish-nginx-lb"].title}

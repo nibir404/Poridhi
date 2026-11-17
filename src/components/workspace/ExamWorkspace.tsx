@@ -4,6 +4,8 @@ import { useSearchParams } from "next/navigation";
 import Workspace, { type RailItem } from "./Workspace";
 import { Composer, Editor, Terminal, Thread, type Msg, type TermLine } from "./parts";
 import { examQuestions } from "@/data/entities";
+import { usePlan } from "@/data/plan";
+import { ProWall } from "./ProGate";
 
 /**
  * AI exam workspace (Claude / Codex layout): the rail lists all ten questions; the thread holds
@@ -40,6 +42,12 @@ resource "aws_lb_target_group" "web" {
 `;
 
 export default function ExamWorkspace() {
+  const { plan } = usePlan();
+  if (plan !== "pro") return <ProWall back="/app/exam" crumb="Milestone 1 exam" title="AI exam" what="The AI exam" about="Exams run on a real sandbox and are graded by AI against a rubric, and passing earns your certificate." />;
+  return <ExamInner />;
+}
+
+function ExamInner() {
   const qs = useSearchParams();
   const q = examQuestions.find((x) => String(x.n) === qs.get("q")) ?? examQuestions[3];
   const [files, setFiles] = useState<Record<string, string>>({ "main.tf": START, "variables.tf": 'variable "region" {\n  default = "ap-south-1"\n}\n', "outputs.tf": 'output "alb_dns" {\n  value = aws_lb.web.dns_name\n}\n' });

@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Workspace, { type RailItem } from "./Workspace";
+import { usePlan } from "@/data/plan";
+import { ProWall } from "./ProGate";
 import { Composer, Terminal, Thread, Whiteboard, type Box, type Msg, type TermLine } from "./parts";
 
 /**
@@ -27,6 +29,12 @@ function score(answer: string, keys: string[]) {
 }
 
 export default function InterviewWorkspace() {
+  const { plan } = usePlan();
+  if (plan !== "pro") return <ProWall back="/app/interview" crumb="AI interview · System design" title="Design a URL shortener" what="The AI interview" about="A live interviewer asks follow-ups, scores every stage and writes you a hiring-style report." />;
+  return <InterviewInner />;
+}
+
+function InterviewInner() {
   const [stage, setStage] = useState(0);
   const [scores, setScores] = useState<number[]>([]);
   const [msgs, setMsgs] = useState<Msg[]>(() => [

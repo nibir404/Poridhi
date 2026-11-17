@@ -22,7 +22,7 @@ import { getWallet, fmtBank, openRedeem } from "@/data/wallet";
 import { seed } from "@/data/seed";
 import { wireIcons } from "./iconLinks";
 import { wireFallback } from "./fallback";
-import { getVm } from "@/data/plan";
+import { getPlan, getVm } from "@/data/plan";
 import { stickyIn } from "@/components/motion/stickyIn";
 import { getTheme, setTheme, THEMES } from "@/components/theme/theme";
 import { APP_LINKS, SCREEN_LINKS } from "@/data/routes";
@@ -53,7 +53,12 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
 
   // Lab tools (IDE, database, load balancer, cloud tray…) need a running VM; otherwise back to the lab.
   useEffect(() => {
-    if (/^Lab/.test(screen) && screen !== "LabLaunch" && getVm() !== "on") window.location.replace("/app/lab");
+    if (/^Lab/.test(screen) && screen !== "LabLaunch" && getVm() !== "on") router.replace("/app/lab");
+    // Exams and interviews are Pro: free users land on the gate (intro pages stay readable).
+    if (getPlan() !== "pro") {
+      if (/^Exam/.test(screen) && screen !== "ExamIntro") router.replace("/app/exam/q4/instructions");
+      if (/^Interview/.test(screen) && screen !== "InterviewIntro") router.replace("/app/interview/session");
+    }
   }, [screen]);
   useEffect(() => {
     const root = host.current?.querySelector<HTMLElement>("[data-pid]");
@@ -310,6 +315,10 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
       router.push(t.dataset.go!);
     };
     root.addEventListener("click", onClick);
+    // Prefetch every route this screen links to, so clicks feel instant.
+    const prefetchT = setTimeout(() => {
+      new Set(Array.from(root.querySelectorAll<HTMLElement>("[data-go]")).map((x) => x.dataset.go!).filter((g) => g.startsWith("/"))).forEach((g) => router.prefetch(g));
+    }, 400);
 
     // 4) Screen-specific behaviour + motion.
     const undoScreen = screenBehaviours[screen]?.(root, (to) => router.push(to));
@@ -329,7 +338,7 @@ export default function AppShell({ screen, children, width = 1600 }: { screen: s
     let undoFallback = () => {};
     const fbT = setTimeout(() => { undoFallback = wireFallback(root); }, 60);
     return () => {
-      clearTimeout(fbT); undoFallback();
+      clearTimeout(fbT); undoFallback(); clearTimeout(prefetchT);
       undoGlow();
       chipOffs.forEach((f) => f());
       stickies.forEach((f) => f());

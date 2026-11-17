@@ -1,12 +1,7 @@
-import MarketingShell from "@/components/marketing/MarketingShell";
-import CoursesDesign from "@/design/CoursesDesign";
+import CoursesView from "@/components/marketing/CoursesView";
 
 export const metadata = { title: "Career tracks · Poridhi" };
 
 export default function Page() {
-  return (
-    <MarketingShell>
-      <CoursesDesign />
-    </MarketingShell>
-  );
+  return <CoursesView />;
 }

@@ -122,6 +122,7 @@ function steppers(root: HTMLElement, offs: (() => void)[]) {
   });
 }
 
+const NAV: [RegExp, string][] = [[/^IDE···$/, "/app/lab/ide"], [/^RA$/, "/app/me/edit"], [/Add note/, "/app/learn/class/note"], [/^Rate session$/, "/app/me/support/rate"], [/^Submit Q4$/, "/app/exam/q4/review"], [/^Q\d+/, "/app/exam/q4/instructions"]];
 const ACTIONS: [RegExp, (el: HTMLElement, root: HTMLElement) => void][] = [
   [/^Add to Google Calendar$/, () => window.open("https://calendar.google.com/calendar/render?action=TEMPLATE&text=Poridhi%20live%20class&details=Live%20class%20on%20Poridhi", "_blank", "noopener")],
   [/^Upload photo$/, (el) => { const i = document.createElement("input"); i.type = "file"; i.accept = "image/*"; i.onchange = () => { const f = i.files?.[0]; if (!f) return; const url = URL.createObjectURL(f); const av = el.closest("[data-pid]")?.parentElement?.querySelector<HTMLElement>("[data-pid]"); if (av) { av.style.backgroundImage = `url(${url})`; av.style.backgroundSize = "cover"; av.textContent = ""; } toast("Photo updated"); }; i.click(); }],
@@ -129,18 +130,12 @@ const ACTIONS: [RegExp, (el: HTMLElement, root: HTMLElement) => void][] = [
   [/^\+ Add$/, (el) => { const v = window.prompt("Add a skill"); if (!v) return; const c = el.cloneNode(true) as HTMLElement; c.dataset.fb = ""; const leaf = c.querySelector("[data-pid]:not(:has([data-pid]))") ?? c; leaf.textContent = `${v} ×`; el.before(c); c.addEventListener("click", () => c.remove()); c.style.cursor = "pointer"; }],
   [/^Delete$/, () => { if (window.confirm("Delete your account? This is a demo, nothing is removed.")) toast("Account deletion requested"); }],
   [/▾$/, (el) => { const leaf = (el.querySelector("[data-pid]:not(:has([data-pid]))") as HTMLElement) ?? el; const t = txt(leaf); const opts: Record<string, string[]> = { Level: ["Any", "Beginner", "Intermediate", "Advanced"], Sort: ["Most started", "Newest", "Shortest"] }; const k = t.split(":")[0]; const list = opts[k]; if (!list) return; const cur = t.replace(/^.*?:\s*/, "").replace(" ▾", ""); leaf.textContent = `${k}: ${list[(list.indexOf(cur) + 1) % list.length]} ▾`; }],
-  [/^IDE···$/, () => (location.href = "/app/lab/ide")],
-  [/^RA$/, () => (location.href = "/app/me/edit")],
   [/^(Change|Manage)$/, (el) => toast(`${txt(el)}: opens in your account settings`)],
   [/^Pause$/, (el) => { const leaf = (el.querySelector("[data-pid]:not(:has([data-pid]))") as HTMLElement) ?? el; leaf.textContent = "Resume"; toast("Interview paused"); }],
   [/^Resume$/, (el) => { const leaf = (el.querySelector("[data-pid]:not(:has([data-pid]))") as HTMLElement) ?? el; leaf.textContent = "Pause"; toast("Interview resumed"); }],
   [/^Today$/, () => toast("Showing today")],
   [/Highlight/, () => toast("Highlight saved to your notes")],
-  [/Add note/, () => (location.href = "/app/learn/class/note")],
   [/Ask Puku/, () => toast("Puku is reading this part of the transcript…")],
-  [/^Rate session$/, () => (location.href = "/app/me/support/rate")],
-  [/^Submit Q4$/, () => (location.href = "/app/exam/q4/review")],
-  [/^Q(\d+)/, () => (location.href = "/app/exam/q4/instructions")],
   [/^After 10 min$/, (el) => { const leaf = (el.querySelector("[data-pid]:not(:has([data-pid]))") as HTMLElement) ?? el; const o = ["After 5 min", "After 10 min", "After 30 min", "Never"]; leaf.textContent = o[(o.indexOf(txt(leaf)) + 1) % o.length]; }],
 ];
 
@@ -153,6 +148,8 @@ export function wireFallback(root: HTMLElement): () => void {
     if (isWired(el) || !looksBtn(el)) return;
     const t = txt(el);
     if (!t || t.length > 40) return;
+    const nav = NAV.find(([re]) => re.test(t));
+    if (nav) { el.dataset.go = nav[1]; el.style.cursor = "pointer"; el.setAttribute("role", "link"); return; } // soft route via the shell
     const hit = ACTIONS.find(([re]) => re.test(t));
     if (!hit) return; // badges, timers and labels stay static
     mark(el, "button");
